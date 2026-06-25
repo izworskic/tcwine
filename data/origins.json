@@ -1,0 +1,26 @@
+{
+ "Traverse City": {
+  "lat": 44.7631,
+  "lng": -85.6206
+ },
+ "Suttons Bay": {
+  "lat": 44.9764,
+  "lng": -85.6514
+ },
+ "Lake Leelanau": {
+  "lat": 45.0181,
+  "lng": -85.7281
+ },
+ "Leland": {
+  "lat": 45.0228,
+  "lng": -85.7595
+ },
+ "Northport": {
+  "lat": 45.1289,
+  "lng": -85.6089
+ },
+ "Glen Arbor": {
+  "lat": 44.8967,
+  "lng": -85.9869
+ }
+}

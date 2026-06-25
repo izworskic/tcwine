@@ -1,0 +1,5034 @@
+[
+ {
+  "id": "leelanau-wine-cellars",
+  "name": "Leelanau Wine Cellars",
+  "area": "leelanau",
+  "town": "Omena",
+  "lat": 45.05521,
+  "lng": -85.5883475,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "broad-lineup",
+   "dry-whites"
+  ],
+  "dwellMinutes": 45,
+  "note": "One of the region's largest and most widely distributed labels. Bay-view room in Omena with a something-for-everyone lineup; an easy, low-pressure stop.",
+  "hours": {
+   "Monday": {
+    "open": "10:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "10:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "10:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://leelanau.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.05521%2C-85.5883475&destination_place_id=ChIJze-kKgUoS00RRb8-JhhryR8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJze-kKgUoS00RRb8-JhhryR8",
+  "view": "bay",
+  "food": null,
+  "dogFriendly": true,
+  "vibe": "approachable",
+  "rating": 4.7,
+  "phone": "+1 231-386-5201",
+  "specialties": [
+   "broad lineup",
+   "sweet to dry whites",
+   "easy-drinking reds"
+  ]
+ },
+ {
+  "id": "dune-bird",
+  "name": "Dune Bird Winery",
+  "area": "leelanau",
+  "town": "Northport",
+  "lat": 45.059624,
+  "lng": -85.6954617,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "chardonnay",
+   "pinot-gris"
+  ],
+  "dwellMinutes": 45,
+  "note": "Relaxed Northport spot with wood-fired pizza and pond-side pergola seating. Dog and kid friendly, with room to spread out.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://dunebirdwinery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.059624%2C-85.6954617&destination_place_id=ChIJB8drs9gvS00RIxGm5bYzsB8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJB8drs9gvS00RIxGm5bYzsB8",
+  "view": "vineyard",
+  "food": "pizza",
+  "dogFriendly": true,
+  "vibe": "laid-back",
+  "rating": 4.9,
+  "phone": "+1 231-613-4100",
+  "specialties": [
+   "Pinot Gris",
+   "Chardonnay",
+   "estate blends"
+  ]
+ },
+ {
+  "id": "45-north",
+  "name": "45 North Vineyard & Winery",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 45.0006468,
+  "lng": -85.6834931,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "dry-whites",
+   "rose",
+   "sparkling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Friendly Lake Leelanau estate with tiered flights, yard games, and a fire pit. Mostly dry wines plus a sparkling peach that gets named often.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://fortyfivenorth.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.0006468%2C-85.6834931&destination_place_id=ChIJ2cAw-q8uS00RunHUlxUMAaQ&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ2cAw-q8uS00RunHUlxUMAaQ",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": true,
+  "vibe": "relaxed",
+  "rating": 4.4,
+  "phone": "+1 231-271-1188",
+  "specialties": [
+   "dry whites",
+   "sparkling",
+   "rose"
+  ]
+ },
+ {
+  "id": "the-ridge-at-verterra",
+  "name": "The Ridge at Verterra",
+  "area": "leelanau",
+  "town": "Northport",
+  "lat": 45.0992916,
+  "lng": -85.6411861,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "riesling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Verterra's hilltop estate and wedding venue with sweeping West Bay views. Some of the biggest vistas on the peninsula, but seasonal.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://verterra.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.0992916%2C-85.6411861&destination_place_id=ChIJBdazqmMmS00RI7nSOdwNQR4&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJBdazqmMmS00RI7nSOdwNQR4",
+  "view": "bay",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "scenic",
+  "rating": 4.6,
+  "phone": "+1 231-386-2473",
+  "specialties": [
+   "late harvest Riesling",
+   "reds",
+   "whites"
+  ]
+ },
+ {
+  "id": "blustone",
+  "name": "Blustone Vineyards",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 44.9937615,
+  "lng": -85.6924149,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "dry-reds",
+   "dry-whites"
+  ],
+  "dwellMinutes": 45,
+  "note": "Modern hilltop room with floor-to-ceiling windows and a fire-pit terrace. Often reservation-only on busy days; check ahead.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://blustonevineyards.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9937615%2C-85.6924149&destination_place_id=ChIJCyoX6Z8uS00Rg9I0rj-PDi4&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJCyoX6Z8uS00Rg9I0rj-PDi4",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "upscale",
+  "rating": 4.5,
+  "phone": "+1 231-256-0146",
+  "specialties": [
+   "dry whites",
+   "dry reds"
+  ]
+ },
+ {
+  "id": "bel-lago",
+  "name": "Bel Lago Vineyards & Winery",
+  "area": "leelanau",
+  "town": "Cedar",
+  "lat": 44.8839083,
+  "lng": -85.7252194,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "aromatic-whites",
+   "gewurztraminer"
+  ],
+  "dwellMinutes": 45,
+  "note": "Lake Leelanau estate known for dry Gewurztraminer and aromatic whites, with Market 22 pizzas on site. Sister winery to French Valley.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8839083%2C-85.7252194&destination_place_id=ChIJ0y_Wu6opHogRor5jdTKic0A&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ0y_Wu6opHogRor5jdTKic0A",
+  "view": "lake",
+  "food": "pizza",
+  "dogFriendly": null,
+  "vibe": "welcoming",
+  "rating": 4.7,
+  "phone": "+1 231-228-4800",
+  "specialties": [
+   "dry Gewurztraminer",
+   "aromatic whites",
+   "estate blends"
+  ]
+ },
+ {
+  "id": "chateau-fontaine",
+  "name": "Chateau Fontaine",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 44.9484416,
+  "lng": -85.7551398,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "broad-lineup",
+   "chardonnay"
+  ],
+  "dwellMinutes": 45,
+  "note": "Cottage-style room that puts the wine first over the view. Award-winning Chardonnay and a wide flight; welcomes kids and dogs.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://chateaufontaine.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9484416%2C-85.7551398&destination_place_id=ChIJV-0TQWYtS00RuYygC5mdPwI&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJV-0TQWYtS00RuYygC5mdPwI",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": true,
+  "vibe": "homey",
+  "rating": 4.7,
+  "phone": "+1 231-256-0000",
+  "specialties": [
+   "Chardonnay",
+   "broad varietal flight"
+  ]
+ },
+ {
+  "id": "verterra-leland",
+  "name": "Verterra Winery (Leland)",
+  "area": "leelanau",
+  "town": "Leland",
+  "lat": 45.0229492,
+  "lng": -85.7595811,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "dessert-ice-wine"
+  ],
+  "dwellMinutes": 45,
+  "note": "Year-round tasting room in downtown Leland near Fishtown. Reds, whites, and a well-regarded ice wine; an easy walk-in stop.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://verterra.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.0229492%2C-85.7595811&destination_place_id=ChIJebyqXtoxS00RDIF-6Ft9JOE&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJebyqXtoxS00RDIF-6Ft9JOE",
+  "view": "town",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "welcoming",
+  "rating": 4.7,
+  "phone": "+1 231-256-2115",
+  "specialties": [
+   "reds",
+   "whites",
+   "ice wine"
+  ]
+ },
+ {
+  "id": "boathouse-vineyards",
+  "name": "Boathouse Vineyards",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 44.9813627,
+  "lng": -85.7130365,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "cabernet-franc",
+   "dry-reds",
+   "merlot",
+   "riesling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Waterfront room on the Lake Leelanau narrows with a couple of boat slips. Dry reds lead; lawn seating runs down to the water.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://boathousevineyards.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9813627%2C-85.7130365&destination_place_id=ChIJnXMclzMsS00RYeOefCivqNA&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJnXMclzMsS00RYeOefCivqNA",
+  "view": "lake",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "waterfront",
+  "rating": 4.6,
+  "phone": "+1 231-256-7115",
+  "specialties": [
+   "dry reds",
+   "Merlot",
+   "Cabernet Franc",
+   "Riesling"
+  ]
+ },
+ {
+  "id": "shady-lane-cellars",
+  "name": "Shady Lane Cellars",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.8918287,
+  "lng": -85.6624113,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "dry-whites",
+   "riesling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Laid-back former farm with fireplaces and Adirondack chairs under the pines. Strong dry whites; one of the few genuinely good winter visits.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://shadylanecellars.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8918287%2C-85.6624113&destination_place_id=ChIJ6U0Rd0cqHogRmteEgUrTn_o&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ6U0Rd0cqHogRmteEgUrTn_o",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "laid-back",
+  "rating": 4.7,
+  "phone": "+1 231-947-8865",
+  "specialties": [
+   "dry Riesling",
+   "dry whites"
+  ]
+ },
+ {
+  "id": "three-trees",
+  "name": "Three Trees Vineyard",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9030859,
+  "lng": -85.6549674,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "cabernet-franc",
+   "merlot"
+  ],
+  "dwellMinutes": 45,
+  "note": "Small estate-only producer with a quiet, pine-scented room. Limited lineup led by Cabernet Franc and Merlot, and open later than most.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://threetreesvineyard.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9030859%2C-85.6549674&destination_place_id=ChIJE-UzOcErHogRZopp3FaihzY&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJE-UzOcErHogRZopp3FaihzY",
+  "view": "vineyard",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "intimate",
+  "rating": 5.0,
+  "phone": "+1 231-492-0052",
+  "specialties": [
+   "Cabernet Franc",
+   "Merlot",
+   "estate-only"
+  ]
+ },
+ {
+  "id": "gilchrist-farm",
+  "name": "Gilchrist Farm Winery",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9785723,
+  "lng": -85.6498479,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "albarino",
+   "gruner"
+  ],
+  "dwellMinutes": 45,
+  "note": "Farm-to-table kitchen and winery in one. Rare-for-the-region Albarino and Gruner, a real lunch and dinner menu, and gluten-free friendly.",
+  "hours": {
+   "Monday": {
+    "closed": true
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Sunday": {
+    "closed": true
+   }
+  },
+  "openDays": [
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday"
+  ],
+  "needsHours": false,
+  "website": "https://gilchristfarmwinery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9785723%2C-85.6498479&destination_place_id=ChIJHXYJ3QUrS00RoNRNOLYbUg8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJHXYJ3QUrS00RoNRNOLYbUg8",
+  "view": "inland",
+  "food": "kitchen",
+  "dogFriendly": true,
+  "vibe": "farm-to-table",
+  "rating": 4.7,
+  "phone": "+1 231-916-3902",
+  "specialties": [
+   "Albarino",
+   "Gruner Veltliner",
+   "cool-climate blends"
+  ]
+ },
+ {
+  "id": "black-star-farms-suttons-bay",
+  "name": "Black Star Farms (Suttons Bay)",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9337885,
+  "lng": -85.6361776,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "spirits"
+  ],
+  "tags": [
+   "broad-lineup"
+  ],
+  "dwellMinutes": 45,
+  "note": "Flagship destination with an inn, bistro, distillery, and tasting room. Polished and family-friendly; can get busy.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://blackstarfarms.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9337885%2C-85.6361776&destination_place_id=ChIJS_2fe-cqS00ReAbMJtxYYWc&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJS_2fe-cqS00ReAbMJtxYYWc",
+  "view": "vineyard",
+  "food": "bistro",
+  "dogFriendly": null,
+  "vibe": "polished destination",
+  "rating": 4.4,
+  "phone": "+1 231-944-1270",
+  "specialties": [
+   "broad estate lineup",
+   "spirits"
+  ]
+ },
+ {
+  "id": "willow-winery",
+  "name": "Willow Winery & Vineyard",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9058333,
+  "lng": -85.6402778,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "dry-whites",
+   "pinot-noir"
+  ],
+  "dwellMinutes": 45,
+  "note": "Small, warm room under owners Tracy and Harry. Short but solid lineup leaning to dry Pinot Noir; strong on hospitality.",
+  "hours": {
+   "Monday": {
+    "closed": true
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "closed": true
+   },
+   "Thursday": {
+    "open": "13:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Saturday": {
+    "open": "11:30",
+    "close": "17:30"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "16:00"
+   }
+  },
+  "openDays": [
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9058333%2C-85.6402778&destination_place_id=ChIJ36FETI8qHogRbX_C5bzOQ8M&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ36FETI8qHogRbX_C5bzOQ8M",
+  "view": "vineyard",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "hospitality-forward",
+  "rating": 4.5,
+  "phone": "+1 231-271-4810",
+  "specialties": [
+   "Pinot Noir",
+   "dry whites"
+  ]
+ },
+ {
+  "id": "green-bird-organic",
+  "name": "Green Bird Organic Cellars & Farm",
+  "area": "leelanau",
+  "town": "Northport",
+  "lat": 45.1086203,
+  "lng": -85.6502459,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [],
+  "dwellMinutes": 45,
+  "note": "The region's only fully organic, off-the-beaten-path cellar. Quiet, with farm animals on site and dry, regenerative-farmed wines.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://greenbirdcellars.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.1086203%2C-85.6502459&destination_place_id=ChIJpayyNocmS00RBYfIkNy9Po0&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJpayyNocmS00RBYfIkNy9Po0",
+  "view": "inland",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "quiet",
+  "rating": 4.8,
+  "phone": "+1 231-386-5636",
+  "specialties": [
+   "dry organic whites",
+   "sweet wine",
+   "cider"
+  ]
+ },
+ {
+  "id": "mawby",
+  "name": "MAWBY Sparkling Wines",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9137481,
+  "lng": -85.6523013,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "sparkling"
+  ],
+  "dwellMinutes": 45,
+  "note": "The region's sparkling specialist and arguably its most famous label. Methode champenoise focus, no still reds; the bubbles benchmark for any loop.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://mawby.wine",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9137481%2C-85.6523013&destination_place_id=ChIJQ1I2j3cqHogRt2Ghhas1TCI&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJQ1I2j3cqHogRt2Ghhas1TCI",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "iconic",
+  "rating": 4.6,
+  "phone": "+1 231-271-3522",
+  "specialties": [
+   "sparkling (methode champenoise)",
+   "no still reds"
+  ]
+ },
+ {
+  "id": "good-harbor",
+  "name": "Good Harbor Vineyards",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 44.9830086,
+  "lng": -85.7739024,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "albarino",
+   "broad-lineup",
+   "pinot-noir"
+  ],
+  "dwellMinutes": 45,
+  "note": "Established estate a few minutes from Leland and Fishtown with a broad, easy lineup. Albarino and Pinot Noir blends stand out; heated patio.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://goodharbor.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9830086%2C-85.7739024&destination_place_id=ChIJSWydpxYyS00RFzBso-IreBs&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJSWydpxYyS00RFzBso-IreBs",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "welcoming",
+  "rating": 4.7,
+  "phone": "+1 231-256-7165",
+  "specialties": [
+   "Albarino",
+   "Pinot Noir blends",
+   "broad lineup",
+   "cider"
+  ]
+ },
+ {
+  "id": "ciccone",
+  "name": "Ciccone Vineyard & Winery",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9072267,
+  "lng": -85.6469759,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "dry-reds",
+   "gewurztraminer"
+  ],
+  "dwellMinutes": 45,
+  "note": "Hilltop vineyard and event barn with vineyard, bay, and rolling-hill views. Dry reds and Gewurztraminer. Founded by Madonna's father, Silvio Ciccone.",
+  "hours": {},
+  "openDays": [],
+  "needsHours": true,
+  "website": "https://cicconevineyard.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9072267%2C-85.6469759&destination_place_id=ChIJQ8c6OmMqHogRZnV38rTZODg&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJQ8c6OmMqHogRZnV38rTZODg",
+  "view": "bay",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "scenic",
+  "rating": 4.3,
+  "phone": "+1 231-271-5553",
+  "specialties": [
+   "dry reds",
+   "Gewurztraminer"
+  ]
+ },
+ {
+  "id": "french-valley",
+  "name": "French Valley",
+  "area": "leelanau",
+  "town": "Cedar",
+  "lat": 44.9260743,
+  "lng": -85.7509293,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [],
+  "dwellMinutes": 45,
+  "note": "Dressy-casual Cedar estate known for its raclette experience and vineyard picnics by golf cart. Sister to Bel Lago; a special-occasion stop.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://frenchvalley.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9260743%2C-85.7509293&destination_place_id=ChIJZcGFiHcpS00RoQF9OCHp60I&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJZcGFiHcpS00RoQF9OCHp60I",
+  "view": "vineyard",
+  "food": "raclette",
+  "dogFriendly": null,
+  "vibe": "dressy-casual",
+  "rating": 4.6,
+  "phone": "+1 231-228-2616",
+  "specialties": [
+   "refreshing whites",
+   "blends"
+  ]
+ },
+ {
+  "id": "aurora-cellars",
+  "name": "Aurora Cellars",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 45.015056,
+  "lng": -85.697492,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "broad-lineup"
+  ],
+  "dwellMinutes": 45,
+  "note": "Vineyard and wedding venue a touch off the main routes. Warm room and a broad, approachable lineup; quieter than the marquee stops.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://auroracellars.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.015056%2C-85.697492&destination_place_id=ChIJA1yqm-suS00RlBa9Of8DeP8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJA1yqm-suS00RlBa9Of8DeP8",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "relaxed",
+  "rating": 4.5,
+  "phone": "+1 231-994-3188",
+  "specialties": [
+   "broad lineup",
+   "reds and whites"
+  ]
+ },
+ {
+  "id": "black-star-farms-old-mission",
+  "name": "Black Star Farms Old Mission",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.796401,
+  "lng": -85.5683056,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "spirits"
+  ],
+  "tags": [
+   "pinot-noir"
+  ],
+  "dwellMinutes": 45,
+  "note": "Old Mission outpost of Black Star with wines, spirits, and cocktail flights. The first winery as you head up the peninsula; an easy opener.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://blackstarfarms.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.796401%2C-85.5683056&destination_place_id=ChIJceRNpPvSH4gRKhzETD_tQt0&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJceRNpPvSH4gRKhzETD_tQt0",
+  "view": "inland",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "easy in-and-out",
+  "rating": 4.3,
+  "phone": "+1 231-944-1300",
+  "specialties": [
+   "estate wines",
+   "spirits",
+   "Pinot Noir"
+  ]
+ },
+ {
+  "id": "hawthorne-vineyards",
+  "name": "Hawthorne Vineyards",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8263545,
+  "lng": -85.5610612,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "broad-lineup",
+   "pinot-gris"
+  ],
+  "dwellMinutes": 45,
+  "note": "Unpretentious room with the rare trick of views over both the East and West arms of the bay, plus a big deck. Solid across whites and reds.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://hawthornevineyards.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8263545%2C-85.5610612&destination_place_id=ChIJ77wBC3PTH4gRnKhROe31Irc&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ77wBC3PTH4gRnKhROe31Irc",
+  "view": "bay",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "unpretentious",
+  "rating": 4.5,
+  "phone": "+1 231-929-4206",
+  "specialties": [
+   "broad lineup",
+   "Pinot Grigio",
+   "whites and reds"
+  ]
+ },
+ {
+  "id": "tabone",
+  "name": "Tabone Vineyards",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.904691,
+  "lng": -85.5152729,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "gewurztraminer",
+   "riesling",
+   "rose",
+   "sparkling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Family-run favorite with a generous patio. Sparkling rose, dry bubbly Riesling, and Gewurztraminer; a warm, personal stop.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "closed": true
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://tabonevineyards.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.904691%2C-85.5152729&destination_place_id=ChIJ76eu3GLXH4gRreLBTPSS5n8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ76eu3GLXH4gRreLBTPSS5n8",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "family-run",
+  "rating": 4.6,
+  "phone": "+1 231-223-4101",
+  "specialties": [
+   "sparkling rose",
+   "dry bubbly Riesling",
+   "Gewurztraminer"
+  ]
+ },
+ {
+  "id": "peninsula-cellars",
+  "name": "Peninsula Cellars",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.854006,
+  "lng": -85.527215,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "cabernet-franc",
+   "gewurztraminer",
+   "riesling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Tasting room in a converted schoolhouse with playful school-themed labels (one wine is called Detention). Riesling and Gewurztraminer standouts.",
+  "hours": {
+   "Monday": {
+    "open": "10:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "10:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "10:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "10:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "10:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://peninsulacellars.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.854006%2C-85.527215&destination_place_id=ChIJ1YJXVR_UH4gR0UiRffiIaMw&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ1YJXVR_UH4gR0UiRffiIaMw",
+  "view": "inland",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "characterful",
+  "rating": 4.7,
+  "phone": "+1 231-933-9787",
+  "specialties": [
+   "Riesling",
+   "Gewurztraminer",
+   "Cabernet Franc"
+  ]
+ },
+ {
+  "id": "mari-vineyards",
+  "name": "Mari Vineyards",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8085397,
+  "lng": -85.5655841,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "italian-reds",
+   "nebbiolo"
+  ],
+  "dwellMinutes": 45,
+  "note": "Hilltop estate with underground wine caves and an Italian-leaning red program. Big, architectural, and view-forward over the East Bay.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://marivineyards.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8085397%2C-85.5655841&destination_place_id=ChIJNcXwygPTH4gRCM9tRdQeEc0&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJNcXwygPTH4gRCM9tRdQeEc0",
+  "view": "bay",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "grand",
+  "rating": 4.5,
+  "phone": "+1 231-938-6116",
+  "specialties": [
+   "Italian-style reds",
+   "Nebbiolo",
+   "bigger reds"
+  ]
+ },
+ {
+  "id": "chateau-grand-traverse",
+  "name": "Chateau Grand Traverse",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8649348,
+  "lng": -85.5198472,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "broad-lineup",
+   "riesling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Old Mission's founding estate and Michigan's Riesling pioneer. Large and lively, with live music on busy days; a natural anchor stop.",
+  "hours": {
+   "Monday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "10:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "10:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "10:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "10:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://cgtwines.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8649348%2C-85.5198472&destination_place_id=ChIJX1z3IZ3WH4gRFABKNQNThNI&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJX1z3IZ3WH4gRFABKNQNThNI",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": true,
+  "vibe": "lively",
+  "rating": 4.6,
+  "phone": "+1 231-938-6120",
+  "specialties": [
+   "Riesling",
+   "broad lineup"
+  ]
+ },
+ {
+  "id": "brys-estate",
+  "name": "Brys Estate Vineyard & Winery",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8866667,
+  "lng": -85.5097222,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "rose",
+   "sauvignon-blanc"
+  ],
+  "dwellMinutes": 45,
+  "note": "Polished estate paired with the Secret Garden lavender farm. Strong Sauvignon Blanc and rose, bay views, and seated tastings by reservation.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://brysestate.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8866667%2C-85.5097222&destination_place_id=ChIJ-8biVGXWH4gRFWNjXgkKD1A&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ-8biVGXWH4gRFWNjXgkKD1A",
+  "view": "bay",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "polished",
+  "rating": 4.6,
+  "phone": "+1 231-223-9303",
+  "specialties": [
+   "Sauvignon Blanc",
+   "rose"
+  ]
+ },
+ {
+  "id": "2-lads",
+  "name": "2 Lads Winery",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.9342419,
+  "lng": -85.4960448,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "cabernet-franc",
+   "pinot-noir",
+   "sparkling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Modern, architectural room near the tip with East Bay views. Known for Cabernet Franc, Pinot Noir, and sparkling; a frequent trip favorite.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://lads.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9342419%2C-85.4960448&destination_place_id=ChIJ1WCqixPTSk0R32GumC6DelI&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ1WCqixPTSk0R32GumC6DelI",
+  "view": "bay",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "modern",
+  "rating": 4.4,
+  "phone": "+1 231-223-7722",
+  "specialties": [
+   "Cabernet Franc",
+   "Pinot Noir",
+   "sparkling"
+  ]
+ },
+ {
+  "id": "chateau-chantal",
+  "name": "Chateau Chantal Winery and Inn",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.9195363,
+  "lng": -85.5020069,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "broad-lineup"
+  ],
+  "dwellMinutes": 45,
+  "note": "Hilltop inn and winery near the peninsula's high point with vineyard and bay views. Broad lineup and a B&B on site; central to the upper cluster.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "20:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://chateauchantal.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9195363%2C-85.5020069&destination_place_id=ChIJY5Cc60vTSk0R2VMNMeozAC4&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJY5Cc60vTSk0R2VMNMeozAC4",
+  "view": "bay",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "grand",
+  "rating": 4.5,
+  "phone": "+1 231-223-4110",
+  "specialties": [
+   "broad lineup",
+   "reds and whites"
+  ]
+ },
+ {
+  "id": "bowers-harbor",
+  "name": "Bowers Harbor Vineyards",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8932217,
+  "lng": -85.5178798,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "broad-lineup",
+   "dry-reds",
+   "riesling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Laid-back, family-feel estate with several outdoor spaces and a park next door for a walk. Vineyard rather than bay views; dog friendly.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://bowersharbor.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8932217%2C-85.5178798&destination_place_id=ChIJt5j2onTWH4gRqppuFhhRRkQ&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJt5j2onTWH4gRqppuFhhRRkQ",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": true,
+  "vibe": "family-feel",
+  "rating": 4.4,
+  "phone": "+1 231-223-7615",
+  "specialties": [
+   "broad lineup",
+   "dry reds",
+   "Riesling"
+  ]
+ },
+ {
+  "id": "bonobo",
+  "name": "Bonobo Winery",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8603845,
+  "lng": -85.5233635,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "broad-lineup",
+   "sparkling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Relaxed, view-forward room over the vineyard with strong sparkling and food. Open late, which makes it a good last stop of the day.",
+  "hours": {
+   "Monday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Wednesday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Thursday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://bonobowinery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8603845%2C-85.5233635&destination_place_id=ChIJr7V3OyHUH4gRvkaNk6yS1OQ&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJr7V3OyHUH4gRvkaNk6yS1OQ",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "relaxed",
+  "rating": 4.4,
+  "phone": "+1 231-282-9463",
+  "specialties": [
+   "sparkling",
+   "broad lineup"
+  ]
+ },
+ {
+  "id": "rove-estate",
+  "name": "Rove Winery at the Gallagher Estate",
+  "area": "leelanau",
+  "town": "Traverse City",
+  "lat": 44.7784171,
+  "lng": -85.7169866,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "cabernet-franc",
+   "merlot",
+   "pinot-gris"
+  ],
+  "dwellMinutes": 45,
+  "note": "Hilltop estate on the Leelanau trail's Grand Traverse Bay loop, on the ridgeline west of Traverse City. Family and dog friendly, open late, with a big outdoor tent; a natural stop to or from Sleeping Bear.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://roveestate.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7784171%2C-85.7169866&destination_place_id=ChIJme-U4CUuHogR-LFapWO2-3s&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJme-U4CUuHogR-LFapWO2-3s",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": true,
+  "vibe": "hilltop",
+  "rating": 4.7,
+  "phone": "+1 231-421-7001",
+  "specialties": [
+   "Cabernet Franc and Merlot",
+   "Pinot Grigio",
+   "cider"
+  ]
+ },
+ {
+  "id": "the-barrel-room",
+  "name": "The Barrel Room",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7564352,
+  "lng": -85.6462128,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [],
+  "dwellMinutes": 45,
+  "note": "Intimate, stone-walled barrel-room tasting experience on the south side of town. Small and reservation-style; better as an evening cap than a midday stop.",
+  "hours": {
+   "Monday": {
+    "open": "16:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "closed": true
+   },
+   "Thursday": {
+    "closed": true
+   },
+   "Friday": {
+    "open": "16:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "14:00",
+    "close": "20:00"
+   },
+   "Sunday": {
+    "closed": true
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Friday",
+   "Saturday"
+  ],
+  "needsHours": false,
+  "website": "https://barrel.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7564352%2C-85.6462128&destination_place_id=ChIJ6e0kFZ0zHogRZz96Shzujj8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ6e0kFZ0zHogRZz96Shzujj8",
+  "view": "indoor",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "intimate",
+  "rating": 4.7,
+  "phone": "+1 231-995-0500",
+  "specialties": [
+   "verify"
+  ]
+ },
+ {
+  "id": "suttons-bay-ciders",
+  "name": "Suttons Bay Ciders",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.905766,
+  "lng": -85.643616,
+  "category": "cidery",
+  "beverages": [
+   "cider"
+  ],
+  "tags": [],
+  "dwellMinutes": 40,
+  "note": "Hilltop cidery with one of the best West Bay views around, a wide cider range, wood-fired pizza, and a bonfire area. A nice non-wine change of pace.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://suttonsbayciders.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.905766%2C-85.643616&destination_place_id=ChIJWUEgjIgqHogRFuKp2NYzD9I&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJWUEgjIgqHogRFuKp2NYzD9I",
+  "view": "bay",
+  "food": "pizza",
+  "dogFriendly": true,
+  "vibe": "easygoing",
+  "rating": 4.8,
+  "phone": "+1 231-271-6000",
+  "specialties": [
+   "hard cider (dry to sweet)",
+   "specialty ciders"
+  ]
+ },
+ {
+  "id": "two-k-farms",
+  "name": "Two K Farms Cidery & Winery",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9239481,
+  "lng": -85.6295691,
+  "category": "cidery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [],
+  "dwellMinutes": 40,
+  "note": "Graft-to-glass estate cidery and winery with bay views. Dry ciders, heritage single-varieties, and apple wine; everything grown and made on site.",
+  "hours": {
+   "Monday": {
+    "closed": true
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://twokfarms.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9239481%2C-85.6295691&destination_place_id=ChIJxbiaOUwrS00R82ybwyNDx4o&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJxbiaOUwrS00R82ybwyNDx4o",
+  "view": "bay",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "estate",
+  "rating": 4.4,
+  "phone": "+1 231-866-4265",
+  "specialties": [
+   "dry ciders",
+   "heritage single-variety ciders",
+   "apple wine"
+  ]
+ },
+ {
+  "id": "left-foot-charley",
+  "name": "Left Foot Charley",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7562659,
+  "lng": -85.6452181,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "aromatic-whites",
+   "gewurztraminer",
+   "pinot-blanc",
+   "riesling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Urban winery and cidery in the Village at Grand Traverse Commons, sourcing Leelanau and Old Mission fruit. A stylish downtown anchor; phone shares a listing with The Barrel Room, so verify.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://leftfootcharley.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7562659%2C-85.6452181&destination_place_id=ChIJ45v-82IyHogRzZgwjOJRzeA&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ45v-82IyHogRzZgwjOJRzeA",
+  "view": "village",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "stylish urban",
+  "rating": 4.7,
+  "phone": "+1 231-995-0500",
+  "specialties": [
+   "aromatic whites",
+   "Riesling",
+   "Pinot Blanc",
+   "Gewurztraminer",
+   "hard cider"
+  ]
+ },
+ {
+  "id": "big-little-wines",
+  "name": "Big Little Wines",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9137401,
+  "lng": -85.652888,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "dessert-ice-wine",
+   "sauvignon-blanc"
+  ],
+  "dwellMinutes": 45,
+  "note": "Small-batch still-wine label co-located with MAWBY on Elm Valley Rd (shares the property and phone). Intimate room, attentive pours.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://biglittlewines.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9137401%2C-85.652888&destination_place_id=ChIJR603j3cqHogRGvpgq_R2NOM&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJR603j3cqHogRGvpgq_R2NOM",
+  "view": "vineyard",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "small and intimate",
+  "rating": 4.8,
+  "phone": "+1 231-271-3522",
+  "specialties": [
+   "small-batch still wines",
+   "Sauvignon Blanc",
+   "dessert wine"
+  ]
+ },
+ {
+  "id": "tandem-ciders",
+  "name": "Tandem Ciders",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 45.0113193,
+  "lng": -85.6597096,
+  "category": "cidery",
+  "beverages": [
+   "cider"
+  ],
+  "tags": [],
+  "dwellMinutes": 40,
+  "note": "Beloved small cidery in a quiet rural setting north of Suttons Bay. Generous flights, friendly bar, dry to sweet range.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://tandemciders.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.0113193%2C-85.6597096&destination_place_id=ChIJ31PQfzgpS00RxMmJCDuMC_g&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ31PQfzgpS00RxMmJCDuMC_g",
+  "view": "rural",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "humble and relaxed",
+  "rating": 4.8,
+  "phone": "+1 231-271-0050",
+  "specialties": [
+   "hard cider (dry to sweet)",
+   "Green Man",
+   "Smackintosh"
+  ]
+ },
+ {
+  "id": "northern-natural-cider-house",
+  "name": "Northern Natural Cider House",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7638195,
+  "lng": -85.6171264,
+  "category": "cidery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "riesling"
+  ],
+  "dwellMinutes": 40,
+  "note": "Downtown Front Street cider house and tasting room for the organic Northern Natural cidery and winery. Vegan-friendly kitchen; cider and wine flights.",
+  "hours": {},
+  "openDays": [],
+  "needsHours": true,
+  "website": "https://northernnaturalwinery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7638195%2C-85.6171264&destination_place_id=ChIJdUWiInpyHogRuV20a29lCqk&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJdUWiInpyHogRuV20a29lCqk",
+  "view": "downtown",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "calm and quiet",
+  "rating": 4.8,
+  "phone": "+1 231-889-0064",
+  "specialties": [
+   "organic hard cider",
+   "organic wines",
+   "dry Riesling"
+  ]
+ },
+ {
+  "id": "taproot-cider-house",
+  "name": "Taproot Cider House",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7639945,
+  "lng": -85.6180232,
+  "category": "cidery",
+  "beverages": [
+   "cider"
+  ],
+  "tags": [],
+  "dwellMinutes": 40,
+  "note": "Cider-focused downtown restaurant and bar with a deep rotating draft list. A pour house showcasing many regional ciders rather than an on-site producer.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://taproothouse.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7639945%2C-85.6180232&destination_place_id=ChIJG94iLaEyHogRAe_WAdrVTMw&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJG94iLaEyHogRAe_WAdrVTMw",
+  "view": "downtown",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "lively restaurant",
+  "rating": 4.6,
+  "phone": "+1 231-943-2500",
+  "specialties": [
+   "large rotating Michigan cider selection"
+  ]
+ },
+ {
+  "id": "nocturnal-bloom",
+  "name": "Nocturnal Bloom Brewing",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7349817,
+  "lng": -85.6249576,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "lager",
+   "pilsner"
+  ],
+  "dwellMinutes": 50,
+  "note": "Small, well-reviewed lager-leaning brewery on the south side with indoor and patio space; a strong newer contender.",
+  "hours": {
+   "Monday": {
+    "open": "14:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "14:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "14:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://nocturnalbloombrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7349817%2C-85.6249576&destination_place_id=ChIJD-9sMwAzHogRjbM1vw1yBxg&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJD-9sMwAzHogRjbM1vw1yBxg",
+  "view": "inland",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "cozy",
+  "rating": 4.9,
+  "phone": "+1 231-590-7446",
+  "specialties": [
+   "lagers",
+   "pilsners"
+  ]
+ },
+ {
+  "id": "tank-space-on-8th",
+  "name": "Tank Space on 8th",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7584406,
+  "lng": -85.5946101,
+  "category": "brewery",
+  "beverages": [
+   "cider",
+   "beer"
+  ],
+  "tags": [
+   "lager"
+  ],
+  "dwellMinutes": 50,
+  "note": "Earthen Ales' Eighth Street satellite taproom, with a smash-burger spot next door and Tandem cider on tap.",
+  "hours": {
+   "Monday": {
+    "open": "14:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "14:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "14:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "14:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7584406%2C-85.5946101&destination_place_id=ChIJ322D_KXNH4gRhPXCE-h4x0E&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ322D_KXNH4gRhPXCE-h4x0E",
+  "view": "inland",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "casual",
+  "rating": 4.9,
+  "phone": "+1 231-252-1500",
+  "specialties": [
+   "lagers",
+   "European styles"
+  ]
+ },
+ {
+  "id": "loco-boys",
+  "name": "Loco Boys Brewing Company",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.763814,
+  "lng": -85.6383426,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [],
+  "dwellMinutes": 50,
+  "note": "Brewery and Mexican kitchen just off the main drag on West Front; well-regarded food alongside the house beer.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "22:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://locoboysbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.763814%2C-85.6383426&destination_place_id=ChIJ3xaDpmczHogR1Hwe-fR58p4&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ3xaDpmczHogR1Hwe-fR58p4",
+  "view": "inland",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "lively",
+  "rating": 4.6,
+  "phone": "+1 231-252-2378",
+  "specialties": [
+   "house beers"
+  ]
+ },
+ {
+  "id": "silver-spruce",
+  "name": "Silver Spruce Brewing Company",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7598708,
+  "lng": -85.6140738,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "lager",
+   "pilsner",
+   "sour"
+  ],
+  "dwellMinutes": 50,
+  "note": "Spacious Eighth Street brewery from an Asheville-trained husband-and-wife team. Precise traditional styles; rotating food truck.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "22:30"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "22:30"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://silversprucebrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7598708%2C-85.6140738&destination_place_id=ChIJdYOb0HwzHogRPy9iKP8edWA&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJdYOb0HwzHogRPy9iKP8edWA",
+  "view": "inland",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "family-friendly",
+  "rating": 4.7,
+  "phone": "+1 231-252-3552",
+  "specialties": [
+   "lagers",
+   "pilsners",
+   "sours"
+  ]
+ },
+ {
+  "id": "right-brain",
+  "name": "Right Brain Brewery",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7494479,
+  "lng": -85.6195076,
+  "category": "brewery",
+  "beverages": [
+   "cider",
+   "beer",
+   "mead"
+  ],
+  "tags": [
+   "ale"
+  ],
+  "dwellMinutes": 50,
+  "note": "Renovated warehouse brewery with pinball, pizza, and 15 to 25 rotating taps, plus local wine, cider, and mead. Famously unusual beer names.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://rightbrainbrewery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7494479%2C-85.6195076&destination_place_id=ChIJsVjzsJ8yHogR8FwB7poG0mE&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJsVjzsJ8yHogR8FwB7poG0mE",
+  "view": "inland",
+  "food": "pizza",
+  "dogFriendly": null,
+  "vibe": "eclectic arcade",
+  "rating": 4.6,
+  "phone": "+1 231-944-1239",
+  "specialties": [
+   "rotating eclectic ales"
+  ]
+ },
+ {
+  "id": "brewery-terra-firma",
+  "name": "Brewery Terra Firma",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7150982,
+  "lng": -85.6349572,
+  "category": "brewery",
+  "beverages": [
+   "cider",
+   "beer"
+  ],
+  "tags": [
+   "ale",
+   "ipa",
+   "porter",
+   "wheat"
+  ],
+  "dwellMinutes": 50,
+  "note": "Michigan's first certified agricultural brewery, on a farm south of town with a bonfire patio. Sustainable methods, broad traditional range.",
+  "hours": {
+   "Monday": {
+    "open": "14:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "14:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "14:00",
+    "close": "20:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://breweryterrafirma.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7150982%2C-85.6349572&destination_place_id=ChIJeYp70Q0zHogR7wVqLdmchqo&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJeYp70Q0zHogR7wVqLdmchqo",
+  "view": "farm",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "farm taproom",
+  "rating": 4.7,
+  "phone": "+1 231-929-1600",
+  "specialties": [
+   "ales",
+   "IPA",
+   "porter",
+   "wheat"
+  ]
+ },
+ {
+  "id": "the-workshop",
+  "name": "The Workshop Brewing Company",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7652017,
+  "lng": -85.6260218,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale",
+   "ipa",
+   "porter"
+  ],
+  "dwellMinutes": 50,
+  "note": "Garland Street brewery with live music and a seasonal, locally sourced menu. Approachable, community feel.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "22:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://traversecityworkshop.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7652017%2C-85.6260218&destination_place_id=ChIJrWVdTp4yHogRZpk7zn-EC5I&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJrWVdTp4yHogRZpk7zn-EC5I",
+  "view": "inland",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "warm and musical",
+  "rating": 4.5,
+  "phone": "+1 231-421-8977",
+  "specialties": [
+   "ales",
+   "IPA",
+   "porter"
+  ]
+ },
+ {
+  "id": "north-peak",
+  "name": "North Peak Brewing Company",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7644035,
+  "lng": -85.6284723,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ipa",
+   "lager"
+  ],
+  "dwellMinutes": 50,
+  "note": "Downtown brewpub in a former candy factory with two floors and a full menu. A long-running TC fixture.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://northpeak.net",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7644035%2C-85.6284723&destination_place_id=ChIJC5gUJpwyHogRbO4iVIYk2HI&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJC5gUJpwyHogRbO4iVIYk2HI",
+  "view": "downtown",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "large brewpub",
+  "rating": 4.3,
+  "phone": "+1 231-941-7325",
+  "specialties": [
+   "Diabolical IPA",
+   "Siren amber",
+   "lagers"
+  ]
+ },
+ {
+  "id": "the-filling-station",
+  "name": "The Filling Station Microbrewery",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7581577,
+  "lng": -85.6096419,
+  "category": "brewery",
+  "beverages": [
+   "cider",
+   "beer"
+  ],
+  "tags": [
+   "ale"
+  ],
+  "dwellMinutes": 50,
+  "note": "Brewery in a restored railroad depot with wood-fired pizza and a greenhouse-like heated patio. Kids can watch the trains.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "closed": true
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "22:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://thefillingstationmicrobrewery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7581577%2C-85.6096419&destination_place_id=ChIJfZvpta8yHogRIYyDjvp2ueM&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJfZvpta8yHogRIYyDjvp2ueM",
+  "view": "rail depot",
+  "food": "pizza",
+  "dogFriendly": null,
+  "vibe": "family-friendly depot",
+  "rating": 4.7,
+  "phone": "+1 231-946-8168",
+  "specialties": [
+   "rotating ales",
+   "a couple hard ciders"
+  ]
+ },
+ {
+  "id": "mackinaw-brewing",
+  "name": "Mackinaw Brewing Company",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7643168,
+  "lng": -85.6212674,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale",
+   "lager"
+  ],
+  "dwellMinutes": 50,
+  "note": "Front Street brewpub open since 1997 with a full menu (the olive burger and French onion soup get named). Central and reliable.",
+  "hours": {},
+  "openDays": [],
+  "needsHours": true,
+  "website": "https://mackinawbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7643168%2C-85.6212674&destination_place_id=ChIJa_X3zqEyHogR8ZAB0o0qpXg&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJa_X3zqEyHogR8ZAB0o0qpXg",
+  "view": "downtown",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "downtown brewpub",
+  "rating": 4.2,
+  "phone": "+1 231-933-1100",
+  "specialties": [
+   "ale",
+   "lager",
+   "stout"
+  ]
+ },
+ {
+  "id": "rare-bird",
+  "name": "Rare Bird Brewpub",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7599068,
+  "lng": -85.6196475,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale"
+  ],
+  "dwellMinutes": 50,
+  "note": "Popular brewpub with roughly six house beers, a large guest-tap list, a full liquor bar, and a strong kitchen. A common first stop.",
+  "hours": {},
+  "openDays": [],
+  "needsHours": true,
+  "website": "https://rarebirdbrewpub.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7599068%2C-85.6196475&destination_place_id=ChIJ4aeUq6MyHogRdXhwsquA870&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ4aeUq6MyHogRdXhwsquA870",
+  "view": "inland",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "gastropub",
+  "rating": 4.5,
+  "phone": "+1 231-943-2053",
+  "specialties": [
+   "house ales",
+   "30+ Michigan taps",
+   "full bar"
+  ]
+ },
+ {
+  "id": "middlecoast",
+  "name": "MiddleCoast Brewing",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7632755,
+  "lng": -85.6168743,
+  "category": "brewery",
+  "beverages": [
+   "cider",
+   "beer"
+  ],
+  "tags": [
+   "ipa"
+  ],
+  "dwellMinutes": 50,
+  "note": "Brewery anchoring the State Street Market food hall, with games, coffee, and pub fare. Now occupies the former Brewery Ferment / Monkey Fist space.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://middlecoastbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7632755%2C-85.6168743&destination_place_id=ChIJk2kQx6YyHogRV69SQj2k_kE&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJk2kQx6YyHogRV69SQj2k_kE",
+  "view": "downtown",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "modern food-hall brewery",
+  "rating": 4.4,
+  "phone": "+1 231-943-1606",
+  "specialties": [
+   "Beach Please Blonde",
+   "All Day Vacay IPA",
+   "cider"
+  ]
+ },
+ {
+  "id": "earthen-ales",
+  "name": "Earthen Ales",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7551823,
+  "lng": -85.6456457,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale",
+   "ipa",
+   "lager",
+   "porter"
+  ],
+  "dwellMinutes": 50,
+  "note": "Hidden brewery under the water tower at the Village at Grand Traverse Commons, around the corner from Left Foot Charley. Relaxed and well-loved.",
+  "hours": {
+   "Monday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "13:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "13:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "13:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "13:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://earthenales.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7551823%2C-85.6456457&destination_place_id=ChIJ-4sgTGIyHogRWMDPDZA5yeE&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ-4sgTGIyHogRWMDPDZA5yeE",
+  "view": "village",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "tucked-away local",
+  "rating": 4.8,
+  "phone": "+1 231-252-4270",
+  "specialties": [
+   "ales",
+   "IPA",
+   "lager",
+   "porter"
+  ]
+ },
+ {
+  "id": "beggars-brewery",
+  "name": "Beggars Brewery",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.679345,
+  "lng": -85.66379,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale"
+  ],
+  "dwellMinutes": 50,
+  "note": "Small south-side brewery (Chums Corner area). Very limited live data in this snapshot, so confirm everything before relying on it.",
+  "hours": {},
+  "openDays": [],
+  "needsHours": true,
+  "website": "https://beggars.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.679345%2C-85.66379&destination_place_id=ChIJGz8X0ZIpHogRzWjXWnA9HpY&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJGz8X0ZIpHogRzWjXWnA9HpY",
+  "view": "inland",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "small",
+  "rating": 5.0,
+  "phone": null,
+  "specialties": [
+   "house ales"
+  ]
+ },
+ {
+  "id": "hop-lot",
+  "name": "Hop Lot Brewing Co. & Beer Garden",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 44.9683952,
+  "lng": -85.6477381,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale",
+   "lager"
+  ],
+  "dwellMinutes": 50,
+  "note": "Suttons Bay beer garden with fire pits, BBQ kitchen, live music, and winter igloos. The main brewery on the Leelanau side and family and dog friendly.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://hoplotbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9683952%2C-85.6477381&destination_place_id=ChIJNcPkirkrS00R0hL1qlVUsk8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJNcPkirkrS00R0hL1qlVUsk8",
+  "view": "garden",
+  "food": "kitchen",
+  "dogFriendly": true,
+  "vibe": "beer garden",
+  "rating": 4.6,
+  "phone": "+1 231-866-4445",
+  "specialties": [
+   "lagers",
+   "ales"
+  ]
+ },
+ {
+  "id": "lake-ann-brewing",
+  "name": "Lake Ann Brewing Company",
+  "area": "traverse-city",
+  "town": "Lake Ann",
+  "lat": 44.7243364,
+  "lng": -85.8429588,
+  "category": "brewery",
+  "beverages": [
+   "cider",
+   "beer"
+  ],
+  "tags": [
+   "ale"
+  ],
+  "dwellMinutes": 50,
+  "note": "Cozy village brewery west of TC with a lively summer patio, live music, and a semi-festival feel. Dogs and outside food welcome.",
+  "hours": {
+   "Monday": {
+    "open": "16:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Sunday": {
+    "closed": true
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday"
+  ],
+  "needsHours": false,
+  "website": "https://lakeannbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7243364%2C-85.8429588&destination_place_id=ChIJT8Mmro47HogR9hL-JAooiEc&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJT8Mmro47HogR9hL-JAooiEc",
+  "view": "village",
+  "food": null,
+  "dogFriendly": true,
+  "vibe": "backyard festival",
+  "rating": 4.8,
+  "phone": "+1 231-640-2327",
+  "specialties": [
+   "ales",
+   "ciders"
+  ]
+ },
+ {
+  "id": "stone-hound",
+  "name": "Stone Hound Brewing Company",
+  "area": "traverse-city",
+  "town": "Williamsburg",
+  "lat": 44.7643325,
+  "lng": -85.5055773,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale",
+   "sour"
+  ],
+  "dwellMinutes": 50,
+  "note": "Brewery east of TC right on the bike trail, with a rotating tap list and farm-raised smash burgers. Dog friendly, music stage.",
+  "hours": {
+   "Monday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Tuesday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Wednesday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Thursday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Friday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Sunday": {
+    "open": "10:00",
+    "close": "23:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://stonehoundbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7643325%2C-85.5055773&destination_place_id=ChIJZRZEsjLRH4gR8O7u7s2T8FU&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJZRZEsjLRH4gR8O7u7s2T8FU",
+  "view": "trailside",
+  "food": "kitchen",
+  "dogFriendly": true,
+  "vibe": "trailside",
+  "rating": 4.6,
+  "phone": "+1 231-421-5010",
+  "specialties": [
+   "rotating ales",
+   "sours"
+  ]
+ },
+ {
+  "id": "bravo-zulu",
+  "name": "Bravo Zulu Brewing",
+  "area": "traverse-city",
+  "town": "Williamsburg",
+  "lat": 44.774561,
+  "lng": -85.498418,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [],
+  "dwellMinutes": 50,
+  "note": "Military-themed brewery on US-31 in Williamsburg with about nine taps, a big open tasting room, and a pizza stand in the lot.",
+  "hours": {},
+  "openDays": [],
+  "needsHours": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.774561%2C-85.498418&destination_place_id=ChIJAzxUdcLRH4gRFkDEkVwM13U&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJAzxUdcLRH4gRFkDEkVwM13U",
+  "view": "inland",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "open and casual",
+  "rating": 3.9,
+  "phone": "+1 231-943-1459",
+  "specialties": [
+   "~9 house beers"
+  ]
+ },
+ {
+  "id": "shorts-elk-rapids",
+  "name": "Short's Brewing Pull Barn (Elk Rapids)",
+  "area": "traverse-city",
+  "town": "Elk Rapids",
+  "lat": 44.9035337,
+  "lng": -85.4069903,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ipa"
+  ],
+  "dwellMinutes": 50,
+  "note": "Short's production brewery and taproom in Elk Rapids (about 25 minutes northeast of TC), pouring beers you cannot get elsewhere. The flagship pub is in Bellaire.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "22:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://shortsbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9035337%2C-85.4069903&destination_place_id=ChIJv56EUXfYH4gRN3KM37EHJ78&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJv56EUXfYH4gRN3KM37EHJ78",
+  "view": "industrial",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "taproom",
+  "rating": 4.8,
+  "phone": "+1 231-498-2300",
+  "specialties": [
+   "Huma Lupa Licious IPA",
+   "Soft Parade",
+   "production-only beers"
+  ]
+ },
+ {
+  "id": "farm-club",
+  "name": "Farm Club: Restaurant, Farm Market & Brewery",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.8331931,
+  "lng": -85.6898661,
+  "category": "brewery",
+  "beverages": [
+   "cider",
+   "beer"
+  ],
+  "tags": [],
+  "dwellMinutes": 50,
+  "note": "Farm, market, restaurant, and brewery on Lake Leelanau Drive, on the route between TC and Leelanau. Clean, seasonal cooking and house beer and cider.",
+  "hours": {
+   "Monday": {
+    "closed": true
+   },
+   "Tuesday": {
+    "open": "08:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "08:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "08:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "08:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "08:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "08:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://farmclubtc.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8331931%2C-85.6898661&destination_place_id=ChIJx9w2ucApHogRDsNz7GdM83E&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJx9w2ucApHogRDsNz7GdM83E",
+  "view": "farm",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "farm-to-table",
+  "rating": 4.7,
+  "phone": "+1 231-252-3079",
+  "specialties": [
+   "house beer",
+   "cider"
+  ]
+ },
+ {
+  "id": "jolly-pumpkin",
+  "name": "Jolly Pumpkin Restaurant & Brewery",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8861334,
+  "lng": -85.5284273,
+  "category": "brewery",
+  "beverages": [
+   "beer",
+   "spirits"
+  ],
+  "tags": [
+   "ale",
+   "sour"
+  ],
+  "dwellMinutes": 50,
+  "note": "Artisan-ale brewery, distillery, and restaurant on Old Mission at Bowers Harbor, with wood-fired pizza and a beach below. The only brewery among the OM wineries.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://jollypumpkin.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8861334%2C-85.5284273&destination_place_id=ChIJF7Jk7trVH4gRqO6V2hLjPiE&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJF7Jk7trVH4gRqO6V2hLjPiE",
+  "view": "bay",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "rustic bayside",
+  "rating": 4.4,
+  "phone": "+1 231-223-4333",
+  "specialties": [
+   "sour and oak-aged artisan ales",
+   "wood-fired pizza"
+  ]
+ },
+ {
+  "id": "the-mitten-northport",
+  "name": "The Mitten Brewing Company (Northport)",
+  "area": "leelanau",
+  "town": "Northport",
+  "lat": 45.1298496,
+  "lng": -85.6167741,
+  "category": "brewery",
+  "beverages": [
+   "beer"
+  ],
+  "tags": [
+   "ale",
+   "ipa",
+   "pilsner"
+  ],
+  "dwellMinutes": 50,
+  "note": "Northport taproom of the Grand Rapids-based Mitten Brewing, with 14 taps, wood-fired pizza, and local wine and cider. The far-north Leelanau beer stop, dog friendly.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://mittenbrewing.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.1298496%2C-85.6167741&destination_place_id=ChIJxVhqQ9omS00RDDg3MQeYNew&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJxVhqQ9omS00RDDg3MQeYNew",
+  "view": "town",
+  "food": "pizza",
+  "dogFriendly": true,
+  "vibe": "easygoing",
+  "rating": 4.7,
+  "phone": "+1 231-386-1101",
+  "specialties": [
+   "14 taps",
+   "ales",
+   "IPA",
+   "pilsner"
+  ]
+ },
+ {
+  "id": "grand-traverse-distillery",
+  "name": "Grand Traverse Distillery",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.720391,
+  "lng": -85.5579668,
+  "category": "distillery",
+  "beverages": [
+   "spirits"
+  ],
+  "tags": [
+   "bourbon",
+   "rye",
+   "vodka",
+   "whiskey"
+  ],
+  "dwellMinutes": 45,
+  "note": "One of Michigan's oldest craft distilleries, with production tours and tastings. The downtown Front Street tasting room is a separate listing.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "17:30"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "17:30"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "17:30"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "17:30"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "16:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://grandtraversedistillery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.720391%2C-85.5579668&destination_place_id=ChIJz9mAg1bMH4gRJ7fIKWT6d68&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJz9mAg1bMH4gRJ7fIKWT6d68",
+  "view": "industrial",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "craft production",
+  "rating": 4.9,
+  "phone": "+1 231-947-8635",
+  "specialties": [
+   "whiskey",
+   "rye",
+   "bourbon",
+   "potato vodka"
+  ]
+ },
+ {
+  "id": "grand-traverse-distillery-downtown",
+  "name": "Grand Traverse Distillery Tasting Room (Downtown)",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7642485,
+  "lng": -85.6202769,
+  "category": "distillery",
+  "beverages": [
+   "spirits"
+  ],
+  "tags": [
+   "bourbon",
+   "rye",
+   "vodka",
+   "whiskey"
+  ],
+  "dwellMinutes": 45,
+  "note": "Downtown Front Street tasting room and retail shop for Grand Traverse Distillery. Walkable with the rest of the downtown cluster.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "20:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "20:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://grandtraversedistillery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7642485%2C-85.6202769&destination_place_id=ChIJ50_tAKEyHogRpsZPqBK44P8&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ50_tAKEyHogRpsZPqBK44P8",
+  "view": "downtown",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "downtown tasting room",
+  "rating": 4.5,
+  "phone": "+1 231-946-1259",
+  "specialties": [
+   "bourbon",
+   "rye",
+   "cherry whiskey",
+   "vodka",
+   "cocktails"
+  ]
+ },
+ {
+  "id": "tc-whiskey-stillhouse",
+  "name": "Traverse City Whiskey Co. - The Stillhouse",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7518653,
+  "lng": -85.6205541,
+  "category": "distillery",
+  "beverages": [
+   "spirits"
+  ],
+  "tags": [
+   "bourbon",
+   "rye",
+   "whiskey"
+  ],
+  "dwellMinutes": 45,
+  "note": "Tasting room and craft cocktail bar for TC Whiskey Co in the SoFo district, with production tours and a food truck. Cherry whiskey is the signature.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Sunday": {
+    "open": "10:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://tcwhiskey.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7518653%2C-85.6205541&destination_place_id=ChIJp-6TZ74yHogRh4CQm6Hxx1U&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJp-6TZ74yHogRh4CQm6Hxx1U",
+  "view": "SoFo district",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "cocktail bar and tasting",
+  "rating": 4.7,
+  "phone": "+1 231-922-8292",
+  "specialties": [
+   "bourbon",
+   "rye",
+   "cherry whiskey",
+   "cocktails"
+  ]
+ },
+ {
+  "id": "mammoth-distilling",
+  "name": "Mammoth Distilling Cocktail Lounge",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7639587,
+  "lng": -85.6167499,
+  "category": "distillery",
+  "beverages": [
+   "spirits"
+  ],
+  "tags": [
+   "bourbon",
+   "gin",
+   "vodka"
+  ],
+  "dwellMinutes": 45,
+  "note": "Downtown cocktail lounge and tasting room for Mammoth Distilling (based in Central Lake). The blend-your-own-bourbon experience is a highlight.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "24:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "24:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "22:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://mammothdistilling.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7639587%2C-85.6167499&destination_place_id=ChIJ6WI8UJ4yHogR2e42MYvqZic&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ6WI8UJ4yHogR2e42MYvqZic",
+  "view": "downtown",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "cocktail lounge",
+  "rating": 4.6,
+  "phone": "+1 231-626-6684",
+  "specialties": [
+   "bourbon",
+   "gin",
+   "vodka",
+   "blend-your-own-bourbon"
+  ]
+ },
+ {
+  "id": "old-mission-distilling",
+  "name": "Old Mission Distilling",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8884044,
+  "lng": -85.5164429,
+  "category": "distillery",
+  "beverages": [
+   "spirits"
+  ],
+  "tags": [],
+  "dwellMinutes": 45,
+  "note": "Distillery and cocktail lounge on Old Mission with a garden and pavilion. The natural spirits stop to fold into an Old Mission wine loop.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "23:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "23:00"
+   },
+   "Sunday": {
+    "open": "10:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://oldmissiondistilling.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8884044%2C-85.5164429&destination_place_id=ChIJJdh1oA_XH4gRMuQBPXzbJH0&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJJdh1oA_XH4gRMuQBPXzbJH0",
+  "view": "peninsula",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "cocktail lounge with garden",
+  "rating": 4.8,
+  "phone": "+1 231-224-6011",
+  "specialties": [
+   "craft spirits",
+   "cocktails"
+  ]
+ },
+ {
+  "id": "northern-latitudes",
+  "name": "Northern Latitudes Distillery",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 44.983222,
+  "lng": -85.7079837,
+  "category": "distillery",
+  "beverages": [
+   "spirits"
+  ],
+  "tags": [
+   "gin",
+   "rum",
+   "vodka"
+  ],
+  "dwellMinutes": 45,
+  "note": "Lake Leelanau's distillery, with four complimentary tastes, inventive cocktails (the horseradish-vodka dirty martini), and a kitchen. The spirits stop for a Leelanau loop.",
+  "hours": {
+   "Monday": {
+    "closed": true
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "19:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://northernlatitudesdistillery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.983222%2C-85.7079837&destination_place_id=ChIJpShwcTZ1HogRArkbhXY1M_o&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJpShwcTZ1HogRArkbhXY1M_o",
+  "view": "inland",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "relaxed",
+  "rating": 4.9,
+  "phone": "+1 231-256-2700",
+  "specialties": [
+   "horseradish vodka",
+   "gin",
+   "rum",
+   "cocktails"
+  ]
+ },
+ {
+  "id": "iron-fish",
+  "name": "Iron Fish Distillery",
+  "area": "outer",
+  "town": "Thompsonville",
+  "lat": 44.4993087,
+  "lng": -86.0148153,
+  "category": "distillery",
+  "beverages": [
+   "spirits"
+  ],
+  "tags": [
+   "bourbon",
+   "rye",
+   "whiskey"
+  ],
+  "dwellMinutes": 45,
+  "note": "Farm distillery in Thompsonville (Benzie County), about 45 minutes southwest of TC. A major destination with grain fields, a restaurant, and dog-friendly grounds, but outside a same-day TC loop radius.",
+  "hours": {
+   "Monday": {
+    "open": "15:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "closed": true
+   },
+   "Thursday": {
+    "open": "15:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "15:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "19:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://ironfishdistillery.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.4993087%2C-86.0148153&destination_place_id=ChIJhxpSiEpvHogR9z6buTgCCMI&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJhxpSiEpvHogR9z6buTgCCMI",
+  "view": "farm",
+  "food": "kitchen",
+  "dogFriendly": true,
+  "vibe": "destination farm distillery",
+  "rating": 4.8,
+  "phone": "+1 231-378-3474",
+  "specialties": [
+   "bourbon",
+   "whiskey",
+   "rye",
+   "wood-fired food"
+  ]
+ },
+ {
+  "id": "amoritas-vineyards",
+  "name": "Amoritas Vineyards",
+  "area": "leelanau",
+  "town": "Lake Leelanau",
+  "lat": 44.9813235,
+  "lng": -85.7193738,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [],
+  "dwellMinutes": 45,
+  "note": "Low-key Lake Leelanau winery with porch seating, an organic-leaning approach, and story-rich hosts. Seasonal pours like the blackberry basil get named often.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://amoritasvineyards.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9813235%2C-85.7193738&destination_place_id=ChIJR895ccwtS00RWYbBBscA2Wk&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJR895ccwtS00RWYbBBscA2Wk",
+  "view": "vineyard",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "low-key and welcoming",
+  "rating": 4.7,
+  "phone": "+1 231-994-2300",
+  "specialties": [
+   "cool-climate whites",
+   "seasonal fruit wines",
+   "organic-leaning"
+  ]
+ },
+ {
+  "id": "silver-leaf",
+  "name": "Silver Leaf Vineyard & Winery",
+  "area": "leelanau",
+  "town": "Suttons Bay",
+  "lat": 45.024645,
+  "lng": -85.6319787,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [],
+  "dwellMinutes": 45,
+  "note": "Off-the-beaten-path hilltop winery near Suttons Bay with a cabin-in-the-woods feel and sunset views. Small and personable; the sangria gets singled out.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "closed": true
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "17:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.024645%2C-85.6319787&destination_place_id=ChIJ-eBc1J4pS00RZreYZ1wBUe0&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ-eBc1J4pS00RZreYZ1wBUe0",
+  "view": "vineyard",
+  "food": null,
+  "dogFriendly": null,
+  "vibe": "cabin in the woods",
+  "rating": 4.3,
+  "phone": "+1 231-271-3111",
+  "specialties": [
+   "sangria",
+   "Pinot",
+   "cherry wine"
+  ]
+ },
+ {
+  "id": "brengman-family-wines",
+  "name": "Brengman Family Wines",
+  "area": "leelanau",
+  "town": "Traverse City",
+  "lat": 44.836502,
+  "lng": -85.6675232,
+  "category": "winery",
+  "beverages": [
+   "wine"
+  ],
+  "tags": [
+   "merlot"
+  ],
+  "dwellMinutes": 45,
+  "note": "Hillside estate west of TC (formerly Brengman Brothers at Crain Hill) on the Leelanau trail's Grand Traverse Bay loop. Pours by the glass rather than flights, with an acclaimed on-site restaurant, Cafe Exalt.",
+  "hours": {
+   "Monday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Tuesday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Wednesday": {
+    "open": "13:00",
+    "close": "20:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "20:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "20:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://brengmanfamilywines.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.836502%2C-85.6675232&destination_place_id=ChIJ-ci52QwsHogRq1un3K2WRxo&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ-ci52QwsHogRq1un3K2WRxo",
+  "view": "vineyard",
+  "food": "kitchen",
+  "dogFriendly": null,
+  "vibe": "elegant and warm",
+  "rating": 4.6,
+  "phone": "+1 231-421-5611",
+  "specialties": [
+   "estate wines",
+   "Merlot",
+   "wine by the glass"
+  ]
+ },
+ {
+  "id": "glen-arbor-wines",
+  "name": "Glen Arbor Wines",
+  "area": "leelanau",
+  "town": "Glen Arbor",
+  "lat": 44.8985468,
+  "lng": -85.9886132,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [
+   "chardonnay",
+   "rose",
+   "sparkling"
+  ],
+  "dwellMinutes": 45,
+  "note": "Homey, dog-friendly wine bar and shop in downtown Glen Arbor with its own local label, regional wines, and hard cider, plus firepits and a backyard. Confirm on-site production versus curated selection.",
+  "hours": {
+   "Monday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Tuesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Wednesday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Thursday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Friday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Saturday": {
+    "open": "12:00",
+    "close": "22:00"
+   },
+   "Sunday": {
+    "open": "12:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://glenarborwines.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8985468%2C-85.9886132&destination_place_id=ChIJqWIJVFweHogRC9Z2vLhDgQY&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJqWIJVFweHogRC9Z2vLhDgQY",
+  "view": "village",
+  "food": null,
+  "dogFriendly": true,
+  "vibe": "homey and dog-friendly",
+  "rating": 4.7,
+  "phone": "+1 231-835-2196",
+  "specialties": [
+   "local red, white, rose, sparkling",
+   "hard cider",
+   "Chardonnay"
+  ]
+ },
+ {
+  "id": "cherry-republic-winery",
+  "name": "Cherry Republic Winery (Glen Arbor)",
+  "area": "leelanau",
+  "town": "Glen Arbor",
+  "lat": 44.8961619,
+  "lng": -85.9890924,
+  "category": "winery",
+  "beverages": [
+   "wine",
+   "cider"
+  ],
+  "tags": [],
+  "dwellMinutes": 45,
+  "note": "The wine bar arm of Cherry Republic in Glen Arbor, pouring cherry-based wines and slushies. Distinct from the adjacent gift shop and the Cherry Public House restaurant.",
+  "hours": {
+   "Monday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Tuesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Wednesday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Thursday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Friday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Saturday": {
+    "open": "11:00",
+    "close": "18:00"
+   },
+   "Sunday": {
+    "open": "11:00",
+    "close": "18:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "website": "https://cherryrepublic.com",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8961619%2C-85.9890924&destination_place_id=ChIJucIJhgYfHogRQ9NgYLUhbWY&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJucIJhgYfHogRQ9NgYLUhbWY",
+  "view": "village",
+  "food": "snacks",
+  "dogFriendly": null,
+  "vibe": "fun and touristy",
+  "rating": 4.7,
+  "phone": "+1 800-206-6949",
+  "specialties": [
+   "cherry wines",
+   "wine slushies"
+  ]
+ }
+]

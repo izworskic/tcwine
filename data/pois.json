@@ -1,0 +1,1240 @@
+[
+ {
+  "id": "dune-climb",
+  "name": "Dune Climb",
+  "area": "leelanau",
+  "town": "Glen Arbor",
+  "lat": 44.8825,
+  "lng": -86.0425,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 75,
+  "note": "The big climb up the dune face, with Glen Lake behind you and Lake Michigan beyond the next ridge. All soft sand, so go barefoot.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": "NPS lakeshore pass",
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8825%2C-86.0425&travelmode=driving&destination_place_id=ChIJo83p_mEbHogRhUJV-HHxffM",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJo83p_mEbHogRhUJV-HHxffM"
+ },
+ {
+  "id": "pierce-stocking",
+  "name": "Pierce Stocking Scenic Drive",
+  "area": "leelanau",
+  "town": "Empire",
+  "lat": 44.8607,
+  "lng": -86.0508,
+  "kind": "scenic",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "scenic"
+  ],
+  "dwellMinutes": 60,
+  "note": "A 7-mile loop drive through the dunes with pull-offs, including the Lake Michigan Overlook high above the water.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": "NPS lakeshore pass",
+  "dogFriendly": false,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8607%2C-86.0508&travelmode=driving&destination_place_id=ChIJTw2roYAcHogRIl6mohzl0_s",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJTw2roYAcHogRIl6mohzl0_s"
+ },
+ {
+  "id": "empire-bluff",
+  "name": "Empire Bluff Trail",
+  "area": "leelanau",
+  "town": "Empire",
+  "lat": 44.7992,
+  "lng": -86.0585,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 60,
+  "note": "A 1.5-mile round trip through beech and maple to a bluff over Lake Michigan and the Manitou Islands.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": "NPS lakeshore pass",
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7992%2C-86.0585&travelmode=driving&destination_place_id=ChIJ8apeMJMaHogRiSn7T9v8Dsw",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ8apeMJMaHogRiSn7T9v8Dsw"
+ },
+ {
+  "id": "pyramid-point",
+  "name": "Pyramid Point Trail",
+  "area": "leelanau",
+  "town": "Glen Arbor",
+  "lat": 44.9623,
+  "lng": -85.9298,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 75,
+  "note": "A wooded climb to a high overlook above Good Harbor Bay, North Manitou on the horizon.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": "NPS lakeshore pass",
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9623%2C-85.9298&travelmode=driving&destination_place_id=ChIJ33fRMYFKS00RKeBMe9baSjU",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ33fRMYFKS00RKeBMe9baSjU"
+ },
+ {
+  "id": "glen-haven",
+  "name": "Glen Haven Historic Village",
+  "area": "leelanau",
+  "town": "Glen Arbor",
+  "lat": 44.903,
+  "lng": -86.027,
+  "kind": "town",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "landmark"
+  ],
+  "dwellMinutes": 40,
+  "note": "A restored Lake Michigan company town, with the cannery boathouse and an old general store on the shore.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.903%2C-86.027&travelmode=driving&destination_place_id=ChIJK1S4V88dHogR1ITB0MDrAlA",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJK1S4V88dHogR1ITB0MDrAlA"
+ },
+ {
+  "id": "fishtown",
+  "name": "Fishtown",
+  "area": "leelanau",
+  "town": "Leland",
+  "lat": 45.0246,
+  "lng": -85.7596,
+  "kind": "town",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "landmark"
+  ],
+  "dwellMinutes": 45,
+  "note": "Weathered fishing shanties on the Leland River, smoked whitefish, and the docks where the boats still tie up.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.0246%2C-85.7596&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fishtown%20Leland%20MI"
+ },
+ {
+  "id": "vans-beach",
+  "name": "Van's Beach",
+  "area": "leelanau",
+  "town": "Leland",
+  "lat": 45.0223,
+  "lng": -85.7625,
+  "kind": "beach",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "beach"
+  ],
+  "dwellMinutes": 60,
+  "note": "A clear, easy Lake Michigan beach a short walk from Fishtown, good for a swim or a sunset.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.0223%2C-85.7625&travelmode=driving&destination_place_id=ChIJsca6LsUxS00Rdwv0NVmsKGQ",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJsca6LsUxS00Rdwv0NVmsKGQ"
+ },
+ {
+  "id": "grand-traverse-lighthouse",
+  "name": "Grand Traverse Lighthouse",
+  "area": "leelanau",
+  "town": "Northport",
+  "lat": 45.2102,
+  "lng": -85.55,
+  "kind": "lighthouse",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "lighthouse"
+  ],
+  "dwellMinutes": 40,
+  "note": "An 1858 light at the tip of the peninsula inside Leelanau State Park, with a rocky shore to wander.",
+  "hours": {
+   "Monday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Tuesday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Wednesday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Thursday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Friday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "15:00"
+   },
+   "Sunday": {
+    "open": "10:00",
+    "close": "15:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": "State park pass + museum fee",
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.2102%2C-85.55&travelmode=driving&destination_place_id=ChIJadGkEOXfSk0RmlJnLlSrGGE",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJadGkEOXfSk0RmlJnLlSrGGE"
+ },
+ {
+  "id": "peterson-park",
+  "name": "Peterson Park",
+  "area": "leelanau",
+  "town": "Northport",
+  "lat": 45.1539,
+  "lng": -85.6467,
+  "kind": "scenic",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "scenic"
+  ],
+  "dwellMinutes": 25,
+  "note": "A bluff-top county park with a long Lake Michigan view and a steep stair down to a stone beach.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.1539%2C-85.6467&travelmode=driving&destination_place_id=ChIJw-vE9FghS00Rz6EmrqZ7CMk",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJw-vE9FghS00Rz6EmrqZ7CMk"
+ },
+ {
+  "id": "good-harbor-beach",
+  "name": "Good Harbor Bay Beach",
+  "area": "leelanau",
+  "town": "Cleveland Township",
+  "lat": 44.9476,
+  "lng": -85.8114,
+  "kind": "beach",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "beach"
+  ],
+  "dwellMinutes": 60,
+  "note": "A quiet, wide stretch of sand in the national lakeshore, with room to walk and dunes behind.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": "NPS lakeshore pass",
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9476%2C-85.8114&travelmode=driving&destination_place_id=ChIJU3L97RszS00RVBqcTCme56E",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJU3L97RszS00RVBqcTCme56E"
+ },
+ {
+  "id": "whaleback",
+  "name": "Whaleback Natural Area",
+  "area": "leelanau",
+  "town": "Leland",
+  "lat": 45.006,
+  "lng": -85.7699,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 60,
+  "note": "A short switchback climb up a forested headland to a platform over Lake Michigan.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.006%2C-85.7699&travelmode=driving&destination_place_id=ChIJJzy-Ke4xS00RKuUL80CmNos",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJJzy-Ke4xS00RKuUL80CmNos"
+ },
+ {
+  "id": "clay-cliffs",
+  "name": "Clay Cliffs Natural Area",
+  "area": "leelanau",
+  "town": "Leland",
+  "lat": 45.0511,
+  "lng": -85.7356,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 45,
+  "note": "An easy mile through woods and meadow to the Manitou overlook above the lake.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=45.0511%2C-85.7356&travelmode=driving&destination_place_id=ChIJFR9dkcIvS00RvZXdXdQHvcg",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJFR9dkcIvS00RvZXdXdQHvcg"
+ },
+ {
+  "id": "mission-point-lighthouse",
+  "name": "Mission Point Lighthouse",
+  "area": "old-mission",
+  "town": "Old Mission",
+  "lat": 44.9913,
+  "lng": -85.4795,
+  "kind": "lighthouse",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "lighthouse"
+  ],
+  "dwellMinutes": 40,
+  "note": "The little light at the tip of Old Mission, almost exactly on the 45th parallel, with trails and a shallow swimming beach.",
+  "hours": {
+   "Monday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Tuesday": {
+    "closed": true
+   },
+   "Wednesday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Thursday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Friday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Saturday": {
+    "open": "10:00",
+    "close": "17:00"
+   },
+   "Sunday": {
+    "open": "10:00",
+    "close": "17:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": "Grounds free, tower fee",
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9913%2C-85.4795&travelmode=driving&destination_place_id=ChIJ5-IZZ2TRSk0RIAnntM6gUAs",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ5-IZZ2TRSk0RIAnntM6gUAs"
+ },
+ {
+  "id": "old-mission-point-park",
+  "name": "Old Mission Point State Park",
+  "area": "old-mission",
+  "town": "Old Mission",
+  "lat": 44.9798,
+  "lng": -85.4905,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 60,
+  "note": "Shoreline and woodland trails at the peninsula's tip, easy to moderate, with bay views.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9798%2C-85.4905&travelmode=driving&destination_place_id=ChIJPYADF-fTSk0RV5rc2iNJtzA",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJPYADF-fTSk0RV5rc2iNJtzA"
+ },
+ {
+  "id": "haserot-beach",
+  "name": "Haserot Beach",
+  "area": "old-mission",
+  "town": "Old Mission",
+  "lat": 44.9616,
+  "lng": -85.4852,
+  "kind": "beach",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "beach"
+  ],
+  "dwellMinutes": 60,
+  "note": "A small, calm, sandy bay beach tucked among the orchards and vineyards near the tip.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.9616%2C-85.4852&travelmode=driving&destination_place_id=ChIJv0fj6LvTSk0RekrgUwweE8g",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJv0fj6LvTSk0RekrgUwweE8g"
+ },
+ {
+  "id": "bowers-harbor-park",
+  "name": "Bowers Harbor Park",
+  "area": "old-mission",
+  "town": "Traverse City",
+  "lat": 44.8938,
+  "lng": -85.5204,
+  "kind": "town",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "landmark"
+  ],
+  "dwellMinutes": 40,
+  "note": "A shaded bayside park with a walking path and a quiet stretch of Bowers Harbor shore.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.8938%2C-85.5204&travelmode=driving&destination_place_id=ChIJt-dbWnXWH4gREikCwpSfw1k",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJt-dbWnXWH4gREikCwpSfw1k"
+ },
+ {
+  "id": "clinch-park",
+  "name": "Clinch Park",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7658,
+  "lng": -85.6215,
+  "kind": "beach",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "beach"
+  ],
+  "dwellMinutes": 60,
+  "note": "Traverse City's downtown beach on the bay, with a pier, a marina, and a tunnel under the parkway to town.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": false,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7658%2C-85.6215&travelmode=driving&destination_place_id=ChIJv4nPjKAyHogRLoDqaLd_X7w",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJv4nPjKAyHogRLoDqaLd_X7w"
+ },
+ {
+  "id": "boardman-lake-loop",
+  "name": "Boardman Lake Loop Trail",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7532,
+  "lng": -85.6172,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 60,
+  "note": "A flat, paved loop around Boardman Lake, easy walking or biking right in town.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7532%2C-85.6172&travelmode=driving",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Boardman%20Lake%20Loop%20Trail%20Traverse%20City%20MI"
+ },
+ {
+  "id": "hickory-hills",
+  "name": "Hickory Hills",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7682,
+  "lng": -85.6606,
+  "kind": "hike",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "hike"
+  ],
+  "dwellMinutes": 60,
+  "note": "Wooded trails and a disc golf course just west of downtown, a quick way to stretch your legs.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": true,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7682%2C-85.6606&travelmode=driving&destination_place_id=ChIJf3y4nqEyHogRLwX_bEJi_F8",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJf3y4nqEyHogRLwX_bEJi_F8"
+ },
+ {
+  "id": "gt-commons",
+  "name": "The Village at Grand Traverse Commons",
+  "area": "traverse-city",
+  "town": "Traverse City",
+  "lat": 44.7564,
+  "lng": -85.6433,
+  "kind": "town",
+  "category": "sight",
+  "isPoi": true,
+  "beverages": [],
+  "tags": [
+   "landmark"
+  ],
+  "dwellMinutes": 60,
+  "note": "The restored former state hospital, now shops and cafes in grand brick halls, with grounds to stroll.",
+  "hours": {
+   "Monday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Tuesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Wednesday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Thursday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Friday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Saturday": {
+    "open": "07:00",
+    "close": "21:00"
+   },
+   "Sunday": {
+    "open": "07:00",
+    "close": "21:00"
+   }
+  },
+  "openDays": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "needsHours": false,
+  "fee": null,
+  "dogFriendly": false,
+  "website": null,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=44.7564%2C-85.6433&travelmode=driving&destination_place_id=ChIJX9fsMIgyHogRSzdfgs8oqAQ",
+  "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJX9fsMIgyHogRSzdfgs8oqAQ"
+ }
+]
