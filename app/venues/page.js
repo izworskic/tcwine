@@ -15,7 +15,7 @@ export const metadata = {
 export default function VenuesPage() {
   const itemList = buildVenueItemList(venues);
   return (
-    <main
+    <main className="tc-page"
       style={{
         maxWidth: 860,
         margin: "0 auto",

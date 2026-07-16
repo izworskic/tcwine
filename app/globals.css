@@ -238,3 +238,17 @@ select,input[type=date],input[type=time],input[type=number]{
 .starter-title{font-family:"Fraunces",Georgia,serif; font-size:1.08rem; font-weight:600; color:var(--ink)}
 .starter-meta{font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--bay)}
 .starter-blurb{font-size:.85rem; color:var(--ink-soft); line-height:1.45; margin-top:3px}
+
+
+/* ---- content pages (restored guides) ---- */
+body:has(main.tc-page){display:block;height:auto;overflow:auto}
+.planner-shell{height:100vh;display:flex;flex-direction:column}
+main.tc-page{max-width:880px;margin:0 auto;padding:28px 20px 90px;line-height:1.65;font-size:1.02rem}
+main.tc-page h1{font-size:1.7rem;margin:6px 0 14px}
+main.tc-page h2{font-size:1.28rem;margin:30px 0 10px}
+main.tc-page h3{font-size:1.06rem;margin:20px 0 8px}
+main.tc-page ul,main.tc-page ol{padding-left:22px}
+main.tc-page li{margin:7px 0}
+main.tc-page .faq dt{font-weight:600;margin-top:14px}
+main.tc-page .faq dd{margin:4px 0 0}
+main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #ddd;font-size:.95rem}
