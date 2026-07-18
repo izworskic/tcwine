@@ -7,9 +7,29 @@ const counts = venues.reduce((acc, v) => {
   return acc;
 }, {});
 
+const BASE = "https://tcwine.chrisizworski.com";
+const SOCIAL_IMAGE = `${BASE}/opengraph-image`;
+const TITLE = `Traverse City Tasting Room Hours: ${venues.length} Verified Venues`;
+const DESCRIPTION = `Current hours for ${venues.length} Traverse City tasting rooms across Leelanau and Old Mission: ${counts.winery} wineries, ${counts.brewery} breweries, ${counts.distillery} distilleries and ${counts.cidery} cideries.`;
+
 export const metadata = {
-  title: `Traverse City Tasting Room Hours: All ${venues.length} Wineries, Breweries, Distilleries and Cideries (Verified ${HOURS_VERIFIED})`,
-  description: `Current hours for all ${venues.length} tasting rooms across the Leelanau and Old Mission peninsulas and Traverse City: ${counts.winery} wineries, ${counts.brewery} breweries, ${counts.distillery} distilleries and ${counts.cidery} cideries, with suggested visit times. Verified ${HOURS_VERIFIED}.`,
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/venues" },
+  openGraph: {
+    type: "website",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${BASE}/venues`,
+    siteName: "Traverse City Wine Country Planner",
+    images: [{ url: SOCIAL_IMAGE, width: 1200, height: 630, alt: "Traverse City Wine Country tasting-loop planner" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [SOCIAL_IMAGE],
+  },
 };
 
 export default function VenuesPage() {
