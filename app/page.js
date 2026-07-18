@@ -49,6 +49,11 @@ export const metadata = {
     url: BASE,
     siteName: "Traverse City Wine Country Planner",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Traverse City Wine Country: Plan a Tasting Loop",
+    description: "Free tasting-day planner covering " + T + " verified wineries, breweries, distilleries, and cideries, routed and timed to real hours.",
+  },
 };
 
 const AREAS = [
