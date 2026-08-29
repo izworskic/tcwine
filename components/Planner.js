@@ -558,7 +558,7 @@ export default function Planner({
   return (
     <>
       <header className={embedded ? "planner-head embedded" : "planner-head"}>
-        {embedded ? <h2>{title}</h2> : <h1>{title}</h1>}
+        <h2>{title}</h2>
         <p>{description}</p>
         {!embedded && (
           <div className="map-proof" aria-label="Map coverage">
