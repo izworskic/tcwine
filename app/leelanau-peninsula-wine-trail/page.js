@@ -82,9 +82,9 @@ export default function Page() {
       <p>
         {"Staying near the village? The "}
         <Link href="/suttons-bay-tasting-rooms">Suttons Bay tasting rooms</Link>
-        {" guide covers real distances and the walkable rooms, and the "}
+        {" guide covers real distances and the walkable rooms. You can also "}
         <Link href="/compare-wineries">compare wineries side by side</Link>
-        {", and the "}<Link href="/fall-color-wine-tour">fall color wine tour</Link>
+        {" or use the "}<Link href="/fall-color-wine-tour">fall color wine tour</Link>
         {" covers the M-22 shore drive at peak."}
       </p>
       <VenueHours title="Leelanau Peninsula winery hours" areas={["leelanau"]} categories={["winery"]} />
