@@ -482,11 +482,15 @@ export default function Planner({
       }
       const hrs = extra || (v.needsHours ? "Hours vary, call ahead" : (w?`Open today, closes ${pretty(w.close)}`:"Closed today"));
       const tags = v.tags.slice(0,5).map((t)=>`<span class="ptag ${state.styles.has(t)?'match':''}">${prettyTag(t)}</span>`).join("");
+      const trail = v.officialTrail ? `<span class="pop-trail">Current ${v.officialTrail.name} member</span>` : "";
+      const guide = v.category==="winery" ? `<a class="pop-guide" href="/winery/${v.id}">Full winery guide</a>` : "";
       return `<div class="pop"><strong>${v.name}</strong>
         <span class="pop-sub">${v.town} · ${v.beverages.map((b)=>`<span class="bev bev-${b}">${BEV_LABEL[b]}</span>`).join("")}</span>
+        ${trail}
         <span class="pop-hrs">${hrs}</span>
         ${tags?`<span class="pop-tags">${tags}</span>`:""}
-        <span class="pop-note">${v.note}</span>${btn}</div>`;
+        <span class="pop-note">${v.note}</span>
+        ${guide}${btn}</div>`;
     }
     function ringMarker(v, color){
       const m=L.circleMarker([v.lat,v.lng],{radius:8,color:color,weight:2.5,fillColor:"#fff",fillOpacity:.95});
@@ -572,11 +576,12 @@ export default function Planner({
       }
       const day=dayName(state.date), w=windowFor(v,day,state.date);
       const hrs = v.needsHours ? "call ahead" : `closes ${pretty(w.close)}`;
+      const trailTag = v.officialTrail ? '<span class="tag official">Official trail</span>' : "";
       const tags = v.tags.map((t)=>`<span class="tag ${state.styles.has(t)?'match':''}">${prettyTag(t)}</span>`).slice(0,4).join("");
       return `<div class="cand ${sel?'sel':''}" data-toggle="${v.id}"><span class="box">${sel?"✓":""}</span>
         <span class="cand-body"><span class="cand-name">${v.name}</span>
         <span class="cand-sub">${v.town} · ${v.beverages.map((b)=>`<span class="bev bev-${b}">${BEV_LABEL[b]}</span>`).join("")} · ${hrs}</span>
-        <span class="cand-tags">${tags}</span></span></div>`;
+        <span class="cand-tags">${trailTag}${tags}</span></span></div>`;
     }
     function renderChoose(){
       const plan = document.getElementById("plan");
