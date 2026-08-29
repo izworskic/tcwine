@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Traverse City Wine Country tasting-loop planner";
+export const alt = "Traverse City winery map with 40 wineries and route planner";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -21,14 +21,14 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ display: "flex", fontSize: 26, letterSpacing: 4, textTransform: "uppercase", color: "#f3d9b1" }}>
-          Northern Michigan
+          Northern Michigan · built by Chris Izworski
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <div style={{ display: "flex", maxWidth: 1000, fontSize: 72, fontWeight: 700, lineHeight: 1.02 }}>
-            Traverse City Wine Country
+            Traverse City Winery Map
           </div>
           <div style={{ display: "flex", maxWidth: 940, fontSize: 34, lineHeight: 1.25, color: "#fff2df" }}>
-            Plan a tasting loop around verified hours and real drive times.
+            40 wineries · Old Mission + Leelanau · real-road route planner
           </div>
         </div>
         <div style={{ display: "flex", fontSize: 25, color: "#f3d9b1" }}>
