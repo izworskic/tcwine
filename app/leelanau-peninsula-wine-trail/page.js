@@ -40,7 +40,7 @@ export default function Page() {
       </p>
       <PlannerMount
         embedded
-        preset={{ area: "leelanau", beverages: ["wine"], origin: "Suttons Bay" }}
+        preset={{ area: "leelanau", beverages: ["wine"], origin: "Suttons Bay", analyticsContext: "leelanau_map" }}
         title="Leelanau Peninsula winery map"
         description={"Showing " + N + " wineries first across Suttons Bay, Lake Leelanau, Leland, Omena, Northport, and the western peninsula."}
       />
