@@ -1,5 +1,8 @@
 import Link from "next/link";
 import venues from "@/data/venues.json";
+import PlannerMount from "@/components/PlannerMount";
+import RegionalPhoto from "@/components/RegionalPhoto";
+import AuthorNote from "@/components/AuthorNote";
 
 const SEASON_SPAN = "Late summer through fall is the classic window, when the weather is warm, the harvest is underway, and the color comes in. Summer is the busiest and liveliest stretch. Spring and early winter are quieter, with some rooms on reduced hours, which the planner accounts for when it checks each place against your date.";
 const byRating = (a, b) => (b.rating || 0) - (a.rating || 0);
@@ -9,9 +12,9 @@ const inlandPicks = venues.filter((v) => ["Lake Leelanau", "Cedar", "Maple City"
 const viewRooms = venues.filter((v) => /bay|view|overlook/i.test(v.note || ""));
 
 export const metadata = {
-  title: "Fall Color Wine Tour: Traverse City Peak Timing and the Three Drives",
+  title: "Traverse City Fall Color Winery Map: 3 Scenic Wine Routes",
   description:
-    "When the color peaks in Traverse City wine country, the three drives that carry it best, and the tasting rooms whose own notes earn a bay or vineyard view.",
+    "Traverse City fall color winery map with Old Mission, M-22 Leelanau, and inland wine routes, plus view-forward wineries and a routed day planner.",
   alternates: { canonical: "/fall-color-wine-tour" },
 };
 
@@ -33,7 +36,18 @@ const DRIVES = [
 export default function Page() {
   return (
     <main className="tc-page">
-      <h1>Fall Color Wine Tour</h1>
+      <h1>Traverse City Fall Color Winery Map</h1>
+      <p className="search-lede">
+        Pair peak-color driving with wineries that actually fit the day. The three useful fall routes are Old Mission&apos;s Center Road,
+        the M-22 Leelanau shore, and the inland Lake Leelanau cut.
+      </p>
+      <PlannerMount
+        embedded
+        preset={{ beverages: ["wine"], poiKinds: ["scenic"], origin: "Traverse City", analyticsContext: "fall_color_map" }}
+        title="Fall color winery map"
+        description="Wine is on, scenic stops are on, and the map is ready to turn a fall-color drive into a realistic tasting loop."
+      />
+      <RegionalPhoto kind="chateau" />
       <p>{"Color in the Grand Traverse region typically peaks from late September into mid October, with the exact week shifting year to year. Harvest runs in the same window, which is why fall is the classic time to do this."}</p>
       <p>{SEASON_SPAN}</p>
       <h2>The three drives</h2>
@@ -52,6 +66,7 @@ export default function Page() {
         <Link href="/venues">verified hours</Link>
         {" before you set out; fall hours shift."}
       </p>
+      <AuthorNote context="Traverse City fall-color wine planning" />
       <nav className="morelinks">{"More guides: "}<Link href="/">Planner home</Link>{" \u00b7 "}<Link href="/venues">All tasting room hours</Link>{" \u00b7 "}<Link href="/old-mission-peninsula-wineries">Old Mission wineries</Link>{" \u00b7 "}<Link href="/leelanau-peninsula-wine-trail">Leelanau wine trail</Link>{" \u00b7 "}<Link href="/one-day-itineraries">One-day itineraries</Link></nav>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(CRUMBS) }} />
     </main>

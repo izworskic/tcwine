@@ -6,8 +6,14 @@ import venuesData from "@/data/venues.json";
 import poisData from "@/data/pois.json";
 import originsData from "@/data/origins.json";
 import shuttleData from "@/data/shuttle.json";
+import { trackWineEvent } from "@/lib/wine-analytics";
 
-export default function Planner() {
+export default function Planner({
+  preset = {},
+  embedded = false,
+  title = "Traverse City Winery Map",
+  description = "Map 40 wineries across Old Mission and Leelanau, choose the stops you want, then route the day around real roads and tasting-room hours.",
+}) {
   useEffect(() => {
     const VENUES = venuesData;
     const POIS = poisData;
@@ -39,12 +45,22 @@ export default function Planner() {
     const fmtDur = (m) => { const h=Math.floor(m/60),mm=m%60; return h?`${h}h ${mm}m`:`${mm}m`; };
     const prettyTag = (t) => t.replace(/-/g," ").replace(/\b\w/g,(c)=>c.toUpperCase());
 
+    const analyticsContext =
+      typeof preset.analyticsContext === "string" && preset.analyticsContext.length <= 40
+        ? preset.analyticsContext
+        : embedded
+          ? "embedded_map"
+          : "winery_map_home";
     const state = {
-      beverages:new Set(),
-      styles:new Set(), poiKinds:new Set(), area:"any", origin:"Traverse City",
+      beverages:new Set(Array.isArray(preset.beverages) ? preset.beverages : ["wine"]),
+      styles:new Set(Array.isArray(preset.styles) ? preset.styles : []),
+      poiKinds:new Set(Array.isArray(preset.poiKinds) ? preset.poiKinds : []),
+      area:["any","leelanau","old-mission","traverse-city"].includes(preset.area) ? preset.area : "any",
+      origin:ORIGINS[preset.origin] ? preset.origin : "Traverse City",
       date:new Date().toISOString().slice(0,10), start:"11:00", doneBy:"18:00",
       pace:"standard", dd:false, suggestN:3,
-      selected:[], mode:"choose", scheduled:null
+      selected:Array.isArray(preset.selected) ? preset.selected.filter((id)=>byId(id)) : [],
+      mode:"choose", scheduled:null
     };
     const originPt = () => ORIGINS[state.origin];
 
@@ -76,6 +92,7 @@ export default function Planner() {
     }
     function loadStarter(id){
       const p = STARTERS.find((s)=>s.id===id); if(!p) return;
+      trackWineEvent("wine_starter_loaded", { starter: p.id, context: analyticsContext });
       state.beverages = new Set(p.beverages||[]);
       state.poiKinds = new Set(p.poiKinds||[]);
       state.styles = new Set();
@@ -117,8 +134,15 @@ export default function Planner() {
 
     function toggleSelect(id){
       const wasIn = state.selected.includes(id);
+      const item = byId(id);
       if(wasIn) state.selected = state.selected.filter((x)=>x!==id);
       else state.selected = [...state.selected, id];
+      if(item) trackWineEvent("wine_stop_toggled", {
+        action: wasIn ? "removed" : "added",
+        kind: item.isPoi ? "sight" : item.category,
+        area: item.area,
+        context: analyticsContext,
+      });
       if(state.mode==="day"){ buildDay(); }
       else { renderPanel(); drawMap(); if(!wasIn){ const m=markerById[id]; if(m && m.openPopup) m.openPopup(); } }
     }
@@ -212,6 +236,13 @@ export default function Planner() {
       state.scheduled = schedule(ordered, legDur);
       state.scheduled.geometry = geometry;
       state.scheduled.routed = !!geometry;
+      trackWineEvent("wine_route_built", {
+        context: analyticsContext,
+        area: state.area,
+        stopCount: state.scheduled.fits.length,
+        routeMode: geometry ? "routed" : "estimated",
+        conflictCount: state.scheduled.conflicts.length + state.scheduled.overflow.length,
+      });
       state.mode = "day"; renderPanel(); drawMap();
     }
     function removeAndRebuild(id){ state.selected = state.selected.filter((x)=>x!==id); if(state.selected.length) buildDay(); else { state.mode="choose"; renderPanel(); drawMap(); } }
@@ -225,7 +256,12 @@ export default function Planner() {
 
     let map, dotsLayer, routeLayer, markerById = {};
     function initMap(){
-      map = L.map("map",{zoomControl:true}).setView([44.95,-85.65],10);
+      const initialView = state.area === "old-mission"
+        ? { center:[44.94,-85.52], zoom:10 }
+        : state.area === "leelanau"
+          ? { center:[44.98,-85.82], zoom:9 }
+          : { center:[44.95,-85.65], zoom:10 };
+      map = L.map("map",{zoomControl:true}).setView(initialView.center, initialView.zoom);
       const voyager = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
         {attribution:"&copy; OpenStreetMap &copy; CARTO", subdomains:"abcd", maxZoom:20});
       const positron = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
@@ -483,16 +519,16 @@ export default function Planner() {
     }
     function buildChips(){
       const bc=document.getElementById("bevChips"); bc.innerHTML="";
-      Object.keys(BEV_LABEL).forEach((b)=>{ const el=document.createElement("button"); el.className="chip"; el.dataset.bev=b; el.textContent=BEV_LABEL[b]; el.style.setProperty("--accent",CAT_COLOR[b]); bc.appendChild(el); });
+      Object.keys(BEV_LABEL).forEach((b)=>{ const el=document.createElement("button"); el.className="chip"+(state.beverages.has(b)?" chip-on":""); el.dataset.bev=b; el.textContent=BEV_LABEL[b]; el.style.setProperty("--accent",CAT_COLOR[b]); bc.appendChild(el); });
       const ac=document.getElementById("areaChips"); ac.innerHTML="";
-      [["any","All areas"],["leelanau","Leelanau"],["old-mission","Old Mission"],["traverse-city","Traverse City"]].forEach(([k,lab],i)=>{ const el=document.createElement("button"); el.className="chip"+(i===0?" chip-on":""); el.dataset.area=k; el.textContent=lab; ac.appendChild(el); });
+      [["any","All areas"],["leelanau","Leelanau"],["old-mission","Old Mission"],["traverse-city","Traverse City"]].forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip"+(state.area===k?" chip-on":""); el.dataset.area=k; el.textContent=lab; ac.appendChild(el); });
       const pc=document.getElementById("paceChips"); pc.innerHTML="";
       [["leisurely","Leisurely"],["standard","Standard"],["efficient","Efficient"]].forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip"+(k==="standard"?" chip-on":""); el.dataset.pace=k; el.textContent=lab; pc.appendChild(el); });
       buildStyleCloud();
       const gc=document.getElementById("sightChips"); gc.innerHTML="";
-      POI_KINDS.forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip leaf"; el.dataset.sight=k; el.textContent=lab; gc.appendChild(el); });
+      POI_KINDS.forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip leaf"+(state.poiKinds.has(k)?" chip-on":""); el.dataset.sight=k; el.textContent=lab; gc.appendChild(el); });
       const os=document.getElementById("originSelect"); os.innerHTML="";
-      Object.keys(ORIGINS).forEach((n)=>{ const op=document.createElement("option"); op.value=n; op.textContent=n; os.appendChild(op); }); os.value="Traverse City";
+      Object.keys(ORIGINS).forEach((n)=>{ const op=document.createElement("option"); op.value=n; op.textContent=n; os.appendChild(op); }); os.value=state.origin;
       document.getElementById("dateInput").value=state.date;
       document.getElementById("timeInput").value=state.start;
       document.getElementById("doneByInput").value=state.doneBy;
@@ -500,8 +536,10 @@ export default function Planner() {
     function refreshChoose(){ if(state.mode==="choose"){ renderPanel(); drawMap(); } else { drawMap(); } }
     function wireEvents(){
       document.getElementById("bevChips").onclick=(e)=>{ const b=e.target.dataset.bev; if(!b) return;
-        if(state.beverages.has(b)){ state.beverages.delete(b); e.target.classList.remove("chip-on"); }
+        const turningOff = state.beverages.has(b);
+        if(turningOff){ state.beverages.delete(b); e.target.classList.remove("chip-on"); }
         else { state.beverages.add(b); e.target.classList.add("chip-on"); }
+        trackWineEvent("wine_filter_changed", { context: analyticsContext, filter: "beverage", value: b, action: turningOff ? "off" : "on" });
         [...state.styles].forEach((t)=>{ const bev=STYLE_BEV[t]; if(state.beverages.size && bev && !state.beverages.has(bev)) state.styles.delete(t); });
         buildStyleCloud(); refreshChoose(); };
       document.getElementById("styleCloud").onclick=(e)=>{ const s=e.target.dataset.style; if(!s) return;
@@ -509,6 +547,7 @@ export default function Planner() {
       document.getElementById("sightChips").onclick=(e)=>{ const k=e.target.dataset.sight; if(!k) return;
         if(state.poiKinds.has(k)){ state.poiKinds.delete(k); e.target.classList.remove("chip-on"); } else { state.poiKinds.add(k); e.target.classList.add("chip-on"); } refreshChoose(); };
       document.getElementById("areaChips").onclick=(e)=>{ const a=e.target.dataset.area; if(!a) return; state.area=a;
+        trackWineEvent("wine_filter_changed", { context: analyticsContext, filter: "area", value: a, action: "set" });
         [...e.currentTarget.children].forEach((c)=>c.classList.toggle("chip-on",c.dataset.area===a)); refreshChoose(); };
       document.getElementById("paceChips").onclick=(e)=>{ const p=e.target.dataset.pace; if(!p) return; state.pace=p;
         [...e.currentTarget.children].forEach((c)=>c.classList.toggle("chip-on",c.dataset.pace===p)); if(state.mode==="day") buildDay(); };
@@ -538,14 +577,29 @@ export default function Planner() {
     }
 
     buildChips(); wireEvents(); initMap(); renderPanel();
+    trackWineEvent("wine_map_loaded", {
+      context: analyticsContext,
+      area: state.area,
+      embedded: embedded ? "yes" : "no",
+      wineFirst: state.beverages.has("wine") ? "yes" : "no",
+    });
     return () => { if (map) { map.remove(); map = null; } };
   }, []);
 
   return (
     <>
-      <header>
-        <h1>Traverse City Wine Country</h1>
-        <p>Pick the styles you&apos;re after and the stops you want, add a beach or a trail along the way, then have your day routed into a loop and timed against each place&apos;s real hours.</p>
+      <header className={embedded ? "planner-head embedded" : "planner-head"}>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        {!embedded && (
+          <div className="map-proof" aria-label="Map coverage">
+            <strong>40 wineries</strong>
+            <span>11 Old Mission</span>
+            <span>27 Leelanau</span>
+            <span>2 Traverse City</span>
+            <em>Real-road routing · tasting-room hours · no account</em>
+          </div>
+        )}
       </header>
       <section id="controls" className="hide-adv">
         <div className="grp"><label>Tasting</label><div id="bevChips" className="chips"></div></div>
