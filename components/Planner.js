@@ -812,7 +812,7 @@ export default function Planner({
         <div className="my-wine-day-bar">
           <button type="button" id="resumeWineBtn" className="my-wine-resume" hidden>Resume last wine day</button>
           <button type="button" id="myWineDayBtn" className="my-wine-toggle" aria-controls="myWineDayDrawer">My Wine Day</button>
-          <span>Saved locally. Shared links keep the exact plan in the URL fragment.</span>
+          <span>Saved on this device. Shared links reopen the exact plan.</span>
         </div>
         <div id="myWineDayDrawer" className="my-wine-day-drawer" hidden></div>
       </section>
