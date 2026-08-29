@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node scripts/check-seo.mjs && node scripts/check-pois.mjs && npm run test:my-wine-day",
+    "test": "node scripts/check-seo.mjs && node scripts/check-pois.mjs && npm run test:my-wine-day && npm run test:wine-truth",
     "check": "npm run test && npm run build",
-    "test:my-wine-day": "node scripts/check-my-wine-day.mjs"
+    "test:my-wine-day": "node scripts/check-my-wine-day.mjs",
+    "test:wine-truth": "node scripts/check-wine-truth.mjs"
   },
   "dependencies": {
     "leaflet": "1.9.4",
