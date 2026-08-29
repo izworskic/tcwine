@@ -157,6 +157,16 @@ export default function Page() {
             <div className="wine-lens-card"><h3>Wine-first producers</h3><p>For visitors who care more about distinctive wine programs than the biggest view or tasting-room spectacle.</p><Link href="/wine/serious-wine">Plan a wine-first day</Link></div>
             <div className="wine-lens-card"><h3>First Traverse City wine day</h3><p>A balanced entry point: strong wine identity, memorable settings, and a route that makes geographic sense.</p><Link href="/wine/first-trip">Build a first-timer wine day</Link></div>
           </div>
+          <div className="wine-grape-links" aria-label="Grape-specific winery guides">
+            <span>Grape guides:</span>
+            <Link href="/wine/cabernet-franc">Cabernet Franc</Link>
+            <Link href="/wine/pinot-noir">Pinot Noir</Link>
+            <Link href="/wine/chardonnay">Chardonnay</Link>
+            <Link href="/wine/pinot-gris">Pinot Gris</Link>
+            <Link href="/wine/sauvignon-blanc">Sauvignon Blanc</Link>
+            <Link href="/wine/gewurztraminer">Gewürztraminer</Link>
+            <Link href="/wine/merlot">Merlot</Link>
+          </div>
         </section>
         <h2>Why this map is different</h2>
         <p>
