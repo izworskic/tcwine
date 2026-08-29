@@ -3,7 +3,7 @@ import fs from "node:fs";
 const venues=JSON.parse(fs.readFileSync(new URL("../data/venues.json",import.meta.url),"utf8"));
 const truth=JSON.parse(fs.readFileSync(new URL("../data/wine-truth.json",import.meta.url),"utf8"));
 const sitemap=fs.readFileSync(new URL("../app/sitemap.js",import.meta.url),"utf8");
-const page=fs.readFileSync(new URL("../app/wine/[intent]/page.js",import.meta.url),"utf8");
+const page=fs.readFileSync(new URL("../app/wine/[intent]/page.js",import.meta.url),"utf8");\nconst wineryPage=fs.readFileSync(new URL("../app/winery/[id]/page.js",import.meta.url),"utf8");\nconst comparePage=fs.readFileSync(new URL("../app/compare-wineries/page.js",import.meta.url),"utf8");
 
 const wineries=venues.filter(v=>v.category==="winery");
 const records=truth.records||[];
@@ -20,7 +20,7 @@ for(const v of wineries){
   if(!(r.wineSignal>=2.5&&r.wineSignal<=5)) errors.push(`${v.id}: invalid wineSignal`);
   if(!r.verifiedAt) errors.push(`${v.id}: missing verifiedAt`);
 }
-const intents=["riesling","sparkling","reds","whites","serious-wine","first-trip"];\nconst leelanauOfficial=wineries.filter(v=>v.officialTrail?.name==="Leelanau Peninsula Wine Trail").length;\nconst oldMissionOfficial=wineries.filter(v=>v.officialTrail?.name==="Old Mission Peninsula Wine Trail").length;\nif(leelanauOfficial<23) errors.push(`official Leelanau inventory regressed: ${leelanauOfficial}`);\nif(oldMissionOfficial<10) errors.push(`official Old Mission inventory regressed: ${oldMissionOfficial}`);
+const intents=["riesling","sparkling","reds","whites","serious-wine","first-trip"];\nconst leelanauOfficial=wineries.filter(v=>v.officialTrail?.name==="Leelanau Peninsula Wine Trail").length;\nconst oldMissionOfficial=wineries.filter(v=>v.officialTrail?.name==="Old Mission Peninsula Wine Trail").length;\nif(leelanauOfficial<23) errors.push(`official Leelanau inventory regressed: ${leelanauOfficial}`);\nif(oldMissionOfficial<10) errors.push(`official Old Mission inventory regressed: ${oldMissionOfficial}`);\nif(!sitemap.includes("compare-wineries")) errors.push("sitemap missing winery comparator");\nif(!sitemap.includes('filter((v) => v.category === "winery")')) errors.push("sitemap is not generating winery detail URLs");\nif(!wineryPage.includes("generateStaticParams")) errors.push("winery detail pages are not statically generated");\nif(!wineryPage.includes("officialTrail")) errors.push("winery guide lost official trail truth");\nif(!comparePage.includes("WineryCompare")) errors.push("winery comparator page missing");
 for(const i of intents){
   if(!sitemap.includes(`wine/${i}`)) errors.push(`sitemap missing wine/${i}`);
   if(!page.includes(`${i}`)) errors.push(`wine landing config missing ${i}`);
