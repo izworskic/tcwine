@@ -26,8 +26,8 @@ for(const v of wineries){
 }
 
 const intents=["riesling","sparkling","reds","whites","serious-wine","first-trip"];
-const leelanauOfficial=wineries.filter(v=>v.officialTrail?.name==="Leelanau Peninsula Wine Trail").length;
-const oldMissionOfficial=wineries.filter(v=>v.officialTrail?.name==="Old Mission Peninsula Wine Trail").length;
+const leelanauOfficial=venues.filter(v=>v.officialTrail?.name==="Leelanau Peninsula Wine Trail").length;
+const oldMissionOfficial=venues.filter(v=>v.officialTrail?.name==="Old Mission Peninsula Wine Trail").length;
 
 if(leelanauOfficial<23) errors.push(`official Leelanau inventory regressed: ${leelanauOfficial}`);
 if(oldMissionOfficial<10) errors.push(`official Old Mission inventory regressed: ${oldMissionOfficial}`);
