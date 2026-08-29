@@ -2,14 +2,34 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://tcwine.chrisizworski.com"),
-  title: "Traverse City Wine Country: Plan a Tasting Loop",
+  title: {
+    default: "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
+    template: "%s | Traverse City Winery Map",
+  },
   description:
-    "Plan a routed, time-aware day across the wineries, cideries, breweries, and distilleries of Leelanau, Old Mission, and Traverse City, with beaches, hikes, and overlooks woven in.",
+    "Interactive Traverse City winery map with 40 wineries across Old Mission, Leelanau, and Traverse City. Pick stops, route real roads, and check the day against tasting-room hours.",
+  authors: [{ name: "Chris Izworski", url: "https://chrisizworski.com/chris-izworski/" }],
+  creator: "Chris Izworski",
+  publisher: "Chris Izworski",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://upload.wikimedia.org" />
+      </head>
       <body>{children}</body>
     </html>
   );
