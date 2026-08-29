@@ -8,6 +8,7 @@ import { trackWineEvent } from "@/lib/wine-analytics";
 function stateLabel(state){
   if(state==="active") return "Happening now";
   if(state==="today") return "Today";
+  if(state==="paused") return "Active season · not today";
   return "Upcoming";
 }
 
