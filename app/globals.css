@@ -252,3 +252,74 @@ main.tc-page li{margin:7px 0}
 main.tc-page .faq dt{font-weight:600;margin-top:14px}
 main.tc-page .faq dd{margin:4px 0 0}
 main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #ddd;font-size:.95rem}
+
+
+/* ---------- map-first search authority ---------- */
+.planner-head .map-proof{
+  display:flex;flex-wrap:wrap;gap:7px 12px;align-items:center;margin-top:10px;
+  color:var(--ink-soft);font-size:.76rem
+}
+.map-proof strong{color:var(--wine);font-size:.82rem}
+.map-proof span{padding:2px 7px;border:1px solid var(--line);border-radius:999px;background:#fff}
+.map-proof em{font-style:normal;color:var(--bay);font-weight:600}
+.planner-shell-embedded{
+  height:min(760px,82vh);min-height:560px;margin:18px 0 30px;border:1px solid var(--line);
+  border-radius:14px;overflow:hidden;background:var(--paper);box-shadow:0 12px 34px rgba(35,36,31,.08)
+}
+.planner-shell-embedded .planner-head{padding:16px 18px 10px}
+.planner-shell-embedded .planner-head h2{margin:0;font-size:1.35rem}
+.planner-shell-embedded .planner-head p{margin:4px 0 0}
+.planner-shell-embedded #controls{padding:10px 18px 12px}
+.planner-shell-embedded #plan{width:400px}
+.search-lede{
+  margin:0 0 18px;padding:14px 16px;border-left:4px solid var(--wine);
+  background:#fff;color:var(--ink);font-size:1rem
+}
+.intent-pills{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 22px}
+.intent-pills a{
+  display:inline-flex;align-items:center;padding:7px 10px;border:1px solid var(--line);
+  border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font-size:.84rem
+}
+.intent-pills a:hover{border-color:var(--wine);color:var(--wine)}
+.regional-photo{margin:26px 0 30px}
+.regional-photo img{
+  display:block;width:100%;max-height:430px;object-fit:cover;border-radius:14px;
+  border:1px solid var(--line);background:var(--paper-2)
+}
+.regional-photo figcaption{
+  display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+  padding:7px 2px 0;color:var(--ink-soft);font-size:.78rem
+}
+.regional-photo figcaption small{font-size:.7rem;text-align:right}
+.regional-photo figcaption a{color:inherit}
+.regional-photo.compact img{max-height:320px}
+.author-note{
+  margin:36px 0 10px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;
+  background:#fff
+}
+.author-note>span{
+  display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)
+}
+.author-note strong{display:block;margin-top:2px;font-family:"Fraunces",Georgia,serif;font-size:1.25rem}
+.author-note strong a{color:var(--ink);text-decoration:none}
+.author-note p{margin:7px 0 8px;color:var(--ink-soft);font-size:.9rem}
+.author-note .author-more{font-size:.82rem;font-weight:600;color:var(--bay)}
+.quick-answer{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0 28px
+}
+.quick-answer>div{padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.quick-answer strong{display:block;color:var(--wine);font-size:1.05rem}
+.quick-answer span{display:block;color:var(--ink-soft);font-size:.78rem;margin-top:2px}
+.page-cta{
+  display:inline-flex;align-items:center;padding:9px 13px;border-radius:9px;background:var(--wine);
+  color:#fff;text-decoration:none;font-weight:600
+}
+.page-cta:hover{background:#64303c}
+@media (max-width:860px){
+  .planner-shell-embedded{height:auto;min-height:0;border-radius:0;margin-left:-20px;margin-right:-20px}
+  .planner-shell-embedded #map{height:46vh;min-height:330px}
+  .planner-shell-embedded #plan{width:100%}
+  .regional-photo figcaption{display:block}
+  .regional-photo figcaption small{display:block;text-align:left;margin-top:3px}
+  .quick-answer{grid-template-columns:1fr}
+}
