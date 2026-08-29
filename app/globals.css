@@ -1087,3 +1087,41 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .truth-day-top{align-items:center}
   .truth-metrics{grid-template-columns:1fr 1fr}
 }
+
+
+.wine-ranking{
+  list-style:none;
+  display:grid;
+  gap:10px;
+  margin:14px 0 28px;
+  padding:0;
+}
+.wine-ranking>li{
+  display:grid;
+  grid-template-columns:54px minmax(0,1fr);
+  gap:14px;
+  align-items:start;
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:var(--paper);
+}
+.wine-ranking-score{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:50px;
+  height:50px;
+  border:1px solid #dac9c4;
+  border-radius:50%;
+  background:#fff;
+  color:var(--wine);
+  font:600 1.05rem/1 "Fraunces",Georgia,serif;
+}
+.wine-ranking h3{margin:0 0 5px;font-size:1rem}
+.wine-ranking p{margin:0 0 6px;color:var(--ink-soft);font-size:.78rem;line-height:1.42}
+.wine-ranking-reasons{font-size:.68rem!important}
+@media(max-width:520px){
+  .wine-ranking>li{grid-template-columns:42px minmax(0,1fr);gap:10px;padding:12px}
+  .wine-ranking-score{width:40px;height:40px;font-size:.9rem}
+}
