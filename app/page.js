@@ -84,7 +84,7 @@ function graph() {
           "40 winery map",
           "Old Mission and Leelanau filters",
           "real-road route ordering",
-          "tasting-room hours",
+          "posted venue hours",
           "ready-made wine-tour loops",
           "beaches, hikes, overlooks, and lighthouse stops"
         ],
@@ -135,7 +135,7 @@ export default function Page() {
           <Link href="/leelanau-peninsula-wine-trail">Leelanau winery map</Link>
           <Link href="/one-day-itineraries">Ready-made wine routes</Link>
           <Link href="/fall-color-wine-tour">Fall color wine tour</Link>
-          <Link href="/venues">Tasting-room hours</Link>
+          <Link href="/venues">Posted hours</Link>
         </div>
         <WineCountryWorld />
         <RegionalPhoto kind="chateau" />
@@ -154,7 +154,7 @@ export default function Page() {
             </li>
           ))}
           <li>
-            <Link href="/venues">Tasting room hours</Link>
+            <Link href="/venues">Posted hours</Link>
             {": all " + T + " venues in one directory, verified " + HOURS_VERIFIED}
           </li>
         </ul>
