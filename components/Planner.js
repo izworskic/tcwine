@@ -774,7 +774,7 @@ export default function Planner({
       };
     }
 
-    buildChips(); wireEvents(); initMap(); renderPanel(); renderMyWineDay();
+    buildChips(); syncControlsFromState(); wireEvents(); initMap(); renderPanel(); renderMyWineDay();
     trackWineEvent("wine_map_loaded", {
       context: analyticsContext,
       area: state.area,
