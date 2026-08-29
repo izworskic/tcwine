@@ -1319,3 +1319,26 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .trail-truth{display:grid}
   .trail-truth a{margin-left:0}
 }
+
+.pop-trail{
+  display:block;
+  margin:4px 0;
+  color:#365d40;
+  font-size:.66rem;
+  font-weight:700;
+}
+.pop-guide{
+  display:inline-block;
+  margin:6px 8px 0 0;
+  color:var(--bay);
+  font-size:.68rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.tag.official{
+  border-color:#cfe0d4;
+  background:#f3f8f4;
+  color:#365d40;
+}
+.truth-winery-link{color:inherit;text-decoration:none}
+.truth-winery-link:hover{color:var(--wine);text-decoration:underline}
