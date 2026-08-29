@@ -323,3 +323,61 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .regional-photo figcaption small{display:block;text-align:left;margin-top:3px}
   .quick-answer{grid-template-columns:1fr}
 }
+
+
+/* ---------- My Wine Day continuity ---------- */
+.my-wine-day-shell{
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.72);
+  padding:8px 24px 10px;
+}
+.my-wine-day-shell[hidden],.my-wine-day-drawer[hidden],.my-wine-resume[hidden]{display:none!important}
+.my-wine-day-bar{
+  display:flex;align-items:center;gap:8px 10px;min-height:32px
+}
+.my-wine-day-bar>span{
+  margin-left:auto;color:var(--ink-soft);font-size:.72rem;line-height:1.35
+}
+.my-wine-toggle,.my-wine-resume{
+  font:inherit;border-radius:999px;cursor:pointer;padding:6px 10px;font-size:.78rem
+}
+.my-wine-toggle{
+  border:1px solid var(--wine);background:#fff;color:var(--wine);font-weight:600
+}
+.my-wine-resume{
+  border:1px solid var(--line);background:var(--paper-2);color:var(--ink)
+}
+.my-wine-toggle:hover,.my-wine-resume:hover{border-color:var(--bay)}
+.my-wine-day-drawer{
+  margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff
+}
+.my-wine-drawer-head{
+  display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:7px
+}
+.my-wine-drawer-head strong{font-size:.86rem}
+.my-wine-drawer-head span{font-size:.7rem;color:var(--ink-soft)}
+.my-wine-saved-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.my-wine-saved{
+  display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:var(--paper)
+}
+.my-wine-open{
+  min-width:0;flex:1;text-align:left;font:inherit;font-size:.78rem;border:0;background:none;color:var(--ink);
+  padding:8px 9px;cursor:pointer
+}
+.my-wine-open:hover{color:var(--wine)}
+.my-wine-remove{
+  flex:0 0 auto;border:0;border-left:1px solid var(--line);background:none;color:var(--ink-soft);
+  cursor:pointer;font-size:1rem;padding:7px 9px
+}
+.my-wine-remove:hover{color:var(--wine)}
+.my-wine-empty{display:flex;flex-direction:column;gap:2px;font-size:.78rem}
+.my-wine-empty span{color:var(--ink-soft)}
+.plan-foot #sharePlanBtn{border-color:var(--wine);color:var(--wine);font-weight:600}
+.plan-foot #savePlanBtn{border-color:var(--bay);color:var(--bay);font-weight:600}
+
+@media (max-width:860px){
+  .my-wine-day-shell{padding:8px 16px}
+  .my-wine-day-bar{align-items:flex-start;flex-wrap:wrap}
+  .my-wine-day-bar>span{flex-basis:100%;margin-left:0}
+  .my-wine-saved-list{grid-template-columns:1fr}
+}
