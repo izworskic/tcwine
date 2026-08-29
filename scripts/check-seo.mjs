@@ -17,6 +17,8 @@ const [
   photo,
   venues,
   image,
+  analytics,
+  analyticsComponent,
 ] = await Promise.all([
   read("../app/page.js"),
   read("../app/layout.js"),
@@ -31,6 +33,8 @@ const [
   read("../components/RegionalPhoto.js"),
   read("../app/venues/page.js"),
   read("../app/opengraph-image.js"),
+  read("../lib/wine-analytics.js"),
+  read("../components/WineAnalytics.js"),
 ]);
 
 assert.match(home, /Traverse City Winery Map: 40 Wineries/);
@@ -42,10 +46,16 @@ assert.match(home, /card: "summary_large_image"/);
 assert.match(layout, /Traverse City Winery Map & Wine Tour Planner/);
 assert.match(layout, /max-image-preview/);
 assert.match(layout, /authors: \[\{ name: "Chris Izworski"/);
+assert.match(layout, /\/_vercel\/insights\/script\.js/);
+assert.match(layout, /window\.va=window\.va\|\|function/);
 
 assert.match(planner, /new Set\(Array\.isArray\(preset\.beverages\) \? preset\.beverages : \["wine"\]\)/);
 assert.match(planner, /state\.area === "old-mission"/);
 assert.match(planner, /state\.area === "leelanau"/);
+assert.match(planner, /trackWineEvent\("wine_map_loaded"/);
+assert.match(planner, /trackWineEvent\("wine_route_built"/);
+assert.match(planner, /trackWineEvent\("wine_stop_toggled"/);
+assert.doesNotMatch(planner, /trackWineEvent\([^\n]+name:/);
 
 assert.match(oldMission, /category === "winery"/);
 assert.match(oldMission, /Old Mission Peninsula Winery Map/);
@@ -79,6 +89,12 @@ assert.match(photo, /Old Mission Peninsula vineyard and Grand Traverse Bay/);
 assert.match(photo, /CC BY-SA 2\.5/);
 assert.match(photo, /Public domain/);
 assert.match(photo, /Attribution license/);
+
+assert.match(analytics, /wine_landing_viewed/);
+assert.match(analytics, /wine_route_built|WINE_LANDING_KEYS/);
+assert.doesNotMatch(analytics, /latitude|longitude|selectedVenue|freeText/i);
+assert.match(analyticsComponent, /usePathname/);
+assert.match(analyticsComponent, /WINE_LANDING_KEYS\[pathname\]/);
 
 assert.match(venues, /alternates: \{ canonical: "\/venues" \}/);
 assert.match(venues, /url: `\$\{BASE\}\/venues`/);
