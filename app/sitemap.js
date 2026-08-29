@@ -12,6 +12,12 @@ const ROUTES = [
   "fall-color-wine-tour",
   "suttons-bay-tasting-rooms",
   "venues",
+  "wine/riesling",
+  "wine/sparkling",
+  "wine/reds",
+  "wine/whites",
+  "wine/serious-wine",
+  "wine/first-trip",
 ];
 
 export default function sitemap() {

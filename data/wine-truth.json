@@ -1,0 +1,912 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "note": "Wine Day Fit metadata. Scores are itinerary-fit signals, not objective wine-quality rankings.",
+  "records": [
+    {
+      "id": "leelanau-wine-cellars",
+      "role": "broad-range-anchor",
+      "signature": "A broad, approachable north Leelanau tasting with dry-white strength and bay scenery.",
+      "bestFor": [
+        "first-trip",
+        "whites",
+        "views",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want only boutique or highly specialized producers"
+      ],
+      "styleStrengths": [
+        "broad-lineup",
+        "dry-whites"
+      ],
+      "wineSignal": 3.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://leelanau.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "dune-bird",
+      "role": "wine-and-food-anchor",
+      "signature": "A Northport-area wine stop with Chardonnay and Pinot Gris signals plus pizza, useful when the northern loop needs a meal.",
+      "bestFor": [
+        "whites",
+        "food",
+        "mixed-group",
+        "aromatic-whites",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you are building a compact southern Leelanau route"
+      ],
+      "styleStrengths": [
+        "chardonnay",
+        "pinot-gris"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://dunebirdwinery.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "45-north",
+      "role": "classic-anchor",
+      "signature": "A versatile Leelanau stop for dry whites, rosé, sparkling, and cider in a relaxed vineyard setting.",
+      "bestFor": [
+        "whites",
+        "sparkling",
+        "mixed-group",
+        "first-trip",
+        "food"
+      ],
+      "avoidIf": [
+        "your day is narrowly focused on red wine"
+      ],
+      "styleStrengths": [
+        "dry-whites",
+        "rose",
+        "sparkling"
+      ],
+      "wineSignal": 4.2,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://fortyfivenorth.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "the-ridge-at-verterra",
+      "role": "view-specialist",
+      "signature": "A Riesling-forward north Leelanau stop where bay scenery is part of the reason to go.",
+      "bestFor": [
+        "riesling",
+        "views",
+        "first-trip",
+        "whites",
+        "aromatic-whites",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want to stay near Suttons Bay or Lake Leelanau"
+      ],
+      "styleStrengths": [
+        "riesling"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://verterra.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "blustone",
+      "role": "specialist",
+      "signature": "A polished Leelanau stop built around dry reds and dry whites rather than a novelty-driven tasting.",
+      "bestFor": [
+        "reds",
+        "whites",
+        "serious-wine",
+        "views",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want a very casual or kid-centered stop"
+      ],
+      "styleStrengths": [
+        "dry-reds",
+        "dry-whites"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://blustonevineyards.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "bel-lago",
+      "role": "specialist",
+      "signature": "A Leelanau aromatic-white specialist signal, especially for Gewürztraminer, with lake scenery and food available.",
+      "bestFor": [
+        "aromatic-whites",
+        "whites",
+        "food",
+        "views",
+        "mixed-group",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "your group is focused on bold reds"
+      ],
+      "styleStrengths": [
+        "aromatic-whites",
+        "gewurztraminer"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": null,
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "chateau-fontaine",
+      "role": "classic-anchor",
+      "signature": "A homey Leelanau stop with a broad lineup and Chardonnay signal, useful for an unhurried central-peninsula route.",
+      "bestFor": [
+        "whites",
+        "quiet",
+        "first-trip",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want dramatic lake views"
+      ],
+      "styleStrengths": [
+        "broad-lineup",
+        "chardonnay"
+      ],
+      "wineSignal": 3.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://chateaufontaine.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "verterra-leland",
+      "role": "village-specialist",
+      "signature": "A Leland tasting stop with dessert and ice-wine signal, best when Fishtown or the village is already part of the route.",
+      "bestFor": [
+        "dessert-wine",
+        "town",
+        "mixed-group",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you want an estate-vineyard experience"
+      ],
+      "styleStrengths": [
+        "dessert-ice-wine"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://verterra.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "boathouse-vineyards",
+      "role": "wine-and-place-anchor",
+      "signature": "A strong Leelanau match for Cabernet Franc, Merlot, Riesling, and a water-oriented setting.",
+      "bestFor": [
+        "reds",
+        "riesling",
+        "views",
+        "serious-wine",
+        "whites",
+        "aromatic-whites"
+      ],
+      "avoidIf": [
+        "you need a meal at the winery"
+      ],
+      "styleStrengths": [
+        "cabernet-franc",
+        "dry-reds",
+        "merlot",
+        "riesling"
+      ],
+      "wineSignal": 4.7,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://boathousevineyards.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "shady-lane-cellars",
+      "role": "specialist",
+      "signature": "A Leelanau wine-first anchor for dry whites and Riesling in a laid-back vineyard setting.",
+      "bestFor": [
+        "riesling",
+        "whites",
+        "serious-wine",
+        "quiet",
+        "aromatic-whites",
+        "food",
+        "mixed-group",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you need a full meal on site"
+      ],
+      "styleStrengths": [
+        "dry-whites",
+        "riesling"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://shadylanecellars.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "three-trees",
+      "role": "specialist",
+      "signature": "An intimate Leelanau red-wine stop when Cabernet Franc and Merlot are the priority.",
+      "bestFor": [
+        "reds",
+        "serious-wine",
+        "quiet",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "your group mainly wants sweet or sparkling wine"
+      ],
+      "styleStrengths": [
+        "cabernet-franc",
+        "merlot"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://threetreesvineyard.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "gilchrist-farm",
+      "role": "wine-and-food-specialist",
+      "signature": "A distinctive Leelanau stop for Albariño and Grüner plus a real kitchen, useful when wine and food should carry equal weight.",
+      "bestFor": [
+        "whites",
+        "food",
+        "serious-wine",
+        "mixed-group",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you need a Sunday or Monday stop"
+      ],
+      "styleStrengths": [
+        "albarino",
+        "gruner"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://gilchristfarmwinery.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "black-star-farms-suttons-bay",
+      "role": "destination-anchor",
+      "signature": "A broad, polished Leelanau anchor for mixed groups that need wine, spirits, food, and a full-estate experience.",
+      "bestFor": [
+        "first-trip",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want a tiny producer or highly specialized flight"
+      ],
+      "styleStrengths": [
+        "broad-lineup"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://blackstarfarms.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "willow-winery",
+      "role": "small-producer-specialist",
+      "signature": "A hospitality-forward Leelanau stop with dry-white and Pinot Noir signals and a smaller tasting-room feel.",
+      "bestFor": [
+        "quiet",
+        "whites",
+        "reds"
+      ],
+      "avoidIf": [
+        "you need broad weekly availability"
+      ],
+      "styleStrengths": [
+        "dry-whites",
+        "pinot-noir"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": null,
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "green-bird-organic",
+      "role": "farm-specialist",
+      "signature": "A quiet farm-and-cellar experience that works for visitors who value organic-farm character and a less polished wine-country stop.",
+      "bestFor": [
+        "quiet",
+        "mixed-group",
+        "local-character",
+        "food",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you want a grand estate or broad documented varietal lineup"
+      ],
+      "styleStrengths": [],
+      "wineSignal": 2.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://greenbirdcellars.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "mawby",
+      "role": "specialist",
+      "signature": "A wine-first specialist stop when sparkling is the point of the day.",
+      "bestFor": [
+        "sparkling",
+        "serious-wine",
+        "first-trip",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want a broad still-wine survey"
+      ],
+      "styleStrengths": [
+        "sparkling"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://mawby.wine",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "good-harbor",
+      "role": "classic-anchor",
+      "signature": "A dependable Leelanau wine stop with a broad lineup and useful Pinot Noir and Albariño signals.",
+      "bestFor": [
+        "first-trip",
+        "whites",
+        "reds",
+        "mixed-group",
+        "food"
+      ],
+      "avoidIf": [
+        "you want a highly theatrical destination experience"
+      ],
+      "styleStrengths": [
+        "albarino",
+        "broad-lineup",
+        "pinot-noir"
+      ],
+      "wineSignal": 4,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://goodharbor.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "ciccone",
+      "role": "view-and-reds-specialist",
+      "signature": "A scenic Leelanau stop with dry-red and Gewürztraminer signals, best used when the route already runs the Suttons Bay corridor.",
+      "bestFor": [
+        "reds",
+        "aromatic-whites",
+        "views",
+        "whites"
+      ],
+      "avoidIf": [
+        "you need dependable structured hours without checking ahead"
+      ],
+      "styleStrengths": [
+        "dry-reds",
+        "gewurztraminer"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://cicconevineyard.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "french-valley",
+      "role": "food-and-place-anchor",
+      "signature": "A Leelanau wine-and-food stop where the setting and raclette program can carry a longer pause in the day.",
+      "bestFor": [
+        "food",
+        "mixed-group",
+        "views"
+      ],
+      "avoidIf": [
+        "your priority is a tightly specialized wine flight"
+      ],
+      "styleStrengths": [],
+      "wineSignal": 2.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://frenchvalley.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "aurora-cellars",
+      "role": "broad-range-anchor",
+      "signature": "A relaxed central Leelanau stop with a broad lineup and cider, useful for mixed groups and flexible routes.",
+      "bestFor": [
+        "mixed-group",
+        "first-trip",
+        "food"
+      ],
+      "avoidIf": [
+        "you want a narrowly specialized wine stop"
+      ],
+      "styleStrengths": [
+        "broad-lineup"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://auroracellars.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "black-star-farms-old-mission",
+      "role": "easy-anchor",
+      "signature": "An easy Old Mission tasting stop with Pinot Noir signal and spirits for mixed preferences.",
+      "bestFor": [
+        "reds",
+        "mixed-group",
+        "first-trip",
+        "food"
+      ],
+      "avoidIf": [
+        "you want the full Black Star estate experience"
+      ],
+      "styleStrengths": [
+        "pinot-noir"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://blackstarfarms.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "hawthorne-vineyards",
+      "role": "quiet-anchor",
+      "signature": "A quieter Old Mission option for visitors who want bay scenery and a broad wine lineup without the biggest-destination feel.",
+      "bestFor": [
+        "quiet",
+        "views",
+        "whites",
+        "aromatic-whites"
+      ],
+      "avoidIf": [
+        "you want a full food program or big-event atmosphere"
+      ],
+      "styleStrengths": [
+        "broad-lineup",
+        "pinot-gris"
+      ],
+      "wineSignal": 3.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://hawthornevineyards.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "tabone",
+      "role": "specialist",
+      "signature": "A wine-first stop for aromatic whites, Riesling, rosé, and sparkling styles in a smaller family-run setting.",
+      "bestFor": [
+        "riesling",
+        "aromatic-whites",
+        "sparkling",
+        "quiet",
+        "whites",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you need daily availability"
+      ],
+      "styleStrengths": [
+        "gewurztraminer",
+        "riesling",
+        "rose",
+        "sparkling"
+      ],
+      "wineSignal": 4.7,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://tabonevineyards.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "peninsula-cellars",
+      "role": "character-anchor",
+      "signature": "A characterful Old Mission stop with strong Riesling, Gewürztraminer, and Cabernet Franc signals and an easy fit in compact routes.",
+      "bestFor": [
+        "riesling",
+        "aromatic-whites",
+        "reds",
+        "first-trip",
+        "whites"
+      ],
+      "avoidIf": [
+        "you want a grand estate setting"
+      ],
+      "styleStrengths": [
+        "cabernet-franc",
+        "gewurztraminer",
+        "riesling"
+      ],
+      "wineSignal": 4.2,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://peninsulacellars.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "mari-vineyards",
+      "role": "wine-and-place-anchor",
+      "signature": "A strong Old Mission anchor for visitors who want distinctive reds, a major estate setting, and a tasting that feels different from the rest of the peninsula.",
+      "bestFor": [
+        "reds",
+        "serious-wine",
+        "first-trip",
+        "views",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want a tiny, low-key tasting room"
+      ],
+      "styleStrengths": [
+        "italian-reds",
+        "nebbiolo"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://marivineyards.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "chateau-grand-traverse",
+      "role": "classic-anchor",
+      "signature": "A classic Old Mission stop when Riesling and a broad regional wine survey matter more than novelty.",
+      "bestFor": [
+        "riesling",
+        "whites",
+        "serious-wine",
+        "first-trip",
+        "aromatic-whites",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want only small-production or intimate stops"
+      ],
+      "styleStrengths": [
+        "broad-lineup",
+        "riesling"
+      ],
+      "wineSignal": 3.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://cgtwines.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "brys-estate",
+      "role": "wine-and-place-anchor",
+      "signature": "A polished Old Mission anchor for wine plus scenery, especially when rosé or Sauvignon Blanc fits the group.",
+      "bestFor": [
+        "views",
+        "first-trip",
+        "whites",
+        "mixed-group",
+        "food"
+      ],
+      "avoidIf": [
+        "you want a quiet, stripped-down tasting"
+      ],
+      "styleStrengths": [
+        "rose",
+        "sauvignon-blanc"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://brysestate.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "2-lads",
+      "role": "specialist",
+      "signature": "A useful contrast stop for Cabernet Franc, Pinot Noir, sparkling wine, and a modern tasting-room experience.",
+      "bestFor": [
+        "reds",
+        "sparkling",
+        "serious-wine",
+        "views",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want rustic or old-school winery character"
+      ],
+      "styleStrengths": [
+        "cabernet-franc",
+        "pinot-noir",
+        "sparkling"
+      ],
+      "wineSignal": 4.2,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://lads.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "chateau-chantal",
+      "role": "destination-anchor",
+      "signature": "A destination-scale Old Mission stop that works when the group wants wine, a broad lineup, and one of the peninsula's defining hilltop settings.",
+      "bestFor": [
+        "first-trip",
+        "views",
+        "mixed-group",
+        "food"
+      ],
+      "avoidIf": [
+        "you want only small, quiet producers"
+      ],
+      "styleStrengths": [
+        "broad-lineup"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://chateauchantal.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "bowers-harbor",
+      "role": "classic-anchor",
+      "signature": "A broad-lineup Old Mission stop with enough red and Riesling depth to work for mixed wine preferences.",
+      "bestFor": [
+        "riesling",
+        "reds",
+        "mixed-group",
+        "first-trip",
+        "whites",
+        "aromatic-whites",
+        "food"
+      ],
+      "avoidIf": [
+        "you want a highly specialized single-style producer"
+      ],
+      "styleStrengths": [
+        "broad-lineup",
+        "dry-reds",
+        "riesling"
+      ],
+      "wineSignal": 4,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://bowersharbor.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "bonobo",
+      "role": "late-day-anchor",
+      "signature": "A relaxed Old Mission stop with a broad lineup, sparkling signal, and later hours that can stabilize an afternoon route.",
+      "bestFor": [
+        "sparkling",
+        "mixed-group",
+        "late-day",
+        "food"
+      ],
+      "avoidIf": [
+        "you want a highly specialized wine program"
+      ],
+      "styleStrengths": [
+        "broad-lineup",
+        "sparkling"
+      ],
+      "wineSignal": 3.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://bonobowinery.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "rove-estate",
+      "role": "wine-and-place-anchor",
+      "signature": "A hilltop Leelanau anchor for Cabernet Franc, Merlot, Pinot Gris, and a long-view estate experience.",
+      "bestFor": [
+        "reds",
+        "whites",
+        "views",
+        "mixed-group",
+        "aromatic-whites",
+        "food",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you want a tiny, quiet tasting room"
+      ],
+      "styleStrengths": [
+        "cabernet-franc",
+        "merlot",
+        "pinot-gris"
+      ],
+      "wineSignal": 4.2,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://roveestate.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "the-barrel-room",
+      "role": "urban-specialist",
+      "signature": "An intimate Traverse City wine stop best used as an evening or urban add-on rather than a peninsula anchor.",
+      "bestFor": [
+        "quiet",
+        "urban",
+        "late-day",
+        "food",
+        "mixed-group",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you want vineyard scenery"
+      ],
+      "styleStrengths": [],
+      "wineSignal": 2.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://barrel.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "left-foot-charley",
+      "role": "urban-specialist",
+      "signature": "A wine-first Traverse City stop for Riesling, Gewürztraminer, Pinot Blanc, and aromatic whites without driving up a peninsula.",
+      "bestFor": [
+        "riesling",
+        "aromatic-whites",
+        "serious-wine",
+        "urban",
+        "whites",
+        "food",
+        "mixed-group",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you want vineyard scenery"
+      ],
+      "styleStrengths": [
+        "aromatic-whites",
+        "gewurztraminer",
+        "pinot-blanc",
+        "riesling"
+      ],
+      "wineSignal": 4.7,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://leftfootcharley.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "big-little-wines",
+      "role": "small-producer-specialist",
+      "signature": "A small, intimate Leelanau stop with Sauvignon Blanc and dessert-wine signals.",
+      "bestFor": [
+        "quiet",
+        "whites",
+        "serious-wine",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you want a large estate or full food program"
+      ],
+      "styleStrengths": [
+        "dessert-ice-wine",
+        "sauvignon-blanc"
+      ],
+      "wineSignal": 3.6,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://biglittlewines.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "amoritas-vineyards",
+      "role": "quiet-anchor",
+      "signature": "A low-key Lake Leelanau winery that works best as a calm, flexible stop rather than a marquee destination.",
+      "bestFor": [
+        "quiet",
+        "first-trip",
+        "food",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you need a strong documented style specialty"
+      ],
+      "styleStrengths": [],
+      "wineSignal": 2.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://amoritasvineyards.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "silver-leaf",
+      "role": "quiet-anchor",
+      "signature": "A cabin-in-the-woods Leelanau stop for visitors who care more about intimacy and local character than spectacle.",
+      "bestFor": [
+        "quiet",
+        "local-character"
+      ],
+      "avoidIf": [
+        "you need daily hours or a broad food program"
+      ],
+      "styleStrengths": [],
+      "wineSignal": 2.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": null,
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "brengman-family-wines",
+      "role": "wine-and-food-anchor",
+      "signature": "A warm, elegant Leelanau stop with Merlot and a kitchen, useful for a wine-led day that needs a substantial food break.",
+      "bestFor": [
+        "reds",
+        "food",
+        "serious-wine",
+        "mixed-group"
+      ],
+      "avoidIf": [
+        "you want a quick in-and-out tasting"
+      ],
+      "styleStrengths": [
+        "merlot"
+      ],
+      "wineSignal": 3,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://brengmanfamilywines.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "glen-arbor-wines",
+      "role": "village-anchor",
+      "signature": "A Glen Arbor wine stop with Chardonnay, rosé, sparkling, and cider that works when the village is already part of the day.",
+      "bestFor": [
+        "sparkling",
+        "whites",
+        "mixed-group",
+        "town",
+        "first-trip"
+      ],
+      "avoidIf": [
+        "you want an estate-vineyard setting"
+      ],
+      "styleStrengths": [
+        "chardonnay",
+        "rose",
+        "sparkling"
+      ],
+      "wineSignal": 4.2,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://glenarborwines.com",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "cherry-republic-winery",
+      "role": "fun-mixed-group",
+      "signature": "A Glen Arbor stop for groups that want an easy, playful wine-and-cider break inside a larger village or Sleeping Bear day.",
+      "bestFor": [
+        "mixed-group",
+        "town",
+        "first-trip",
+        "food"
+      ],
+      "avoidIf": [
+        "you want a serious producer-focused tasting"
+      ],
+      "styleStrengths": [],
+      "wineSignal": 2.5,
+      "sourceBasis": "venue-data-plus-editorial-fit",
+      "sourceUrl": "https://cherryrepublic.com",
+      "verifiedAt": "2026-08-29"
+    }
+  ]
+}
