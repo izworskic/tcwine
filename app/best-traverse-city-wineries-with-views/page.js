@@ -40,7 +40,7 @@ export default function Page() {
       </p>
       <PlannerMount
         embedded
-        preset={{ beverages: ["wine"], selected, origin: "Traverse City" }}
+        preset={{ beverages: ["wine"], selected, origin: "Traverse City", analyticsContext: "wineries_views" }}
         title="Map the view-forward wineries"
         description="Five view-forward wineries are preselected. The planner will route them, check hours, and tell you if the day is too ambitious."
       />
