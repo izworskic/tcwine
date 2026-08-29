@@ -24,6 +24,10 @@ const DRINKS = [
 const PLACES = [
   ["hike", "Hike"],
   ["beach", "Beach"],
+  ["paddle", "Paddle"],
+  ["market", "Farm / market"],
+  ["food", "Local food"],
+  ["history", "History"],
   ["lighthouse", "Lighthouse"],
   ["scenic", "Scenic stop"],
   ["town", "Harbor town"],
@@ -71,7 +75,18 @@ function countArea(area, beverage) {
   ).length;
 }
 
+function availableToday(place, today) {
+  if (place.status && place.status !== "open") return false;
+  if (!place.season) return true;
+  const year = String(place.season.year || "");
+  if (year && today.slice(0, 4) !== year) return false;
+  if (place.season.start && today < place.season.start) return false;
+  if (place.season.end && today > place.season.end) return false;
+  return true;
+}
+
 export default function WineCountryWorld() {
+  const [today] = useState(() => new Date().toISOString().slice(0, 10));
   const [area, setArea] = useState("leelanau");
   const [drink, setDrink] = useState("wine");
   const [place, setPlace] = useState("hike");
@@ -84,11 +99,14 @@ export default function WineCountryWorld() {
         v.beverages.includes(drink)
     );
     let outside = pois.filter(
-      (p) => p.kind === place && (area === "any" || p.area === area)
+      (p) =>
+        p.kind === place &&
+        (area === "any" || p.area === area) &&
+        availableToday(p, today)
     );
 
     if (!outside.length && area !== "any") {
-      outside = pois.filter((p) => p.kind === place);
+      outside = pois.filter((p) => p.kind === place && availableToday(p, today));
     }
 
     return outside
@@ -101,7 +119,7 @@ export default function WineCountryWorld() {
       .filter(Boolean)
       .sort((a, b) => a.gap - b.gap)
       .slice(0, 4);
-  }, [area, drink, place]);
+  }, [area, drink, place, today]);
 
   function choose(setter, value, dimension) {
     setter(value);

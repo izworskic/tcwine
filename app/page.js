@@ -86,7 +86,7 @@ function graph() {
           "real-road route ordering",
           "posted venue hours",
           "ready-made wine-tour loops",
-          "beaches, hikes, overlooks, and lighthouse stops"
+          "beaches, hikes, paddles, farm markets, local food, history, overlooks, and lighthouse stops"
         ],
         operatingSystem: "Web",
         description: INTRO,
@@ -143,7 +143,7 @@ export default function Page() {
         <p>
           Most winery maps stop at pins. This one lets you choose the stops you actually want, orders them into a practical loop,
           checks drive time and posted hours, and tells you when the day no longer fits. Wine is the default view; cider, beer,
-          spirits, beaches, hikes, scenic stops, and lighthouses are optional layers for mixed groups.
+          spirits, beaches, hikes, paddles, farm markets, local food, history, scenic stops, and lighthouses are optional layers for mixed groups.
         </p>
         <h2>Guides</h2>
         <ul className="guides">

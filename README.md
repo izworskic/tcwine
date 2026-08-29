@@ -1,8 +1,7 @@
 # Traverse City Wine Country: Loop Planner
 
 A routed, time-aware day planner for the wineries, cideries, breweries, and distilleries of
-Leelanau, Old Mission, and the Traverse City area, with beaches, dune and bluff hikes,
-overlooks, and lighthouses woven in as non-drinking stops.
+Leelanau, Old Mission, and the Traverse City area, with beaches, dune and bluff hikes, paddles, farm markets, local food, history, overlooks, and lighthouses woven in as non-drinking stops.
 
 Built with Next.js 14 (App Router) and Leaflet, in the same shape as the other properties.
 
@@ -10,8 +9,7 @@ Built with Next.js 14 (App Router) and Leaflet, in the same shape as the other p
 
 - Filter by beverage (inclusive, so a winery that also makes cider shows under cider) and by
   multiple grape or beer/spirit styles at once.
-- Hand-pick your stops from a list or straight off the map, and turn on sights (beaches,
-  hikes, scenic spots, lighthouses, towns) to add along the way.
+- Hand-pick your stops from a list or straight off the map, and turn on special-place layers for beaches, hikes, paddles, farm markets, local food, history, scenic stops, lighthouses, and towns.
 - Build the day from a start time and a "done by" time: stops are ordered into a loop and
   scheduled against each place's real hours, so nothing lands when it's closed, and anything
   that won't fit the window is called out rather than dropped silently.
@@ -49,7 +47,7 @@ npm start        # serve the production build
 
 - `data/venues.json`: 74 venues (40 wineries, 22 breweries, 7 distilleries, 5 cideries) with
   structured hours, beverages, style tags, dwell times, and Google Maps links.
-- `data/pois.json`: 20 sights/hikes/beaches/lighthouses with kinds, visit times, hours, and links.
+- `data/pois.json`: 65 special places across nine kinds, including hikes, beaches, paddles, farm markets, local food, history, scenic stops, lighthouses, and towns. Deep-v1 records carry source and verification metadata; seasonal and closure states are enforced by the planner.
 - `data/origins.json`, `data/shuttle.json`: start towns and the chauffeured-tour operator.
 
 ## Project layout
