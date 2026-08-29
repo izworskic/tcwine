@@ -43,7 +43,7 @@ export default function Page() {
       </p>
       <PlannerMount
         embedded
-        preset={{ beverages: ["wine"], poiKinds: ["scenic"], origin: "Traverse City" }}
+        preset={{ beverages: ["wine"], poiKinds: ["scenic"], origin: "Traverse City", analyticsContext: "fall_color_map" }}
         title="Fall color winery map"
         description="Wine is on, scenic stops are on, and the map is ready to turn a fall-color drive into a realistic tasting loop."
       />
