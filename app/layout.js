@@ -1,4 +1,6 @@
+import Script from "next/script";
 import "./globals.css";
+import WineAnalytics from "@/components/WineAnalytics";
 
 export const metadata = {
   metadataBase: new URL("https://tcwine.chrisizworski.com"),
@@ -30,7 +32,14 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://upload.wikimedia.org" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Script id="wine-analytics-queue" strategy="beforeInteractive">
+          {`window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};`}
+        </Script>
+        <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
+        <WineAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
