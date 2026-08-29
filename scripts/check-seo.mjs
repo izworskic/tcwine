@@ -90,8 +90,8 @@ assert.match(photo, /CC BY-SA 2\.5/);
 assert.match(photo, /Public domain/);
 assert.match(photo, /Attribution license/);
 
-assert.match(analytics, /wine_landing_viewed/);
-assert.match(analytics, /wine_route_built|WINE_LANDING_KEYS/);
+assert.match(analytics, /WINE_LANDING_KEYS/);
+assert.match(analyticsComponent, /wine_landing_viewed/);
 assert.doesNotMatch(analytics, /latitude|longitude|selectedVenue|freeText/i);
 assert.match(analyticsComponent, /usePathname/);
 assert.match(analyticsComponent, /WINE_LANDING_KEYS\[pathname\]/);
