@@ -4,6 +4,7 @@ import PlannerMount from "@/components/PlannerMount";
 import RegionalPhoto from "@/components/RegionalPhoto";
 import AuthorNote from "@/components/AuthorNote";
 import WineCountryWorld from "@/components/WineCountryWorld";
+import WineDayComposer from "@/components/WineDayComposer";
 import { buildVenueItemList } from "@/lib/venue-schema";
 import { HOURS_VERIFIED } from "@/components/VenueHours";
 
@@ -137,8 +138,21 @@ export default function Page() {
           <Link href="/fall-color-wine-tour">Fall color wine tour</Link>
           <Link href="/venues">Posted hours</Link>
         </div>
+        <WineDayComposer />
         <WineCountryWorld />
         <RegionalPhoto kind="chateau" />
+        <section className="wine-lens" aria-labelledby="wine-lens-title">
+          <h2 id="wine-lens-title">Find wineries by what is in the glass</h2>
+          <p>Most regional lists sort by geography or popularity. These wine-first lenses start with the style you want to taste, then use the planner to make the route practical.</p>
+          <div className="wine-lens-grid">
+            <div className="wine-lens-card"><h3>Riesling</h3><p>Dry, aromatic, off-dry, and classic cool-climate expressions across both peninsulas.</p><Link href="/wine/riesling">Find Riesling wineries</Link></div>
+            <div className="wine-lens-card"><h3>Sparkling wine</h3><p>Start with true sparkling specialists, then add wineries where bubbly is a meaningful part of the lineup.</p><Link href="/wine/sparkling">Find sparkling-wine stops</Link></div>
+            <div className="wine-lens-card"><h3>Cool-climate reds</h3><p>Cabernet Franc, Pinot Noir, Merlot, Nebbiolo, and other red-wine signals for visitors who do not want a white-only day.</p><Link href="/wine/reds">Find red-wine wineries</Link></div>
+            <div className="wine-lens-card"><h3>Dry & aromatic whites</h3><p>Chardonnay, Pinot Gris, Sauvignon Blanc, Albariño, Grüner, Gewürztraminer, and more.</p><Link href="/wine/whites">Find white-wine wineries</Link></div>
+            <div className="wine-lens-card"><h3>Wine-first producers</h3><p>For visitors who care more about distinctive wine programs than the biggest view or tasting-room spectacle.</p><Link href="/wine/serious-wine">Plan a wine-first day</Link></div>
+            <div className="wine-lens-card"><h3>First Traverse City wine day</h3><p>A balanced entry point: strong wine identity, memorable settings, and a route that makes geographic sense.</p><Link href="/wine/first-trip">Build a first-timer wine day</Link></div>
+          </div>
+        </section>
         <h2>Why this map is different</h2>
         <p>
           Most winery maps stop at pins. This one lets you choose the stops you actually want, orders them into a practical loop,
