@@ -7,6 +7,20 @@ import poisData from "@/data/pois.json";
 import originsData from "@/data/origins.json";
 import shuttleData from "@/data/shuttle.json";
 import { trackWineEvent } from "@/lib/wine-analytics";
+import {
+  buildWinePlanHash,
+  normalizeWinePlan,
+  readLastWinePlan,
+  readLocalWinePlans,
+  readWinePlanFromHash,
+  removeSavedWinePlan,
+  upsertSavedWinePlan,
+  winePlanFingerprint,
+  winePlanLabel,
+  wineStopCountBucket,
+  writeLastWinePlan,
+  writeLocalWinePlans,
+} from "@/lib/my-wine-day";
 
 export default function Planner({
   preset = {},
@@ -51,18 +65,65 @@ export default function Planner({
         : embedded
           ? "embedded_map"
           : "winery_map_home";
+    const today = new Date().toISOString().slice(0,10);
+    const winePlanOptions = {
+      validOrigins: Object.keys(ORIGINS),
+      validIds: ALL.map((v)=>v.id),
+      defaultOrigin: "Traverse City",
+      defaultDate: today,
+    };
     const state = {
       beverages:new Set(Array.isArray(preset.beverages) ? preset.beverages : ["wine"]),
       styles:new Set(Array.isArray(preset.styles) ? preset.styles : []),
       poiKinds:new Set(Array.isArray(preset.poiKinds) ? preset.poiKinds : []),
       area:["any","leelanau","old-mission","traverse-city"].includes(preset.area) ? preset.area : "any",
       origin:ORIGINS[preset.origin] ? preset.origin : "Traverse City",
-      date:new Date().toISOString().slice(0,10), start:"11:00", doneBy:"18:00",
+      date:today, start:"11:00", doneBy:"18:00",
       pace:"standard", dd:false, suggestN:3,
       selected:Array.isArray(preset.selected) ? preset.selected.filter((id)=>byId(id)) : [],
       mode:"choose", scheduled:null
     };
     const originPt = () => ORIGINS[state.origin];
+    const initialSharedPlan = typeof window !== "undefined"
+      ? readWinePlanFromHash(window.location.hash, winePlanOptions)
+      : null;
+
+    function currentWinePlan(){
+      return normalizeWinePlan({
+        origin: state.origin,
+        date: state.date,
+        start: state.start,
+        doneBy: state.doneBy,
+        pace: state.pace,
+        dd: state.dd,
+        area: state.area,
+        beverages: [...state.beverages],
+        styles: [...state.styles],
+        poiKinds: [...state.poiKinds],
+        selected: state.selected,
+      }, winePlanOptions);
+    }
+
+    function applyWinePlan(plan){
+      const clean = normalizeWinePlan(plan, winePlanOptions);
+      if(!clean) return false;
+      state.origin = clean.origin;
+      state.date = clean.date;
+      state.start = clean.start;
+      state.doneBy = clean.doneBy;
+      state.pace = clean.pace;
+      state.dd = clean.dd;
+      state.area = clean.area;
+      state.beverages = new Set(clean.beverages);
+      state.styles = new Set(clean.styles);
+      state.poiKinds = new Set(clean.poiKinds);
+      state.selected = clean.selected.slice();
+      state.mode = "choose";
+      state.scheduled = null;
+      return true;
+    }
+
+    if(initialSharedPlan) applyWinePlan(initialSharedPlan);
 
     // Curated starting points, each a real, geographically tight loop of well-rated,
     // open-most-days stops. Tapping one loads it and routes it; the user edits from there.
@@ -88,7 +149,116 @@ export default function Planner({
       const di=document.getElementById("dateInput"); if(di) di.value=state.date;
       const ti=document.getElementById("timeInput"); if(ti) ti.value=state.start;
       const db=document.getElementById("doneByInput"); if(db) db.value=state.doneBy;
+      const pace=document.getElementById("paceChips"); if(pace)[...pace.children].forEach((el)=>el.classList.toggle("chip-on",el.dataset.pace===state.pace));
+      const dd=document.getElementById("ddToggle"); if(dd) dd.checked=state.dd;
       buildStyleCloud();
+    }
+
+    function setActionLabel(id, label, resetLabel){
+      const el=document.getElementById(id); if(!el) return;
+      el.textContent=label;
+      if(resetLabel) setTimeout(()=>{ const again=document.getElementById(id); if(again) again.textContent=resetLabel; },1600);
+    }
+
+    function renderMyWineDay(){
+      const shell=document.getElementById("myWineDayShell");
+      const drawer=document.getElementById("myWineDayDrawer");
+      const resume=document.getElementById("resumeWineBtn");
+      const toggle=document.getElementById("myWineDayBtn");
+      if(!shell || !drawer || !resume || !toggle) return;
+
+      const saved=readLocalWinePlans(window.localStorage, winePlanOptions);
+      const last=readLastWinePlan(window.localStorage, winePlanOptions);
+      const current=currentWinePlan();
+      const currentFingerprint=current ? winePlanFingerprint(current, winePlanOptions) : "";
+      const lastFingerprint=last ? winePlanFingerprint(last, winePlanOptions) : "";
+      const canResume=Boolean(last && lastFingerprint && lastFingerprint!==currentFingerprint);
+
+      shell.hidden=!(saved.length || last || state.scheduled);
+      resume.hidden=!canResume;
+      if(canResume) resume.textContent="Resume last wine day";
+      toggle.textContent=saved.length ? `My Wine Day · ${saved.length} saved` : "My Wine Day";
+
+      if(!saved.length){
+        drawer.innerHTML=`<div class="my-wine-empty"><strong>No saved wine days yet.</strong><span>Build a route, then save it here. Plans stay in this browser only.</span></div>`;
+        return;
+      }
+
+      drawer.innerHTML=`<div class="my-wine-drawer-head"><strong>Saved wine days</strong><span>Stored only on this device</span></div>
+        <div class="my-wine-saved-list">${saved.map((entry)=>`
+          <div class="my-wine-saved">
+            <button class="my-wine-open" data-wine-open="${entry.id}">${winePlanLabel(entry.plan, winePlanOptions)}</button>
+            <button class="my-wine-remove" data-wine-remove="${entry.id}" aria-label="Remove saved wine day">×</button>
+          </div>`).join("")}</div>`;
+    }
+
+    async function restoreWinePlan(plan, source){
+      if(!applyWinePlan(plan)) return;
+      syncControlsFromState();
+      renderMyWineDay();
+      trackWineEvent("wine_plan_resumed", {
+        context: analyticsContext,
+        source,
+        area: state.area,
+        stopCount: wineStopCountBucket(state.selected.length),
+      });
+      await buildDay();
+    }
+
+    function saveCurrentWinePlan(){
+      const plan=currentWinePlan(); if(!plan) return;
+      const saved=readLocalWinePlans(window.localStorage, winePlanOptions);
+      const next=upsertSavedWinePlan(saved, plan, winePlanOptions);
+      writeLocalWinePlans(window.localStorage, next);
+      writeLastWinePlan(window.localStorage, plan, winePlanOptions);
+      trackWineEvent("wine_plan_saved", {
+        context: analyticsContext,
+        area: state.area,
+        stopCount: wineStopCountBucket(plan.selected.length),
+      });
+      renderMyWineDay();
+      setActionLabel("savePlanBtn","Saved to My Wine Day","Save to My Wine Day");
+    }
+
+    function removeSavedWineDay(id){
+      const saved=readLocalWinePlans(window.localStorage, winePlanOptions);
+      writeLocalWinePlans(window.localStorage, removeSavedWinePlan(saved,id));
+      trackWineEvent("wine_plan_removed", { context: analyticsContext });
+      renderMyWineDay();
+    }
+
+    function planSummaryText(){
+      const s=state.scheduled; if(!s) return "";
+      const lines=[`Our Traverse City wine day · ${dayName(state.date)} · start ${pretty(toMin(state.start))} from ${state.origin}`];
+      s.fits.forEach((x,i)=>{ const v=byId(x.id); lines.push(`${i+1}. ${pretty(x.arrive)} · ${v.name}`); });
+      lines.push(`Back around ${pretty(s.endTime+s.returnLeg)}.`);
+      return lines.join("\n");
+    }
+
+    async function shareExactWinePlan(){
+      const plan=currentWinePlan(); if(!plan || !state.scheduled) return;
+      const hash=buildWinePlanHash(plan, winePlanOptions); if(!hash) return;
+      const url=window.location.origin+window.location.pathname+hash;
+      const text=planSummaryText();
+      let method="clipboard";
+      if(navigator.share){
+        try{
+          await navigator.share({title:"Our Traverse City wine day",text,url});
+          method="native";
+        }catch(err){
+          if(err && err.name==="AbortError") return;
+          if(navigator.clipboard) await navigator.clipboard.writeText(text+"\n\n"+url);
+        }
+      } else if(navigator.clipboard){
+        await navigator.clipboard.writeText(text+"\n\n"+url);
+      }
+      trackWineEvent("wine_plan_shared", {
+        context: analyticsContext,
+        method,
+        area: state.area,
+        stopCount: wineStopCountBucket(plan.selected.length),
+      });
+      setActionLabel("sharePlanBtn",method==="native"?"Shared":"Plan link copied","Share exact plan");
     }
     function loadStarter(id){
       const p = STARTERS.find((s)=>s.id===id); if(!p) return;
@@ -236,6 +406,8 @@ export default function Planner({
       state.scheduled = schedule(ordered, legDur);
       state.scheduled.geometry = geometry;
       state.scheduled.routed = !!geometry;
+      const builtPlan=currentWinePlan();
+      if(builtPlan) writeLastWinePlan(window.localStorage, builtPlan, winePlanOptions);
       trackWineEvent("wine_route_built", {
         context: analyticsContext,
         area: state.area,
@@ -243,7 +415,7 @@ export default function Planner({
         routeMode: geometry ? "routed" : "estimated",
         conflictCount: state.scheduled.conflicts.length + state.scheduled.overflow.length,
       });
-      state.mode = "day"; renderPanel(); drawMap();
+      state.mode = "day"; renderPanel(); drawMap(); renderMyWineDay();
     }
     function removeAndRebuild(id){ state.selected = state.selected.filter((x)=>x!==id); if(state.selected.length) buildDay(); else { state.mode="choose"; renderPanel(); drawMap(); } }
 
@@ -494,7 +666,9 @@ export default function Planner({
       if(s.overflow.length) html += `<div class="dropped"><strong>Past your ${pretty(toMin(state.doneBy))} finish:</strong> ${s.overflow.map((c)=>byId(c.id).name).join(", ")}. Extend your finish time or drop an earlier stop.</div>`;
       html += `<div class="plan-foot">
         <a class="open-maps" href="${gmapsLoop(s)}" target="_blank" rel="noopener">Open whole loop in Google Maps</a>
-        <button class="ghost" id="shareBtn">Copy a shareable summary</button></div>`;
+        <button class="ghost" id="sharePlanBtn">Share exact plan</button>
+        <button class="ghost" id="savePlanBtn">Save to My Wine Day</button>
+        <button class="ghost" id="shareBtn">Copy summary</button></div>`;
       plan.innerHTML = html;
     }
     function responsibleNote(s, nDrinks, nSights){
@@ -508,7 +682,9 @@ export default function Planner({
     function copyShare(){ const s=state.scheduled; if(!s) return; const lines=[`A day from ${state.origin}, ${dayName(state.date)}, start ${pretty(toMin(state.start))}`];
       s.fits.forEach((x,i)=>{ const v=byId(x.id); lines.push(`${i+1}. ${pretty(x.arrive)} ${v.name} (${v.isPoi?POI_KIND_LABEL[v.kind]:v.town})`); });
       lines.push(`Back by about ${pretty(s.endTime+s.returnLeg)}.`);
-      if(navigator.clipboard) navigator.clipboard.writeText(lines.join("\n")); const b=document.getElementById("shareBtn"); if(b){ b.textContent="Copied"; setTimeout(()=>b.textContent="Copy a shareable summary",1500); } }
+      if(navigator.clipboard) navigator.clipboard.writeText(lines.join("\n"));
+      trackWineEvent("wine_summary_copied", { context: analyticsContext, area: state.area, stopCount: wineStopCountBucket(s.fits.length) });
+      setActionLabel("shareBtn","Summary copied","Copy summary"); }
 
     function buildStyleCloud(){
       const sc=document.getElementById("styleCloud"); if(!sc) return; sc.innerHTML="";
@@ -569,20 +745,51 @@ export default function Planner({
         if(t.id==="suggestBtn") return suggest();
         if(t.id==="sightBtn") return addSightAlongWay();
         if(t.id==="backBtn"){ state.mode="choose"; renderPanel(); drawMap(); return; }
-        if(t.id==="shareBtn") return copyShare();
+        if(t.id==="sharePlanBtn") return shareExactWinePlan();
+      if(t.id==="savePlanBtn") return saveCurrentWinePlan();
+      if(t.id==="shareBtn") return copyShare();
       };
       plan.onmouseover=(e)=>{ const r=e.target.closest("[data-toggle],[data-row],[data-locate]"); if(!r) return; emphasize(r.dataset.toggle||r.dataset.row||r.dataset.locate,true); };
       plan.onmouseout=(e)=>{ const r=e.target.closest("[data-toggle],[data-row],[data-locate]"); if(!r) return; emphasize(r.dataset.toggle||r.dataset.row||r.dataset.locate,false); };
       document.getElementById("map").onclick=(e)=>{ if(e.target.dataset && e.target.dataset.toggle) toggleSelect(e.target.dataset.toggle); };
+
+      const myShell=document.getElementById("myWineDayShell");
+      const myDrawer=document.getElementById("myWineDayDrawer");
+      const myToggle=document.getElementById("myWineDayBtn");
+      const resume=document.getElementById("resumeWineBtn");
+      if(myToggle) myToggle.onclick=()=>{ if(myDrawer) myDrawer.hidden=!myDrawer.hidden; };
+      if(resume) resume.onclick=()=>{
+        const last=readLastWinePlan(window.localStorage, winePlanOptions);
+        if(last) restoreWinePlan(last,"last");
+      };
+      if(myShell) myShell.onclick=(e)=>{
+        const open=e.target.closest("[data-wine-open]");
+        const remove=e.target.closest("[data-wine-remove]");
+        if(remove){ removeSavedWineDay(remove.dataset.wineRemove); return; }
+        if(open){
+          const saved=readLocalWinePlans(window.localStorage, winePlanOptions);
+          const entry=saved.find((item)=>item.id===open.dataset.wineOpen);
+          if(entry) restoreWinePlan(entry.plan,"saved");
+        }
+      };
     }
 
-    buildChips(); wireEvents(); initMap(); renderPanel();
+    buildChips(); syncControlsFromState(); wireEvents(); initMap(); renderPanel(); renderMyWineDay();
     trackWineEvent("wine_map_loaded", {
       context: analyticsContext,
       area: state.area,
       embedded: embedded ? "yes" : "no",
       wineFirst: state.beverages.has("wine") ? "yes" : "no",
     });
+    if(initialSharedPlan){
+      trackWineEvent("wine_plan_resumed", {
+        context: analyticsContext,
+        source: "shared",
+        area: state.area,
+        stopCount: wineStopCountBucket(state.selected.length),
+      });
+      buildDay();
+    }
     return () => { if (map) { map.remove(); map = null; } };
   }, []);
 
@@ -601,6 +808,14 @@ export default function Planner({
           </div>
         )}
       </header>
+      <section id="myWineDayShell" className="my-wine-day-shell" hidden aria-label="My Wine Day">
+        <div className="my-wine-day-bar">
+          <button type="button" id="resumeWineBtn" className="my-wine-resume" hidden>Resume last wine day</button>
+          <button type="button" id="myWineDayBtn" className="my-wine-toggle" aria-controls="myWineDayDrawer">My Wine Day</button>
+          <span>Saved on this device. Shared links reopen the exact plan.</span>
+        </div>
+        <div id="myWineDayDrawer" className="my-wine-day-drawer" hidden></div>
+      </section>
       <section id="controls" className="hide-adv">
         <div className="grp"><label>Tasting</label><div id="bevChips" className="chips"></div></div>
         <div className="grp grow adv"><label>Styles (optional, pick any)</label><div id="styleCloud" className="chips style-cloud"></div></div>

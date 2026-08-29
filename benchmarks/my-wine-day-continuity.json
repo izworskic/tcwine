@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "id": "my-wine-day-continuity",
+  "property": "https://tcwine.chrisizworski.com/",
+  "objective": "Increase route commitment, return use, and word-of-mouth sharing without changing the active map-first search treatment.",
+  "storage": {
+    "localOnly": true,
+    "lastPlanKey": "tcwine:my-wine-day:last:v1",
+    "savedPlansKey": "tcwine:my-wine-day:saved:v1",
+    "maxSavedPlans": 6,
+    "maxSelectedStops": 12,
+    "serverProfile": false,
+    "crossDeviceSync": false
+  },
+  "sharing": {
+    "transport": "url-fragment",
+    "prefix": "#plan=",
+    "indexableUserPlanPages": false,
+    "rebuildAgainstCurrentRouteAndHours": true
+  },
+  "events": [
+    "wine_plan_saved",
+    "wine_plan_removed",
+    "wine_plan_resumed",
+    "wine_plan_shared",
+    "wine_summary_copied"
+  ],
+  "forbiddenAnalytics": [
+    "selected venue ids",
+    "selected venue names",
+    "exact plan url or hash",
+    "date",
+    "exact start/end time",
+    "free text",
+    "precise user location",
+    "personal identifiers"
+  ],
+  "initialTargets": {
+    "routeBuildToSaveRate": 0.08,
+    "routeBuildToShareRate": 0.05,
+    "resumedOrSharedPlanRebuildRate": 0.20,
+    "mapLoadRegressionAllowed": false,
+    "routeBuildRegressionAllowed": false
+  },
+  "searchBoundary": {
+    "activeMapFirstWindowPreserved": true,
+    "changesCanonical": false,
+    "changesTitle": false,
+    "changesH1": false,
+    "changesCoreMetaDescription": false,
+    "addsIndexablePages": false
+  }
+}
