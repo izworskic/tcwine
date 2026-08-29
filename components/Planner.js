@@ -6,6 +6,7 @@ import venuesData from "@/data/venues.json";
 import poisData from "@/data/pois.json";
 import originsData from "@/data/origins.json";
 import shuttleData from "@/data/shuttle.json";
+import { trackWineEvent } from "@/lib/wine-analytics";
 
 export default function Planner({
   preset = {},
@@ -44,6 +45,12 @@ export default function Planner({
     const fmtDur = (m) => { const h=Math.floor(m/60),mm=m%60; return h?`${h}h ${mm}m`:`${mm}m`; };
     const prettyTag = (t) => t.replace(/-/g," ").replace(/\b\w/g,(c)=>c.toUpperCase());
 
+    const analyticsContext =
+      typeof preset.analyticsContext === "string" && preset.analyticsContext.length <= 40
+        ? preset.analyticsContext
+        : embedded
+          ? "embedded_map"
+          : "winery_map_home";
     const state = {
       beverages:new Set(Array.isArray(preset.beverages) ? preset.beverages : ["wine"]),
       styles:new Set(Array.isArray(preset.styles) ? preset.styles : []),
@@ -85,6 +92,7 @@ export default function Planner({
     }
     function loadStarter(id){
       const p = STARTERS.find((s)=>s.id===id); if(!p) return;
+      trackWineEvent("wine_starter_loaded", { starter: p.id, context: analyticsContext });
       state.beverages = new Set(p.beverages||[]);
       state.poiKinds = new Set(p.poiKinds||[]);
       state.styles = new Set();
@@ -126,8 +134,15 @@ export default function Planner({
 
     function toggleSelect(id){
       const wasIn = state.selected.includes(id);
+      const item = byId(id);
       if(wasIn) state.selected = state.selected.filter((x)=>x!==id);
       else state.selected = [...state.selected, id];
+      if(item) trackWineEvent("wine_stop_toggled", {
+        action: wasIn ? "removed" : "added",
+        kind: item.isPoi ? "sight" : item.category,
+        area: item.area,
+        context: analyticsContext,
+      });
       if(state.mode==="day"){ buildDay(); }
       else { renderPanel(); drawMap(); if(!wasIn){ const m=markerById[id]; if(m && m.openPopup) m.openPopup(); } }
     }
@@ -221,6 +236,13 @@ export default function Planner({
       state.scheduled = schedule(ordered, legDur);
       state.scheduled.geometry = geometry;
       state.scheduled.routed = !!geometry;
+      trackWineEvent("wine_route_built", {
+        context: analyticsContext,
+        area: state.area,
+        stopCount: state.scheduled.fits.length,
+        routeMode: geometry ? "routed" : "estimated",
+        conflictCount: state.scheduled.conflicts.length + state.scheduled.overflow.length,
+      });
       state.mode = "day"; renderPanel(); drawMap();
     }
     function removeAndRebuild(id){ state.selected = state.selected.filter((x)=>x!==id); if(state.selected.length) buildDay(); else { state.mode="choose"; renderPanel(); drawMap(); } }
@@ -514,8 +536,10 @@ export default function Planner({
     function refreshChoose(){ if(state.mode==="choose"){ renderPanel(); drawMap(); } else { drawMap(); } }
     function wireEvents(){
       document.getElementById("bevChips").onclick=(e)=>{ const b=e.target.dataset.bev; if(!b) return;
-        if(state.beverages.has(b)){ state.beverages.delete(b); e.target.classList.remove("chip-on"); }
+        const turningOff = state.beverages.has(b);
+        if(turningOff){ state.beverages.delete(b); e.target.classList.remove("chip-on"); }
         else { state.beverages.add(b); e.target.classList.add("chip-on"); }
+        trackWineEvent("wine_filter_changed", { context: analyticsContext, filter: "beverage", value: b, action: turningOff ? "off" : "on" });
         [...state.styles].forEach((t)=>{ const bev=STYLE_BEV[t]; if(state.beverages.size && bev && !state.beverages.has(bev)) state.styles.delete(t); });
         buildStyleCloud(); refreshChoose(); };
       document.getElementById("styleCloud").onclick=(e)=>{ const s=e.target.dataset.style; if(!s) return;
@@ -523,6 +547,7 @@ export default function Planner({
       document.getElementById("sightChips").onclick=(e)=>{ const k=e.target.dataset.sight; if(!k) return;
         if(state.poiKinds.has(k)){ state.poiKinds.delete(k); e.target.classList.remove("chip-on"); } else { state.poiKinds.add(k); e.target.classList.add("chip-on"); } refreshChoose(); };
       document.getElementById("areaChips").onclick=(e)=>{ const a=e.target.dataset.area; if(!a) return; state.area=a;
+        trackWineEvent("wine_filter_changed", { context: analyticsContext, filter: "area", value: a, action: "set" });
         [...e.currentTarget.children].forEach((c)=>c.classList.toggle("chip-on",c.dataset.area===a)); refreshChoose(); };
       document.getElementById("paceChips").onclick=(e)=>{ const p=e.target.dataset.pace; if(!p) return; state.pace=p;
         [...e.currentTarget.children].forEach((c)=>c.classList.toggle("chip-on",c.dataset.pace===p)); if(state.mode==="day") buildDay(); };
@@ -552,6 +577,12 @@ export default function Planner({
     }
 
     buildChips(); wireEvents(); initMap(); renderPanel();
+    trackWineEvent("wine_map_loaded", {
+      context: analyticsContext,
+      area: state.area,
+      embedded: embedded ? "yes" : "no",
+      wineFirst: state.beverages.has("wine") ? "yes" : "no",
+    });
     return () => { if (map) { map.remove(); map = null; } };
   }, []);
 
