@@ -4,10 +4,7 @@ import WineAnalytics from "@/components/WineAnalytics";
 
 export const metadata = {
   metadataBase: new URL("https://tcwine.chrisizworski.com"),
-  title: {
-    default: "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
-    template: "%s | Traverse City Winery Map",
-  },
+  title: "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
   description:
     "Interactive Traverse City winery map with 40 wineries across Old Mission, Leelanau, and Traverse City. Pick stops, route real roads, and check the day against tasting-room hours.",
   authors: [{ name: "Chris Izworski", url: "https://chrisizworski.com/chris-izworski/" }],
