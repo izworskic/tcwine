@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node scripts/check-seo.mjs",
-    "check": "npm run test && npm run build"
+    "test": "node scripts/check-seo.mjs && npm run test:my-wine-day",
+    "check": "npm run test && npm run build",
+    "test:my-wine-day": "node scripts/check-my-wine-day.mjs"
   },
   "dependencies": {
     "leaflet": "1.9.4",
