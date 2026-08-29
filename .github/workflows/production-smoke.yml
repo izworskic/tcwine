@@ -1,0 +1,46 @@
+name: Production smoke
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify custom domain serves current map-first release
+        shell: bash
+        run: |
+          set -euo pipefail
+          HOME_URL="https://tcwine.chrisizworski.com/"
+          FOOD_URL="https://tcwine.chrisizworski.com/traverse-city-wineries-with-food"
+          ok=0
+
+          for attempt in $(seq 1 12); do
+            stamp="$(date +%s)-${attempt}"
+            home="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${HOME_URL}?smoke=${stamp}" || true)"
+            food="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${FOOD_URL}?smoke=${stamp}" || true)"
+
+            if grep -q "Traverse City Winery Map: 40 Wineries" <<<"$home" \
+              && grep -q "My Wine Day" <<<"$home" \
+              && grep -q "Traverse City Wineries With Food" <<<"$food"; then
+              ok=1
+              echo "Production custom domain is serving the current map-first + My Wine Day release."
+              break
+            fi
+
+            echo "Attempt ${attempt}: production content has not converged yet."
+            sleep 10
+          done
+
+          if [[ "$ok" != "1" ]]; then
+            echo "::error::tcwine.chrisizworski.com did not serve the expected current release markers."
+            echo "Homepage title marker:"
+            grep -o "Traverse City[^<]*" <<<"$home" | head -5 || true
+            exit 1
+          fi
