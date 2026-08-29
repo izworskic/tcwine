@@ -73,7 +73,7 @@ export default function Page() {
       <p>
         {"Timing a trip for the leaves? See the "}
         <Link href="/fall-color-wine-tour">fall color wine tour</Link>
-        {" guide, or load a ready-made loop from the "}
+        {" guide, compare two stops in the "}
         <Link href="/compare-wineries">winery comparator</Link>
         {", or load a ready-made loop from the "}<Link href="/one-day-itineraries">one-day itineraries</Link>
         {"."}
