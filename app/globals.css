@@ -1355,3 +1355,125 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   font-weight:700;
   vertical-align:middle;
 }
+
+
+/* ---------- Wine Country Now + My Wine Journal ---------- */
+.wine-now-strip{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:center;
+  margin:18px 0 22px;
+  padding:13px 15px;
+  border:1px solid #d8c8ba;
+  border-radius:12px;
+  background:linear-gradient(120deg,#fffaf4,#f5eee7);
+}
+.wine-now-strip>div{display:grid;gap:2px}
+.wine-now-strip strong{font-size:.88rem}
+.wine-now-strip span{color:var(--ink-soft);font-size:.65rem}
+.wine-now-kicker{color:var(--wine)!important;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.wine-now-strip a{flex:0 0 auto;color:var(--wine);font-size:.7rem;font-weight:700;text-decoration:none}
+
+.wine-now{margin:28px 0 36px}
+.wine-now-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:14px}
+.wine-now-head h2{margin:0 0 6px;font-size:1.65rem}
+.wine-now-head p:last-child{margin:0;max-width:70ch;color:var(--ink-soft)}
+.wine-now-verified{flex:0 0 auto;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink-soft);font-size:.65rem}
+.wine-now-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.wine-now-card{padding:15px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.wine-now-card-top{display:flex;justify-content:space-between;gap:8px;color:var(--ink-soft);font-size:.61rem}
+.wine-now-state{font-weight:700;text-transform:uppercase;letter-spacing:.07em}
+.wine-now-state.active,.wine-now-state.today{color:#365d40}
+.wine-now-state.upcoming{color:var(--wine)}
+.wine-now-card h3{margin:7px 0 4px;font-size:1rem}
+.wine-now-card h3 a{color:inherit;text-decoration:none}
+.wine-now-date{margin:0 0 7px!important;color:var(--wine)!important;font-weight:700}
+.wine-now-card p{margin:0 0 8px;color:var(--ink-soft);font-size:.72rem;line-height:1.4}
+.wine-now-truth{padding:8px;border-radius:8px;background:var(--paper);color:var(--ink-soft);font-size:.68rem;line-height:1.4}
+.wine-now-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:9px}
+.wine-now-actions a,.wine-watch a,.event-source a{color:var(--bay);font-size:.66rem;font-weight:700;text-decoration:none}
+.wine-watch{margin-top:14px;padding:14px;border:1px dashed #c8bcae;border-radius:11px;background:#fbf8f3}
+.wine-watch>div{margin-top:8px}
+.wine-watch p{margin:4px 0;color:var(--ink-soft);font-size:.7rem}
+.wine-event-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0}
+.wine-event-facts>div{padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.wine-event-facts strong{display:block;font-size:.76rem}
+.wine-event-facts span{display:block;margin-top:3px;color:var(--ink-soft);font-size:.6rem}
+.event-warning{margin:12px 0;padding:10px 12px;border:1px solid #e2c9b5;border-radius:9px;background:#fff8ef;font-size:.72rem}
+.event-truth{margin:20px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.event-truth h2{margin:0 0 6px}
+.event-truth>p:not(.wine-world-eyebrow){color:var(--ink-soft)}
+.event-source{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-top:10px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.64rem}
+.event-venue-link{padding:10px 12px;border-left:3px solid var(--wine);background:var(--paper)}
+
+.winery-journal-card{
+  margin:28px 0;
+  padding:17px;
+  border:1px solid #d8c8ba;
+  border-radius:14px;
+  background:linear-gradient(145deg,#fffaf5,#f5eee7);
+}
+.journal-card-head{display:flex;justify-content:space-between;gap:14px;align-items:start}
+.journal-card-head h2{margin:0}
+.journal-card-head>a{color:var(--wine);font-size:.67rem;font-weight:700;text-decoration:none}
+.journal-privacy,.journal-local-note{color:var(--ink-soft);font-size:.64rem}
+.journal-status{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:12px 0}
+.journal-status button,.journal-filterbar button{
+  border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fff;color:var(--ink-soft);font:inherit;font-size:.68rem;cursor:pointer
+}
+.journal-status button.on,.journal-filterbar button.on{border-color:var(--wine);background:var(--wine);color:#fff}
+.journal-favorite{display:flex;gap:5px;align-items:center;color:var(--ink-soft);font-size:.68rem}
+.journal-field{display:grid;gap:4px;margin:8px 0;color:var(--ink-soft);font-size:.65rem;font-weight:700}
+.journal-field input,.journal-field textarea,.journal-quick select{
+  width:100%;box-sizing:border-box;padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-size:.74rem
+}
+.journal-field textarea{resize:vertical}
+.journal-actions{display:flex;gap:8px;margin-top:10px}
+.journal-actions button,.journal-quick button{
+  border-radius:8px;padding:7px 10px;font:inherit;font-size:.67rem;font-weight:700;cursor:pointer
+}
+.journal-save{border:1px solid var(--wine);background:var(--wine);color:#fff}
+.journal-clear{border:1px solid var(--line);background:#fff;color:var(--ink-soft)}
+.wine-journal-dashboard{margin:24px 0 36px}
+.journal-dashboard-proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.journal-dashboard-proof>div{padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.journal-dashboard-proof strong{display:block;color:var(--wine);font:600 1.15rem/1 "Fraunces",Georgia,serif}
+.journal-dashboard-proof span{display:block;margin-top:4px;color:var(--ink-soft);font-size:.62rem}
+.journal-quick{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.journal-quick label{display:grid;gap:4px;color:var(--ink-soft);font-size:.65rem;font-weight:700}
+.journal-quick button{border:1px solid var(--wine);background:var(--wine);color:#fff}
+.journal-filterbar{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.journal-filterbar .journal-copy{margin-left:auto}
+.journal-entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.journal-entry{padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.journal-entry-top{display:flex;justify-content:space-between;gap:8px;font-size:.59rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.journal-entry-status.visited{color:#365d40}
+.journal-entry-status.want{color:var(--wine)}
+.journal-heart{color:var(--wine)}
+.journal-entry h2{margin:6px 0 3px;font-size:.95rem}
+.journal-entry h2 a{color:inherit;text-decoration:none}
+.journal-entry-meta{margin:0 0 8px;color:var(--ink-soft);font-size:.63rem}
+.journal-memory{margin:7px 0;padding:7px 8px;border-radius:8px;background:var(--paper);font-size:.7rem}
+.journal-note{color:var(--ink-soft);font-size:.7rem;line-height:1.4;white-space:pre-wrap}
+.journal-entry-tags{display:flex;flex-wrap:wrap;gap:4px}
+.journal-entry-tags span{padding:3px 5px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft);font-size:.55rem}
+.journal-entry-actions{display:flex;gap:10px;margin-top:9px}
+.journal-entry-actions a,.journal-entry-actions button{color:var(--bay);font:inherit;font-size:.63rem;font-weight:700;text-decoration:none}
+.journal-entry-actions button{border:0;background:none;padding:0;cursor:pointer}
+.journal-empty{padding:22px;border:1px dashed var(--line);border-radius:12px;text-align:center;background:var(--paper)}
+.journal-empty h2{margin:0 0 6px}.journal-empty p{color:var(--ink-soft)}.journal-empty a{color:var(--wine);font-weight:700;text-decoration:none}
+
+@media(max-width:760px){
+  .wine-now-head{display:grid;gap:10px}
+  .wine-now-verified{justify-self:start}
+  .wine-now-grid,.journal-entry-grid{grid-template-columns:1fr}
+  .wine-event-facts,.journal-dashboard-proof{grid-template-columns:1fr 1fr}
+  .event-source{display:grid}
+}
+@media(max-width:520px){
+  .wine-now-strip{display:grid}
+  .wine-event-facts,.journal-dashboard-proof{grid-template-columns:1fr 1fr}
+  .journal-quick{grid-template-columns:1fr}
+  .journal-filterbar .journal-copy{margin-left:0}
+}
