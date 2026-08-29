@@ -10,10 +10,10 @@
     "placeKinds": 5
   },
   "after": {
-    "tastingVenues": 74,
+    "tastingVenues": 77,
     "specialPlaces": 65,
     "placeKinds": 9,
-    "totalRoutableRecords": 139,
+    "totalRoutableRecords": 142,
     "sourceBackedSpecialPlaces": 47,
     "seasonalRecords": 5,
     "temporaryClosureGuards": 1
