@@ -48,7 +48,7 @@ export default function WineDayComposer(){
           </p>
         </div>
         <div className="wine-truth-proof">
-          <span><strong>40</strong> wineries scored</span>
+          <span><strong>43</strong> wineries scored</span>
           <span><strong>3</strong> wineries per day</span>
           <span><strong>1</strong> optional non-wine break</span>
         </div>
