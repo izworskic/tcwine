@@ -37,11 +37,21 @@ function routePartners(v){
 }
 function styleLinks(tags=[]){
   const links=[];
-  if(tags.includes("riesling")) links.push(["/wine/riesling","Riesling wineries"]);
-  if(tags.includes("sparkling")) links.push(["/wine/sparkling","Sparkling wine"]);
+  const specific=[
+    ["cabernet-franc","/wine/cabernet-franc","Cabernet Franc"],
+    ["pinot-noir","/wine/pinot-noir","Pinot Noir"],
+    ["chardonnay","/wine/chardonnay","Chardonnay"],
+    ["pinot-gris","/wine/pinot-gris","Pinot Gris"],
+    ["sauvignon-blanc","/wine/sauvignon-blanc","Sauvignon Blanc"],
+    ["gewurztraminer","/wine/gewurztraminer","Gewürztraminer"],
+    ["merlot","/wine/merlot","Merlot"],
+    ["riesling","/wine/riesling","Riesling"],
+    ["sparkling","/wine/sparkling","Sparkling wine"],
+  ];
+  specific.forEach(([tag,href,label])=>{ if(tags.includes(tag)) links.push([href,label]); });
   if(tags.some(t=>RED.has(t))) links.push(["/wine/reds","Cool-climate reds"]);
   if(tags.some(t=>WHITE.has(t))) links.push(["/wine/whites","Dry & aromatic whites"]);
-  return links;
+  return links.slice(0,8);
 }
 function openSummary(v){
   if(v.needsHours) return "Call ahead before making this a must-hit stop.";
