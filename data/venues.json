@@ -12,7 +12,19 @@
     ],
     "tags": [
       "broad-lineup",
-      "dry-whites"
+      "dry-whites",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "muscat",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc",
+      "vidal",
+      "vignoles",
+      "baco-noir"
     ],
     "dwellMinutes": 45,
     "note": "One of the region's largest and most widely distributed labels. Bay-view room in Omena with a something-for-everyone lineup; an easy, low-pressure stop.",
@@ -74,7 +86,24 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Muscat",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc",
+      "Vidal",
+      "Vignoles",
+      "Baco Noir"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/leelanau-cellars/6283/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "dune-bird",
@@ -168,7 +197,11 @@
     "tags": [
       "dry-whites",
       "rose",
-      "sparkling"
+      "sparkling",
+      "chardonnay",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling"
     ],
     "dwellMinutes": 45,
     "note": "Friendly Lake Leelanau estate with tiered flights, yard games, and a fire pit. Mostly dry wines plus a sparkling peach that gets named often.",
@@ -230,7 +263,16 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Chardonnay",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/45-north-vineyard-%26-winery/6268/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "the-ridge-at-verterra",
@@ -317,7 +359,15 @@
     ],
     "tags": [
       "dry-reds",
-      "dry-whites"
+      "dry-whites",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "pinot-blanc",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc"
     ],
     "dwellMinutes": 45,
     "note": "Modern hilltop room with floor-to-ceiling windows and a fire-pit terrace. Often reservation-only on busy days; check ahead.",
@@ -378,7 +428,20 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/blustone-vineyards/6273/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "bel-lago",
@@ -393,7 +456,16 @@
     ],
     "tags": [
       "aromatic-whites",
-      "gewurztraminer"
+      "gewurztraminer",
+      "cabernet-franc",
+      "chardonnay",
+      "merlot",
+      "muscat",
+      "pinot-blanc",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc"
     ],
     "dwellMinutes": 45,
     "note": "Lake Leelanau estate known for dry Gewurztraminer and aromatic whites, with Market 22 pizzas on site. Sister winery to French Valley.",
@@ -455,7 +527,22 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Muscat",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/bel-lago-vineyards-and-winery/6270/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "chateau-fontaine",
@@ -470,7 +557,12 @@
     ],
     "tags": [
       "broad-lineup",
-      "chardonnay"
+      "chardonnay",
+      "pinot-gris",
+      "riesling",
+      "gewurztraminer",
+      "pinot-blanc",
+      "viognier"
     ],
     "dwellMinutes": 45,
     "note": "Cottage-style room that puts the wine first over the view. Award-winning Chardonnay and a wide flight; welcomes kids and dogs.",
@@ -531,7 +623,18 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Chardonnay",
+      "Pinot Gris",
+      "Riesling",
+      "Gewürztraminer",
+      "Pinot Blanc",
+      "Viognier"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://lpwines.com/chateau-fontaine/",
+    "varietalsSourceLabel": "Leelanau Peninsula Wine Trail"
   },
   {
     "id": "verterra-leland",
@@ -625,7 +728,11 @@
       "cabernet-franc",
       "dry-reds",
       "merlot",
-      "riesling"
+      "riesling",
+      "chardonnay",
+      "muscat",
+      "pinot-gris",
+      "pinot-noir"
     ],
     "dwellMinutes": 45,
     "note": "Waterfront room on the Lake Leelanau narrows with a couple of boat slips. Dry reds lead; lawn seating runs down to the water.",
@@ -688,7 +795,19 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Merlot",
+      "Muscat",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/boathouse-vineyards/6274/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "shady-lane-cellars",
@@ -703,7 +822,14 @@
     ],
     "tags": [
       "dry-whites",
-      "riesling"
+      "riesling",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "muscat",
+      "pinot-gris",
+      "pinot-noir"
     ],
     "dwellMinutes": 45,
     "note": "Laid-back former farm with fireplaces and Adirondack chairs under the pines. Strong dry whites; one of the few genuinely good winter visits.",
@@ -764,7 +890,20 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Muscat",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/shady-lane-cellars/4933/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "three-trees",
@@ -924,7 +1063,17 @@
       "spirits"
     ],
     "tags": [
-      "broad-lineup"
+      "broad-lineup",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "pinot-blanc",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc",
+      "baco-noir"
     ],
     "dwellMinutes": 45,
     "note": "Flagship destination with an inn, bistro, distillery, and tasting room. Polished and family-friendly; can get busy.",
@@ -985,7 +1134,22 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc",
+      "Baco Noir"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/black-star-farms/6272/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "willow-winery",
@@ -1212,7 +1376,12 @@
     "tags": [
       "albarino",
       "broad-lineup",
-      "pinot-noir"
+      "pinot-noir",
+      "chardonnay",
+      "merlot",
+      "pinot-gris",
+      "riesling",
+      "vignoles"
     ],
     "dwellMinutes": 45,
     "note": "Established estate a few minutes from Leland and Fishtown with a broad, easy lineup. Albarino and Pinot Noir blends stand out; heated patio.",
@@ -1275,7 +1444,18 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Chardonnay",
+      "Merlot",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Vignoles"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/good-harbor-vineyards/6281/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "ciccone",
@@ -1327,7 +1507,16 @@
     "beverages": [
       "wine"
     ],
-    "tags": [],
+    "tags": [
+      "pinot-noir",
+      "cabernet-franc",
+      "merlot",
+      "chardonnay",
+      "pinot-gris",
+      "riesling",
+      "frontenac-gris",
+      "marquette"
+    ],
     "dwellMinutes": 45,
     "note": "Dressy-casual Cedar estate known for its raclette experience and vineyard picnics by golf cart. Sister to Bel Lago; a special-occasion stop.",
     "hours": {
@@ -1387,7 +1576,20 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Pinot Noir",
+      "Cabernet Franc",
+      "Merlot",
+      "Chardonnay",
+      "Pinot Gris",
+      "Riesling",
+      "Frontenac Gris",
+      "Marquette"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://lpwines.com/french-valley-vineyard/",
+    "varietalsSourceLabel": "Leelanau Peninsula Wine Trail"
   },
   {
     "id": "aurora-cellars",
@@ -1402,7 +1604,15 @@
       "cider"
     ],
     "tags": [
-      "broad-lineup"
+      "broad-lineup",
+      "blaufrankisch",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "pinot-blanc",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc"
     ],
     "dwellMinutes": 45,
     "note": "Vineyard and wedding venue a touch off the main routes. Warm room and a broad, approachable lineup; quieter than the marquee stops.",
@@ -1463,7 +1673,20 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Blaufränkisch",
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Pinot Blanc",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/aurora-cellars/6269/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "black-star-farms-old-mission",
@@ -1478,7 +1701,15 @@
       "spirits"
     ],
     "tags": [
-      "pinot-noir"
+      "pinot-noir",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "sauvignon-blanc"
     ],
     "dwellMinutes": 45,
     "note": "Old Mission outpost of Black Star with wines, spirits, and cocktail flights. The first winery as you head up the peninsula; an easy opener.",
@@ -1540,7 +1771,21 @@
       "name": "Old Mission Peninsula Wine Trail",
       "url": "https://www.ompwinetrail.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/black-star-farms-old-mission/6271/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "hawthorne-vineyards",
@@ -1785,7 +2030,16 @@
     ],
     "tags": [
       "italian-reds",
-      "nebbiolo"
+      "nebbiolo",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "pinot-blanc",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc"
     ],
     "dwellMinutes": 45,
     "note": "Hilltop estate with underground wine caves and an Italian-leaning red program. Big, architectural, and view-forward over the East Bay.",
@@ -1847,7 +2101,22 @@
       "name": "Old Mission Peninsula Wine Trail",
       "url": "https://www.ompwinetrail.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc",
+      "Nebbiolo"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/mari-vineyards/6285/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "chateau-grand-traverse",
@@ -1862,7 +2131,13 @@
     ],
     "tags": [
       "broad-lineup",
-      "riesling"
+      "riesling",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "pinot-gris",
+      "pinot-noir"
     ],
     "dwellMinutes": 45,
     "note": "Old Mission's founding estate and Michigan's Riesling pioneer. Large and lively, with live music on busy days; a natural anchor stop.",
@@ -1923,7 +2198,19 @@
       "name": "Old Mission Peninsula Wine Trail",
       "url": "https://www.ompwinetrail.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/chateau-grand-traverse/6279/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "brys-estate",
@@ -1938,7 +2225,15 @@
     ],
     "tags": [
       "rose",
-      "sauvignon-blanc"
+      "sauvignon-blanc",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "pinot-blanc",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling"
     ],
     "dwellMinutes": 45,
     "note": "Polished estate paired with the Secret Garden lavender farm. Strong Sauvignon Blanc and rose, bay views, and seated tastings by reservation.",
@@ -1999,7 +2294,20 @@
       "name": "Old Mission Peninsula Wine Trail",
       "url": "https://www.ompwinetrail.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/brys-estate-vineyard-%26-winery/6277/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "2-lads",
@@ -2091,7 +2399,15 @@
       "wine"
     ],
     "tags": [
-      "broad-lineup"
+      "broad-lineup",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "merlot",
+      "pinot-blanc",
+      "pinot-gris",
+      "pinot-noir",
+      "riesling"
     ],
     "dwellMinutes": 45,
     "note": "Hilltop inn and winery near the peninsula's high point with vineyard and bay views. Broad lineup and a B&B on site; central to the upper cluster.",
@@ -2152,7 +2468,20 @@
       "name": "Old Mission Peninsula Wine Trail",
       "url": "https://www.ompwinetrail.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/chateau-chantal/6278/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "bowers-harbor",
@@ -2318,7 +2647,13 @@
     "tags": [
       "cabernet-franc",
       "merlot",
-      "pinot-gris"
+      "pinot-gris",
+      "chardonnay",
+      "gewurztraminer",
+      "pinot-blanc",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc"
     ],
     "dwellMinutes": 45,
     "note": "Hilltop estate on the Leelanau trail's Grand Traverse Bay loop, on the ridgeline west of Traverse City. Family and dog friendly, open late, with a big outdoor tent; a natural stop to or from Sleeping Bear.",
@@ -2380,7 +2715,21 @@
       "name": "Leelanau Peninsula Wine Trail",
       "url": "https://lpwines.com/wineries/",
       "verifiedAt": "2026-08-29"
-    }
+    },
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Pinot Blanc",
+      "Pinot Gris",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/rove-winery-at-the-gallagher-estate/6287/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "the-barrel-room",
@@ -4979,7 +5328,14 @@
       "wine"
     ],
     "tags": [
-      "merlot"
+      "merlot",
+      "cabernet-franc",
+      "chardonnay",
+      "gewurztraminer",
+      "muscat",
+      "pinot-noir",
+      "riesling",
+      "sauvignon-blanc"
     ],
     "dwellMinutes": 45,
     "note": "Hillside estate west of TC (formerly Brengman Brothers at Crain Hill) on the Leelanau trail's Grand Traverse Bay loop. Pours by the glass rather than flights, with an acclaimed on-site restaurant, Cafe Exalt.",
@@ -5036,7 +5392,20 @@
       "estate wines",
       "Merlot",
       "wine by the glass"
-    ]
+    ],
+    "varietals": [
+      "Cabernet Franc",
+      "Chardonnay",
+      "Gewürztraminer",
+      "Merlot",
+      "Muscat",
+      "Pinot Noir",
+      "Riesling",
+      "Sauvignon Blanc"
+    ],
+    "varietalsVerifiedAt": "2026-08-29",
+    "varietalsSourceUrl": "https://www.traversecity.com/listings/brengman-family-wines/250/",
+    "varietalsSourceLabel": "Traverse City Tourism"
   },
   {
     "id": "glen-arbor-wines",
