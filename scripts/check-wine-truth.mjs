@@ -10,7 +10,7 @@ const records=truth.records||[];
 const byId=new Map(records.map(r=>[r.id,r]));
 const errors=[];
 
-if(records.length!==wineries.length) errors.push(`truth records ${records.length} != winery count ${wineries.length}`);
+if(wineries.length<43) errors.push(`winery inventory regressed: expected at least 43, got ${wineries.length}`);\nif(records.length!==wineries.length) errors.push(`truth records ${records.length} != winery count ${wineries.length}`);
 for(const v of wineries){
   const r=byId.get(v.id);
   if(!r){errors.push(`missing truth record: ${v.id}`);continue;}
@@ -20,7 +20,7 @@ for(const v of wineries){
   if(!(r.wineSignal>=2.5&&r.wineSignal<=5)) errors.push(`${v.id}: invalid wineSignal`);
   if(!r.verifiedAt) errors.push(`${v.id}: missing verifiedAt`);
 }
-const intents=["riesling","sparkling","reds","whites","serious-wine","first-trip"];
+const intents=["riesling","sparkling","reds","whites","serious-wine","first-trip"];\nconst leelanauOfficial=wineries.filter(v=>v.officialTrail?.name==="Leelanau Peninsula Wine Trail").length;\nconst oldMissionOfficial=wineries.filter(v=>v.officialTrail?.name==="Old Mission Peninsula Wine Trail").length;\nif(leelanauOfficial<23) errors.push(`official Leelanau inventory regressed: ${leelanauOfficial}`);\nif(oldMissionOfficial<10) errors.push(`official Old Mission inventory regressed: ${oldMissionOfficial}`);
 for(const i of intents){
   if(!sitemap.includes(`wine/${i}`)) errors.push(`sitemap missing wine/${i}`);
   if(!page.includes(`${i}`)) errors.push(`wine landing config missing ${i}`);
@@ -42,4 +42,4 @@ if(errors.length){
   console.error("Wine truth validation failed:\n- "+errors.join("\n- "));
   process.exit(1);
 }
-console.log(JSON.stringify({wineries:wineries.length,truthRecords:records.length,coverage},null,2));
+console.log(JSON.stringify({wineries:wineries.length,truthRecords:records.length,leelanauOfficial,oldMissionOfficial,coverage},null,2));
