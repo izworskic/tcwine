@@ -1,3 +1,4 @@
+import wineEventData from "@/data/wine-events.json";
 import venues from "@/data/venues.json";
 
 const BASE = "https://tcwine.chrisizworski.com";
@@ -15,6 +16,8 @@ const ROUTES = [
   "suttons-bay-tasting-rooms",
   "venues",
   "compare-wineries",
+  "wine-country-now",
+  "my-wine-journal",
   "wine/riesling",
   "wine/sparkling",
   "wine/reds",
@@ -39,5 +42,11 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.78,
     }));
-  return [...staticRoutes, ...wineryRoutes];
+  const eventRoutes = wineEventData.events.map((event) => ({
+    url: BASE + "/events/" + event.id,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+  return [...staticRoutes, ...wineryRoutes, ...eventRoutes];
 }
