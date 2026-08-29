@@ -26,11 +26,13 @@ jobs:
             home="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${HOME_URL}?smoke=${stamp}" || true)"
             food="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${FOOD_URL}?smoke=${stamp}" || true)"
 
-            if grep -q "Traverse City Winery Map: 40 Wineries" <<<"$home" \
-              && grep -q "My Wine Day" <<<"$home" \
+            # PlannerMount uses dynamic(..., { ssr: false }), so My Wine Day is
+            # intentionally client-rendered and cannot be asserted from curl HTML.
+            if grep -q "Traverse City Winery Map" <<<"$home" \
+              && grep -q "40 Wineries" <<<"$home" \
               && grep -q "Traverse City Wineries With Food" <<<"$food"; then
               ok=1
-              echo "Production custom domain is serving the current map-first + My Wine Day release."
+              echo "Production custom domain is serving the current map-first release."
               break
             fi
 
