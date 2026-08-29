@@ -26,7 +26,7 @@ export default function Planner({
   preset = {},
   embedded = false,
   title = "Traverse City Winery Map",
-  description = "Map 40 wineries across Old Mission and Leelanau, choose the stops you want, then route the day around real roads and tasting-room hours.",
+  description = "Map 40 wineries across Old Mission and Leelanau, choose the stops you want, then route the day around real roads and posted hours.",
 }) {
   useEffect(() => {
     const VENUES = venuesData;
@@ -129,7 +129,7 @@ export default function Planner({
     // open-most-days stops. Tapping one loads it and routes it; the user edits from there.
     const STARTERS = [
       { id:"old-mission", title:"An Old Mission afternoon", meta:"4 wineries · Old Mission",
-        blurb:"Four hilltop tasting rooms strung up the narrow peninsula, with the bay on both sides the whole way. The easiest introduction to the area.",
+        blurb:"Four hilltop wineries strung up the narrow peninsula, with the bay on both sides the whole way. The easiest introduction to the area.",
         origin:"Traverse City", beverages:["wine"], poiKinds:[],
         stops:["peninsula-cellars","chateau-chantal","brys-estate","2-lads"] },
       { id:"leelanau-beach", title:"Leelanau, wine and a beach", meta:"3 wineries and a beach · Leelanau",
@@ -584,7 +584,7 @@ export default function Planner({
       }
       html += `<button id="buildBtn2" class="build" ${state.selected.length?"":"disabled"}>Build my day${state.selected.length?` (${state.selected.length})`:""}</button>`;
       const total = cand.length + poiC.length;
-      html += `<div class="match-count">${cand.length} tasting room${cand.length!==1?'s':''}${poiC.length?` · ${poiC.length} sight${poiC.length!==1?'s':''}`:''} match your filters</div>`;
+      html += `<div class="match-count">${cand.length} tasting stop${cand.length!==1?'s':''}${poiC.length?` · ${poiC.length} sight${poiC.length!==1?'s':''}`:''} match your filters</div>`;
       if(!state.poiKinds.size) html += `<p class="hint">Turn on Beaches, Hikes, or Scenic spots up top to add sights along the way, or tap “+ a sight” for a nearby pick.</p>`;
       if(!total){
         html += `<div class="empty"><p class="warn">Nothing matches those filters on ${dayName(state.date)}. Try another day or time, fewer styles, or more beverages.</p></div>`;
@@ -804,7 +804,7 @@ export default function Planner({
             <span>11 Old Mission</span>
             <span>27 Leelanau</span>
             <span>2 Traverse City</span>
-            <em>Real-road routing · tasting-room hours · no account</em>
+            <em>Real-road routing · posted hours · no account</em>
           </div>
         )}
       </header>

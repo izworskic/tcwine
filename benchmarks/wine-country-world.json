@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "id": "wine-country-world",
+  "property": "https://tcwine.chrisizworski.com/",
+  "objective": "Turn the winery map into a Traverse City and Leelanau wine-country decision world without weakening the map-first search experience.",
+  "competitiveBenchmark": {
+    "leelanauWineTrail": {
+      "strength": "Authoritative winery membership and trip-planning categories.",
+      "gapToExploit": "Planning remains largely directory/category based rather than route plus outdoor pairing."
+    },
+    "traverseCityTourism": {
+      "strength": "Strong destination storytelling, day trips, wineries, cideries and outdoor context.",
+      "gapToExploit": "Content is spread across destination pages rather than combined into one decision surface."
+    },
+    "visitNapaValley": {
+      "strength": "Map-first winery discovery and itinerary inspiration.",
+      "gapToExploit": "Wine discovery is strong, but nearby hikes, beaches, lighthouses and harbor-town pairing are not the core interaction."
+    }
+  },
+  "productBenchmark": {
+    "mustFeelLike": [
+      "a map-first planner",
+      "a peninsula chooser",
+      "a tasting plus special-place matcher",
+      "a mixed beverage finder",
+      "a doorway into the broader Michigan outdoor tool network"
+    ],
+    "mustNotFeelLike": [
+      "a winery directory",
+      "a stack of SEO articles",
+      "a lodging page",
+      "a wall of giant buttons",
+      "a sponsored ranking"
+    ]
+  },
+  "events": [
+    "wine_world_filter_changed",
+    "wine_world_pair_opened",
+    "wine_world_outdoors_handoff"
+  ],
+  "initialTargets": {
+    "landingToWorldInteractionRate": 0.12,
+    "worldInteractionToPairMapOpenRate": 0.08,
+    "landingToOutdoorsHandoffRate": 0.03,
+    "routeBuildRegressionAllowed": false,
+    "mapLoadRegressionAllowed": false
+  },
+  "searchBoundary": {
+    "preserveCanonical": true,
+    "preserveTitle": true,
+    "preserveH1": true,
+    "preserveCoreMetaDescription": true,
+    "noNewIndexablePagesInThisIncrement": true
+  }
+}

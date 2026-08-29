@@ -3,14 +3,15 @@ import venues from "@/data/venues.json";
 import PlannerMount from "@/components/PlannerMount";
 import RegionalPhoto from "@/components/RegionalPhoto";
 import AuthorNote from "@/components/AuthorNote";
+import WineCountryWorld from "@/components/WineCountryWorld";
 import { buildVenueItemList } from "@/lib/venue-schema";
 import { HOURS_VERIFIED } from "@/components/VenueHours";
 
 const BASE = "https://tcwine.chrisizworski.com";
-const INTRO = "Interactive Traverse City winery map with 40 wineries across Old Mission Peninsula, Leelanau Peninsula, and Traverse City. Pick your stops on the map, then route the day on real roads and check it against tasting-room hours.";
+const INTRO = "Interactive Traverse City winery map with 40 wineries across Old Mission Peninsula, Leelanau Peninsula, and Traverse City. Pick your stops on the map, then route the day on real roads and check it against posted hours.";
 const TAIL = "A few things make a tasting day go smoothly. Decide on a designated driver before you set out, or plan around one of the area shuttle services, since the loops cross open country roads.";
-const REST = ["Most tasting rooms open late morning and close in the late afternoon or early evening, and hours shift with the season, so it is worth confirming with any room you are set on, especially in spring and late fall. Weekends in summer and during fall color are busy, and larger groups should call ahead for reservations. Build in a real meal rather than tasting on an empty stomach, and leave room for the views, which are a large part of why people come here. This planner maps 40 wineries along with 22 breweries, 7 distilleries, and 5 cideries, for 74 tasting venues in total across the Old Mission and Leelanau peninsulas and the Traverse City area. Late summer through fall is the classic window, when the weather is warm, the harvest is underway, and the color comes in. Summer is the busiest and liveliest stretch. Spring and early winter are quieter, with some rooms on reduced hours, which the planner accounts for when it checks each place against your date.", "Built by Chris Izworski, this is a free day planner for tasting your way across Traverse City wine country in Northern Michigan. Pick the rooms you want to visit across the Old Mission and Leelanau peninsulas, add a beach or an overlook if you like, and the planner routes your choices into one efficient loop that is timed against each place's real hours and the drive between stops. The map currently covers 74 verified venues: 40 wineries, 22 breweries, 7 distilleries, and 5 cideries. Traverse City sits near the 45th parallel, the same latitude that runs through Bordeaux, Burgundy, and the Willamette Valley. Two deep arms of Grand Traverse Bay and the broad presence of Lake Michigan moderate the climate here, which lets cool-climate grapes like Riesling, Pinot Gris, Chardonnay, and Pinot Noir ripen slowly and hold their acidity. Most visitors base themselves in Traverse City and spend a day on each peninsula.", "Old Mission Peninsula is the narrow finger of land that splits Grand Traverse Bay into its east and west arms. It runs about nineteen miles north from Traverse City and is never more than three miles wide, with water visible on both sides along most of Center Road. It became Michigan's fourth federally recognized wine appellation in 1987 and is the smallest of the state's growing regions, which makes it the easier of the two peninsulas to cover in a single day. Mission Point Lighthouse stands at the tip, right on the 45th parallel, and there are public beaches and bay overlooks along the way. Leelanau Peninsula is the larger region to the northwest, the little finger of the mitten, bounded by Lake Michigan on one side and the bay on the other. It was recognized as Michigan's second wine appellation in 1982 and its rooms are spread out among villages like Suttons Bay, Lake Leelanau, Leland, Omena, and Northport."];
-const GUIDES = [{"href": "/old-mission-peninsula-wineries", "title": "Old Mission Peninsula winery map", "blurb": "all 11 wineries on the compact peninsula, prefiltered on the interactive map"}, {"href": "/leelanau-peninsula-wine-trail", "title": "Leelanau Peninsula winery map", "blurb": "27 wineries grouped by harbor town and loaded into the peninsula map"}, {"href": "/traverse-city-breweries-and-distilleries", "title": "Traverse City breweries and distilleries", "blurb": "the city tasting day for mixed groups"}, {"href": "/one-day-itineraries", "title": "One-day itineraries", "blurb": "four ready-made loops you can load into the planner"}, {"href": "/group-wine-tour-planning", "title": "Group and bachelorette planning", "blurb": "shuttles, reservations, pacing, and the designated-driver question"}, {"href": "/fall-color-wine-tour", "title": "Fall color wine tour", "blurb": "peak timing, the three drives, and the rooms with bay and vineyard views"}, {"href": "/suttons-bay-tasting-rooms", "title": "Suttons Bay tasting rooms", "blurb": "all 13 with real distances from the village, the walkable two, and the Leelanau Trail arrival"}, {"href": "/old-mission-vs-leelanau-wineries", "title": "Old Mission vs. Leelanau", "blurb": "which peninsula fits a first day, a scenic road trip, or the shortest drive"}, {"href": "/traverse-city-wineries-with-food", "title": "Wineries with food", "blurb": "28 wineries with on-site food, separated into meal-worthy stops and tasting snacks"}, {"href": "/best-traverse-city-wineries-with-views", "title": "Wineries with the best views", "blurb": "view-forward wineries with supported bay, hilltop, vineyard, or sunset notes"}];
+const REST = ["Most tasting stops open late morning and close in the late afternoon or early evening, and hours shift with the season, so it is worth confirming any stop you are set on, especially in spring and late fall. Weekends in summer and during fall color are busy, and larger groups should call ahead for reservations. Build in a real meal rather than tasting on an empty stomach, and leave time for the views, which are a large part of why people come here. This planner maps 40 wineries along with 22 breweries, 7 distilleries, and 5 cideries, for 74 tasting venues in total across the Old Mission and Leelanau peninsulas and the Traverse City area. Late summer through fall is the classic window, when the weather is warm, the harvest is underway, and the color comes in. Summer is the busiest and liveliest stretch. Spring and early winter are quieter, with some places on reduced hours, which the planner accounts for when it checks each place against your date.", "Built by Chris Izworski, this is a free day planner for tasting your way across Traverse City wine country in Northern Michigan. Pick the places you want to visit across the Old Mission and Leelanau peninsulas, add a beach or an overlook if you like, and the planner routes your choices into one efficient loop that is timed against each place's real hours and the drive between stops. The map currently covers 74 verified venues: 40 wineries, 22 breweries, 7 distilleries, and 5 cideries. Traverse City sits near the 45th parallel, the same latitude that runs through Bordeaux, Burgundy, and the Willamette Valley. Two deep arms of Grand Traverse Bay and the broad presence of Lake Michigan moderate the climate here, which lets cool-climate grapes like Riesling, Pinot Gris, Chardonnay, and Pinot Noir ripen slowly and hold their acidity. Most visitors base themselves in Traverse City and spend a day on each peninsula.", "Old Mission Peninsula is the narrow finger of land that splits Grand Traverse Bay into its east and west arms. It runs about nineteen miles north from Traverse City and is never more than three miles wide, with water visible on both sides along most of Center Road. It became Michigan's fourth federally recognized wine appellation in 1987 and is the smallest of the state's growing regions, which makes it the easier of the two peninsulas to cover in a single day. Mission Point Lighthouse stands at the tip, right on the 45th parallel, and there are public beaches and bay overlooks along the way. Leelanau Peninsula is the larger region to the northwest, the little finger of the mitten, bounded by Lake Michigan on one side and the bay on the other. It was recognized as Michigan's second wine appellation in 1982 and its wineries and cideries are spread out among villages like Suttons Bay, Lake Leelanau, Leland, Omena, and Northport."];
+const GUIDES = [{"href": "/old-mission-peninsula-wineries", "title": "Old Mission Peninsula winery map", "blurb": "all 11 wineries on the compact peninsula, prefiltered on the interactive map"}, {"href": "/leelanau-peninsula-wine-trail", "title": "Leelanau Peninsula winery map", "blurb": "27 wineries grouped by harbor town and loaded into the peninsula map"}, {"href": "/traverse-city-breweries-and-distilleries", "title": "Traverse City breweries and distilleries", "blurb": "the city tasting day for mixed groups"}, {"href": "/one-day-itineraries", "title": "One-day itineraries", "blurb": "four ready-made loops you can load into the planner"}, {"href": "/group-wine-tour-planning", "title": "Group and bachelorette planning", "blurb": "shuttles, reservations, pacing, and the designated-driver question"}, {"href": "/fall-color-wine-tour", "title": "Fall color wine tour", "blurb": "peak timing, the three drives, and the stops with bay and vineyard views"}, {"href": "/suttons-bay-tasting-rooms", "title": "Suttons Bay tasting stops", "blurb": "13 places to taste with real distances from the village, the walkable two, and the Leelanau Trail arrival"}, {"href": "/old-mission-vs-leelanau-wineries", "title": "Old Mission vs. Leelanau", "blurb": "which peninsula fits a first day, a scenic road trip, or the shortest drive"}, {"href": "/traverse-city-wineries-with-food", "title": "Wineries with food", "blurb": "28 wineries with on-site food, separated into meal-worthy stops and tasting snacks"}, {"href": "/best-traverse-city-wineries-with-views", "title": "Wineries with the best views", "blurb": "view-forward wineries with supported bay, hilltop, vineyard, or sunset notes"}];
 
 const W = venues.filter((v) => v.category === "winery").length;
 const B = venues.filter((v) => v.category === "brewery").length;
@@ -32,12 +33,12 @@ const FAQ = [
     a: "Plan on one. Decide on a designated driver before you set out, or plan around one of the area shuttle services, since the loops cross open country roads.",
   },
   {
-    q: "Do tasting rooms take reservations?",
-    a: "Weekends in summer and during fall color are busy, and larger groups should call ahead. Hours shift with the season, so confirm with any room you are set on.",
+    q: "Do wineries take reservations?",
+    a: "Weekends in summer and during fall color are busy, and larger groups should call ahead. Hours shift with the season, so confirm any stop you are set on.",
   },
   {
     q: "Which peninsula should I visit first, Old Mission or Leelanau?",
-    a: "Old Mission is the smaller 1987 appellation and the easier single-day loop. Leelanau is larger, with rooms spread among harbor villages. Most visitors base in Traverse City and spend a day on each.",
+    a: "Old Mission is the smaller 1987 appellation and the easier single-day loop. Leelanau is larger, with wineries and cideries spread among harbor villages. Most visitors base in Traverse City and spend a day on each.",
   },
 ];
 
@@ -83,7 +84,7 @@ function graph() {
           "40 winery map",
           "Old Mission and Leelanau filters",
           "real-road route ordering",
-          "tasting-room hours",
+          "posted venue hours",
           "ready-made wine-tour loops",
           "beaches, hikes, overlooks, and lighthouse stops"
         ],
@@ -118,8 +119,8 @@ export default function Page() {
   return (
     <>
       <PlannerMount
-        title="Traverse City Winery Map"
-        description="Start with wine. Map 40 wineries, compare Old Mission and Leelanau, then build the day around real roads and tasting-room hours."
+        title="Traverse City Wine Country"
+        description="Start with wine, then open the day up: cider, spirits, beaches, hikes, lighthouses, food and harbor towns. Build the route around real roads and posted hours."
       />
       <main className="tc-page">
         <h1>Traverse City Winery Map: 40 Wineries on Old Mission & Leelanau</h1>
@@ -134,12 +135,13 @@ export default function Page() {
           <Link href="/leelanau-peninsula-wine-trail">Leelanau winery map</Link>
           <Link href="/one-day-itineraries">Ready-made wine routes</Link>
           <Link href="/fall-color-wine-tour">Fall color wine tour</Link>
-          <Link href="/venues">Tasting-room hours</Link>
+          <Link href="/venues">Posted hours</Link>
         </div>
+        <WineCountryWorld />
         <RegionalPhoto kind="chateau" />
         <h2>Why this map is different</h2>
         <p>
-          Most winery maps stop at pins. This one lets you choose the rooms you actually want, orders them into a practical loop,
+          Most winery maps stop at pins. This one lets you choose the stops you actually want, orders them into a practical loop,
           checks drive time and posted hours, and tells you when the day no longer fits. Wine is the default view; cider, beer,
           spirits, beaches, hikes, scenic stops, and lighthouses are optional layers for mixed groups.
         </p>
@@ -152,7 +154,7 @@ export default function Page() {
             </li>
           ))}
           <li>
-            <Link href="/venues">Tasting room hours</Link>
+            <Link href="/venues">Posted hours</Link>
             {": all " + T + " venues in one directory, verified " + HOURS_VERIFIED}
           </li>
         </ul>
@@ -170,7 +172,7 @@ export default function Page() {
             </div>
           ))}
         </dl>
-        <h2>Browse the rooms</h2>
+        <h2>Browse the places</h2>
         {AREAS.map(([key, label]) => {
           const list = venues.filter((v) => v.area === key);
           if (!list.length) return null;
