@@ -37,7 +37,7 @@ export default function Page() {
       </p>
       <PlannerMount
         embedded
-        preset={{ area: "old-mission", beverages: ["wine"], origin: "Traverse City" }}
+        preset={{ area: "old-mission", beverages: ["wine"], origin: "Traverse City", analyticsContext: "old_mission_map" }}
         title="Old Mission Peninsula winery map"
         description={"Showing the " + N + " wineries first. Add other tasting rooms or sights only if you want them."}
       />
