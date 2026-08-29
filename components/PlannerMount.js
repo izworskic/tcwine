@@ -6,10 +6,11 @@ const Planner = dynamic(() => import("@/components/Planner"), {
   loading: () => <div style={{ minHeight: "100vh", padding: 28 }}>Loading the map…</div>,
 });
 
-export default function PlannerMount() {
+export default function PlannerMount(props) {
+  const embedded = Boolean(props?.embedded);
   return (
-    <div className="planner-shell">
-      <Planner />
+    <div className={embedded ? "planner-shell planner-shell-embedded" : "planner-shell"}>
+      <Planner {...props} />
     </div>
   );
 }
