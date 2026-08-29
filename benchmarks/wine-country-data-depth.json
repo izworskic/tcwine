@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "id": "wine-country-data-depth",
+  "property": "https://tcwine.chrisizworski.com/",
+  "objective": "Make the non-drinking side of Traverse City wine country deep enough to build memorable days rather than winery-only loops.",
+  "before": {
+    "tastingVenues": 74,
+    "specialPlaces": 20,
+    "placeKinds": 5
+  },
+  "after": {
+    "tastingVenues": 74,
+    "specialPlaces": 65,
+    "placeKinds": 9,
+    "totalRoutableRecords": 139,
+    "sourceBackedSpecialPlaces": 47,
+    "seasonalRecords": 5,
+    "temporaryClosureGuards": 1
+  },
+  "kindMinimums": {
+    "hike": 25,
+    "beach": 10,
+    "market": 8,
+    "paddle": 4,
+    "food": 4,
+    "history": 2
+  },
+  "qualityRules": [
+    "deep-v1 records require sourceUrl, sourceLabel, and verifiedAt",
+    "temporarily closed records must not be offered as candidates",
+    "year-specific seasonal records must not be offered outside their verified season",
+    "all routable coordinates must remain inside the Traverse City and Leelanau regional bounds",
+    "duplicate ids fail validation"
+  ],
+  "releaseBlockers": [
+    "specialPlaces below 60",
+    "source-backed special places below 45",
+    "unknown place kind",
+    "invalid coordinates",
+    "Whaleback closure guard removed",
+    "route build regression",
+    "map load regression"
+  ]
+}
