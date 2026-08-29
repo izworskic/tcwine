@@ -7,7 +7,12 @@ import poisData from "@/data/pois.json";
 import originsData from "@/data/origins.json";
 import shuttleData from "@/data/shuttle.json";
 
-export default function Planner() {
+export default function Planner({
+  preset = {},
+  embedded = false,
+  title = "Traverse City Winery Map",
+  description = "Map 40 wineries across Old Mission and Leelanau, choose the stops you want, then route the day around real roads and tasting-room hours.",
+}) {
   useEffect(() => {
     const VENUES = venuesData;
     const POIS = poisData;
@@ -40,11 +45,15 @@ export default function Planner() {
     const prettyTag = (t) => t.replace(/-/g," ").replace(/\b\w/g,(c)=>c.toUpperCase());
 
     const state = {
-      beverages:new Set(),
-      styles:new Set(), poiKinds:new Set(), area:"any", origin:"Traverse City",
+      beverages:new Set(Array.isArray(preset.beverages) ? preset.beverages : ["wine"]),
+      styles:new Set(Array.isArray(preset.styles) ? preset.styles : []),
+      poiKinds:new Set(Array.isArray(preset.poiKinds) ? preset.poiKinds : []),
+      area:["any","leelanau","old-mission","traverse-city"].includes(preset.area) ? preset.area : "any",
+      origin:ORIGINS[preset.origin] ? preset.origin : "Traverse City",
       date:new Date().toISOString().slice(0,10), start:"11:00", doneBy:"18:00",
       pace:"standard", dd:false, suggestN:3,
-      selected:[], mode:"choose", scheduled:null
+      selected:Array.isArray(preset.selected) ? preset.selected.filter((id)=>byId(id)) : [],
+      mode:"choose", scheduled:null
     };
     const originPt = () => ORIGINS[state.origin];
 
@@ -225,7 +234,12 @@ export default function Planner() {
 
     let map, dotsLayer, routeLayer, markerById = {};
     function initMap(){
-      map = L.map("map",{zoomControl:true}).setView([44.95,-85.65],10);
+      const initialView = state.area === "old-mission"
+        ? { center:[44.94,-85.52], zoom:10 }
+        : state.area === "leelanau"
+          ? { center:[44.98,-85.82], zoom:9 }
+          : { center:[44.95,-85.65], zoom:10 };
+      map = L.map("map",{zoomControl:true}).setView(initialView.center, initialView.zoom);
       const voyager = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
         {attribution:"&copy; OpenStreetMap &copy; CARTO", subdomains:"abcd", maxZoom:20});
       const positron = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
@@ -483,16 +497,16 @@ export default function Planner() {
     }
     function buildChips(){
       const bc=document.getElementById("bevChips"); bc.innerHTML="";
-      Object.keys(BEV_LABEL).forEach((b)=>{ const el=document.createElement("button"); el.className="chip"; el.dataset.bev=b; el.textContent=BEV_LABEL[b]; el.style.setProperty("--accent",CAT_COLOR[b]); bc.appendChild(el); });
+      Object.keys(BEV_LABEL).forEach((b)=>{ const el=document.createElement("button"); el.className="chip"+(state.beverages.has(b)?" chip-on":""); el.dataset.bev=b; el.textContent=BEV_LABEL[b]; el.style.setProperty("--accent",CAT_COLOR[b]); bc.appendChild(el); });
       const ac=document.getElementById("areaChips"); ac.innerHTML="";
-      [["any","All areas"],["leelanau","Leelanau"],["old-mission","Old Mission"],["traverse-city","Traverse City"]].forEach(([k,lab],i)=>{ const el=document.createElement("button"); el.className="chip"+(i===0?" chip-on":""); el.dataset.area=k; el.textContent=lab; ac.appendChild(el); });
+      [["any","All areas"],["leelanau","Leelanau"],["old-mission","Old Mission"],["traverse-city","Traverse City"]].forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip"+(state.area===k?" chip-on":""); el.dataset.area=k; el.textContent=lab; ac.appendChild(el); });
       const pc=document.getElementById("paceChips"); pc.innerHTML="";
       [["leisurely","Leisurely"],["standard","Standard"],["efficient","Efficient"]].forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip"+(k==="standard"?" chip-on":""); el.dataset.pace=k; el.textContent=lab; pc.appendChild(el); });
       buildStyleCloud();
       const gc=document.getElementById("sightChips"); gc.innerHTML="";
-      POI_KINDS.forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip leaf"; el.dataset.sight=k; el.textContent=lab; gc.appendChild(el); });
+      POI_KINDS.forEach(([k,lab])=>{ const el=document.createElement("button"); el.className="chip leaf"+(state.poiKinds.has(k)?" chip-on":""); el.dataset.sight=k; el.textContent=lab; gc.appendChild(el); });
       const os=document.getElementById("originSelect"); os.innerHTML="";
-      Object.keys(ORIGINS).forEach((n)=>{ const op=document.createElement("option"); op.value=n; op.textContent=n; os.appendChild(op); }); os.value="Traverse City";
+      Object.keys(ORIGINS).forEach((n)=>{ const op=document.createElement("option"); op.value=n; op.textContent=n; os.appendChild(op); }); os.value=state.origin;
       document.getElementById("dateInput").value=state.date;
       document.getElementById("timeInput").value=state.start;
       document.getElementById("doneByInput").value=state.doneBy;
@@ -543,9 +557,18 @@ export default function Planner() {
 
   return (
     <>
-      <header>
-        <h1>Traverse City Wine Country</h1>
-        <p>Pick the styles you&apos;re after and the stops you want, add a beach or a trail along the way, then have your day routed into a loop and timed against each place&apos;s real hours.</p>
+      <header className={embedded ? "planner-head embedded" : "planner-head"}>
+        {embedded ? <h2>{title}</h2> : <h1>{title}</h1>}
+        <p>{description}</p>
+        {!embedded && (
+          <div className="map-proof" aria-label="Map coverage">
+            <strong>40 wineries</strong>
+            <span>11 Old Mission</span>
+            <span>27 Leelanau</span>
+            <span>2 Traverse City</span>
+            <em>Real-road routing · tasting-room hours · no account</em>
+          </div>
+        )}
       </header>
       <section id="controls" className="hide-adv">
         <div className="grp"><label>Tasting</label><div id="bevChips" className="chips"></div></div>
