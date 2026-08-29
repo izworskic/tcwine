@@ -40,7 +40,7 @@ export default function Planner({
     const BEV_LABEL = { wine:"Wine", cider:"Cider", beer:"Beer", spirits:"Spirits", mead:"Mead" };
     const AREA_LABEL = { "leelanau":"Leelanau Peninsula", "old-mission":"Old Mission Peninsula", "traverse-city":"Traverse City area" };
     const AREA_ORDER = ["leelanau","old-mission","traverse-city"];
-    const POI_KINDS = [["beach","Beaches"],["hike","Hikes & trails"],["scenic","Scenic spots"],["lighthouse","Lighthouses"],["town","Towns & landmarks"]];
+    const POI_KINDS = [["beach","Beaches"],["hike","Hikes & trails"],["scenic","Scenic spots"],["lighthouse","Lighthouses"],["town","Towns & landmarks"],["paddle","Paddles & water"],["market","Farms & markets"],["food","Local food"],["history","History & odd places"]];
     const POI_KIND_LABEL = Object.fromEntries(POI_KINDS);
     const STYLE_BEV = {};
     VENUES.forEach((v)=>{ const c=v.category==="winery"?"wine":v.category==="brewery"?"beer":v.category==="distillery"?"spirits":v.category==="cidery"?"cider":null; if(c) v.tags.forEach((t)=>{ if(!STYLE_BEV[t]) STYLE_BEV[t]=c; }); });
@@ -53,8 +53,23 @@ export default function Planner({
     function toMin(s){ if(!s) return null; if(s==="24:00") return 1440; const [h,m]=s.split(":").map(Number); return h*60+m; }
     function pretty(min){ if(min>=1440) return "midnight"; let h=Math.floor(min/60),m=min%60,ap=h>=12?"PM":"AM",hh=h%12; if(hh===0)hh=12; return `${hh}:${String(m).padStart(2,"0")} ${ap}`; }
     function dayName(s){ return DAYS[new Date(s+"T12:00:00").getDay()]; }
-    function windowFor(v,day){ if(v.needsHours) return {open:660,close:1080,callAhead:true}; const h=v.hours[day]; if(!h||h.closed) return null; return {open:toMin(h.open),close:toMin(h.close),callAhead:false}; }
-    const isOpen = (v,day) => windowFor(v,day)!==null;
+    function availableOnDate(v,date){
+      if(v.status && v.status!=="open") return false;
+      if(v.season){
+        const year=String(v.season.year||"");
+        if(year && date && date.slice(0,4)!==year) return false;
+        if(v.season.start && date && date<v.season.start) return false;
+        if(v.season.end && date && date>v.season.end) return false;
+      }
+      return true;
+    }
+    function windowFor(v,day,date){
+      if(!availableOnDate(v,date)) return null;
+      if(v.needsHours) return {open:660,close:1080,callAhead:true};
+      const h=v.hours[day]; if(!h||h.closed) return null;
+      return {open:toMin(h.open),close:toMin(h.close),callAhead:false};
+    }
+    const isOpen = (v,day,date) => windowFor(v,day,date)!==null;
     const coords = (id) => { const v=byId(id); return {lat:v.lat,lng:v.lng}; };
     const fmtDur = (m) => { const h=Math.floor(m/60),mm=m%60; return h?`${h}h ${mm}m`:`${mm}m`; };
     const prettyTag = (t) => t.replace(/-/g," ").replace(/\b\w/g,(c)=>c.toUpperCase());
@@ -280,14 +295,16 @@ export default function Planner({
         if(state.area!=="any" && v.area!==state.area) return false;
         if(state.beverages.size && ![...v.beverages].some((b)=>state.beverages.has(b))) return false;
         if(state.styles.size && !v.tags.some((t)=>state.styles.has(t))) return false;
-        if(!isOpen(v,day)) return false;
+        if(!isOpen(v,day,state.date)) return false;
         return true;
       });
     }
     function poiCandidates(){
+      const day=dayName(state.date);
       return POIS.filter((p)=>{
         if(state.area!=="any" && p.area!==state.area) return false;
         if(!state.poiKinds.has(p.kind)) return false;
+        if(!isOpen(p,day,state.date)) return false;
         return true;
       });
     }
@@ -330,7 +347,8 @@ export default function Planner({
       const anchors = (anchorIds && anchorIds.length ? anchorIds.map(coords) : [originPt()]);
       const cands = POIS.filter((p)=> !state.selected.includes(p.id)
         && (state.area==="any" || p.area===state.area)
-        && (!kinds || kinds.has(p.kind)));
+        && (!kinds || kinds.has(p.kind))
+        && isOpen(p,dayName(state.date),state.date));
       let best=null, bestD=Infinity;
       cands.forEach((p)=>{ const d=Math.min(...anchors.map((a)=>miles(a,p))); if(d<bestD){ bestD=d; best=p; } });
       return best;
@@ -373,7 +391,7 @@ export default function Planner({
         else { drive = legMin(prev, coords(id)); }
         if(!lunchDone && clock>=12*60+30 && fits.length){ lunch={time:clock, beforeId:id}; clock+=45; lunchDone=true; }
         let arrive = clock + drive;
-        const w = windowFor(v,day);
+        const w = windowFor(v,day,state.date);
         if(!w){ conflicts.push({id,reason:"closed that day"}); continue; }
         if(arrive < w.open) arrive = w.open;
         const dwell = Math.max(20, v.dwellMinutes + (v.isPoi?Math.max(0,adj):adj));
@@ -451,7 +469,7 @@ export default function Planner({
 
     // Rich info bubble for ANY pin: identity, hours, match, note, and a clear add/remove.
     function popupHtml(v, extra){
-      const day=dayName(state.date), w=windowFor(v,day);
+      const day=dayName(state.date), w=windowFor(v,day,state.date);
       const inSel = state.selected.includes(v.id);
       const btn = `<button class="pop-add ${inSel?'on':''}" data-toggle="${v.id}">${inSel?"✓ In your day · remove":"Add to day"}</button>`;
       if(v.isPoi){
@@ -552,7 +570,7 @@ export default function Planner({
           <span class="cand-sub"><span class="kindtag">${POI_KIND_LABEL[v.kind]}</span> ${v.town} · about ${v.dwellMinutes} min${fee}</span>
           <span class="cand-note">${v.note}</span></span></div>`;
       }
-      const day=dayName(state.date), w=windowFor(v,day);
+      const day=dayName(state.date), w=windowFor(v,day,state.date);
       const hrs = v.needsHours ? "call ahead" : `closes ${pretty(w.close)}`;
       const tags = v.tags.map((t)=>`<span class="tag ${state.styles.has(t)?'match':''}">${prettyTag(t)}</span>`).slice(0,4).join("");
       return `<div class="cand ${sel?'sel':''}" data-toggle="${v.id}"><span class="box">${sel?"✓":""}</span>
