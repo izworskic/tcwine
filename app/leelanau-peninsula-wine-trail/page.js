@@ -10,7 +10,8 @@ const allStops = venues.filter((v) => v.area === "leelanau");
 const list = allStops.filter((v) => v.category === "winery");
 const extras = allStops.filter((v) => v.category !== "winery");
 const N = list.length;
-const OFFICIAL = list.filter((v) => v.officialTrail?.name === "Leelanau Peninsula Wine Trail").length;
+const OFFICIAL = allStops.filter((v) => v.officialTrail?.name === "Leelanau Peninsula Wine Trail").length;
+const OFFICIAL_WINERIES = list.filter((v) => v.officialTrail?.name === "Leelanau Peninsula Wine Trail").length;
 const TOWN_ORDER = ["Suttons Bay", "Lake Leelanau", "Leland", "Omena", "Northport", "Cedar", "Glen Arbor", "Empire", "Maple City"];
 const rank = (t) => { const i = TOWN_ORDER.indexOf(t); return i < 0 ? 99 : i; };
 const towns = Array.from(new Set(list.map((v) => v.town))).sort((a, b) => rank(a) - rank(b));
@@ -37,7 +38,7 @@ export default function Page() {
     <main className="tc-page">
       <h1>Leelanau Peninsula Winery Map: {N} Wineries</h1>
       <p className="search-lede">
-        Map {N} Leelanau Peninsula wineries by town, including {OFFICIAL} current official Leelanau Peninsula Wine Trail members, then build a route that fits the wine day instead of treating the peninsula as one long list.
+        Map {N} Leelanau Peninsula wineries by town, including {OFFICIAL_WINERIES} wineries that are current official Leelanau Peninsula Wine Trail members, then build a route that fits the wine day instead of treating the peninsula as one long list.
       </p>
       <PlannerMount
         embedded
@@ -48,7 +49,7 @@ export default function Page() {
       <div className="quick-answer" aria-label="Leelanau winery inventory">
         <div><strong>{N} mapped wineries</strong><span>Full wine-first planning inventory</span></div>
         <div><strong>{OFFICIAL} official members</strong><span>Current Leelanau Peninsula Wine Trail membership</span></div>
-        <div><strong>{N - OFFICIAL} additional producers</strong><span>Active wineries outside the current official member list</span></div>
+        <div><strong>{N - OFFICIAL_WINERIES} additional wineries</strong><span>Active wineries outside the current official member list</span></div>
       </div>
       <RegionalPhoto kind="leelanau" />
       <p>{LEE_SPAN}</p>
