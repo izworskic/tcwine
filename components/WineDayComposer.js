@@ -18,9 +18,9 @@ function tagLabel(t){
   return String(t||"").replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
 }
 
-export default function WineDayComposer(){
-  const [area,setArea]=useState("leelanau");
-  const [intent,setIntent]=useState("first-trip");
+export default function WineDayComposer({initialArea="leelanau",initialIntent="first-trip"}={}){
+  const [area,setArea]=useState(AREAS.some(([v])=>v===initialArea)?initialArea:"leelanau");
+  const [intent,setIntent]=useState(INTENTS.includes(initialIntent)?initialIntent:"first-trip");
   const [addPlace,setAddPlace]=useState(false);
   const [date,setDate]=useState(()=>new Date().toISOString().slice(0,10));
 
