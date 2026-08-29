@@ -56,7 +56,7 @@ export default function Page() {
       </p>
       <PlannerMount
         embedded
-        preset={{ beverages: ["wine"], selected, origin: "Traverse City" }}
+        preset={{ beverages: ["wine"], selected, origin: "Traverse City", analyticsContext: "wineries_food" }}
         title="Winery map with food-forward stops preloaded"
         description="Five food-forward wineries are selected as a starting point. Edit the stops, change peninsulas, or build the day around their current hours."
       />
