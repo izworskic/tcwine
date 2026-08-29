@@ -119,11 +119,19 @@ export default function Page({params}){
             {(t.bestFor||[]).map(x=><span key={x}>{pretty(x)}</span>)}
           </div>
 
-          <h2>Wine signals</h2>
-          {(t.styleStrengths||[]).length?(
-            <div className="winery-style-list">
-              {(t.styleStrengths||[]).map(x=><span key={x}>{pretty(x)}</span>)}
-            </div>
+          <h2>{v.varietals?.length ? "Verified varietals" : "Wine signals"}</h2>
+          {(v.varietals?.length || t.styleStrengths?.length)?(
+            <>
+              <div className="winery-style-list">
+                {(v.varietals?.length ? v.varietals : t.styleStrengths).map(x=><span key={x}>{pretty(x)}</span>)}
+              </div>
+              {v.varietalsSourceUrl&&(
+                <p className="varietal-source">
+                  Varietal list checked {v.varietalsVerifiedAt} from{" "}
+                  <a href={v.varietalsSourceUrl} target="_blank" rel="noopener noreferrer">{v.varietalsSourceLabel||"current source"}</a>.
+                </p>
+              )}
+            </>
           ):<p>The current dataset does not support a strong varietal specialization claim, so this guide does not invent one.</p>}
 
           {(t.avoidIf||[]).length>0&&<>
