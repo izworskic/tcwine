@@ -77,7 +77,7 @@ export default function Page({params}){
       <p className="search-lede">{e.summary}</p>
 
       <div className="wine-event-facts">
-        <div><strong>{formatEventDate(e)}</strong><span>2026 dates</span></div>
+        <div><strong>{formatEventDate(e,{all:true})}</strong><span>2026 dates</span></div>
         <div><strong>{e.area==="leelanau"?"Leelanau":e.area==="old-mission"?"Old Mission":"Traverse City"}</strong><span>Wine-country area</span></div>
         <div><strong>{e.price||"See source"}</strong><span>Published price / details</span></div>
         <div><strong>{e.verifiedAt}</strong><span>Source checked</span></div>
