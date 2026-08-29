@@ -5,6 +5,7 @@ import RegionalPhoto from "@/components/RegionalPhoto";
 import AuthorNote from "@/components/AuthorNote";
 import WineCountryWorld from "@/components/WineCountryWorld";
 import WineDayComposer from "@/components/WineDayComposer";
+import WineCountryNow from "@/components/WineCountryNow";
 import { buildVenueItemList } from "@/lib/venue-schema";
 import { HOURS_VERIFIED } from "@/components/VenueHours";
 
@@ -137,8 +138,11 @@ export default function Page() {
           <Link href="/one-day-itineraries">Ready-made wine routes</Link>
           <Link href="/fall-color-wine-tour">Fall color wine tour</Link>
           <Link href="/compare-wineries">Compare wineries</Link>
+          <Link href="/wine-country-now">Wine Country Now</Link>
+          <Link href="/my-wine-journal">My Wine Journal</Link>
           <Link href="/venues">Posted hours</Link>
         </div>
+        <WineCountryNow compact />
         <WineDayComposer />
         <WineCountryWorld />
         <RegionalPhoto kind="chateau" />

@@ -1,0 +1,183 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "timezone": "America/Detroit",
+  "events": [
+    {
+      "id": "lp-harvest-club-2026",
+      "title": "LP Harvest Club",
+      "series": "Leelanau Peninsula Wine Trail",
+      "area": "leelanau",
+      "kind": "trail-event",
+      "start": "2026-09-01T12:00:00",
+      "end": "2026-09-30T17:00:00",
+      "excludedWeekdays": [
+        "Saturday"
+      ],
+      "price": "$75/person",
+      "wineIntent": "first-trip",
+      "summary": "A month-long Leelanau wine-club-style passport: participating wineries offer a complimentary flight, tasting, or glass depending on the winery, plus 15% off bottle purchases.",
+      "planningTruth": "Runs throughout September but excludes Saturdays. Choose a starting winery when purchasing, then keep the rest of the day geographically tight rather than trying to collect the whole trail.",
+      "sourceUrl": "https://lpwines.com/event/lp-harvest-club/",
+      "sourceLabel": "Leelanau Peninsula Wine Trail",
+      "sourceType": "official-trail",
+      "verifiedAt": "2026-08-29",
+      "featured": true
+    },
+    {
+      "id": "hunt-reds-october-2026",
+      "title": "Hunt for the Reds of October",
+      "series": "Leelanau Peninsula Wine Trail",
+      "area": "leelanau",
+      "kind": "trail-event",
+      "start": "2026-10-01T12:00:00",
+      "end": "2026-10-31T17:00:00",
+      "price": "$35/person",
+      "wineIntent": "reds",
+      "summary": "An all-October red-wine event built around hand-selected pours and a cork-cash credit, with Cabernet Franc, Cabernet Sauvignon, Pinot Noir, Merlot, and other red styles in focus.",
+      "planningTruth": "The month-long format is the advantage. Build a three-winery red-wine route for the part of Leelanau you actually want to explore instead of treating the ticket like a checklist.",
+      "sourceUrl": "https://lpwines.com/reds-october/",
+      "sourceLabel": "Leelanau Peninsula Wine Trail",
+      "sourceType": "official-trail",
+      "verifiedAt": "2026-08-29",
+      "featured": true
+    },
+    {
+      "id": "toast-season-weekend-1-2026",
+      "title": "Toast The Season – First Weekend",
+      "series": "Leelanau Peninsula Wine Trail",
+      "area": "leelanau",
+      "kind": "trail-event",
+      "start": "2026-11-06T12:00:00",
+      "end": "2026-11-08T17:00:00",
+      "wineIntent": "food",
+      "summary": "The first 2026 Toast The Season weekend pairs selected wines with food at participating Leelanau Wine Trail wineries and includes cork-cash benefits.",
+      "planningTruth": "Treat the pairing as part of the meal rhythm. Three geographically coherent wineries is a better day than crossing the peninsula repeatedly to maximize stops.",
+      "sourceUrl": "https://lpwines.com/toast-the-season/",
+      "sourceLabel": "Leelanau Peninsula Wine Trail",
+      "sourceType": "official-trail",
+      "verifiedAt": "2026-08-29",
+      "featured": true
+    },
+    {
+      "id": "toast-season-weekend-2-2026",
+      "title": "Toast The Season – Second Weekend",
+      "series": "Leelanau Peninsula Wine Trail",
+      "area": "leelanau",
+      "kind": "trail-event",
+      "start": "2026-11-13T12:00:00",
+      "end": "2026-11-15T17:00:00",
+      "wineIntent": "food",
+      "summary": "The second 2026 Toast The Season weekend repeats the Leelanau trail's wine-and-food pairing format for a second Friday-through-Sunday window.",
+      "planningTruth": "Use the same wine-first pacing rule: three wineries, enough time for the pairing at each, and only one optional non-wine stop.",
+      "sourceUrl": "https://lpwines.com/toast-the-season/",
+      "sourceLabel": "Leelanau Peninsula Wine Trail",
+      "sourceType": "official-trail",
+      "verifiedAt": "2026-08-29",
+      "featured": true
+    },
+    {
+      "id": "black-star-old-mission-wine-chocolate-2026",
+      "title": "Wine & Chocolate Tasting Workshop – Old Mission",
+      "series": "Black Star Farms",
+      "area": "old-mission",
+      "kind": "winery-workshop",
+      "venueId": "black-star-farms-old-mission",
+      "dates": [
+        "2026-09-18T18:30:00",
+        "2026-10-23T18:30:00",
+        "2026-11-13T18:30:00"
+      ],
+      "wineIntent": "food",
+      "summary": "An evening wine-and-chocolate workshop at the Old Mission tasting room, pairing estate wines with chocolate in an educational tasting format.",
+      "planningTruth": "This is an evening anchor, not another midday tasting. Build the daytime winery route to finish early enough that the workshop still feels like a distinct experience.",
+      "sourceUrl": "https://www.traversecity.com/event-detail/wine-%26-chocolate-tasting-workshop-black-star-farms-old-mission/26748/",
+      "sourceLabel": "Traverse City Tourism event calendar",
+      "sourceType": "tourism-calendar",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "black-star-suttons-bay-wine-chocolate-2026",
+      "title": "Wine & Chocolate Tasting Workshop – Suttons Bay",
+      "series": "Black Star Farms",
+      "area": "leelanau",
+      "kind": "winery-workshop",
+      "venueId": "black-star-farms-suttons-bay",
+      "dates": [
+        "2026-09-11T18:30:00",
+        "2026-10-23T18:30:00",
+        "2026-11-20T18:30:00",
+        "2026-12-12T18:30:00"
+      ],
+      "wineIntent": "food",
+      "summary": "An evening wine-and-chocolate workshop at the Suttons Bay estate with a guided pairing format.",
+      "planningTruth": "Use it as the final wine event of the day. A northern or Suttons Bay cluster pairs better than a long western-Leelanau loop before a 6:30 PM workshop.",
+      "sourceUrl": "https://www.traversecity.com/event-detail/wine-%26-chocolate-tasting-workshop-black-star-farms-suttons-bay/26749/",
+      "sourceLabel": "Traverse City Tourism event calendar",
+      "sourceType": "tourism-calendar",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "black-star-estate-wine-tour-fall-2026",
+      "title": "Estate & Wine Tour – Suttons Bay",
+      "series": "Black Star Farms",
+      "area": "leelanau",
+      "kind": "winery-tour",
+      "venueId": "black-star-farms-suttons-bay",
+      "dates": [
+        "2026-08-31T11:00:00",
+        "2026-09-07T11:00:00",
+        "2026-09-18T11:00:00",
+        "2026-09-21T11:00:00",
+        "2026-10-02T11:00:00",
+        "2026-10-05T11:00:00",
+        "2026-10-09T11:00:00",
+        "2026-10-12T11:00:00",
+        "2026-10-16T11:00:00",
+        "2026-10-19T11:00:00",
+        "2026-10-23T11:00:00"
+      ],
+      "wineIntent": "serious-wine",
+      "summary": "A one-hour guided estate walk covering the vineyard, inn, barn and wine cave, followed by a hosted wine and spirits tasting.",
+      "planningTruth": "This is useful for a visitor who wants to understand production and place, not just taste. Treat the 11 AM tour as the day's first anchor and choose two later wineries nearby.",
+      "sourceUrl": "https://www.traversecity.com/event-detail/estate-%26-wine-tour/25403/",
+      "sourceLabel": "Traverse City Tourism event calendar",
+      "sourceType": "tourism-calendar",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "wine-down-wednesday-fall-2026",
+      "title": "Wine Down Wednesday",
+      "series": "Discovery Cruises",
+      "area": "traverse-city",
+      "kind": "wine-scene",
+      "dates": [
+        "2026-09-09T17:30:00",
+        "2026-09-16T17:30:00",
+        "2026-09-23T17:30:00",
+        "2026-09-30T17:30:00",
+        "2026-10-07T17:30:00",
+        "2026-10-14T17:30:00"
+      ],
+      "wineIntent": "first-trip",
+      "summary": "A West Bay evening cruise with a local-winemaker component and optional local wine tasting package.",
+      "planningTruth": "A useful non-driving finish to a wine day. End daytime tasting early, return to town, and let the evening be about the bay and the winemaker rather than another peninsula stop.",
+      "sourceUrl": "https://www.traversecity.com/event-detail/wine-down-wednesday/25896/",
+      "sourceLabel": "Traverse City Tourism event calendar",
+      "sourceType": "tourism-calendar",
+      "verifiedAt": "2026-08-29"
+    }
+  ],
+  "watches": [
+    {
+      "id": "old-mission-mac-cheese-2026",
+      "title": "Old Mission Mac & Cheese Bake-off",
+      "area": "old-mission",
+      "status": "details-pending",
+      "note": "The Old Mission Peninsula Wine Trail says to check back in September 2026 for event details. No date or ticket claim is published here until the official trail posts it.",
+      "sourceUrl": "https://www.ompwinetrail.com/wine-trail-events/",
+      "sourceLabel": "Old Mission Peninsula Wine Trail",
+      "verifiedAt": "2026-08-29"
+    }
+  ]
+}

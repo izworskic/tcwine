@@ -1,0 +1,48 @@
+{
+  "version":"1.0.0",
+  "updated":"2026-08-29",
+  "id":"wine-scene-retention",
+  "objective":"Move tcwine from a one-session route planner into an active wine-scene utility that earns seasonal search visits and repeat use after a tasting day.",
+  "surfaces":[
+    "/wine-country-now",
+    "/events/[id]",
+    "/my-wine-journal",
+    "/winery/[id] journal card"
+  ],
+  "freshnessRules":[
+    "Every listed event has a named source URL and verifiedAt date.",
+    "Past events disappear from Wine Country Now automatically.",
+    "Recurring events show only their next remaining occurrence.",
+    "Official blackout rules such as LP Harvest Club Saturdays affect current-state labels.",
+    "Unpublished Old Mission event details stay in a watch state rather than being guessed."
+  ],
+  "retentionRules":[
+    "Journal data stays on-device in browser local storage.",
+    "Analytics may record save/remove/status events but never tasting-note or favorite-wine text.",
+    "Every winery guide can save Want to Taste, Visited, Favorite, wine-to-remember, visit date, and tasting note.",
+    "The aggregate journal links back into winery truth pages and the planner."
+  ],
+  "searchTargets":[
+    "Traverse City wine events 2026",
+    "Leelanau wine events September 2026",
+    "Hunt for the Reds of October 2026",
+    "Toast the Season Leelanau 2026",
+    "Traverse City wine journal",
+    "Leelanau winery passport"
+  ],
+  "successSignals":[
+    "wine_country_now landing engagement",
+    "event detail to planner interaction",
+    "return visits to winery detail pages",
+    "wine_journal_saved",
+    "wine_journal_quick_added",
+    "wine_journal_summary_copied"
+  ],
+  "releaseBlockers":[
+    "event without source or verification date",
+    "Harvest Club Saturday exclusion removed",
+    "event pages missing planner handoff",
+    "journal note content added to analytics",
+    "current map/search contract regression"
+  ]
+}

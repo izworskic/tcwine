@@ -4,6 +4,7 @@ import venues from "@/data/venues.json";
 import truth from "@/data/wine-truth.json";
 import PlannerMount from "@/components/PlannerMount";
 import AuthorNote from "@/components/AuthorNote";
+import WineryJournalCard from "@/components/WineryJournalCard";
 import { miles } from "@/lib/wine-day-engine";
 
 const BASE="https://tcwine.chrisizworski.com";
@@ -154,6 +155,8 @@ export default function Page({params}){
         title={`Build a route around ${v.name}`}
         description={`${v.name} plus two nearby wineries with complementary wine signals are preselected. Change anything, then build the route against real roads and posted hours.`}
       />
+
+      <WineryJournalCard wineryId={v.id} wineryName={v.name} />
 
       <section className="winery-pairings">
         <h2>Two nearby wineries that make sense with it</h2>
