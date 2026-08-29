@@ -5,6 +5,7 @@ import Link from "next/link";
 import venues from "@/data/venues.json";
 import pois from "@/data/pois.json";
 import { trackWineEvent } from "@/lib/wine-analytics";
+import RegionalPhoto from "@/components/RegionalPhoto";
 
 const AREAS = [
   ["any", "Anywhere"],
@@ -124,6 +125,11 @@ export default function WineCountryWorld() {
           <span><strong>{pois.length}</strong> special places</span>
           <span><strong>{countArea("leelanau", "wine")}</strong> Leelanau wine stops</span>
         </div>
+      </div>
+
+      <div className="world-photos" aria-label="Traverse City wine country">
+        <RegionalPhoto kind="leelanau" compact />
+        <RegionalPhoto kind="oldMission" compact />
       </div>
 
       <div className="wine-world-grid">
