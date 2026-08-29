@@ -65,9 +65,17 @@ components/
 data/                  venues, pois, origins, shuttle
 ```
 
-## Next increments (not yet built)
+## Continuity
 
-- Shareable `/loop/[slug]` links backed by Upstash Redis (same pattern as Lawn Advisor).
-- SSG landing pages (`/leelanau`, `/old-mission`, town pages) for SEO, plus sitemap + IndexNow.
-- OG image route and `sameAs` graph, network cross-links.
-- Optional season layer (computed vintage progress, fall-color overlap), behind a clean seam.
+My Wine Day is built in:
+
+- the most recently built plan is remembered locally;
+- up to six plans can be explicitly saved on the device;
+- exact plans can be shared with a `#plan=` URL fragment and reopened without a server-side user profile;
+- restored plans are rebuilt against current routing and current venue-hours data.
+
+## Next increments
+
+- Group decision support only if save/share behavior proves collaboration is a real bottleneck.
+- Continue the active map-first search measurement window before adding any new indexable intent pages.
+- Expand live/seasonal decision intelligence only where it improves the wine-day decision rather than adding decorative data.
