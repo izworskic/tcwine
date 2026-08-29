@@ -4,13 +4,17 @@ const venues=JSON.parse(fs.readFileSync(new URL("../data/venues.json",import.met
 const truth=JSON.parse(fs.readFileSync(new URL("../data/wine-truth.json",import.meta.url),"utf8"));
 const sitemap=fs.readFileSync(new URL("../app/sitemap.js",import.meta.url),"utf8");
 const page=fs.readFileSync(new URL("../app/wine/[intent]/page.js",import.meta.url),"utf8");
+const wineryPage=fs.readFileSync(new URL("../app/winery/[id]/page.js",import.meta.url),"utf8");
+const comparePage=fs.readFileSync(new URL("../app/compare-wineries/page.js",import.meta.url),"utf8");
 
 const wineries=venues.filter(v=>v.category==="winery");
 const records=truth.records||[];
 const byId=new Map(records.map(r=>[r.id,r]));
 const errors=[];
 
+if(wineries.length<43) errors.push(`winery inventory regressed: expected at least 43, got ${wineries.length}`);
 if(records.length!==wineries.length) errors.push(`truth records ${records.length} != winery count ${wineries.length}`);
+
 for(const v of wineries){
   const r=byId.get(v.id);
   if(!r){errors.push(`missing truth record: ${v.id}`);continue;}
@@ -20,11 +24,24 @@ for(const v of wineries){
   if(!(r.wineSignal>=2.5&&r.wineSignal<=5)) errors.push(`${v.id}: invalid wineSignal`);
   if(!r.verifiedAt) errors.push(`${v.id}: missing verifiedAt`);
 }
+
 const intents=["riesling","sparkling","reds","whites","serious-wine","first-trip"];
+const leelanauOfficial=venues.filter(v=>v.officialTrail?.name==="Leelanau Peninsula Wine Trail").length;
+const oldMissionOfficial=venues.filter(v=>v.officialTrail?.name==="Old Mission Peninsula Wine Trail").length;
+
+if(leelanauOfficial<23) errors.push(`official Leelanau inventory regressed: ${leelanauOfficial}`);
+if(oldMissionOfficial<10) errors.push(`official Old Mission inventory regressed: ${oldMissionOfficial}`);
+if(!sitemap.includes("compare-wineries")) errors.push("sitemap missing winery comparator");
+if(!sitemap.includes('filter((v) => v.category === "winery")')) errors.push("sitemap is not generating winery detail URLs");
+if(!wineryPage.includes("generateStaticParams")) errors.push("winery detail pages are not statically generated");
+if(!wineryPage.includes("officialTrail")) errors.push("winery guide lost official trail truth");
+if(!comparePage.includes("WineryCompare")) errors.push("winery comparator page missing");
+
 for(const i of intents){
   if(!sitemap.includes(`wine/${i}`)) errors.push(`sitemap missing wine/${i}`);
-  if(!page.includes(`${i}`)) errors.push(`wine landing config missing ${i}`);
+  if(!page.includes(i)) errors.push(`wine landing config missing ${i}`);
 }
+
 const coverage={
   riesling:records.filter(r=>r.bestFor.includes("riesling")).length,
   sparkling:records.filter(r=>r.bestFor.includes("sparkling")).length,
@@ -33,6 +50,7 @@ const coverage={
   food:records.filter(r=>r.bestFor.includes("food")).length,
   quiet:records.filter(r=>r.bestFor.includes("quiet")).length,
 };
+
 if(coverage.riesling<6) errors.push("Riesling coverage too shallow");
 if(coverage.reds<8) errors.push("red-wine coverage too shallow");
 if(coverage.whites<10) errors.push("white-wine coverage too shallow");
@@ -42,4 +60,11 @@ if(errors.length){
   console.error("Wine truth validation failed:\n- "+errors.join("\n- "));
   process.exit(1);
 }
-console.log(JSON.stringify({wineries:wineries.length,truthRecords:records.length,coverage},null,2));
+
+console.log(JSON.stringify({
+  wineries:wineries.length,
+  truthRecords:records.length,
+  leelanauOfficial,
+  oldMissionOfficial,
+  coverage
+},null,2));

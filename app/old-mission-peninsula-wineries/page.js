@@ -10,6 +10,7 @@ const allStops = venues.filter((v) => v.area === "old-mission");
 const list = allStops.filter((v) => v.category === "winery");
 const extras = allStops.filter((v) => v.category !== "winery");
 const N = list.length;
+const OFFICIAL = list.filter((v) => v.officialTrail?.name === "Old Mission Peninsula Wine Trail").length;
 
 export const metadata = {
   title: "Old Mission Peninsula Winery Map: " + N + " Wineries & Route Planner",
@@ -32,7 +33,7 @@ export default function Page() {
     <main className="tc-page">
       <h1>Old Mission Peninsula Winery Map: {N} Wineries</h1>
       <p className="search-lede">
-        All {N} wineries on Old Mission Peninsula in one interactive map. Start with wine, choose the rooms you want,
+        {N} mapped wineries on Old Mission Peninsula in one interactive map, including {OFFICIAL} current official Old Mission Peninsula Wine Trail members. Start with wine, choose the wineries you want,
         then route the day up Center Road around real drive times and posted tasting-room hours.
       </p>
       <PlannerMount
@@ -41,13 +42,19 @@ export default function Page() {
         title="Old Mission Peninsula winery map"
         description={"Showing the " + N + " wineries first. Add other tasting rooms or sights only if you want them."}
       />
+      <div className="quick-answer" aria-label="Old Mission winery inventory">
+        <div><strong>{N} mapped wineries</strong><span>Wine-first planning inventory</span></div>
+        <div><strong>{OFFICIAL} official members</strong><span>Current Old Mission Peninsula Wine Trail membership</span></div>
+        <div><strong>{N - OFFICIAL} additional producer</strong><span>Active winery outside the current official member list</span></div>
+      </div>
       <RegionalPhoto kind="oldMission" />
       <p>{OMP_SPAN}</p>
       <h2>{"The " + N + " wineries"}</h2>
       <ul>
         {list.map((v) => (
           <li key={v.id}>
-            <strong>{v.name}</strong>
+            <strong><Link href={`/winery/${v.id}`}>{v.name}</Link></strong>
+            {v.officialTrail ? <span className="inline-trail-badge">Official trail member</span> : null}
             {v.note ? ": " + v.note : ""}
             {v.specialties && v.specialties.length ? " Known for " + v.specialties.join(", ") + "." : ""}
             {v.food ? " Food on site: " + v.food + "." : ""}
@@ -66,8 +73,9 @@ export default function Page() {
       <p>
         {"Timing a trip for the leaves? See the "}
         <Link href="/fall-color-wine-tour">fall color wine tour</Link>
-        {" guide, or load a ready-made loop from the "}
-        <Link href="/one-day-itineraries">one-day itineraries</Link>
+        {" guide, compare two stops in the "}
+        <Link href="/compare-wineries">winery comparator</Link>
+        {", or load a ready-made loop from the "}<Link href="/one-day-itineraries">one-day itineraries</Link>
         {"."}
       </p>
       <VenueHours title="Old Mission Peninsula hours" areas={["old-mission"]} categories={["winery"]} />

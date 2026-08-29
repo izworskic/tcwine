@@ -105,7 +105,7 @@ export default function Page({params}){
           <li key={venue.id}>
             <div className="wine-ranking-score">{score}</div>
             <div>
-              <h3>{index+1}. {venue.name}</h3>
+              <h3>{index+1}. <Link href={`/winery/${venue.id}`}>{venue.name}</Link></h3>
               <p>{truth.signature}</p>
               <div className="truth-tags">
                 {(venue.tags||[]).slice(0,6).map(t=><span key={t}>{t.replace(/-/g," ")}</span>)}
@@ -114,6 +114,7 @@ export default function Page({params}){
               <p className="wine-ranking-reasons">{reasons.length?reasons.join(" · "):"Route and winery profile fit this wine-day lens."}</p>
               <div className="truth-stop-actions">
                 {venue.website&&<a href={venue.website} target="_blank" rel="noopener noreferrer">Winery site</a>}
+                <Link href={`/winery/${venue.id}`}>Full winery guide</Link>
                 <a href={venue.mapsUrl} target="_blank" rel="noopener noreferrer">Map winery</a>
               </div>
             </div>

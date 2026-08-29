@@ -1125,3 +1125,233 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .wine-ranking>li{grid-template-columns:42px minmax(0,1fr);gap:10px;padding:12px}
   .wine-ranking-score{width:40px;height:40px;font-size:.9rem}
 }
+
+
+/* ---------- Winery comparison + winery guide cluster ---------- */
+.winery-compare{
+  margin:26px -48px 38px;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(251,247,240,.96),rgba(240,232,224,.84));
+}
+.compare-head h2{margin:0 0 7px;font-size:1.7rem;line-height:1.08}
+.compare-head>p:last-child{margin:0;max-width:75ch;color:var(--ink-soft)}
+.compare-controls{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:18px 0 12px;
+}
+.compare-controls label{
+  display:grid;
+  gap:6px;
+  color:var(--ink-soft);
+  font-size:.68rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+}
+.compare-controls select{
+  min-width:0;
+  width:100%;
+  padding:9px 10px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#fff;
+  color:var(--ink);
+  font:inherit;
+  font-size:.8rem;
+  text-transform:none;
+  letter-spacing:0;
+}
+.compare-grid{
+  border:1px solid var(--line);
+  border-radius:13px;
+  overflow:hidden;
+  background:#fff;
+}
+.compare-row{
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);
+}
+.compare-row>div{
+  min-width:0;
+  padding:10px 12px;
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+  color:var(--ink-soft);
+  font-size:.74rem;
+  line-height:1.4;
+}
+.compare-row>div:first-child{border-left:0}
+.compare-row:first-child>div{border-top:0}
+.compare-label{
+  background:var(--paper);
+  color:var(--ink)!important;
+  font-weight:700;
+}
+.compare-wineries>div:not(.compare-label){
+  color:var(--ink);
+}
+.compare-wineries strong{display:block;font-size:.95rem}
+.compare-wineries span{display:block;margin-top:3px;color:var(--ink-soft);font-size:.65rem}
+.compare-fit{color:var(--wine);font-size:1rem}
+.compare-actions>div:not(.compare-label){display:flex;flex-wrap:wrap;gap:10px}
+.compare-actions a{
+  color:var(--bay);
+  font-size:.67rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.compare-note{margin:10px 2px 0;color:var(--ink-soft);font-size:.66rem}
+
+.crumbs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:0 0 16px;
+  color:var(--ink-soft);
+  font-size:.7rem;
+}
+.crumbs a{color:var(--bay);text-decoration:none}
+.winery-guide-facts{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+  margin:16px 0;
+}
+.winery-guide-facts>div{
+  padding:11px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:var(--paper);
+}
+.winery-guide-facts strong{display:block;font-size:.8rem}
+.winery-guide-facts span{display:block;margin-top:3px;color:var(--ink-soft);font-size:.62rem}
+.trail-truth{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px 12px;
+  align-items:center;
+  margin:14px 0 22px;
+  padding:10px 12px;
+  border:1px solid #d6e0d7;
+  border-radius:10px;
+  background:#f4f8f4;
+  font-size:.7rem;
+}
+.trail-truth strong{color:#365d40}
+.trail-truth span{color:var(--ink-soft)}
+.trail-truth a{margin-left:auto;color:var(--bay);font-weight:700;text-decoration:none}
+.winery-guide-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(270px,.75fr);
+  gap:18px;
+  margin:18px 0 26px;
+}
+.winery-guide-grid h2{margin:18px 0 6px}
+.winery-guide-grid h2:first-child{margin-top:0}
+.winery-style-list{display:flex;flex-wrap:wrap;gap:6px}
+.winery-style-list span{
+  padding:5px 8px;
+  border:1px solid #dac9c4;
+  border-radius:999px;
+  background:#fff;
+  color:var(--wine);
+  font-size:.68rem;
+  font-weight:700;
+}
+.winery-guide-aside{
+  align-self:start;
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:var(--paper);
+}
+.winery-guide-aside h2{margin:0 0 8px}
+.winery-guide-aside dl{margin:0}
+.winery-guide-aside dl>div{
+  padding:8px 0;
+  border-top:1px solid var(--line);
+}
+.winery-guide-aside dl>div:first-child{border-top:0}
+.winery-guide-aside dt{
+  color:var(--ink-soft);
+  font-size:.61rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.winery-guide-aside dd{margin:3px 0 0;font-size:.72rem;line-height:1.35}
+.winery-guide-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:10px;
+}
+.winery-guide-actions a{
+  padding:6px 8px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+  color:var(--bay);
+  font-size:.65rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.winery-pairings{margin:28px 0}
+.browse-venue-links a{color:var(--wine);text-decoration:none}
+.browse-venue-links a:hover{text-decoration:underline}
+
+@media(max-width:900px){
+  .winery-compare{margin:24px -20px 34px}
+  .compare-row{grid-template-columns:120px minmax(0,1fr) minmax(0,1fr)}
+  .winery-guide-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .winery-guide-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .compare-controls{grid-template-columns:1fr}
+  .compare-row{grid-template-columns:88px minmax(0,1fr) minmax(0,1fr)}
+  .compare-row>div{padding:8px;font-size:.65rem}
+  .compare-wineries strong{font-size:.78rem}
+  .winery-guide-facts{grid-template-columns:1fr 1fr}
+  .trail-truth{display:grid}
+  .trail-truth a{margin-left:0}
+}
+
+.pop-trail{
+  display:block;
+  margin:4px 0;
+  color:#365d40;
+  font-size:.66rem;
+  font-weight:700;
+}
+.pop-guide{
+  display:inline-block;
+  margin:6px 8px 0 0;
+  color:var(--bay);
+  font-size:.68rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.tag.official{
+  border-color:#cfe0d4;
+  background:#f3f8f4;
+  color:#365d40;
+}
+.truth-winery-link{color:inherit;text-decoration:none}
+.truth-winery-link:hover{color:var(--wine);text-decoration:underline}
+
+.inline-trail-badge{
+  display:inline-block;
+  margin-left:7px;
+  padding:2px 5px;
+  border:1px solid #cfe0d4;
+  border-radius:999px;
+  background:#f3f8f4;
+  color:#365d40;
+  font-size:.56rem;
+  font-weight:700;
+  vertical-align:middle;
+}

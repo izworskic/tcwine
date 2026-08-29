@@ -7,6 +7,7 @@ Built with Next.js 14 (App Router) and Leaflet, in the same shape as the other p
 
 ## What it does
 
+- 43 winery truth guides plus a side-by-side winery comparator, with current official trail membership tracked separately from the broader active-producer inventory.
 - Filter by beverage (inclusive, so a winery that also makes cider shows under cider) and by
   multiple grape or beer/spirit styles at once.
 - Hand-pick your stops from a list or straight off the map, and turn on special-place layers for beaches, hikes, paddles, farm markets, local food, history, scenic stops, lighthouses, and towns.
@@ -45,7 +46,7 @@ npm start        # serve the production build
 
 ## Data
 
-- `data/venues.json`: 74 venues (40 wineries, 22 breweries, 7 distilleries, 5 cideries) with
+- `data/venues.json`: 77 venues (43 wineries, 22 breweries, 7 distilleries, 5 cideries) with
   structured hours, beverages, style tags, dwell times, and Google Maps links.
 - `data/pois.json`: 65 special places across nine kinds, including hikes, beaches, paddles, farm markets, local food, history, scenic stops, lighthouses, and towns. Deep-v1 records carry source and verification metadata; seasonal and closure states are enforced by the planner.
 - `data/origins.json`, `data/shuttle.json`: start towns and the chauffeured-tour operator.

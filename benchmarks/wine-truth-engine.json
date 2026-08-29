@@ -1,24 +1,43 @@
 {
-  "version":"1.0.0",
-  "updated":"2026-08-29",
-  "id":"wine-truth-engine",
-  "objective":"Compete for Traverse City wine users by making wine style and winery fit the primary decision surface, then layering route truth and selective non-wine experiences underneath.",
-  "competitiveSet":[
-    {"name":"Traverse City Tourism","strength":"50+ winery destination authority, wine-style education, views/vibes planning","gapToExploit":"less personalized route scoring and less explicit winery-by-intent fit"},
-    {"name":"Leelanau Peninsula Wine Trail","strength":"official winery membership, events, trip planning and trail identity","gapToExploit":"member discovery is stronger than personalized wine-first day composition"},
-    {"name":"TraverseCityWineTour.com","strength":"40+ winery directory, planner and wine journal","gapToExploit":"closest functional competitor; differentiate with transparent wine-fit scoring, three-stop pacing and special-place intelligence"},
-    {"name":"Tripadvisor","strength":"review volume, popularity signals and bookable tours","gapToExploit":"popularity and tour inventory do not equal a wine-style-specific itinerary"}
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "id": "wine-truth-engine",
+  "objective": "Compete for Traverse City wine users by making wine style and winery fit the primary decision surface, then layering route truth and selective non-wine experiences underneath.",
+  "competitiveSet": [
+    {
+      "name": "Traverse City Tourism",
+      "strength": "50+ winery destination authority, wine-style education, views/vibes planning",
+      "gapToExploit": "less personalized route scoring and less explicit winery-by-intent fit"
+    },
+    {
+      "name": "Leelanau Peninsula Wine Trail",
+      "strength": "official winery membership, events, trip planning and trail identity",
+      "gapToExploit": "member discovery is stronger than personalized wine-first day composition"
+    },
+    {
+      "name": "TraverseCityWineTour.com",
+      "strength": "40+ winery directory, planner and wine journal",
+      "gapToExploit": "closest functional competitor; differentiate with transparent wine-fit scoring, three-stop pacing and special-place intelligence"
+    },
+    {
+      "name": "Tripadvisor",
+      "strength": "review volume, popularity signals and bookable tours",
+      "gapToExploit": "popularity and tour inventory do not equal a wine-style-specific itinerary"
+    }
   ],
-  "moat":[
-    "40 winery truth records",
+  "moat": [
+    "43 winery truth records",
     "wine-intent scoring before scenery scoring",
     "three-winery day composition to reduce palate fatigue",
     "route coherence included in fit",
     "optional special place capped at one so wine remains the anchor",
     "date-aware winery availability",
-    "six indexable wine-intent landing pages"
+    "six indexable wine-intent landing pages",
+    "43 indexable winery truth-and-route guides",
+    "side-by-side winery comparison by wine intent",
+    "current official trail membership truth: 23 Leelanau + 10 Old Mission members"
   ],
-  "searchTargets":[
+  "searchTargets": [
     "best Traverse City wineries",
     "Traverse City Riesling wineries",
     "Traverse City sparkling wine",
@@ -26,11 +45,14 @@
     "best Leelanau wineries for wine lovers",
     "best Old Mission wineries"
   ],
-  "releaseBlockers":[
-    "fewer than 40 wine truth records",
+  "releaseBlockers": [
+    "fewer than 43 wine truth records",
     "wine-intent landing page missing from sitemap",
     "Riesling/sparkling/red/white coverage regression",
     "route build regression",
-    "map load regression"
+    "map load regression",
+    "official Leelanau member coverage below 23",
+    "official Old Mission member coverage below 10",
+    "winery detail pages missing from sitemap"
   ]
 }

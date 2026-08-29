@@ -48,7 +48,7 @@ export default function WineDayComposer(){
           </p>
         </div>
         <div className="wine-truth-proof">
-          <span><strong>40</strong> wineries scored</span>
+          <span><strong>43</strong> wineries scored</span>
           <span><strong>3</strong> wineries per day</span>
           <span><strong>1</strong> optional non-wine break</span>
         </div>
@@ -121,7 +121,7 @@ export default function WineDayComposer(){
                   <div className="truth-stop-num">{i+1}</div>
                   <div className="truth-stop-body">
                     <div className="truth-stop-title">
-                      <strong>{w.name}</strong>
+                      <strong><a className="truth-winery-link" href={`/winery/${w.id}`}>{w.name}</a></strong>
                       <span>{w.fit} fit</span>
                     </div>
                     <p>{w.signature}</p>
@@ -130,6 +130,7 @@ export default function WineDayComposer(){
                       {w.view&&<span>{tagLabel(w.view)} view</span>}
                     </div>
                     <div className="truth-stop-actions">
+                      <a href={`/winery/${w.id}`}>Full guide</a>
                       {w.website&&<a href={w.website} target="_blank" rel="noopener noreferrer">Winery site</a>}
                       <a href={w.mapsUrl} target="_blank" rel="noopener noreferrer"
                         onClick={()=>trackWineEvent("wine_truth_winery_opened",{winery:w.id,intent})}>Map it</a>

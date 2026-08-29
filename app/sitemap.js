@@ -1,3 +1,5 @@
+import venues from "@/data/venues.json";
+
 const BASE = "https://tcwine.chrisizworski.com";
 const ROUTES = [
   "",
@@ -12,6 +14,7 @@ const ROUTES = [
   "fall-color-wine-tour",
   "suttons-bay-tasting-rooms",
   "venues",
+  "compare-wineries",
   "wine/riesling",
   "wine/sparkling",
   "wine/reds",
@@ -22,10 +25,19 @@ const ROUTES = [
 
 export default function sitemap() {
   const now = new Date();
-  return ROUTES.map((p) => ({
+  const staticRoutes = ROUTES.map((p) => ({
     url: p ? BASE + "/" + p : BASE + "/",
     lastModified: now,
     changeFrequency: "weekly",
     priority: p ? 0.82 : 1,
   }));
+  const wineryRoutes = venues
+    .filter((v) => v.category === "winery")
+    .map((v) => ({
+      url: BASE + "/winery/" + v.id,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.78,
+    }));
+  return [...staticRoutes, ...wineryRoutes];
 }

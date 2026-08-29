@@ -907,6 +907,83 @@
       "sourceBasis": "venue-data-plus-editorial-fit",
       "sourceUrl": "https://cherryrepublic.com",
       "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "laurentide-winery",
+      "role": "wine-first-specialist",
+      "signature": "A serious Leelanau stop for Sauvignon Blanc and Fumé Blanc, with enough Riesling, Chardonnay, Pinot Gris and red-wine depth to reward a wine-led visit.",
+      "bestFor": [
+        "serious-wine",
+        "whites",
+        "riesling",
+        "first-trip",
+        "quiet"
+      ],
+      "avoidIf": [
+        "you want a high-energy destination winery more than a focused tasting"
+      ],
+      "styleStrengths": [
+        "sauvignon-blanc",
+        "riesling",
+        "chardonnay",
+        "pinot-gris",
+        "cabernet-franc",
+        "merlot",
+        "sparkling"
+      ],
+      "wineSignal": 5,
+      "sourceBasis": "official-trail-plus-producer-data",
+      "sourceUrl": "https://lpwines.com/laurentide-winery/",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "nathaniel-rose",
+      "role": "red-wine-specialist",
+      "signature": "One of the most wine-first red-wine stops in the region: tiny-production, age-worthy, Old World-styled reds in a deliberately rustic setting.",
+      "bestFor": [
+        "serious-wine",
+        "reds",
+        "quiet",
+        "local-character"
+      ],
+      "avoidIf": [
+        "you need polished hospitality, guaranteed hours, or a destination-style property"
+      ],
+      "styleStrengths": [
+        "dry-reds",
+        "small-batch"
+      ],
+      "wineSignal": 5,
+      "sourceBasis": "official-trail-plus-current-availability-check",
+      "sourceUrl": "https://lpwines.com/nathaniel-rose/",
+      "verifiedAt": "2026-08-29"
+    },
+    {
+      "id": "soul-squeeze-cellars",
+      "role": "village-mixed-specialist",
+      "signature": "A Lake Leelanau wine-and-cider stop with Riesling and sparkling signals, useful when the day needs a relaxed village stop without giving up a real wine program.",
+      "bestFor": [
+        "riesling",
+        "sparkling",
+        "whites",
+        "mixed-group",
+        "town",
+        "late-day"
+      ],
+      "avoidIf": [
+        "you want a vineyard-estate setting or a producer focused almost entirely on one wine style"
+      ],
+      "styleStrengths": [
+        "riesling",
+        "chardonnay",
+        "pinot-gris",
+        "sparkling",
+        "broad-lineup"
+      ],
+      "wineSignal": 4.5,
+      "sourceBasis": "official-trail-plus-producer-data",
+      "sourceUrl": "https://soulsqueezecellars.com/",
+      "verifiedAt": "2026-08-29"
     }
   ]
 }
