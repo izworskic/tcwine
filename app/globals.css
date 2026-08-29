@@ -717,3 +717,17 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .world-card-head{display:block}
   .world-status{display:inline-block;margin-top:8px}
 }
+
+
+.world-photos{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:0 0 14px;
+}
+.world-photos .regional-photo{margin:0}
+.world-photos .regional-photo img{height:220px;max-height:none}
+@media (max-width:760px){
+  .world-photos{grid-template-columns:1fr}
+  .world-photos .regional-photo img{height:190px}
+}
