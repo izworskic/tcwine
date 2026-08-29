@@ -10,6 +10,7 @@ const allStops = venues.filter((v) => v.area === "leelanau");
 const list = allStops.filter((v) => v.category === "winery");
 const extras = allStops.filter((v) => v.category !== "winery");
 const N = list.length;
+const OFFICIAL = list.filter((v) => v.officialTrail?.name === "Leelanau Peninsula Wine Trail").length;
 const TOWN_ORDER = ["Suttons Bay", "Lake Leelanau", "Leland", "Omena", "Northport", "Cedar", "Glen Arbor", "Empire", "Maple City"];
 const rank = (t) => { const i = TOWN_ORDER.indexOf(t); return i < 0 ? 99 : i; };
 const towns = Array.from(new Set(list.map((v) => v.town))).sort((a, b) => rank(a) - rank(b));
@@ -36,7 +37,7 @@ export default function Page() {
     <main className="tc-page">
       <h1>Leelanau Peninsula Winery Map: {N} Wineries</h1>
       <p className="search-lede">
-        Map all {N} Leelanau Peninsula wineries by town, then build a route that fits the day instead of treating the peninsula as one long list.
+        Map {N} Leelanau Peninsula wineries by town, including {OFFICIAL} current official Leelanau Peninsula Wine Trail members, then build a route that fits the wine day instead of treating the peninsula as one long list.
       </p>
       <PlannerMount
         embedded
@@ -44,6 +45,11 @@ export default function Page() {
         title="Leelanau Peninsula winery map"
         description={"Showing " + N + " wineries first across Suttons Bay, Lake Leelanau, Leland, Omena, Northport, and the western peninsula."}
       />
+      <div className="quick-answer" aria-label="Leelanau winery inventory">
+        <div><strong>{N} mapped wineries</strong><span>Full wine-first planning inventory</span></div>
+        <div><strong>{OFFICIAL} official members</strong><span>Current Leelanau Peninsula Wine Trail membership</span></div>
+        <div><strong>{N - OFFICIAL} additional producers</strong><span>Active wineries outside the current official member list</span></div>
+      </div>
       <RegionalPhoto kind="leelanau" />
       <p>{LEE_SPAN}</p>
       {towns.map((t) => {
@@ -54,7 +60,8 @@ export default function Page() {
             <ul>
               {tl.map((v) => (
                 <li key={v.id}>
-                  <strong>{v.name}</strong>
+                  <strong><Link href={`/winery/${v.id}`}>{v.name}</Link></strong>
+                  {v.officialTrail ? <span className="inline-trail-badge">Official trail member</span> : null}
                   {v.note ? ": " + v.note : ""}
                   {v.food ? " Food on site: " + v.food + "." : ""}
                 </li>
@@ -76,7 +83,8 @@ export default function Page() {
         {"Staying near the village? The "}
         <Link href="/suttons-bay-tasting-rooms">Suttons Bay tasting rooms</Link>
         {" guide covers real distances and the walkable rooms, and the "}
-        <Link href="/fall-color-wine-tour">fall color wine tour</Link>
+        <Link href="/compare-wineries">compare wineries side by side</Link>
+        {", and the "}<Link href="/fall-color-wine-tour">fall color wine tour</Link>
         {" covers the M-22 shore drive at peak."}
       </p>
       <VenueHours title="Leelanau Peninsula winery hours" areas={["leelanau"]} categories={["winery"]} />
