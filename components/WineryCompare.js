@@ -8,7 +8,7 @@ import { trackWineEvent } from "@/lib/wine-analytics";
 
 const WINERIES=venues.filter(v=>v.category==="winery").sort((a,b)=>a.name.localeCompare(b.name));
 const TRUTH=new Map(truth.records.map(r=>[r.id,r]));
-const INTENTS=["first-trip","serious-wine","riesling","sparkling","reds","whites","food","views","quiet"];
+const INTENTS=["first-trip","serious-wine","riesling","sparkling","reds","whites","cabernet-franc","pinot-noir","chardonnay","sauvignon-blanc","gewurztraminer","merlot","pinot-gris","food","views","quiet"];
 
 function label(v){
   return String(v||"").replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
@@ -81,7 +81,7 @@ export default function WineryCompare(){
         </div>
         <Row name="Wine Day Fit" a={aScore.score} b={bScore.score} render={x=><strong className="compare-fit">{x}/100</strong>} />
         <Row name="Why it fits" a={aTruth.signature} b={bTruth.signature} />
-        <Row name="Wine styles" a={aTruth.styleStrengths} b={bTruth.styleStrengths} render={x=><div className="truth-tags">{(x||[]).slice(0,8).map(t=><span key={t}>{label(t)}</span>)}</div>} />
+        <Row name="Verified varietals / styles" a={a.varietals?.length?a.varietals:aTruth.styleStrengths} b={b.varietals?.length?b.varietals:bTruth.styleStrengths} render={x=><div className="truth-tags">{(x||[]).slice(0,10).map(t=><span key={t}>{label(t)}</span>)}</div>} />
         <Row name="Best for" a={aTruth.bestFor} b={bTruth.bestFor} render={x=><div className="truth-tags">{(x||[]).slice(0,7).map(t=><span key={t}>{label(t)}</span>)}</div>} />
         <Row name="Setting" a={`${label(a.vibe)} · ${label(a.view)} view`} b={`${label(b.vibe)} · ${label(b.view)} view`} />
         <Row name="Food" a={label(a.food)||"No on-site food noted"} b={label(b.food)||"No on-site food noted"} />
