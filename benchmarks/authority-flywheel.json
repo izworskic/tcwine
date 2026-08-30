@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "id": "tc-wine-authority-flywheel",
+  "objective": "Earn legitimate external links, embeds, citations, and referral clicks into the canonical Traverse City Winery Map without adding indexable search inventory.",
+  "assets": {
+    "publisherKit": "/for-publishers",
+    "embed": "/embed/traverse-city-winery-map",
+    "geojson": "/api/publisher/wineries.geojson",
+    "csv": "/api/publisher/wineries.csv",
+    "indexable": false
+  },
+  "recommendedAttribution": "Chris Izworski's Traverse City Winery Map",
+  "events": [
+    "wine_embed_loaded",
+    "wine_embed_planner_opened",
+    "wine_publisher_embed_copied",
+    "wine_publisher_data_opened"
+  ],
+  "targets30d": {
+    "newReferringDomains": 5,
+    "livePublisherEmbeds": 2,
+    "qualifiedReferralSessions": 100,
+    "referralRouteBuilds": 20,
+    "externalChrisIzworskiCitations": 1
+  },
+  "guardrails": {
+    "noPaidLinks": true,
+    "noReciprocalLinkSchemes": true,
+    "noMassDirectorySubmissions": true,
+    "noSearchTitleReset": true,
+    "publisherSurfacesNoindex": true
+  }
+}
