@@ -19,6 +19,7 @@ const compare = read("app/old-mission-vs-leelanau-wineries/page.js");
 const analytics = read("lib/wine-analytics.js");
 const css = read("app/globals.css");
 const pkg = JSON.parse(read("package.json"));
+const productionSmoke = read(".github/workflows/production-smoke.yml");
 
 const errors = [];
 const wineries = venues.filter((v) => v.category === "winery");
@@ -74,6 +75,9 @@ must(analytics, '"wine_data_filter_changed"', "event registry");
 must(analytics, '"wine_data_download_opened"', "event registry");
 must(analytics, '"wine_data_citation_copied"', "event registry");
 must(css, "Wine Country Data Desk", "Data Desk styles");
+must(productionSmoke, "Wine Country Data Desk and research exports are live.", "production smoke");
+must(productionSmoke, "/api/data-desk/snapshot.json", "production smoke JSON");
+must(productionSmoke, "/api/data-desk/wineries.csv", "production smoke CSV");
 
 if (pkg.scripts["test:data-desk"] !== "node scripts/check-data-desk.mjs") {
   errors.push("package.json missing test:data-desk script");

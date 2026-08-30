@@ -115,3 +115,42 @@ jobs:
             echo "Data X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$data_headers" | head -1 || true)"
             exit 1
           fi
+
+
+          data_desk_ok=0
+          for attempt in $(seq 1 12); do
+            stamp="$(date +%s)-data-desk-${attempt}"
+            desk_url="https://tcwine.chrisizworski.com/wine-country-data?smoke=${stamp}"
+            snapshot_url="https://tcwine.chrisizworski.com/api/data-desk/snapshot.json?smoke=${stamp}"
+            csv_url="https://tcwine.chrisizworski.com/api/data-desk/wineries.csv?smoke=${stamp}"
+
+            desk="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$desk_url" || true)"
+            snapshot="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$snapshot_url" || true)"
+            snapshot_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$snapshot_url" 2>/dev/null | tr -d '\r' || true)"
+            csv_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$csv_url" 2>/dev/null | tr -d '\r' || true)"
+
+            if grep -q "Traverse City Wine Country Data" <<<"$desk" \
+              && grep -q "Five findings worth citing" <<<"$desk" \
+              && grep -q '"verifiedGrapes"' <<<"$snapshot" \
+              && grep -q '"wineries": 43' <<<"$snapshot" \
+              && grep -qi '^x-robots-tag: noindex, follow' <<<"$snapshot_headers" \
+              && grep -qi '^x-robots-tag: noindex, follow' <<<"$csv_headers"; then
+              data_desk_ok=1
+              echo "Wine Country Data Desk and research exports are live."
+              break
+            fi
+
+            echo "Attempt ${attempt}: Data Desk production contract has not converged yet."
+            sleep 10
+          done
+
+          if [[ "$data_desk_ok" != "1" ]]; then
+            echo "::error::Wine Country Data Desk production contract failed."
+            echo "Desk identity present: $(grep -q "Traverse City Wine Country Data" <<<"$desk" && echo yes || echo no)"
+            echo "Citation findings present: $(grep -q "Five findings worth citing" <<<"$desk" && echo yes || echo no)"
+            echo "Snapshot grape data present: $(grep -q '"verifiedGrapes"' <<<"$snapshot" && echo yes || echo no)"
+            echo "Snapshot winery count present: $(grep -q '"wineries": 43' <<<"$snapshot" && echo yes || echo no)"
+            echo "Snapshot X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$snapshot_headers" | head -1 || true)"
+            echo "CSV X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$csv_headers" | head -1 || true)"
+            exit 1
+          fi
