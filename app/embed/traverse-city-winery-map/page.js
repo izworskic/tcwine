@@ -1,4 +1,4 @@
-import PublisherMap from "@/components/PublisherMap";
+import PublisherMapMount from "@/components/PublisherMapMount";
 
 export const metadata = {
   title: "Traverse City Winery Map Embed",
@@ -8,7 +8,7 @@ export const metadata = {
 export default function EmbedTraverseCityWineryMap() {
   return (
     <main className="publisher-embed-page">
-      <PublisherMap />
+      <PublisherMapMount />
     </main>
   );
 }
