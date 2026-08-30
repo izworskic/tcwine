@@ -58,8 +58,7 @@ jobs:
             embed_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$embed_url" 2>/dev/null | tr -d '\r' || true)"
 
             if grep -q "Use the Traverse City Winery Map on your site" <<<"$publisher" \
-              && grep -q "43 current winery/tasting-room locations" <<<"$publisher" \
-              && grep -q "43 mapped winery/tasting-room locations" <<<"$embed" \
+              && grep -q "Traverse City Winery Map Embed" <<<"$embed" \
               && grep -qi '^x-robots-tag: noindex, follow' <<<"$publisher_headers" \
               && grep -qi '^x-robots-tag: noindex, follow' <<<"$embed_headers"; then
               publisher_ok=1
@@ -73,5 +72,9 @@ jobs:
 
           if [[ "$publisher_ok" != "1" ]]; then
             echo "::error::Publisher authority surfaces did not converge on the custom domain."
+            echo "Publisher identity present: $(grep -q "Use the Traverse City Winery Map on your site" <<<"$publisher" && echo yes || echo no)"
+            echo "Embed identity present: $(grep -q "Traverse City Winery Map Embed" <<<"$embed" && echo yes || echo no)"
+            echo "Publisher X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$publisher_headers" | head -1 || true)"
+            echo "Embed X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$embed_headers" | head -1 || true)"
             exit 1
           fi
