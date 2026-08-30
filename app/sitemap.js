@@ -17,6 +17,7 @@ const ROUTES = [
   "venues",
   "compare-wineries",
   "wine-country-now",
+  "wine-country-data",
   "my-wine-journal",
   "wine/riesling",
   "wine/sparkling",
