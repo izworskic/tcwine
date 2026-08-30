@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-30",
+  "id": "wine-country-data-desk",
+  "objective": "Turn the production winery planner dataset into a canonical, citation-ready research asset that can earn editorial links, press citations, AI retrieval, and qualified referral traffic.",
+  "baseline": {
+    "indexableCitationGradeResearchPages": 0,
+    "researchDownloadFormats": 0,
+    "interactiveResearchExplorers": 0
+  },
+  "after": {
+    "indexableCitationGradeResearchPages": 1,
+    "mappedWineryRecords": 43,
+    "sourceBackedVarietalWineries": 18,
+    "researchDownloadFormats": 3,
+    "interactiveResearchExplorers": 1,
+    "internalDistributionSurfaces": 3,
+    "schemaTypes": [
+      "Dataset",
+      "Article",
+      "DataDownload"
+    ]
+  },
+  "coreFindings": {
+    "leelanauMappedWineries": 30,
+    "oldMissionMappedWineries": 11,
+    "traverseCityMappedWineries": 2,
+    "officialTrailMetadataOnWineryRecords": 32,
+    "chardonnayVerifiedWineries": 18,
+    "rieslingVerifiedWineries": 18,
+    "pinotNoirVerifiedWineries": 17,
+    "pinotGrisVerifiedWineries": 16,
+    "merlotVerifiedWineries": 15,
+    "cabernetFrancVerifiedWineries": 14
+  },
+  "searchTargets": [
+    "Traverse City wine country data",
+    "Traverse City winery statistics",
+    "Traverse City wineries by grape",
+    "Old Mission vs Leelanau winery data",
+    "Traverse City winery dataset"
+  ],
+  "authorityTargets30Days": {
+    "newLegitimateReferringDomains": 5,
+    "livePublisherEmbeds": 2,
+    "qualifiedReferralSessions": 100,
+    "referralOriginRouteBuilds": 20,
+    "externalDataOrMapCitations": 1
+  },
+  "qualityRules": [
+    "All headline counts derive from the production dataset rather than duplicated page constants.",
+    "Grape counts use only records with source URL, source label, and verification date.",
+    "Directory inclusion is explicitly separated from wine-trail association membership.",
+    "Geographic measures are labeled straight-line, not road miles.",
+    "Machine-readable downloads are noindex and point users back to the canonical research page.",
+    "The research page is linked from the homepage, publisher kit, and peninsula comparison.",
+    "Chris Izworski remains the canonical creator in Dataset and Article schema."
+  ]
+}
