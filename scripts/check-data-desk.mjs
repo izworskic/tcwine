@@ -18,7 +18,8 @@ const publishers = read("app/for-publishers/page.js");
 const compare = read("app/old-mission-vs-leelanau-wineries/page.js");
 const analytics = read("lib/wine-analytics.js");
 const css = read("app/globals.css");
-const pkg = JSON.parse(read("package.json"));\nconst productionSmoke = read(".github/workflows/production-smoke.yml");
+const pkg = JSON.parse(read("package.json"));
+const productionSmoke = read(".github/workflows/production-smoke.yml");
 
 const errors = [];
 const wineries = venues.filter((v) => v.category === "winery");
