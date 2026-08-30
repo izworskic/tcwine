@@ -1563,3 +1563,12 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
 .map-tiles-minimal{
   filter: grayscale(1) saturate(.18) brightness(1.08) contrast(.88);
 }
+
+
+/* ---------- landscape tablet planner breathing room ---------- */
+@media (orientation: landscape) and (min-width: 861px) and (max-width: 1366px) and (max-height: 900px){
+  .planner-shell:not(.planner-shell-embedded){
+    height:112vh;
+    min-height:720px;
+  }
+}
