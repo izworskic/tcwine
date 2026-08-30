@@ -46,8 +46,17 @@ export default function PublisherMap({ focusId = "", partner = null, nearbyCount
 
     const focusWinery = focusId ? WINERIES.find((v) => v.id === focusId) : null;
     const anchor = partner || focusWinery || null;
+    const surface = partner ? "partner_map" : focusWinery ? "winery_map" : "publisher_map";
+    const context = partner ? partner.slug : focusWinery ? "winery_focus" : "regional";
+
+    const candidateWineries = focusWinery
+      ? WINERIES.filter((v) => v.area === focusWinery.area)
+      : partner?.preferredAreas?.length
+        ? WINERIES.filter((v) => partner.preferredAreas.includes(v.area))
+        : WINERIES;
+
     const visibleWineries = anchor
-      ? [...WINERIES]
+      ? [...candidateWineries]
           .sort((a, b) => miles(anchor, a) - miles(anchor, b))
           .slice(0, Math.max(4, Math.min(20, Number(nearbyCount) || 12)))
       : WINERIES;
@@ -82,15 +91,12 @@ export default function PublisherMap({ focusId = "", partner = null, nearbyCount
     }
 
     if (points.length) {
-      map.fitBounds(L.latLngBounds(points), { padding: [24, 24], maxZoom: 9 });
+      map.fitBounds(L.latLngBounds(points), { padding: [24, 24], maxZoom: anchor ? 11 : 9 });
     } else {
       map.setView([44.95, -85.65], 9);
     }
 
-    trackWineEvent("wine_embed_loaded", {
-      surface: partner ? "partner_map" : focusWinery ? "winery_map" : "publisher_map",
-      context: partner ? partner.slug : focusWinery ? "winery_focus" : "regional",
-    });
+    trackWineEvent("wine_embed_loaded", { surface, context });
 
     return () => {
       map.remove();
@@ -113,7 +119,7 @@ export default function PublisherMap({ focusId = "", partner = null, nearbyCount
           href="https://tcwine.chrisizworski.com/?utm_source=publisher_embed&utm_medium=embed&utm_campaign=winery_map"
           target="_blank"
           rel="noopener nofollow"
-          onClick={() => trackWineEvent("wine_embed_planner_opened", { surface: "publisher_map" })}
+          onClick={() => trackWineEvent("wine_embed_planner_opened", { surface, context })}
         >
           Open the full winery planner →
         </a>

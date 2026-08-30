@@ -7,7 +7,11 @@
     "lng": -85.48802,
     "address": "100 Grand Traverse Boulevard, Acme, MI 49610",
     "sourceUrl": "https://mapcarta.com/W213869615",
-    "verifiedAt": "2026-08-29"
+    "verifiedAt": "2026-08-29",
+    "preferredAreas": [
+      "old-mission",
+      "traverse-city"
+    ]
   },
   {
     "slug": "cherry-tree-inn",
@@ -17,7 +21,11 @@
     "lng": -85.52893,
     "address": "2345 US 31 N, Traverse City, MI 49686",
     "sourceUrl": "https://mapcarta.com/W725844492",
-    "verifiedAt": "2026-08-29"
+    "verifiedAt": "2026-08-29",
+    "preferredAreas": [
+      "old-mission",
+      "traverse-city"
+    ]
   },
   {
     "slug": "traverse-city-tourism",
@@ -27,6 +35,11 @@
     "lng": -85.6243909038,
     "address": "101 W Grandview Pkwy, Traverse City, MI 49684",
     "sourceUrl": "https://www.merchantcircle.com/mi-traverse-city/travel-and-lodging/tourist-attractions",
-    "verifiedAt": "2026-08-29"
+    "verifiedAt": "2026-08-29",
+    "preferredAreas": [
+      "old-mission",
+      "leelanau",
+      "traverse-city"
+    ]
   }
 ]
