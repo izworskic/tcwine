@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-08-29",
   "id": "tc-wine-authority-flywheel",
   "objective": "Earn legitimate external links, embeds, citations, and referral clicks into the canonical Traverse City Winery Map without adding indexable search inventory.",
@@ -29,6 +29,15 @@
     "noReciprocalLinkSchemes": true,
     "noMassDirectorySubmissions": true,
     "noSearchTitleReset": true,
-    "publisherSurfacesNoindex": true
+    "publisherSurfacesNoindex": true,
+    "noRequiredDofollowWidgetLinks": true,
+    "noRequestsToRemoveNofollow": true
+  },
+  "linkPolicy": {
+    "distributedWidgetLinksPassRankingCredit": false,
+    "widgetLinkRel": "nofollow",
+    "editorialCitationRequired": false,
+    "editorialCitationMustBeIndependent": true,
+    "rationale": "Avoid Google widget-link spam patterns while still earning referral traffic and legitimate editorial citations."
   }
 }

@@ -29,6 +29,8 @@ assert.match(kitPage, /not association membership counts/i);
 assert.match(kitPage, /Chris Izworski/);
 assert.match(kit, /Chris Izworski's Traverse City Winery Map/);
 assert.match(kit, /utm_source=publisher_embed/);
+assert.match(kit, /rel="nofollow"/);
+assert.match(map, /rel="noopener nofollow"/);
 assert.match(kit, /Copy embed code/);
 assert.match(kit, /wineries\.geojson/);
 assert.match(kit, /wineries\.csv/);

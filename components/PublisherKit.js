@@ -12,7 +12,7 @@ const EMBED = `<iframe
   style="border:0;border-radius:12px;overflow:hidden"
 ></iframe>
 <p style="font:14px/1.4 system-ui,sans-serif">
-  Map by <a href="https://tcwine.chrisizworski.com/?utm_source=publisher_embed&utm_medium=embed&utm_campaign=winery_map">Chris Izworski's Traverse City Winery Map</a>
+  Map by <a href="https://tcwine.chrisizworski.com/?utm_source=publisher_embed&utm_medium=embed&utm_campaign=winery_map" rel="nofollow">Chris Izworski's Traverse City Winery Map</a>
 </p>`;
 
 export default function PublisherKit() {
@@ -33,7 +33,7 @@ export default function PublisherKit() {
     <section className="publisher-kit">
       <h2>Embed the map on your site</h2>
       <p>
-        The embed is free to use. Keep the attribution link beneath the map so readers can open the full route planner.
+        The embed is free to use. Its built-in planner link is marked nofollow. If you independently reference the map or dataset in your editorial copy, you can cite the planner normally.
       </p>
       <div className="publisher-preview">
         <iframe
@@ -54,8 +54,8 @@ export default function PublisherKit() {
 
       <h2>Download the current directory data</h2>
       <p>
-        Use the exports for editorial research, trip-planning tools, maps, or fact checking. Please attribute the compilation to
-        Chris Izworski&apos;s Traverse City Winery Map and link to the planner.
+        Use the exports for editorial research, trip-planning tools, maps, or fact checking. If you reference the compilation editorially,
+        cite Chris Izworski&apos;s Traverse City Winery Map in the way that best fits your page.
       </p>
       <div className="publisher-downloads">
         <a
