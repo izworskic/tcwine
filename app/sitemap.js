@@ -24,6 +24,13 @@ const ROUTES = [
   "wine/whites",
   "wine/serious-wine",
   "wine/first-trip",
+  "wine/cabernet-franc",
+  "wine/pinot-noir",
+  "wine/chardonnay",
+  "wine/sauvignon-blanc",
+  "wine/gewurztraminer",
+  "wine/merlot",
+  "wine/pinot-gris",
 ];
 
 export default function sitemap() {
