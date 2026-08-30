@@ -3,8 +3,9 @@ import { readFile } from "node:fs/promises";
 
 const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
 
-const [venuesRaw, kitPage, kit, map, mount, embedPage, partnerPage, wineryEmbedPage, partnersRaw, drivingLib, drivingComponent, drivingApi, comparePage, geojson, csv, config, analytics, sitemap] = await Promise.all([
+const [venuesRaw, planner, kitPage, kit, map, mount, embedPage, partnerPage, wineryEmbedPage, partnersRaw, drivingLib, drivingComponent, drivingApi, comparePage, geojson, csv, config, analytics, sitemap] = await Promise.all([
   read("../data/venues.json"),
+  read("../components/Planner.js"),
   read("../app/for-publishers/page.js"),
   read("../components/PublisherKit.js"),
   read("../components/PublisherMap.js"),
@@ -40,6 +41,11 @@ assert.match(kit, /Chris Izworski's Traverse City Winery Map/);
 assert.match(kit, /utm_source=publisher_embed/);
 assert.match(kit, /rel="nofollow"/);
 assert.match(map, /rel="noopener nofollow"/);
+assert.match(map, /tile\.openstreetmap\.org/);
+assert.doesNotMatch(map, /cartocdn/i);
+assert.match(planner, /tile\.openstreetmap\.org/);
+assert.doesNotMatch(planner, /cartocdn/i);
+assert.doesNotMatch(planner, /CARTO/);
 assert.match(kit, /Copy embed code/);
 assert.match(kit, /wineries\.geojson/);
 assert.match(kit, /wineries\.csv/);
