@@ -70,7 +70,7 @@ export default function PublisherMap() {
         <a
           href="https://tcwine.chrisizworski.com/?utm_source=publisher_embed&utm_medium=embed&utm_campaign=winery_map"
           target="_blank"
-          rel="noopener"
+          rel="noopener nofollow"
           onClick={() => trackWineEvent("wine_embed_planner_opened", { surface: "publisher_map" })}
         >
           Open the full winery planner →
