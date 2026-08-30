@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updated": "2026-08-29",
   "id": "tc-wine-authority-flywheel",
   "objective": "Earn legitimate external links, embeds, citations, and referral clicks into the canonical Traverse City Winery Map without adding indexable search inventory.",
@@ -39,5 +39,29 @@
     "editorialCitationRequired": false,
     "editorialCitationMustBeIndependent": true,
     "rationale": "Avoid Google widget-link spam patterns while still earning referral traffic and legitimate editorial citations."
+  },
+  "partnerEmbeds": {
+    "stablePartners": [
+      "grand-traverse-resort",
+      "cherry-tree-inn",
+      "traverse-city-tourism"
+    ],
+    "wineryFocusedEmbeds": true,
+    "currentWineryEmbedCount": 43,
+    "indexable": false
+  },
+  "originalDataAsset": {
+    "canonicalPage": "/old-mission-vs-leelanau-wineries",
+    "api": "/api/publisher/driving-reality.json",
+    "apiIndexable": false,
+    "metrics": [
+      "north-south span",
+      "east-west span",
+      "median pair separation",
+      "75th percentile pair separation",
+      "median nearest-neighbor separation",
+      "median straight-line distance from Traverse City"
+    ],
+    "keyFinding": "Local nearest-neighbor density is nearly identical on Old Mission and Leelanau, while Leelanau's overall pairwise separation is materially larger."
   }
 }
