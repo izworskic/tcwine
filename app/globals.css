@@ -1558,3 +1558,8 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .driving-reality{padding:16px}
   .driving-reality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* CARTO-free minimal map mode. Uses the same OSM tiles with a subdued visual treatment. */
+.map-tiles-minimal{
+  filter: grayscale(1) saturate(.18) brightness(1.08) contrast(.88);
+}
