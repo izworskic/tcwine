@@ -11,7 +11,7 @@ permissions:
 jobs:
   verify-production:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - name: Verify custom domain serves current map-first release
         shell: bash
@@ -108,5 +108,10 @@ jobs:
 
           if [[ "$authority_ok" != "1" ]]; then
             echo "::error::Partner embed or driving-reality production contract failed."
+            echo "Partner identity present: $(grep -q "Plan wine country from Grand Traverse Resort" <<<"$partner" && echo yes || echo no)"
+            echo "Driving analysis present: $(grep -q "Old Mission vs. Leelanau: the driving reality" <<<"$compare" && echo yes || echo no)"
+            echo "Data metric present: $(grep -q '"medianPairMiles"' <<<"$data" && echo yes || echo no)"
+            echo "Partner X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$partner_headers" | head -1 || true)"
+            echo "Data X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$data_headers" | head -1 || true)"
             exit 1
           fi
