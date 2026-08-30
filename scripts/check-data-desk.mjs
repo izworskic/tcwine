@@ -74,7 +74,10 @@ must(analytics, '"/wine-country-data": "wine_country_data"', "landing analytics"
 must(analytics, '"wine_data_filter_changed"', "event registry");
 must(analytics, '"wine_data_download_opened"', "event registry");
 must(analytics, '"wine_data_citation_copied"', "event registry");
-must(css, "Wine Country Data Desk", "Data Desk styles");\nmust(productionSmoke, "Wine Country Data Desk and research exports are live.", "production smoke");\nmust(productionSmoke, "/api/data-desk/snapshot.json", "production smoke JSON");\nmust(productionSmoke, "/api/data-desk/wineries.csv", "production smoke CSV");
+must(css, "Wine Country Data Desk", "Data Desk styles");
+must(productionSmoke, "Wine Country Data Desk and research exports are live.", "production smoke");
+must(productionSmoke, "/api/data-desk/snapshot.json", "production smoke JSON");
+must(productionSmoke, "/api/data-desk/wineries.csv", "production smoke CSV");
 
 if (pkg.scripts["test:data-desk"] !== "node scripts/check-data-desk.mjs") {
   errors.push("package.json missing test:data-desk script");
