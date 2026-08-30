@@ -38,10 +38,9 @@ export default function PublisherMap({ focusId = "", partner = null, nearbyCount
     });
     instanceRef.current = map;
 
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-      attribution: "&copy; OpenStreetMap &copy; CARTO",
-      subdomains: "abcd",
-      maxZoom: 20,
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+      maxZoom: 19,
     }).addTo(map);
 
     const focusWinery = focusId ? WINERIES.find((v) => v.id === focusId) : null;
