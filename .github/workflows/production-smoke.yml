@@ -46,3 +46,19 @@ jobs:
             grep -o "Traverse City[^<]*" <<<"$home" | head -5 || true
             exit 1
           fi
+
+          stamp="$(date +%s)-publisher"
+          publisher_url="https://tcwine.chrisizworski.com/for-publishers?smoke=${stamp}"
+          embed_url="https://tcwine.chrisizworski.com/embed/traverse-city-winery-map?smoke=${stamp}"
+          publisher="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$publisher_url")"
+          embed="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$embed_url")"
+          publisher_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$publisher_url" | tr -d '\r')"
+          embed_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$embed_url" | tr -d '\r')"
+
+          grep -q "Use the Traverse City Winery Map on your site" <<<"$publisher"
+          grep -q "43 current winery/tasting-room locations" <<<"$publisher"
+          grep -q "43 mapped winery/tasting-room locations" <<<"$embed"
+          grep -qi '^x-robots-tag: noindex, follow' <<<"$publisher_headers"
+          grep -qi '^x-robots-tag: noindex, follow' <<<"$embed_headers"
+
+          echo "Publisher authority surfaces are live and noindex."
