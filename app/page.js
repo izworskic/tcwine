@@ -97,7 +97,7 @@ function graph() {
         "@type": "Person",
         "@id": "https://chrisizworski.com/#person",
         name: "Chris Izworski",
-        url: "https://chrisizworski.com/",
+        url: "https://chrisizworski.com/chris-izworski/",
         workExample: { "@id": BASE + "/#app" },
         sameAs: [
           "https://github.com/izworskic",

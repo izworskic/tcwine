@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://upload.wikimedia.org" />
+        <link rel="author" href="https://chrisizworski.com/chris-izworski/" />
       </head>
       <body>
         <Script id="wine-analytics-queue" strategy="beforeInteractive">
