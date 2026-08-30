@@ -4,7 +4,7 @@ import AuthorNote from "@/components/AuthorNote";
 import { rankWineries, WINE_INTENTS } from "@/lib/wine-day-engine";
 
 const BASE="https://tcwine.chrisizworski.com";
-const INTENTS=["riesling","sparkling","reds","whites","serious-wine","first-trip"];
+const INTENTS=["riesling","sparkling","reds","whites","cabernet-franc","pinot-noir","chardonnay","sauvignon-blanc","gewurztraminer","merlot","pinot-gris","serious-wine","first-trip"];
 
 const SEO={
   riesling:{
@@ -30,6 +30,48 @@ const SEO={
     h1:"Traverse City Wineries for Dry & Aromatic Whites",
     description:"Find Traverse City wineries for Chardonnay, Pinot Gris, Sauvignon Blanc, Albariño, Grüner, Gewürztraminer and dry whites, then route the day.",
     intro:"This is the broader white-wine lens: dry whites, Chardonnay, Pinot Gris, Sauvignon Blanc, Albariño, Grüner, Gewürztraminer and other aromatic styles. The ranking rewards explicit wine-style signals first."
+  },
+  "cabernet-franc":{
+    title:"Traverse City Cabernet Franc Wineries: Old Mission & Leelanau",
+    h1:"Traverse City Cabernet Franc Wineries",
+    description:"Find Traverse City wineries with verified Cabernet Franc across Old Mission and Leelanau, compare their fit, and route a three-winery red-wine day.",
+    intro:"Cabernet Franc is one of the core cool-climate reds of the Traverse Wine Coast. This ranking uses verified winery varietal data first, then route fit and tasting character, so a scenic stop cannot outrank a winery that actually documents Cabernet Franc."
+  },
+  "pinot-noir":{
+    title:"Traverse City Pinot Noir Wineries: Old Mission & Leelanau",
+    h1:"Traverse City Pinot Noir Wineries",
+    description:"Find Traverse City wineries with verified Pinot Noir, compare Old Mission and Leelanau producers, and build a practical three-winery route.",
+    intro:"Pinot Noir appears across both Traverse City wine peninsulas, but not every tasting room is equally useful for a Pinot-focused visitor. This lens starts with verified varietal coverage and uses geography only after the grape match."
+  },
+  "chardonnay":{
+    title:"Traverse City Chardonnay Wineries: Old Mission & Leelanau",
+    h1:"Traverse City Chardonnay Wineries",
+    description:"Find Traverse City wineries with verified Chardonnay and route a wine-first Chardonnay day across Old Mission, Leelanau, or both.",
+    intro:"Chardonnay is one of the region's most broadly represented vinifera grapes. The useful question is not whether Traverse City makes Chardonnay, but which documented producers make sense together in one tasting day."
+  },
+  "sauvignon-blanc":{
+    title:"Traverse City Sauvignon Blanc Wineries: Leelanau & Old Mission",
+    h1:"Traverse City Sauvignon Blanc Wineries",
+    description:"Find wineries with verified Sauvignon Blanc in Traverse City wine country, including Leelanau and Old Mission producers, then build the route.",
+    intro:"Sauvignon Blanc is less universal here than Riesling or Chardonnay, which makes verified producer coverage especially useful. This page excludes wineries where the current data does not support a Sauvignon Blanc claim."
+  },
+  "gewurztraminer":{
+    title:"Traverse City Gewürztraminer Wineries: Leelanau & Old Mission",
+    h1:"Traverse City Gewürztraminer Wineries",
+    description:"Find Traverse City wineries with verified Gewürztraminer and build an aromatic-white route across Leelanau and Old Mission.",
+    intro:"Gewürztraminer is a real part of northern Michigan's aromatic-white story. This ranking begins with wineries whose current varietal data explicitly includes it, then balances wine fit with route coherence."
+  },
+  merlot:{
+    title:"Traverse City Merlot Wineries: Old Mission & Leelanau",
+    h1:"Traverse City Merlot Wineries",
+    description:"Find Traverse City wineries with verified Merlot, compare producer fit, and build a focused red-wine route across Old Mission and Leelanau.",
+    intro:"Merlot is grown and poured by a meaningful set of Traverse City producers. This page treats it as a real wine-search intent rather than burying it inside a generic red-wine list."
+  },
+  "pinot-gris":{
+    title:"Traverse City Pinot Gris Wineries: Old Mission & Leelanau",
+    h1:"Traverse City Pinot Gris & Pinot Grigio Wineries",
+    description:"Find Traverse City wineries with verified Pinot Gris or Pinot Grigio coverage and build a wine-first route across Old Mission and Leelanau.",
+    intro:"Pinot Gris and Pinot Grigio are widely represented across the Traverse Wine Coast. The ranking uses verified varietal coverage, then route fit, so the page is useful for planning rather than just naming producers."
   },
   "serious-wine":{
     title:"Best Traverse City Wineries for Wine Lovers: A Wine-First Guide",
@@ -100,6 +142,12 @@ export default function Page({params}){
 
       <h2>Wine-first ranking</h2>
       <p>{intent.description} Scores below are Wine Day Fit scores, not critic scores or claims that one producer makes objectively better wine than another.</p>
+      <p className="wine-data-note">
+        The Traverse Wine Coast is a lake-moderated cool-climate region. Traverse City Tourism identifies Riesling, Chardonnay,
+        Pinot Gris, Pinot Noir, and Cabernet Franc among its defining varieties. This site's grape rankings use winery-level
+        varietal evidence rather than assuming every winery pours every regional grape.{" "}
+        <a href="https://www.traversecity.com/food-and-drink/wineries/" target="_blank" rel="noopener noreferrer">Regional wine context</a>
+      </p>
       <ol className="wine-ranking">
         {top.map(({venue,score,reasons,truth},index)=>(
           <li key={venue.id}>
@@ -131,9 +179,14 @@ export default function Page({params}){
       <AuthorNote context={cfg.h1} />
       <nav className="morelinks">
         Wine lenses: <Link href="/wine/riesling">Riesling</Link>{" · "}
+        <Link href="/wine/cabernet-franc">Cabernet Franc</Link>{" · "}
+        <Link href="/wine/pinot-noir">Pinot Noir</Link>{" · "}
+        <Link href="/wine/chardonnay">Chardonnay</Link>{" · "}
+        <Link href="/wine/pinot-gris">Pinot Gris</Link>{" · "}
+        <Link href="/wine/sauvignon-blanc">Sauvignon Blanc</Link>{" · "}
+        <Link href="/wine/gewurztraminer">Gewürztraminer</Link>{" · "}
+        <Link href="/wine/merlot">Merlot</Link>{" · "}
         <Link href="/wine/sparkling">Sparkling</Link>{" · "}
-        <Link href="/wine/reds">Reds</Link>{" · "}
-        <Link href="/wine/whites">Whites</Link>{" · "}
         <Link href="/wine/serious-wine">Wine-first</Link>{" · "}
         <Link href="/">Full winery map</Link>
       </nav>
