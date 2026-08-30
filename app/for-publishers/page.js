@@ -2,6 +2,7 @@ import Link from "next/link";
 import venues from "@/data/venues.json";
 import wineTruth from "@/data/wine-truth.json";
 import PublisherKit from "@/components/PublisherKit";
+import partners from "@/data/publisher-partners.json";
 
 const wineries = venues.filter((v) => v.category === "winery");
 const oldMission = wineries.filter((v) => v.area === "old-mission").length;
@@ -37,6 +38,22 @@ export default function ForPublishersPage() {
       </p>
 
       <PublisherKit />
+
+      <h2>Partner-specific map examples</h2>
+      <p>
+        Lodging and visitor organizations can use a version centered on their own starting point. These remain noindex utility embeds.
+      </p>
+      <div className="partner-embed-links">
+        {partners.map((partner) => (
+          <a key={partner.slug} href={"/embed/partner/" + partner.slug} target="_blank" rel="noopener">
+            {partner.shortName}: preview guest wine map →
+          </a>
+        ))}
+      </div>
+      <p>
+        Wineries can use a nearby-winery mini map centered on their tasting room. Example:{" "}
+        <a href="/embed/winery/chateau-chantal" target="_blank" rel="noopener">Chateau Chantal + nearby wineries</a>.
+      </p>
 
       <h2>How to cite the map</h2>
       <p>
