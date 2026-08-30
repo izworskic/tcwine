@@ -452,12 +452,13 @@ export default function Planner({
           ? { center:[44.98,-85.82], zoom:9 }
           : { center:[44.95,-85.65], zoom:10 };
       map = L.map("map",{zoomControl:true}).setView(initialView.center, initialView.zoom);
-      const voyager = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-        {attribution:"&copy; OpenStreetMap &copy; CARTO", subdomains:"abcd", maxZoom:20});
-      const positron = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-        {attribution:"&copy; OpenStreetMap &copy; CARTO", subdomains:"abcd", maxZoom:20});
-      voyager.addTo(map);
-      L.control.layers({ "Roads": voyager, "Minimal": positron }, null, { position:"topright" }).addTo(map);
+      const osmAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>';
+      const roads = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        { attribution: osmAttribution, maxZoom: 19 });
+      const minimal = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        { attribution: osmAttribution, maxZoom: 19, className: "map-tiles-minimal" });
+      roads.addTo(map);
+      L.control.layers({ "Roads": roads, "Minimal": minimal }, null, { position:"topright" }).addTo(map);
       L.polyline([[45.0,-86.10],[45.0,-85.38]],{color:"#23241F",weight:1,opacity:0.28,dashArray:"2 6",interactive:false}).addTo(map);
       L.marker([45.0,-85.40],{interactive:false,icon:L.divIcon({className:"par-label",html:"45th parallel",iconSize:[80,14]})}).addTo(map);
       dotsLayer = L.layerGroup().addTo(map);
