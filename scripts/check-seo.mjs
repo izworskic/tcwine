@@ -19,6 +19,7 @@ const [
   image,
   analytics,
   analyticsComponent,
+  styles,
 ] = await Promise.all([
   read("../app/page.js"),
   read("../app/layout.js"),
@@ -35,6 +36,7 @@ const [
   read("../app/opengraph-image.js"),
   read("../lib/wine-analytics.js"),
   read("../components/WineAnalytics.js"),
+  read("../app/globals.css"),
 ]);
 
 assert.match(home, /Traverse City Winery Map: 40 Wineries/);
@@ -95,6 +97,11 @@ assert.match(analyticsComponent, /wine_landing_viewed/);
 assert.doesNotMatch(analytics, /latitude|longitude|selectedVenue|freeText/i);
 assert.match(analyticsComponent, /usePathname/);
 assert.match(analyticsComponent, /WINE_LANDING_KEYS\[pathname\]/);
+assert.match(styles, /orientation: landscape/);
+assert.match(styles, /min-width: 861px/);
+assert.match(styles, /max-width: 1366px/);
+assert.match(styles, /height:112vh/);
+assert.match(styles, /planner-shell:not\(\.planner-shell-embedded\)/);
 
 assert.match(venues, /alternates: \{ canonical: "\/venues" \}/);
 assert.match(venues, /url: `\$\{BASE\}\/venues`/);
