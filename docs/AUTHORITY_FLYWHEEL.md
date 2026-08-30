@@ -16,7 +16,7 @@ The response is not to out-publish them with thin pages. It is to create a usefu
 
 ## Flywheel
 
-**useful publisher asset → external embed/attribution link → referral clicks → stronger referring-domain graph → improved rankings → more discovery → more embeds/links**
+**useful publisher asset → embed/referral use → independent editorial citations → stronger referring-domain graph → improved rankings → more discovery → more use/citations**
 
 The core asset is the free Traverse City Winery Map embed.
 
@@ -25,7 +25,7 @@ The core asset is the free Traverse City Winery Map embed.
 The publisher kit at `/for-publishers` provides:
 
 - a lightweight embeddable winery map;
-- an attribution link to the canonical planner;
+- a nofollow utility link to the canonical planner inside the distributed embed;
 - current GeoJSON;
 - current CSV;
 - count methodology;
@@ -34,22 +34,19 @@ The publisher kit at `/for-publishers` provides:
 
 Publisher surfaces are noindex. They exist to earn links and referrals, not to compete with the active search cluster.
 
-## Why the attribution matters
+## Link-policy boundary
 
-The recommended embed code contains a direct HTML link to:
+The distributed embed contains a branded utility link to the planner, but that link is explicitly `rel="nofollow"`.
 
-`https://tcwine.chrisizworski.com/`
+This matters because Google treats widely distributed widget links that pass ranking credit as a potential link-spam pattern. The embed exists for visitor utility and referral traffic, not to manufacture PageRank.
 
-with the visible attribution:
+Authority should come from **independent editorial citations**. A publisher that genuinely uses the map or data may choose to cite:
 
 **Chris Izworski's Traverse City Winery Map**
 
-That gives the program two benefits:
+in its own surrounding copy. That editorial link is not required by the embed, not exchanged for payment or services, and not generated automatically.
 
-1. topical authority for the winery-map property;
-2. natural external co-occurrence between the authored tool and the Chris Izworski entity.
-
-Do not stuff anchors. The suggested credit should remain natural.
+Do not ask publishers to remove `nofollow` from the widget link. Do not require a dofollow link as a condition of use.
 
 ## Priority outreach targets
 
@@ -127,7 +124,7 @@ Subject direction:
 
 Core pitch:
 
-> I built a free Traverse City winery map that covers the current Old Mission, Leelanau, and Traverse City winery/tasting-room directory and lets visitors jump into a real-road wine-day planner. I made a lightweight embed specifically for hotels, vacation-rental companies, and local publishers. There is no booking commission or affiliate requirement. If it improves your wine-country page, you can use it free with the attribution link intact.
+> I built a free Traverse City winery map that covers the current Old Mission, Leelanau, and Traverse City winery/tasting-room directory and lets visitors jump into a real-road wine-day planner. I made a lightweight embed specifically for hotels, vacation-rental companies, and local publishers. There is no booking commission or affiliate requirement. If it improves your wine-country page, you can use it free. The built-in planner link is nofollow; if you independently reference the map or dataset in your article, a normal editorial citation is welcome but not required.
 
 For Grand Traverse Resort:
 
