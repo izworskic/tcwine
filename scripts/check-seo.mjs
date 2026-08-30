@@ -41,6 +41,7 @@ const [
 
 assert.match(home, /Traverse City Winery Map: 40 Wineries/);
 assert.match(home, /"https:\/\/chrisizworski\.com\/#person"/);
+assert.match(home, /url: "https:\/\/chrisizworski\.com\/chris-izworski\/"/);
 assert.match(home, /applicationCategory: "TravelApplication"/);
 assert.match(home, /featureList:/);
 assert.match(home, /card: "summary_large_image"/);
@@ -48,6 +49,7 @@ assert.match(home, /card: "summary_large_image"/);
 assert.match(layout, /Traverse City Winery Map & Wine Tour Planner/);
 assert.match(layout, /max-image-preview/);
 assert.match(layout, /authors: \[\{ name: "Chris Izworski"/);
+assert.match(layout, /rel="author" href="https:\/\/chrisizworski\.com\/chris-izworski\/"/);
 assert.match(layout, /\/_vercel\/insights\/script\.js/);
 assert.match(layout, /window\.va=window\.va\|\|function/);
 
