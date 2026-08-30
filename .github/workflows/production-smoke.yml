@@ -47,18 +47,31 @@ jobs:
             exit 1
           fi
 
-          stamp="$(date +%s)-publisher"
-          publisher_url="https://tcwine.chrisizworski.com/for-publishers?smoke=${stamp}"
-          embed_url="https://tcwine.chrisizworski.com/embed/traverse-city-winery-map?smoke=${stamp}"
-          publisher="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$publisher_url")"
-          embed="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$embed_url")"
-          publisher_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$publisher_url" | tr -d '\r')"
-          embed_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$embed_url" | tr -d '\r')"
+          publisher_ok=0
+          for attempt in $(seq 1 12); do
+            stamp="$(date +%s)-publisher-${attempt}"
+            publisher_url="https://tcwine.chrisizworski.com/for-publishers?smoke=${stamp}"
+            embed_url="https://tcwine.chrisizworski.com/embed/traverse-city-winery-map?smoke=${stamp}"
+            publisher="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$publisher_url" || true)"
+            embed="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$embed_url" || true)"
+            publisher_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$publisher_url" 2>/dev/null | tr -d '\r' || true)"
+            embed_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$embed_url" 2>/dev/null | tr -d '\r' || true)"
 
-          grep -q "Use the Traverse City Winery Map on your site" <<<"$publisher"
-          grep -q "43 current winery/tasting-room locations" <<<"$publisher"
-          grep -q "43 mapped winery/tasting-room locations" <<<"$embed"
-          grep -qi '^x-robots-tag: noindex, follow' <<<"$publisher_headers"
-          grep -qi '^x-robots-tag: noindex, follow' <<<"$embed_headers"
+            if grep -q "Use the Traverse City Winery Map on your site" <<<"$publisher" \
+              && grep -q "43 current winery/tasting-room locations" <<<"$publisher" \
+              && grep -q "43 mapped winery/tasting-room locations" <<<"$embed" \
+              && grep -qi '^x-robots-tag: noindex, follow' <<<"$publisher_headers" \
+              && grep -qi '^x-robots-tag: noindex, follow' <<<"$embed_headers"; then
+              publisher_ok=1
+              echo "Publisher authority surfaces are live and noindex."
+              break
+            fi
 
-          echo "Publisher authority surfaces are live and noindex."
+            echo "Attempt ${attempt}: publisher authority surfaces have not converged yet."
+            sleep 10
+          done
+
+          if [[ "$publisher_ok" != "1" ]]; then
+            echo "::error::Publisher authority surfaces did not converge on the custom domain."
+            exit 1
+          fi
