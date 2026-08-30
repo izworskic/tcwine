@@ -55,6 +55,12 @@ export default function ForPublishersPage() {
         <a href="/embed/winery/chateau-chantal" target="_blank" rel="noopener">Chateau Chantal + nearby wineries</a>.
       </p>
 
+      <h2>Need citation-ready research?</h2>
+      <p>
+        The <Link href="/wine-country-data">Wine Country Data Desk</Link> publishes the directory counts, source-backed grape coverage,
+        Old Mission-vs.-Leelanau geographic analysis, methodology, and richer CSV/GeoJSON/JSON research exports on one canonical page.
+      </p>
+
       <h2>How to cite the map</h2>
       <p>
         Suggested credit: <strong>Traverse City Winery Map by Chris Izworski</strong>, with a link to

@@ -139,6 +139,7 @@ export default function Page() {
           <Link href="/fall-color-wine-tour">Fall color wine tour</Link>
           <Link href="/compare-wineries">Compare wineries</Link>
           <Link href="/wine-country-now">Wine Country Now</Link>
+          <Link href="/wine-country-data">Wine Country Data</Link>
           <Link href="/my-wine-journal">My Wine Journal</Link>
           <Link href="/venues">Posted hours</Link>
         </div>
