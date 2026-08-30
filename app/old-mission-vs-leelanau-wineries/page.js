@@ -44,6 +44,10 @@ export default function Page() {
       <RegionalPhoto kind="leelanau" compact />
       <p><Link className="page-cta" href="/leelanau-peninsula-wine-trail">Open the Leelanau winery map →</Link></p>
       <DrivingReality />
+      <p>
+        Want the full underlying research? <Link href="/wine-country-data">Open the Wine Country Data Desk</Link> for downloadable
+        winery records, source-backed grape counts, methodology, and the complete geographic comparison.
+      </p>
       <h2>Quick decision</h2>
       <ul>
         <li><strong>First wine day:</strong> Old Mission.</li>
@@ -56,7 +60,7 @@ export default function Page() {
       <nav className="morelinks">
         More guides: <Link href="/">Traverse City winery map</Link>{" · "}
         <Link href="/one-day-itineraries">One-day itineraries</Link>{" · "}
-        <Link href="/fall-color-wine-tour">Fall color wine tour</Link>
+        <Link href="/fall-color-wine-tour">Fall color wine tour</Link>{" · "}\n        <Link href="/wine-country-data">Wine Country Data Desk</Link>
       </nav>
     </main>
   );
