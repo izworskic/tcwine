@@ -92,7 +92,7 @@ jobs:
             partner_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$partner_url" 2>/dev/null | tr -d '\r' || true)"
             data_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$data_url" 2>/dev/null | tr -d '\r' || true)"
 
-            if grep -q "Plan wine country from Grand Traverse Resort" <<<"$partner" \
+            if grep -q "Traverse City Winery Map from Grand Traverse Resort" <<<"$partner" \
               && grep -q "Old Mission vs. Leelanau: the driving reality" <<<"$compare" \
               && grep -q '"medianPairMiles"' <<<"$data" \
               && grep -qi '^x-robots-tag: noindex, follow' <<<"$partner_headers" \
@@ -108,7 +108,7 @@ jobs:
 
           if [[ "$authority_ok" != "1" ]]; then
             echo "::error::Partner embed or driving-reality production contract failed."
-            echo "Partner identity present: $(grep -q "Plan wine country from Grand Traverse Resort" <<<"$partner" && echo yes || echo no)"
+            echo "Partner identity present: $(grep -q "Traverse City Winery Map from Grand Traverse Resort" <<<"$partner" && echo yes || echo no)"
             echo "Driving analysis present: $(grep -q "Old Mission vs. Leelanau: the driving reality" <<<"$compare" && echo yes || echo no)"
             echo "Data metric present: $(grep -q '"medianPairMiles"' <<<"$data" && echo yes || echo no)"
             echo "Partner X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$partner_headers" | head -1 || true)"
