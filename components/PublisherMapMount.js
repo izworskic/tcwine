@@ -14,6 +14,6 @@ const PublisherMap = dynamic(() => import("@/components/PublisherMap"), {
   ),
 });
 
-export default function PublisherMapMount() {
-  return <PublisherMap />;
+export default function PublisherMapMount(props) {
+  return <PublisherMap {...props} />;
 }
