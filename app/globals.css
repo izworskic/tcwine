@@ -1520,3 +1520,41 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .publisher-map-canvas{min-height:345px}
   .publisher-map-credit{align-items:flex-start;flex-direction:column}
 }
+
+
+/* ---------- partner embeds + driving reality ---------- */
+.publisher-partner-heading{
+  padding:10px 12px;border-bottom:1px solid var(--line);background:#fff;
+  display:flex;flex-direction:column;gap:2px
+}
+.publisher-partner-heading strong{font-size:.9rem;color:var(--ink)}
+.publisher-partner-heading span{font-size:.74rem;color:var(--ink-soft)}
+.partner-embed-links{display:grid;gap:8px;margin:12px 0 18px}
+.partner-embed-links a{
+  display:block;padding:10px 12px;border:1px solid var(--line);border-radius:9px;
+  background:#fff;color:var(--bay);font-weight:600;text-decoration:none
+}
+.partner-embed-links a:hover{border-color:var(--wine);color:var(--wine)}
+.driving-reality{
+  margin:34px 0;padding:22px;border:1px solid var(--line);border-radius:14px;background:#fff
+}
+.driving-reality h2{margin-top:0}
+.driving-reality-grid{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0 22px
+}
+.driving-reality-grid>div{
+  padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--paper)
+}
+.driving-reality-grid strong{display:block;color:var(--wine);font-size:1.15rem}
+.driving-reality-grid span{display:block;margin-top:2px;color:var(--ink-soft);font-size:.76rem}
+.driving-reality-table-wrap{overflow:auto;margin:16px 0}
+.driving-reality-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.driving-reality-table th,.driving-reality-table td{
+  padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top
+}
+.driving-reality-table th{color:var(--ink-soft);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.driving-reality-method{font-size:.76rem;color:var(--ink-soft)}
+@media (max-width:860px){
+  .driving-reality{padding:16px}
+  .driving-reality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}

@@ -172,3 +172,39 @@ Do not change the current search-facing title/H1/canonical treatment merely beca
 The publisher kit, embed, and exports remain noindex and outside the sitemap.
 
 Authority acquisition should compound the active search cluster, not reset it.
+
+
+## Partner-specific embed layer
+
+Built August 29, 2026.
+
+Stable noindex partner embeds now exist for:
+
+- Grand Traverse Resort & Spa;
+- Cherry Tree Inn & Suites;
+- Traverse City Tourism Visitor Center.
+
+The partner marker is shown as the starting point and the map emphasizes the nearest winery/tasting-room locations. The same embed system also supports every current winery as a focus point at `/embed/winery/[id]`.
+
+This changes outreach from "here is a generic regional map" to "here is the exact guest/visitor map built around your property or tasting room."
+
+## Original driving-reality asset
+
+The existing canonical Old Mission-vs.-Leelanau page now contains a deterministic geographic analysis built from the current production coordinates.
+
+Current headline findings:
+
+- Old Mission north-south winery span: 9.5 straight-line miles;
+- Leelanau north-south winery span: 22.8 straight-line miles;
+- Old Mission median winery-pair separation: 3.6 straight-line miles;
+- Leelanau median winery-pair separation: 6.8 straight-line miles;
+- median nearest-neighbor separation is nearly identical: 0.8 miles on both peninsulas.
+
+Interpretation: Leelanau still has tight local clusters. The extra trip burden comes primarily from moving between clusters across a much larger footprint.
+
+These are explicitly labeled straight-line geographic measures, not road miles. Actual road routing remains the planner's job.
+
+Machine-readable analysis:
+`/api/publisher/driving-reality.json`
+
+The API is noindex and points researchers back to the existing canonical comparison page.

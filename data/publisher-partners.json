@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "grand-traverse-resort",
+    "name": "Grand Traverse Resort & Spa",
+    "shortName": "Grand Traverse Resort",
+    "lat": 44.77827,
+    "lng": -85.48802,
+    "address": "100 Grand Traverse Boulevard, Acme, MI 49610",
+    "sourceUrl": "https://mapcarta.com/W213869615",
+    "verifiedAt": "2026-08-29"
+  },
+  {
+    "slug": "cherry-tree-inn",
+    "name": "Cherry Tree Inn & Suites",
+    "shortName": "Cherry Tree Inn",
+    "lat": 44.74705,
+    "lng": -85.52893,
+    "address": "2345 US 31 N, Traverse City, MI 49686",
+    "sourceUrl": "https://mapcarta.com/W725844492",
+    "verifiedAt": "2026-08-29"
+  },
+  {
+    "slug": "traverse-city-tourism",
+    "name": "Traverse City Tourism Visitor Center",
+    "shortName": "Traverse City Tourism",
+    "lat": 44.7654981392,
+    "lng": -85.6243909038,
+    "address": "101 W Grandview Pkwy, Traverse City, MI 49684",
+    "sourceUrl": "https://www.merchantcircle.com/mi-traverse-city/travel-and-lodging/tourist-attractions",
+    "verifiedAt": "2026-08-29"
+  }
+]
