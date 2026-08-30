@@ -2,6 +2,7 @@ import Link from "next/link";
 import venues from "@/data/venues.json";
 import RegionalPhoto from "@/components/RegionalPhoto";
 import AuthorNote from "@/components/AuthorNote";
+import DrivingReality from "@/components/DrivingReality";
 
 const oldMission = venues.filter((v) => v.area === "old-mission" && v.category === "winery");
 const leelanau = venues.filter((v) => v.area === "leelanau" && v.category === "winery");
@@ -42,6 +43,7 @@ export default function Page() {
       </p>
       <RegionalPhoto kind="leelanau" compact />
       <p><Link className="page-cta" href="/leelanau-peninsula-wine-trail">Open the Leelanau winery map →</Link></p>
+      <DrivingReality />
       <h2>Quick decision</h2>
       <ul>
         <li><strong>First wine day:</strong> Old Mission.</li>
