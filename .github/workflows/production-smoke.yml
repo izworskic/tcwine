@@ -78,3 +78,35 @@ jobs:
             echo "Embed X-Robots-Tag: $(grep -i '^x-robots-tag:' <<<"$embed_headers" | head -1 || true)"
             exit 1
           fi
+
+          authority_ok=0
+          for attempt in $(seq 1 12); do
+            stamp="$(date +%s)-authority-${attempt}"
+            partner_url="https://tcwine.chrisizworski.com/embed/partner/grand-traverse-resort?smoke=${stamp}"
+            compare_url="https://tcwine.chrisizworski.com/old-mission-vs-leelanau-wineries?smoke=${stamp}"
+            data_url="https://tcwine.chrisizworski.com/api/publisher/driving-reality.json?smoke=${stamp}"
+
+            partner="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$partner_url" || true)"
+            compare="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$compare_url" || true)"
+            data="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "$data_url" || true)"
+            partner_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$partner_url" 2>/dev/null | tr -d '\r' || true)"
+            data_headers="$(curl -fsSI --max-time 20 -H 'Cache-Control: no-cache' "$data_url" 2>/dev/null | tr -d '\r' || true)"
+
+            if grep -q "Plan wine country from Grand Traverse Resort" <<<"$partner" \
+              && grep -q "Old Mission vs. Leelanau: the driving reality" <<<"$compare" \
+              && grep -q '"medianPairMiles"' <<<"$data" \
+              && grep -qi '^x-robots-tag: noindex, follow' <<<"$partner_headers" \
+              && grep -qi '^x-robots-tag: noindex, follow' <<<"$data_headers"; then
+              authority_ok=1
+              echo "Partner embeds and driving-reality data asset are live."
+              break
+            fi
+
+            echo "Attempt ${attempt}: partner/data authority surfaces have not converged yet."
+            sleep 10
+          done
+
+          if [[ "$authority_ok" != "1" ]]; then
+            echo "::error::Partner embed or driving-reality production contract failed."
+            exit 1
+          fi
