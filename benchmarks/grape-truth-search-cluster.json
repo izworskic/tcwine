@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-30",
+  "id": "grape-truth-search-cluster",
+  "objective": "Own high-intent Traverse City grape searches with producer-level varietal evidence connected to ranking, comparison, winery guides, and route planning.",
+  "baseline": {
+    "grapeSpecificIndexableGuides": 1,
+    "producerLevelVerifiedVarietalWineries": 0
+  },
+  "after": {
+    "grapeSpecificIndexableGuides": 8,
+    "producerLevelVerifiedVarietalWineries": 18,
+    "cabernetFrancVerified": 14,
+    "pinotNoirVerified": 17,
+    "chardonnayVerified": 18,
+    "sauvignonBlancVerified": 9,
+    "gewurztraminerVerified": 14,
+    "merlotVerified": 15,
+    "pinotGrisVerified": 16,
+    "rieslingVerified": 18
+  },
+  "grapeRoutes": [
+    "/wine/cabernet-franc",
+    "/wine/pinot-noir",
+    "/wine/chardonnay",
+    "/wine/pinot-gris",
+    "/wine/sauvignon-blanc",
+    "/wine/gewurztraminer",
+    "/wine/merlot"
+  ],
+  "qualityRules": [
+    "Grape pages rank winery fit instead of publishing static best-of copy.",
+    "Producer-level varietal claims require a source URL, source label, and verification date.",
+    "Winery guides show the source of verified varietal lists.",
+    "The comparator uses verified varietals where available.",
+    "New grape routes are linked from the homepage, winery guides, related wine pages, analytics, and sitemap.",
+    "Publisher authority and all prior wine-product CI checks remain active."
+  ]
+}
