@@ -3,6 +3,7 @@ import "./globals.css";
 import WineAnalytics from "@/components/WineAnalytics";
 
 const GA_MEASUREMENT_ID = "G-Y5D2V2W7HN";
+const ADSENSE_PUBLISHER_ID = "ca-pub-8222782620788075";
 
 export const metadata = {
   metadataBase: new URL("https://tcwine.chrisizworski.com"),
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="google-adsense-account" content={ADSENSE_PUBLISHER_ID} />
         <link rel="preconnect" href="https://upload.wikimedia.org" />
         <link rel="author" href="https://chrisizworski.com/chris-izworski/" />
       </head>
