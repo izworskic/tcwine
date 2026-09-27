@@ -53,6 +53,7 @@ export default function RootLayout({ children }) {
         <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
         <WineAnalytics />
         {children}
+      <Script id="ci-network-ads-v1" src="https://chrisizworski.com/assets/network-ads-v1.js" strategy="afterInteractive" />
       </body>
     </html>
   );
