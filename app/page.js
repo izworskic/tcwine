@@ -97,7 +97,7 @@ function graph() {
         "@type": "Person",
         "@id": "https://chrisizworski.com/#person",
         name: "Chris Izworski",
-        url: "https://chrisizworski.com/chris-izworski/",
+        url: "https://chrisizworski.com/",
         workExample: { "@id": BASE + "/#app" },
         sameAs: [
           "https://github.com/izworskic",
@@ -188,6 +188,11 @@ export default function Page() {
             {": all " + T + " venues in one directory, verified " + HOURS_VERIFIED}
           </li>
         </ul>
+        <p>
+          Planning a separate wine day farther north? The{" "}
+          <a href="https://chrisizworski.com/petoskey-wine/">Petoskey Wine Region map and planner</a>
+          {" "}covers the Little Traverse Bay area and routes a different set of tasting stops.
+        </p>
         <p>{TAIL}</p>
         {REST.map((p, i) => (
           <p key={i}>{p}</p>
