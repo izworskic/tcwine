@@ -6,6 +6,7 @@ const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
 const [
   home,
   layout,
+  dataDesk,
   planner,
   oldMission,
   leelanau,
@@ -23,6 +24,7 @@ const [
 ] = await Promise.all([
   read("../app/page.js"),
   read("../app/layout.js"),
+  read("../app/wine-country-data/page.js"),
   read("../components/Planner.js"),
   read("../app/old-mission-peninsula-wineries/page.js"),
   read("../app/leelanau-peninsula-wine-trail/page.js"),
@@ -41,7 +43,10 @@ const [
 
 assert.match(home, /Traverse City Winery Map: 40 Wineries/);
 assert.match(home, /"https:\/\/chrisizworski\.com\/#person"/);
-assert.match(home, /url: "https:\/\/chrisizworski\.com\/chris-izworski\/"/);
+assert.match(home, /url: "https:\/\/chrisizworski\.com\/"/);
+assert.match(home, /Planning a separate wine day farther north/);
+assert.match(home, /href="https:\/\/chrisizworski\.com\/petoskey-wine\/"/);
+assert.match(dataDesk, /url: "https:\/\/chrisizworski\.com\/"/);
 assert.match(home, /applicationCategory: "TravelApplication"/);
 assert.match(home, /featureList:/);
 assert.match(home, /card: "summary_large_image"/);
