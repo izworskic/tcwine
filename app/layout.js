@@ -1,15 +1,17 @@
+import venues from "@/data/venues.json";
 import Script from "next/script";
 import "./globals.css";
 import WineAnalytics from "@/components/WineAnalytics";
 
 const GA_MEASUREMENT_ID = "G-Y5D2V2W7HN";
 const ADSENSE_PUBLISHER_ID = "ca-pub-8222782620788075";
+const WINERY_COUNT = venues.filter((venue) => venue.category === "winery").length;
 
 export const metadata = {
   metadataBase: new URL("https://tcwine.chrisizworski.com"),
-  title: "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
+  title: `Traverse City Winery Map & Wine Tour Planner | ${WINERY_COUNT} Wineries`,
   description:
-    "Interactive Traverse City winery map with 40 wineries across Old Mission, Leelanau, and Traverse City. Pick stops, route real roads, and check the day against tasting-room hours.",
+    `Interactive Traverse City winery map with ${WINERY_COUNT} wineries across Old Mission, Leelanau, and Traverse City. Pick stops, route real roads, and check the day against tasting-room hours.`,
   authors: [{ name: "Chris Izworski", url: "https://chrisizworski.com/chris-izworski/" }],
   creator: "Chris Izworski",
   publisher: "Chris Izworski",
