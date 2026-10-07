@@ -7,6 +7,8 @@ import poisData from "@/data/pois.json";
 import originsData from "@/data/origins.json";
 import shuttleData from "@/data/shuttle.json";
 import { trackWineEvent } from "@/lib/wine-analytics";
+const WINERY_COUNT = venuesData.filter((venue) => venue.category === "winery").length;
+
 import {
   buildWinePlanHash,
   normalizeWinePlan,
@@ -26,7 +28,7 @@ export default function Planner({
   preset = {},
   embedded = false,
   title = "Traverse City Winery Map",
-  description = "Map 40 wineries across Old Mission and Leelanau, choose the stops you want, then route the day around real roads and posted hours.",
+  description = `Map ${WINERY_COUNT} wineries across Old Mission and Leelanau, choose the stops you want, then route the day around real roads and posted hours.`,
 }) {
   useEffect(() => {
     const VENUES = venuesData;
