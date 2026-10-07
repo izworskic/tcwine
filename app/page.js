@@ -47,18 +47,18 @@ const FAQ = [
 export const metadata = {
   title: `Traverse City Winery Map & Wine Tour Planner | ${W} Wineries`,
   description:
-    "Interactive Traverse City winery map with 43 mapped wineries across Old Mission and Leelanau. Pick stops, route real roads, and check the day against tasting-room hours.",
+    `Interactive Traverse City winery map with ${W} mapped wineries across Old Mission and Leelanau. Pick stops, route real roads, and check the day against tasting-room hours.`,
   alternates: { canonical: "/" },
   openGraph: {
     title: `Traverse City Winery Map & Wine Tour Planner | ${W} Wineries`,
-    description: "Interactive map of 43 Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.",
+    description: `Interactive map of ${W} Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.`,
     url: BASE,
     siteName: "Traverse City Wine Country Planner",
   },
   twitter: {
     card: "summary_large_image",
     title: `Traverse City Winery Map & Wine Tour Planner | ${W} Wineries`,
-    description: "Interactive map of 43 Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.",
+    description: `Interactive map of ${W} Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.`,
   },
 };
 
