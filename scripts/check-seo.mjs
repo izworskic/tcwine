@@ -41,7 +41,8 @@ const [
   read("../app/globals.css"),
 ]);
 
-assert.match(home, /Traverse City Winery Map: 40 Wineries/);
+assert.match(home, /Traverse City Winery Map: \{W\} Wineries/);
+assert.match(home, /title: `Traverse City Winery Map & Wine Tour Planner \| \$\{W\} Wineries`/);
 assert.match(home, /"https:\/\/chrisizworski\.com\/#person"/);
 assert.match(home, /url: "https:\/\/chrisizworski\.com\/"/);
 assert.match(home, /Planning a separate wine day farther north/);
@@ -122,7 +123,7 @@ assert.match(image, /height: 630/);
 assert.match(image, /ImageResponse/);
 
 const titles = [
-  "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
+  "Traverse City Winery Map & Wine Tour Planner | ${W} Wineries",
   "Old Mission Peninsula Winery Map: 11 Wineries & Route Planner",
   "Leelanau Peninsula Winery Map: 27 Wineries by Town",
   "Traverse City Wineries With Food: Map, Meals & Tasting Stops",
