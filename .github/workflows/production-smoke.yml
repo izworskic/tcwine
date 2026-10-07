@@ -29,7 +29,7 @@ jobs:
             # PlannerMount uses dynamic(..., { ssr: false }), so My Wine Day is
             # intentionally client-rendered and cannot be asserted from curl HTML.
             if grep -q "Traverse City Winery Map" <<<"$home" \
-              && grep -q "40 Wineries" <<<"$home" \
+              && grep -q "43 Wineries" <<<"$home" \
               && grep -q "Traverse City Wineries With Food" <<<"$food"; then
               ok=1
               echo "Production custom domain is serving the current map-first release."

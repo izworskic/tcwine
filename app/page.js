@@ -45,20 +45,20 @@ const FAQ = [
 ];
 
 export const metadata = {
-  title: "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
+  title: `Traverse City Winery Map & Wine Tour Planner | ${W} Wineries`,
   description:
-    "Interactive Traverse City winery map with 43 mapped wineries across Old Mission and Leelanau. Pick stops, route real roads, and check the day against tasting-room hours.",
+    `Interactive Traverse City winery map with ${W} mapped wineries across Old Mission and Leelanau. Pick stops, route real roads, and check the day against tasting-room hours.`,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
-    description: "Interactive map of 43 Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.",
+    title: `Traverse City Winery Map & Wine Tour Planner | ${W} Wineries`,
+    description: `Interactive map of ${W} Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.`,
     url: BASE,
     siteName: "Traverse City Wine Country Planner",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Traverse City Winery Map & Wine Tour Planner | 40 Wineries",
-    description: "Interactive map of 43 Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.",
+    title: `Traverse City Winery Map & Wine Tour Planner | ${W} Wineries`,
+    description: `Interactive map of ${W} Traverse City-area wineries with real-road routing, tasting-room hours, and ready-made wine-tour loops.`,
   },
 };
 
@@ -125,7 +125,7 @@ export default function Page() {
         description="Start with wine, then open the day up: cider, spirits, beaches, hikes, lighthouses, food and harbor towns. Build the route around real roads and posted hours."
       />
       <main className="tc-page">
-        <h1>Traverse City Winery Map: 40 Wineries on Old Mission & Leelanau</h1>
+        <h1>Traverse City Winery Map: {W} Wineries on Old Mission & Leelanau</h1>
         <p className="search-lede">{INTRO}</p>
         <div className="quick-answer" aria-label="Winery map coverage">
           <div><strong>43 wineries</strong><span>Mapped across the Traverse City wine region</span></div>
