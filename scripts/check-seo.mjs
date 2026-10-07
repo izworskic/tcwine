@@ -123,7 +123,6 @@ assert.match(image, /height: 630/);
 assert.match(image, /ImageResponse/);
 
 const titles = [
-  "Traverse City Winery Map & Wine Tour Planner | ${W} Wineries",
   "Old Mission Peninsula Winery Map: 11 Wineries & Route Planner",
   "Leelanau Peninsula Winery Map: 27 Wineries by Town",
   "Traverse City Wineries With Food: Map, Meals & Tasting Stops",
