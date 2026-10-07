@@ -17,6 +17,7 @@ assert.match(contract, /unknownHoursMeaning: "call-ahead \/ not verified, never 
 assert.match(contract, /buildWineDays\(\{ area, intent: normalizedIntent, date, addPlace: false \}\)/);
 assert.match(contract, /wineryCount: list\.length/);
 assert.match(contract, /knownHoursCount: knownHours\.length/);
+assert.match(contract, /operatingByWeekday: operatingByWeekday\(list\)/);
 assert.match(route, /X-Robots-Tag/);
 assert.match(route, /buildRegionContract/);
 console.log("region contract checks passed");
