@@ -7,8 +7,6 @@ import poisData from "@/data/pois.json";
 import originsData from "@/data/origins.json";
 import shuttleData from "@/data/shuttle.json";
 import { trackWineEvent } from "@/lib/wine-analytics";
-const WINERY_COUNT = venuesData.filter((venue) => venue.category === "winery").length;
-
 import {
   buildWinePlanHash,
   normalizeWinePlan,
@@ -23,6 +21,8 @@ import {
   writeLastWinePlan,
   writeLocalWinePlans,
 } from "@/lib/my-wine-day";
+
+const WINERY_COUNT = venuesData.filter((venue) => venue.category === "winery").length;
 
 export default function Planner({
   preset = {},
