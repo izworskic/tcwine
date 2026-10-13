@@ -27,3 +27,21 @@
 .wine-v5-disclosure{font-size:.78rem;line-height:1.5;margin:16px 0 0;color:#687067}
 .wine-v5 button:focus-visible,.wine-v5 select:focus-visible,.wine-v5 a:focus-visible{outline:3px solid #a87e54;outline-offset:3px}
 @media(max-width:760px){.wine-v5-controls,.wine-v5-verdict{grid-template-columns:1fr}.wine-v5-alternative{padding:18px 0 0;border-left:0;border-top:1px solid #d0d4ca}.wine-v5-verdict{gap:12px;padding:17px}.wine-v5{margin:18px 0 28px;padding:18px}}
+
+/* Wine day feasibility, confidence and route review */
+.wine-day-logistics{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr));margin:12px 0}
+.wine-day-logistics label{display:flex;flex-direction:column;gap:5px;font-weight:650;font-size:.82rem}
+.wine-day-logistics select{max-width:100%;padding:10px;background:#fff;border:1px solid #c8c5bb;border-radius:8px;color:#253528;min-height:44px}
+.wine-day-contract{font-size:.82rem;line-height:1.55;color:#5b6057;border-left:3px solid #c9b8a6;padding:9px 12px;margin:14px 0}
+.wine-day-confidence{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin:13px 0;padding:12px 14px;border:1px solid #b7c9b7;border-radius:9px;background:#f1f5ee}
+.wine-day-confidence[data-state="CALL_AHEAD"]{background:#fff6e8;border-color:#e1c596}
+.wine-day-confidence strong{color:#263e30}
+.wine-day-confidence[data-state="CALL_AHEAD"] strong{color:#735122}
+.wine-day-confidence span{font-size:.85rem;line-height:1.5}
+.wine-day-stop-time{font-size:.78rem!important;letter-spacing:.01em;color:#5a5147;margin:0 0 7px!important}
+.wine-day-timing{font-size:.87rem;line-height:1.6}
+.wine-day-road-link{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;min-height:44px;border:1px solid #693c4a;border-radius:7px;color:#693c4a!important;font-weight:700;text-decoration:none!important}
+.wine-day-no-fit{background:#fff8e9;border:1px solid #d4bea0;padding:18px;border-radius:10px}
+.wine-day-no-fit h3{margin:0 0 8px;font-family:Georgia,serif}
+.winery-visitor-verdict{max-width:920px}
+@media(max-width:640px){.wine-day-logistics{grid-template-columns:1fr}.wine-day-confidence{display:block}.wine-day-road-link{width:100%;margin:8px 0}}
