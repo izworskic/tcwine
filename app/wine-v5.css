@@ -114,3 +114,14 @@
 .wine-trip-winery-fieldnote p{line-height:1.6}
 .wine-trip-winery-fieldnote a{font-weight:750;color:#623e4b}
 @media(max-width:700px){.wine-trip-action-grid{grid-template-columns:1fr;gap:18px}.wine-trip-winery-fieldnote{padding:17px 19px}}
+
+/* Search-led decisions. Brief answers before large maps, no decorative page clones. */
+.wine-search-arrival{margin:16px 0 22px;padding:19px clamp(17px,3vw,27px);background:#f7f4ec;border:1px solid #dcd4c7;border-radius:12px}
+.wine-search-arrival h2{font-family:Georgia,serif;font-size:clamp(1.25rem,2.2vw,1.58rem);margin:0 0 12px}
+.wine-search-arrival p{line-height:1.65;max-width:75ch;margin:9px 0}
+.wine-search-arrival a,.wine-winery-find-nearby a{color:#653a4a;text-decoration:underline;text-underline-offset:3px;font-weight:650}
+.wine-search-actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.wine-search-actions a{display:inline-flex;align-items:center;min-height:44px;padding:8px 11px;border:1px solid #c4b3af;border-radius:8px;background:#fff;font-size:.85rem;text-decoration:none;font-weight:700;color:#653a4a}
+.wine-winery-find-nearby{margin:16px 0 22px;padding:15px 21px;border-left:4px solid #805063;background:#f8f4ed;border-radius:7px}
+.wine-winery-find-nearby p{margin:6px 0;font-size:.92rem;line-height:1.55}
+@media(max-width:640px){.wine-search-actions{display:grid;grid-template-columns:1fr}.wine-search-arrival{padding:16px}.wine-winery-find-nearby{padding:14px}}

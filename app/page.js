@@ -133,6 +133,11 @@ export default function Page() {
           <div><strong>11 mapped Old Mission</strong><span>10 current official trail members, plus wider mapped inventory</span></div>
           <div><strong>30 Leelanau</strong><span>23 current official trail members plus active independents</span></div>
         </div>
+        <section className="wine-search-arrival" aria-label="Choose the right Traverse City winery map">
+          <h2>Looking for a specific Traverse City winery route?</h2>
+          <p>Start with the geography. <Link href="/old-mission-peninsula-wineries">Old Mission Peninsula wineries</Link> make a compact day from Traverse City. <Link href="/leelanau-peninsula-wine-trail">Leelanau Peninsula wineries</Link> are spread across several towns. For a particular kind of day, see <Link href="/traverse-city-wineries-with-food">wineries serving food</Link>, <Link href="/best-traverse-city-wineries-with-views">wineries with views</Link> and <Link href="/wine/sparkling">sparkling-wine tasting rooms</Link>.</p>
+          <p>Choose two or three wineries, then use the map to check road routes and posted hours. Confirm seasonal availability and book any special tasting directly with the producer.</p>
+        </section>
         <WineRegionDecision />
         <section className="wine-trip-feature" aria-labelledby="real-wine-weekend-title">
           <span className="wine-v5-kicker">Firsthand · Chris Izworski</span>

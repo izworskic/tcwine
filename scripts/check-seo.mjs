@@ -132,3 +132,15 @@ for (const title of titles) {
 }
 
 console.log("TC Wine map-first SEO checks passed.");
+
+const wineryLanding=await read("../app/winery/[id]/page.js");
+const oneDay=await read("../app/one-day-itineraries/page.js");
+assert.match(home,/Looking for a specific Traverse City winery route/);
+assert.match(oldMission,/How do you tour Old Mission Peninsula wineries/);
+assert.match(leelanau,/Where should you start the Leelanau Peninsula wine trail/);
+assert.match(food,/Can you eat lunch at a Traverse City winery/);
+assert.match(views,/Which Traverse City wineries have the views/);
+assert.match(wineryLanding,/wine-winery-find-nearby/);
+assert.match(oneDay,/Traverse City Wine Tour Itineraries/);
+for(const page of [oldMission,leelanau,food,views])assert.match(page,/wine-search-actions/);
+console.log("Regional search questions, clear intent pages and wine cross-links checked.");

@@ -18,7 +18,7 @@ const towns = Array.from(new Set(list.map((v) => v.town))).sort((a, b) => rank(a
 const sparkling = list.filter((v) => (v.specialties || []).join(" ").toLowerCase().includes("sparkling"));
 
 export const metadata = {
-  title: "Leelanau Peninsula Winery Map: " + N + " Wineries by Town",
+  title: "Leelanau Peninsula Wineries: Map, Wine Trail & Hours",
   description:
     "Interactive Leelanau Peninsula winery map with " + N + " wineries grouped by town, real-road route planning, tasting-room hours, and sparkling-wine picks.",
   alternates: { canonical: "/leelanau-peninsula-wine-trail" },
@@ -44,6 +44,17 @@ export default function Page() {
       <p className="search-lede">
         Map {N} Leelanau Peninsula wineries by town, including {OFFICIAL_WINERIES} wineries that are current official Leelanau Peninsula Wine Trail members, then build a route that fits the wine day instead of treating the peninsula as one long list.
       </p>
+      <section className="wine-search-arrival" aria-label="Leelanau winery map quick answers">
+        <h2>Where should you start the Leelanau Peninsula wine trail?</h2>
+        <p><strong>Start in Suttons Bay</strong> for a compact wine day and sparkling wine at <Link href="/winery/mawby">MAWBY</Link>. <strong>Start around Lake Leelanau</strong> if you are staying near the village or want to visit a nearby cluster of tasting rooms. We chose it as our base for a recent two-night October trip.</p>
+        <p>Northport, Glen Arbor, and the Suttons Bay–Lake Leelanau villages are different day trips. Choose one cluster, not the entire peninsula. Confirm current hours, driving and reservations before committing to a route.</p>
+        <nav className="wine-search-actions" aria-label="Leelanau wine planning paths">
+          <Link href="/suttons-bay-tasting-rooms">Suttons Bay tasting rooms</Link>
+          <Link href="/wine/sparkling">Leelanau sparkling-wine wineries</Link>
+          <Link href="/wine/riesling">Riesling wineries</Link>
+          <Link href="/leelanau-wine-weekend">Our actual Lake Leelanau weekend</Link>
+        </nav>
+      </section>
       <PlannerMount
         embedded
         preset={{ area: "leelanau", beverages: ["wine"], origin: "Suttons Bay", analyticsContext: "leelanau_map" }}
