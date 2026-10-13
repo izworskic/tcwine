@@ -1,6 +1,9 @@
 import venues from "@/data/venues.json";
 import Script from "next/script";
 import "./globals.css";
+import "./wine-v5.css";
+import "./wine-network-footer.css";
+import WineNetworkFooter from "@/components/WineNetworkFooter";
 import WineAnalytics from "@/components/WineAnalytics";
 
 const GA_MEASUREMENT_ID = "G-Y5D2V2W7HN";
@@ -55,6 +58,7 @@ export default function RootLayout({ children }) {
         <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
         <WineAnalytics />
         {children}
+        <WineNetworkFooter />
       <script defer src="https://chrisizworski.com/assets/network-ads-v1.js"></script>
       </body>
     </html>
