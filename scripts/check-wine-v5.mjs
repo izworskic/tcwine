@@ -51,3 +51,27 @@ assert.equal(late.state,"HOURS_CONFLICT");
 const short=evaluateWineWindow({stops:[a,b,c],date:"2026-10-13",hoursAvailable:1});
 assert.equal(short.state,"TIME_CONFLICT");
 console.log("V5 posted-hours, date, unknown-hours and duration tests passed.");
+
+const [story,sitemap,featureHome,leelanauPage,dayLoops,sparklingPage,footer2,storyStyles] = await Promise.all([
+  read("app/leelanau-wine-weekend/page.js"), read("app/sitemap.js"), read("app/page.js"),
+  read("app/leelanau-peninsula-wine-trail/page.js"), read("app/one-day-itineraries/page.js"),
+  read("app/wine/[intent]/page.js"), read("components/WineNetworkFooter.js"), read("app/wine-v5.css"),
+]);
+assert.match(story,/MAWBY/);
+assert.doesNotMatch(story,/\bMoby\b/i);
+assert.match(story,/Good Harbor Beach/);
+assert.match(story,/Bonobo Winery/);
+assert.match(story,/Laurentide/);
+assert.match(story,/Amoritas/);
+assert.match(story,/Fiddleheads/);
+assert.match(story,/Dick.*Pour House/);
+assert.match(story,/Bone Dry/);
+assert.match(story,/not four additional trips I claim to have taken/);
+assert.match(story,/prohibits glass containers/);
+assert.match(story,/https:\/\/chrisizworski\.com\/#person/);
+assert.match(story,/\/winery\/mawby/);
+assert.match(sitemap,/leelanau-wine-weekend/);
+for(const [name,src] of [["home",featureHome],["region",leelanauPage],["itinerary",dayLoops],["wine style",sparklingPage],["footer",footer2]])assert.match(src,/leelanau-wine-weekend/,name);
+assert.match(storyStyles,/wine-trip-variation-grid/);
+assert.match(storyStyles,/max-width:700px/);
+console.log("Firsthand Leelanau story, MAWBY spelling, park advice, shared person identity and six discovery surfaces passed.");

@@ -40,6 +40,10 @@ export default function Page() {
   return (
     <main className="tc-page">
       <h1>One-Day Itineraries</h1>
+      <section className="wine-trip-guide-ref">
+        <h2>A real weekend beats an overfilled checklist</h2>
+        <p>Want to see what the pacing looks like when two people actually go? Our <Link href="/leelanau-wine-weekend">early-October Leelanau weekend</Link> made room for a Good Harbor sunset, local food, MAWBY, an old favorite at Laurentide and a first visit to Amoritas. It was a two-night trip, not a promise to squeeze those places into a single day.</p>
+      </section>
       <p>{"Four ready-made loops built from the same verified data the planner uses. Each stop lists its suggested tasting time; drives add to that, and the planner times the full day against each room\u2019s real hours when you load your own picks."}</p>
       <section className="wine-v5" aria-label="Wine tour pacing advice">
         <p className="wine-v5-kicker">Why these days are paced this way</p>

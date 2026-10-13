@@ -127,6 +127,12 @@ export default function Page({params}){
     <main className="tc-page">
       <h1>{cfg.h1}</h1>
       <p className="search-lede">{cfg.intro}</p>
+      {(params.intent==="sparkling"||params.intent==="riesling")&&(
+        <aside className="wine-trip-guide-ref">
+          <h2>What a real tasting can teach you</h2>
+          <p>{params.intent==="sparkling"?"We reserved MAWBY for the sparkling experience, then brought bottles home.": "At our first visit to Amoritas, a guided tasting changed how we thought about dry Riesling."} Both moments are part of <Link href="/leelanau-wine-weekend">our actual Leelanau wine weekend</Link>, not an invented wine score or a claim we visited every listed producer.</p>
+        </aside>
+      )}
       <div className="quick-answer" aria-label="Wine-first planning rule">
         <div><strong>Wine first</strong><span>Varietal and wine-program fit leads the ranking</span></div>
         <div><strong>3 wineries</strong><span>A deliberate day target to reduce palate fatigue</span></div>

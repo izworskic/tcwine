@@ -17,6 +17,7 @@ export default function WineNetworkFooter() {
           <h3>Keep exploring</h3>
           <a href="https://tcwine.chrisizworski.com/">Traverse City winery map &amp; planner →</a>
           <a href="https://tcwine.chrisizworski.com/old-mission-vs-leelanau-wineries">Old Mission or Leelanau? →</a>
+          <a href="https://tcwine.chrisizworski.com/leelanau-wine-weekend">A real October wine weekend we took →</a>
           <a href="https://tcwine.chrisizworski.com/wine/sparkling">Where to taste sparkling wine →</a>
           <a href="https://chrisizworski.com/petoskey-wine/">Petoskey wine region planner →</a>
           <a href="https://chrisizworski.com/tools/">All the Michigan planning tools →</a>
