@@ -10,6 +10,30 @@ import { miles } from "@/lib/wine-day-engine";
 const BASE="https://tcwine.chrisizworski.com";
 const WINERIES=venues.filter(v=>v.category==="winery");
 const TRUTH=new Map(truth.records.map(r=>[r.id,r]));
+// Specific firsthand observations, grounded in Chris's early-October trip.
+// These are editorial visit notes, separate from continuously changing hours and wine inventory.
+const FIRSTHAND_TRIP_STOPS = {
+  bonobo: {
+    title: "The start of our Friday",
+    copy: "We stopped at Bonobo on our way into Traverse City wine country, enjoyed a cheese-and-tomato pairing, and made time for the view before continuing west. It was an arrival worth lingering over.",
+    section: "friday"
+  },
+  mawby: {
+    title: "The Saturday reservation we protected",
+    copy: "My wife and I reserved MAWBY ahead of a busy October Saturday. We came for sparkling wine, stayed for the atmosphere and views, and brought bottles home. Check MAWBY's current reservation guidance for your own visit.",
+    section: "saturday"
+  },
+  "laurentide-winery": {
+    title: "The familiar stop in our weekend",
+    copy: "Laurentide was one of our old favorites on this trip. We paired that familiar place with a first visit to another winery rather than making every stop new.",
+    section: "saturday"
+  },
+  "amoritas-vineyards": {
+    title: "The place that surprised us",
+    copy: "Our first visit to Amoritas included a guided tasting and a conversation about dry Riesling, including a wine called Bone Dry. It was an excellent reminder that Riesling is not necessarily sweet. Wine offerings and guided experiences can change.",
+    section: "saturday"
+  }
+};
 const DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 const RED=new Set(["cabernet-franc","pinot-noir","merlot","dry-reds","italian-reds","nebbiolo"]);
 const WHITE=new Set(["dry-whites","riesling","chardonnay","pinot-gris","pinot-blanc","sauvignon-blanc","albarino","gruner","aromatic-whites","gewurztraminer"]);
@@ -184,6 +208,14 @@ export default function Page({params}){
         description={`${v.name} plus two nearby wineries with complementary wine signals are preselected. Change anything, then build the route against real roads and posted hours.`}
       />
 
+      {FIRSTHAND_TRIP_STOPS[v.id]&&(
+        <aside className="wine-trip-winery-fieldnote">
+          <p className="wine-v5-kicker">From a weekend we actually took</p>
+          <h2>{FIRSTHAND_TRIP_STOPS[v.id].title}</h2>
+          <p>{FIRSTHAND_TRIP_STOPS[v.id].copy}</p>
+          <Link href={"/leelanau-wine-weekend#"+FIRSTHAND_TRIP_STOPS[v.id].section}>Read the whole weekend in context →</Link>
+        </aside>
+      )}
       <WineryJournalCard wineryId={v.id} wineryName={v.name} />
 
       <section className="winery-pairings">

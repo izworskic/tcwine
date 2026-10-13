@@ -99,3 +99,18 @@
 .wine-trip-inline{border-left:3px solid #a27a65;padding:10px 14px;background:#f5f0e9}
 .wine-travel-story a:focus-visible,.wine-trip-feature a:focus-visible{outline:3px solid #a58255;outline-offset:3px}
 @media(max-width:700px){.wine-trip-variation-grid{grid-template-columns:1fr}.wine-trip-contents{gap:6px}.wine-trip-contents a{width:100%}.wine-trip-actions{display:grid}.wine-trip-actions a{text-align:center}.wine-trip-important{padding:18px}.wine-trip-chapter p{font-size:1rem;line-height:1.75}}
+
+/* Direct, source-based visit and menu links for the firsthand trip. */
+.wine-trip-external-actions{max-width:940px;margin:36px 0 42px;padding:clamp(18px,3vw,27px);background:#f5f1e9;border:1px solid #ded3c2;border-radius:14px}
+.wine-trip-external-actions .wine-v5-kicker,.wine-trip-winery-fieldnote .wine-v5-kicker{font-size:.72rem;color:#784e57;text-transform:uppercase;letter-spacing:.1em;font-weight:800}
+.wine-trip-external-actions h2,.wine-trip-winery-fieldnote h2{font-family:Georgia,serif;font-size:clamp(1.35rem,2.5vw,1.9rem);margin:10px 0}
+.wine-trip-external-actions>p{max-width:77ch;line-height:1.65}
+.wine-trip-action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:20px 0}
+.wine-trip-action-grid>div{min-width:0}
+.wine-trip-action-grid h3{font-family:Georgia,serif;font-size:1.12rem;margin:0 0 13px}
+.wine-trip-action-grid a{display:block;border-bottom:1px solid #d8ccba;padding:11px 3px;line-height:1.4;color:#623e4b;font-size:.88rem;font-weight:750;text-underline-offset:3px;overflow-wrap:anywhere}
+.wine-trip-resource-note{font-size:.8rem;color:#625c54}
+.wine-trip-winery-fieldnote{max-width:900px;margin:24px 0;padding:22px 26px;background:#f8f1e9;border-left:4px solid #76505d;border-radius:10px}
+.wine-trip-winery-fieldnote p{line-height:1.6}
+.wine-trip-winery-fieldnote a{font-weight:750;color:#623e4b}
+@media(max-width:700px){.wine-trip-action-grid{grid-template-columns:1fr;gap:18px}.wine-trip-winery-fieldnote{padding:17px 19px}}
