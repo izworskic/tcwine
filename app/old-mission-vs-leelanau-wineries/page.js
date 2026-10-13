@@ -44,6 +44,18 @@ export default function Page() {
       <RegionalPhoto kind="leelanau" compact />
       <p><Link className="page-cta" href="/leelanau-peninsula-wine-trail">Open the Leelanau winery map →</Link></p>
       <DrivingReality />
+      <section className="wine-v5" aria-labelledby="visit-choice">
+        <p className="wine-v5-kicker">A frequent Michigan wine visitor's perspective</p>
+        <h2 id="visit-choice">How we'd choose for a real day</h2>
+        <p>When we visit Michigan wine country, we want the wine to lead, but we leave room for a good meal and the unexpected stop that makes a trip memorable. The wrong choice is rarely a bad winery. It's usually a beautiful destination paired with a day that spends too much time in the car.</p>
+        <h3>If you have a short afternoon from Traverse City</h3>
+        <p>Choose Old Mission. Stay on the peninsula, visit two or three tasting rooms, and save the lighthouse or an overlook for the end if time allows. The small geographic footprint is the advantage, not a claim that its wines are better.</p>
+        <h3>If you are staying around Suttons Bay or Lake Leelanau</h3>
+        <p>Choose Leelanau. This is where a village, a lakeshore road, and a favorite wine style can shape the day. Don't assume that a winery near Northport and another near Glen Arbor are a short hop because both are labeled “Leelanau.”</p>
+        <h3>If the wine style matters more than the map</h3>
+        <p>Start with the <Link href="/wine/riesling">Riesling evidence guide</Link>, <Link href="/wine/sparkling">sparkling-wine guide</Link>, or <Link href="/wine/cabernet-franc">Cabernet Franc guide</Link>. Build your route around the actual producing wineries, not a generic “best wineries” list.</p>
+        <p><strong>Inventory distinction:</strong> The <a href="https://www.ompwinetrail.com/wineries/">official Old Mission trail</a> currently lists ten members; this independent map includes {oldMission.length} mapped wineries. Trail membership and geographic inventory are not interchangeable. Verify the date and operating hours in the planner.</p>
+      </section>
       <p>
         Want the full underlying research? <Link href="/wine-country-data">Open the Wine Country Data Desk</Link> for downloadable
         winery records, source-backed grape counts, methodology, and the complete geographic comparison.

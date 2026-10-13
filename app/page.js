@@ -5,6 +5,7 @@ import RegionalPhoto from "@/components/RegionalPhoto";
 import AuthorNote from "@/components/AuthorNote";
 import WineCountryWorld from "@/components/WineCountryWorld";
 import WineDayComposer from "@/components/WineDayComposer";
+import WineRegionDecision from "@/components/WineRegionDecision";
 import WineCountryNow from "@/components/WineCountryNow";
 import { buildVenueItemList } from "@/lib/venue-schema";
 import { HOURS_VERIFIED } from "@/components/VenueHours";
@@ -129,9 +130,10 @@ export default function Page() {
         <p className="search-lede">{INTRO}</p>
         <div className="quick-answer" aria-label="Winery map coverage">
           <div><strong>43 wineries</strong><span>Mapped across the Traverse City wine region</span></div>
-          <div><strong>11 Old Mission</strong><span>Compact peninsula, easiest single-day route</span></div>
+          <div><strong>11 mapped Old Mission</strong><span>10 current official trail members, plus wider mapped inventory</span></div>
           <div><strong>30 Leelanau</strong><span>23 current official trail members plus active independents</span></div>
         </div>
+        <WineRegionDecision />
         <div className="intent-pills" aria-label="Popular winery map views">
           <Link href="/old-mission-peninsula-wineries">Old Mission winery map</Link>
           <Link href="/leelanau-peninsula-wine-trail">Leelanau winery map</Link>

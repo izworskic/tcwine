@@ -4,18 +4,18 @@ import venues from "@/data/venues.json";
 const usable = venues.filter((v) => !v.needsHours);
 const byRating = (a, b) => (b.rating || 0) - (a.rating || 0);
 
-const ompLoop = usable.filter((v) => v.area === "old-mission" && v.category === "winery").sort(byRating).slice(0, 5).sort((a, b) => a.lat - b.lat);
+const ompLoop = usable.filter((v) => v.area === "old-mission" && v.category === "winery").sort(byRating).slice(0, 3).sort((a, b) => a.lat - b.lat);
 const harborLoop = [];
-for (const t of ["Suttons Bay", "Lake Leelanau", "Leland", "Northport"]) {
+for (const t of ["Suttons Bay", "Lake Leelanau"]) {
   const picks = usable.filter((v) => v.area === "leelanau" && v.town === t).sort(byRating);
   harborLoop.push(...picks.slice(0, t === "Suttons Bay" ? 2 : 1));
 }
 const cityLoop = usable.filter((v) => v.area === "traverse-city" && ["brewery", "distillery"].includes(v.category)).sort(byRating).slice(0, 4);
-const viewLoop = usable.filter((v) => /bay|view|overlook/i.test(v.note || "")).sort(byRating).slice(0, 4);
+const viewLoop = usable.filter((v) => /bay|view|overlook/i.test(v.note || "")).sort(byRating).slice(0, 3);
 
 const LOOPS = [
-  { name: "Old Mission classic", intro: "Five wineries in tasting order up Center Road, south to north, ending near Mission Point Lighthouse.", stops: ompLoop },
-  { name: "Leelanau harbor towns", intro: "Village to village along the bay side: two rooms in Suttons Bay, then one each in Lake Leelanau, Leland, and Northport.", stops: harborLoop },
+  { name: "Old Mission classic", intro: "Three wineries in tasting order up Center Road, south to north, ending near Mission Point Lighthouse.", stops: ompLoop },
+  { name: "Suttons Bay and Lake Leelanau", intro: "A tighter Leelanau day: two wine stops around Suttons Bay and one near Lake Leelanau, without racing north to Northport.", stops: harborLoop },
   { name: "Traverse City on foot", intro: "The in-town day: breweries and distilleries close enough that the car can stay parked.", stops: cityLoop },
   { name: "Bay views", intro: "Rooms whose own notes earn the view: bay water or an overlook from the tasting room.", stops: viewLoop },
 ];
@@ -41,6 +41,12 @@ export default function Page() {
     <main className="tc-page">
       <h1>One-Day Itineraries</h1>
       <p>{"Four ready-made loops built from the same verified data the planner uses. Each stop lists its suggested tasting time; drives add to that, and the planner times the full day against each room\u2019s real hours when you load your own picks."}</p>
+      <section className="wine-v5" aria-label="Wine tour pacing advice">
+        <p className="wine-v5-kicker">Why these days are paced this way</p>
+        <h2>Three worthwhile wineries beat a five-stop sprint.</h2>
+        <p>We visit Northern Michigan wine country because we enjoy the wine and the place. We would rather leave time for a real lunch, a longer conversation at one winery, and a bay view than pretend five tastings and several drives make a relaxing afternoon.</p>
+        <p>These are <strong>illustrative starting orders, not booked schedules</strong>. Confirm operating hours and reservations for your actual date, use a designated driver or tour transport, and open the live planner to check whether each route still fits.</p>
+      </section>
       {LOOPS.map((L) => {
         const mins = L.stops.reduce((s, v) => s + (v.dwellMinutes || 60), 0);
         const hrs = Math.round(mins / 6) / 10;
