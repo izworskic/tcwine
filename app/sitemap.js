@@ -11,6 +11,7 @@ const ROUTES = [
   "best-traverse-city-wineries-with-views",
   "traverse-city-breweries-and-distilleries",
   "one-day-itineraries",
+  "leelanau-wine-weekend",
   "group-wine-tour-planning",
   "fall-color-wine-tour",
   "suttons-bay-tasting-rooms",

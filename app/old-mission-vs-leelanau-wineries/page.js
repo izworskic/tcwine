@@ -27,6 +27,7 @@ export default function Page() {
         <div><strong>{leelanau.length} wineries</strong><span>Leelanau · larger region · best by town or sub-loop</span></div>
         <div><strong>One rule</strong><span>Do not try to cover both peninsulas in one tasting day</span></div>
       </div>
+      <p className="wine-trip-inline">We made both peninsulas work across one relaxed weekend: Bonobo on Friday, then the Leelanau villages and vineyards on Saturday. <Link href="/leelanau-wine-weekend">See the firsthand weekend and why we split the experience across two days →</Link></p>
       <RegionalPhoto kind="chateau" compact />
       <h2>Old Mission Peninsula</h2>
       <p>

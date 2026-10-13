@@ -37,6 +37,10 @@ export default function Page() {
   return (
     <main className="tc-page">
       <h1>Leelanau Peninsula Winery Map: {N} Wineries</h1>
+      <section className="wine-trip-guide-ref">
+        <h2>A weekend lived, not just mapped</h2>
+        <p>For one October weekend my wife and I used Lake Leelanau as our base, protected a Good Harbor sunset and chose MAWBY, Laurentide and Amoritas for very different reasons. <Link href="/leelanau-wine-weekend">Read the firsthand trip and the decisions that made it work →</Link></p>
+      </section>
       <p className="search-lede">
         Map {N} Leelanau Peninsula wineries by town, including {OFFICIAL_WINERIES} wineries that are current official Leelanau Peninsula Wine Trail members, then build a route that fits the wine day instead of treating the peninsula as one long list.
       </p>

@@ -134,6 +134,12 @@ export default function Page() {
           <div><strong>30 Leelanau</strong><span>23 current official trail members plus active independents</span></div>
         </div>
         <WineRegionDecision />
+        <section className="wine-trip-feature" aria-labelledby="real-wine-weekend-title">
+          <span className="wine-v5-kicker">Firsthand · Chris Izworski</span>
+          <h2 id="real-wine-weekend-title">What a wine-country weekend can actually feel like</h2>
+          <p>My wife and I spent an early-October weekend between Bonobo, Good Harbor Beach, Lake Leelanau, MAWBY, Laurentide and a new-to-us discovery at Amoritas. Friday pizza at sunset, a Saturday morning beach walk, and just enough tasting to remember every stop.</p>
+          <Link href="/leelanau-wine-weekend">Read our real Leelanau weekend and borrow the plan →</Link>
+        </section>
         <div className="intent-pills" aria-label="Popular winery map views">
           <Link href="/old-mission-peninsula-wineries">Old Mission winery map</Link>
           <Link href="/leelanau-peninsula-wine-trail">Leelanau winery map</Link>
