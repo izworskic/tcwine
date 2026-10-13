@@ -91,7 +91,7 @@ export function generateMetadata({params}){
   const v=WINERIES.find(x=>x.id===params.id);
   if(!v) return {};
   const t=TRUTH.get(v.id);
-  const title=`${v.name}: Wine, Hours, Map & What It Does Best`;
+  const title=`${v.name}: Hours, Wine & Map | ${v.town}, Michigan`;
   const description=(t?.signature||v.note).slice(0,155);
   return {
     title,
@@ -130,6 +130,10 @@ export default function Page({params}){
       <h1>{v.name}</h1>
       <p className="search-lede">{t.signature||v.note}</p>
 
+      <nav className="wine-winery-find-nearby" aria-label="Continue winery planning">
+        <p><strong>Planning this stop?</strong> {v.name} is in {v.town} on {areaName(v)}. Compare <Link href={v.area==="old-mission"?"/old-mission-peninsula-wineries":"/leelanau-peninsula-wine-trail"}>nearby wineries by town and posted hours</Link> before committing to the drive.</p>
+        <p>For a full day, explore <Link href="/traverse-city-wineries-with-food">wineries with food</Link>, <Link href="/best-traverse-city-wineries-with-views">scenic tasting rooms</Link> or <Link href="/one-day-itineraries">realistic one-day routes</Link>.</p>
+      </nav>
       <div className="winery-guide-facts">
         <div><strong>{areaName(v)}</strong><span>{v.town}</span></div>
         <div><strong>{pretty(t.role||"winery")}</strong><span>Best-fit role</span></div>

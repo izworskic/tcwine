@@ -12,7 +12,7 @@ const selected = wineries.slice(0, 5).map((v) => v.id);
 const BASE = "https://tcwine.chrisizworski.com";
 
 export const metadata = {
-  title: "Best Traverse City Wineries With Views: Map & Bay Overlooks",
+  title: "Traverse City Wineries With Views: Bay & Vineyard Map",
   description:
     "Map Traverse City wineries known for Grand Traverse Bay, vineyard, hilltop, and sunset views, then route the stops into a realistic Old Mission or Leelanau wine day.",
   alternates: { canonical: "/best-traverse-city-wineries-with-views" },
@@ -38,6 +38,16 @@ export default function Page() {
         These are the wineries whose venue notes specifically support a bay, hilltop, vineyard, overlook, or sunset-view claim.
         The map starts with five strong view-forward stops selected so you can see whether they actually fit one day.
       </p>
+      <section className="wine-search-arrival" aria-label="Wine view quick answer">
+        <h2>Which Traverse City wineries have the views?</h2>
+        <p>Choose <Link href="/old-mission-peninsula-wineries">Old Mission Peninsula</Link> for a compact Grand Traverse Bay-focused afternoon. Choose <Link href="/leelanau-peninsula-wine-trail">Leelanau</Link> when the vineyard setting, Lake Leelanau villages or a broader drive matter as much as the tasting. Bay views, hilltop views and vineyard views are different experiences.</p>
+        <p>The places below are included because their documented notes mention a distinctive setting—not because we personally photographed or reviewed every vista. Confirm outdoor seating and seasonal access directly with each winery.</p>
+        <nav className="wine-search-actions" aria-label="Scenic winery companion guides">
+          <Link href="/traverse-city-wineries-with-food">Wine and a real meal</Link>
+          <Link href="/leelanau-wine-weekend">Our real October beach-and-wine weekend</Link>
+          <Link href="/one-day-itineraries">See manageable winery loops</Link>
+        </nav>
+      </section>
       <PlannerMount
         embedded
         preset={{ beverages: ["wine"], selected, origin: "Traverse City", analyticsContext: "wineries_views" }}
@@ -49,7 +59,7 @@ export default function Page() {
       <ol>
         {wineries.map((v) => (
           <li key={v.id}>
-            <strong>{v.name}</strong> ({v.town}). {v.note}
+            <strong><Link href={"/winery/"+v.id}>{v.name}</Link></strong> ({v.town}). {v.note}
           </li>
         ))}
       </ol>

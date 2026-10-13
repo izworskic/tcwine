@@ -21,7 +21,7 @@ const LOOPS = [
 ];
 
 export const metadata = {
-  title: "One-Day Traverse City Wine Itineraries: Four Ready-Made Loops",
+  title: "Traverse City Wine Tour Itinerary: 4 One-Day Routes",
   description:
     "Four ready-made tasting loops with real venues and honest pacing: Old Mission in order, Leelanau by harbor town, the in-town day, and the bay-view rooms.",
   alternates: { canonical: "/one-day-itineraries" },
@@ -39,7 +39,7 @@ const CRUMBS = {
 export default function Page() {
   return (
     <main className="tc-page">
-      <h1>One-Day Itineraries</h1>
+      <h1>Traverse City Wine Tour Itineraries: Four One-Day Routes</h1>
       <section className="wine-trip-guide-ref">
         <h2>A real weekend beats an overfilled checklist</h2>
         <p>Want to see what the pacing looks like when two people actually go? Our <Link href="/leelanau-wine-weekend">early-October Leelanau weekend</Link> made room for a Good Harbor sunset, local food, MAWBY, an old favorite at Laurentide and a first visit to Amoritas. It was a two-night trip, not a promise to squeeze those places into a single day.</p>
@@ -61,7 +61,7 @@ export default function Page() {
             <ol>
               {L.stops.map((v) => (
                 <li key={v.id}>
-                  <strong>{v.name}</strong>
+                  <strong><Link href={"/winery/"+v.id}>{v.name}</Link></strong>
                   {" (" + v.town + "): about " + (v.dwellMinutes || 60) + " minutes."}
                   {v.note ? " " + v.note.split(". ")[0] + "." : ""}
                 </li>

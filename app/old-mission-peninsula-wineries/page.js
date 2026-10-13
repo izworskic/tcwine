@@ -13,7 +13,7 @@ const N = list.length;
 const OFFICIAL = list.filter((v) => v.officialTrail?.name === "Old Mission Peninsula Wine Trail").length;
 
 export const metadata = {
-  title: "Old Mission Peninsula Winery Map: " + N + " Wineries & Route Planner",
+  title: "Old Mission Peninsula Wineries: Map, Hours & Wine Trail",
   description:
     "Interactive Old Mission Peninsula winery map with all " + N + " wineries, real-road route planning, tasting-room hours, food notes, and Grand Traverse Bay stops.",
   alternates: { canonical: "/old-mission-peninsula-wineries" },
@@ -36,6 +36,16 @@ export default function Page() {
         {N} mapped wineries on Old Mission Peninsula in one interactive map, including {OFFICIAL} current official Old Mission Peninsula Wine Trail members. Start with wine, choose the wineries you want,
         then route the day up Center Road around real drive times and posted tasting-room hours.
       </p>
+      <section className="wine-search-arrival" aria-label="Old Mission wine tour questions">
+        <h2>How do you tour Old Mission Peninsula wineries in one day?</h2>
+        <p><strong>The practical answer:</strong> start in Traverse City, choose two or three tasting rooms along Center Road, then stay on the peninsula. It is a shorter, more coherent day than trying to cross into Leelanau between tastings. Allow 45–60 minutes per winery plus real driving, a meal and any required reservations.</p>
+        <p>We opened an actual October wine weekend at <Link href="/winery/bonobo">Bonobo Winery</Link> before spending the next day in Leelanau. <Link href="/leelanau-wine-weekend">Read the firsthand weekend</Link> and compare it with the suggested <Link href="/one-day-itineraries">three-winery Old Mission loop</Link>.</p>
+        <nav className="wine-search-actions" aria-label="Related Old Mission winery guides">
+          <Link href="/best-traverse-city-wineries-with-views">Wineries with bay views</Link>
+          <Link href="/traverse-city-wineries-with-food">Wineries serving food</Link>
+          <Link href="/leelanau-peninsula-wine-trail">Compare with Leelanau</Link>
+        </nav>
+      </section>
       <PlannerMount
         embedded
         preset={{ area: "old-mission", beverages: ["wine"], origin: "Traverse City", analyticsContext: "old_mission_map" }}
