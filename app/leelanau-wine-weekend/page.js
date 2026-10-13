@@ -129,10 +129,10 @@ export default function Page() {
         <p>Once the light went, we drove back into Lake Leelanau and settled into our Airbnb right downtown. That turned out to be one of the smartest decisions of the trip: a place to come home to, close to the village, with the peninsula spread around us instead of another long drive waiting at the end of the night.</p>
       </section>
 
-      <figure className="wine-trip-photo">
+      <div className="wine-trip-photo">
         <RegionalPhoto kind="leelanau" />
-        <figcaption>Regional vineyard imagery, independently credited above. This is a landscape reference, not a photograph from our weekend.</figcaption>
-      </figure>
+        <p className="wine-trip-image-disclosure">Regional vineyard imagery, independently credited above. This is a landscape reference, not a photograph from our weekend.</p>
+      </div>
 
       <section id="saturday" className="wine-trip-chapter">
         <div className="wine-trip-chapter-head"><span className="wine-trip-day">02 · Saturday</span><h2>A beach walk, a proper lunch, and a little old with a little new.</h2></div>
