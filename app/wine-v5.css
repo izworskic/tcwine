@@ -1,0 +1,29 @@
+
+/* Michigan wine V5 — shared decision lens, comfortable on a narrow phone */
+.wine-v5{--v5-ink:#253528;--v5-wine:#693c4a;--v5-line:#d9d4c9; margin:26px 0 38px; padding:clamp(18px,3vw,36px);background:#fbf9f4;color:var(--v5-ink);border:1px solid var(--v5-line);border-radius:18px;box-shadow:0 12px 38px rgba(35,36,31,.065);line-height:1.55}
+.wine-v5 h2,.wine-v5 h3,.wine-v5 h4{font-family:Georgia,serif;color:var(--v5-ink);letter-spacing:-.025em}
+.wine-v5 h2{font-size:clamp(1.45rem,2.7vw,2rem);line-height:1.16;margin:8px 0 10px}
+.wine-v5 h3{font-size:clamp(1.55rem,2.8vw,2.3rem);line-height:1.16;margin:8px 0}
+.wine-v5 h4{font-size:1.15rem;margin:10px 0}
+.wine-v5-intro{max-width:64ch}
+.wine-v5-intro p{margin:0 0 15px;color:#51584e}
+.wine-v5 .wine-v5-kicker{color:var(--v5-wine);font:700 .69rem/1.4 system-ui,sans-serif;letter-spacing:.115em;text-transform:uppercase;margin:0}
+.wine-v5-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0}
+.wine-v5-controls label,.wine-v5-controls legend{font:700 .8rem/1.4 system-ui,sans-serif;color:#51584e}
+.wine-v5-controls label{display:flex;flex-direction:column;gap:8px}
+.wine-v5-controls select{width:100%;min-width:0;height:44px;background:#fff;color:#253528;border:1px solid #c9c6bd;border-radius:9px;padding:8px 10px;font:500 .88rem system-ui,sans-serif}
+.wine-v5-controls fieldset{padding:0;border:0;margin:0;min-width:0}
+.wine-v5-controls legend{margin-bottom:8px}
+.wine-v5-options{display:flex;gap:5px}
+.wine-v5-options button{flex:1;min-height:44px;border:1px solid #c9c6bd;border-radius:9px;background:white;color:#253528;font:600 .84rem system-ui,sans-serif;cursor:pointer}
+.wine-v5-options button.on{background:#693c4a;color:#fff;border-color:#693c4a}
+.wine-v5-verdict{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;padding:22px;border-radius:13px;background:#f1f1e9;border:1px solid #e4e5d9}
+.wine-v5-verdict p{font-size:.92rem;line-height:1.55;margin:9px 0}
+.wine-v5-mood{font-size:1.02rem!important;color:#445c4b}
+.wine-v5-action{display:inline-block;margin:15px 0 0;padding:12px 18px;border-radius:9px;background:#693c4a;color:white!important;font:700 .9rem system-ui,sans-serif;text-decoration:none}
+.wine-v5-alternative{padding:0 0 0 24px;border-left:1px solid #d0d4ca}
+.wine-v5-alternative a{color:#693c4a;font-weight:700}
+.wine-v5-fine{font-size:.82rem!important;color:#626a60}
+.wine-v5-disclosure{font-size:.78rem;line-height:1.5;margin:16px 0 0;color:#687067}
+.wine-v5 button:focus-visible,.wine-v5 select:focus-visible,.wine-v5 a:focus-visible{outline:3px solid #a87e54;outline-offset:3px}
+@media(max-width:760px){.wine-v5-controls,.wine-v5-verdict{grid-template-columns:1fr}.wine-v5-alternative{padding:18px 0 0;border-left:0;border-top:1px solid #d0d4ca}.wine-v5-verdict{gap:12px;padding:17px}.wine-v5{margin:18px 0 28px;padding:18px}}
