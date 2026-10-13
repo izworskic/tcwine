@@ -125,3 +125,51 @@
 .wine-winery-find-nearby{margin:16px 0 22px;padding:15px 21px;border-left:4px solid #805063;background:#f8f4ed;border-radius:7px}
 .wine-winery-find-nearby p{margin:6px 0;font-size:.92rem;line-height:1.55}
 @media(max-width:640px){.wine-search-actions{display:grid;grid-template-columns:1fr}.wine-search-arrival{padding:16px}.wine-winery-find-nearby{padding:14px}}
+
+
+/* Food winery planner: keep the map unobstructed on desktops, tablets and phones.
+ * The generic 400px #plan sidebar squeezes the map at editorial page widths.
+ * This page deliberately presents the map first and the live selections below it. */
+.wine-food-page .planner-shell-embedded {
+  height:auto;
+  min-height:0;
+}
+.wine-food-page .planner-shell-embedded #main {
+  flex:none;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  min-width:0;
+}
+.wine-food-page .planner-shell-embedded #map {
+  flex:none;
+  display:block;
+  width:100%;
+  height:clamp(390px,54vh,550px);
+  min-height:390px;
+}
+.wine-food-page .planner-shell-embedded #plan {
+  flex:none;
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  max-width:none;
+  min-width:0;
+  height:auto;
+  overflow:visible;
+  border-left:none;
+  border-top:1px solid var(--line);
+  padding:18px clamp(16px,3vw,26px) 24px;
+}
+@media(max-width:860px){
+  .wine-food-page .planner-shell-embedded #map {
+    height:52vh;
+    min-height:350px;
+  }
+}
+@media(max-width:520px){
+  .wine-food-page .planner-shell-embedded #map {
+    height:48vh;
+    min-height:310px;
+  }
+}

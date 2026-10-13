@@ -48,7 +48,7 @@ const GRAPH = {
 
 export default function Page() {
   return (
-    <main className="tc-page">
+    <main className="tc-page wine-food-page">
       <h1>Traverse City Wineries With Food: {wineries.length} Mapped Stops</h1>
       <p className="search-lede">
         Looking for a wine day that includes an actual meal? This list separates wineries with kitchens, pizza,
@@ -67,8 +67,8 @@ export default function Page() {
       <PlannerMount
         embedded
         preset={{ beverages: ["wine"], selected, origin: "Traverse City", analyticsContext: "wineries_food" }}
-        title="Winery map with food-forward stops preloaded"
-        description="Five food-forward wineries are selected as a starting point. Edit the stops, change peninsulas, or build the day around their current hours."
+        title="Wineries With Food: Interactive Map"
+        description="Explore the wineries on the full-width map. Your five starter selections and route controls appear directly below the map, not over it."
       />
       <h2>Best bets for more than a snack</h2>
       <ul>
