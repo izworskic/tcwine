@@ -167,6 +167,16 @@ export default function Page({params}){
         </aside>
       </section>
 
+      <section className="wine-v5 winery-visitor-verdict" aria-labelledby="winery-visitor-verdict-title">
+        <p className="wine-v5-kicker">Make the stop earn its place</p>
+        <h2 id="winery-visitor-verdict-title">Does {v.name} belong in your day?</h2>
+        <p><strong>For this trip:</strong> {t.signature||v.note}</p>
+        <p><strong>Make room for:</strong> {v.dwellMinutes||60} minutes to taste, plus actual road travel. {v.food?"Food is listed here; confirm the menu and service on your date.":"A full meal is not reliably documented here; plan your lunch separately."}</p>
+        <p><strong>The tradeoff:</strong> {(t.avoidIf||[]).length?t.avoidIf.join("; "):v.area==="leelanau"?"Leelanau distances add up; avoid mixing distant village clusters.":"Keep the day on one side of Grand Traverse Bay."}</p>
+        <p><strong>Before you go:</strong> {v.needsHours?"Hours need direct verification. Call ahead.":"Weekly posted hours are useful planning evidence, not a guarantee for holidays or seasonal days."} Check reservations and the winery&apos;s site.</p>
+        <p>We return to Michigan wine country often and favor a day with room to taste and explore. These are evidence-based planning observations, not invented personal tasting reviews.</p>
+        <Link href="/#wine-truth-title">Build a day that fits →</Link>
+      </section>
       <PlannerMount
         embedded
         preset={{beverages:["wine"],selected:preset,origin:"Traverse City",analyticsContext:"winery_detail"}}
