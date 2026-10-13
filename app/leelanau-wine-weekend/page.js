@@ -169,6 +169,28 @@ export default function Page() {
         <p>That is the philosophy behind this wine planner: a great trip is not a mathematically full itinerary. It is the right wine, a manageable drive, a meal when you need one, and some room left for the place itself.</p>
       </section>
 
+      <section className="wine-trip-external-actions" aria-labelledby="wine-trip-take-action">
+        <p className="wine-v5-kicker">Useful links from our actual stops</p>
+        <h2 id="wine-trip-take-action">Make the weekend easier to plan</h2>
+        <p>These go to the actual businesses or the National Park Service, not a generic booking or affiliate search. Menus, tours and hours can change; check directly before making the drive.</p>
+        <div className="wine-trip-action-grid">
+          <div>
+            <h3>Friday · Old Mission and the beach</h3>
+            <a href="https://www.bonobowinery.com/" target="_blank" rel="noopener noreferrer">Bonobo Winery · visit and food pairing information ↗</a>
+            <a href="https://www.dickspourhouse.com/menu" target="_blank" rel="noopener noreferrer">Dick&apos;s Pour House · current menu ↗</a>
+            <a href="tel:+12312569912">Dick&apos;s Pour House · call for pizza pickup</a>
+            <a href="https://www.nps.gov/places/000/good-harbor-beach-651.htm" target="_blank" rel="noopener noreferrer">Good Harbor Beach · official park access ↗</a>
+          </div>
+          <div>
+            <h3>Saturday · Leelanau wine day</h3>
+            <a href="https://order.toasttab.com/online/fiddleheads" target="_blank" rel="noopener noreferrer">Fiddleheads · pickup ordering and current menu ↗</a>
+            <a href="https://mawby.wine/visit/" target="_blank" rel="noopener noreferrer">MAWBY · tasting room details and reservations ↗</a>
+            <a href="/winery/laurentide-winery">Laurentide · winery guide and map →</a>
+            <a href="https://www.amoritasvineyards.com/" target="_blank" rel="noopener noreferrer">Amoritas · current tasting room and wines ↗</a>
+          </div>
+        </div>
+        <p className="wine-trip-resource-note">The little wine shop and our Airbnb are deliberately unnamed because their exact identities were not established. These are useful public resources, not claims that any reservation or order is currently available.</p>
+      </section>
       <section className="wine-trip-important" aria-labelledby="wine-trip-practical">
         <h2 id="wine-trip-practical">A few real-world checks before copying our trip</h2>
         <p>This is our trip story, not a claim that every stop has the same menu, wine list, tours or hours now. <strong>MAWBY strongly recommends reservations</strong>; a guided winery tasting may need its own booking. Verify current hours, food and sunset timing for your date. Have a designated driver or arrange transport for wine tastings.</p>

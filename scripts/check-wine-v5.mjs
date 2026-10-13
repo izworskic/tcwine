@@ -75,3 +75,19 @@ for(const [name,src] of [["home",featureHome],["region",leelanauPage],["itinerar
 assert.match(storyStyles,/wine-trip-variation-grid/);
 assert.match(storyStyles,/max-width:700px/);
 console.log("Firsthand Leelanau story, MAWBY spelling, park advice, shared person identity and six discovery surfaces passed.");
+
+const [fieldNotes,stopLinks] = await Promise.all([
+  read("app/winery/[id]/page.js"),read("app/leelanau-wine-weekend/page.js")
+]);
+for (const id of ["bonobo","mawby","laurentide-winery","amoritas-vineyards"]) {
+  assert.ok(fieldNotes.includes(id), "Firsthand field note missing: "+id);
+}
+assert.match(fieldNotes,/leelanau-wine-weekend#/);
+assert.match(stopLinks,/https:\/\/www\.dickspourhouse\.com\/menu/);
+assert.match(stopLinks,/tel:\+12312569912/);
+assert.match(stopLinks,/https:\/\/order\.toasttab\.com\/online\/fiddleheads/);
+assert.match(stopLinks,/https:\/\/mawby\.wine\/visit\//);
+assert.match(stopLinks,/https:\/\/www\.nps\.gov\/places\/000\/good-harbor-beach-651\.htm/);
+assert.match(stopLinks,/exact identities were not established/);
+assert.match(stopLinks,/https:\/\/www\.amoritasvineyards\.com\//);
+console.log("Firsthand winery backlinks and verified business/park visit actions passed.");
