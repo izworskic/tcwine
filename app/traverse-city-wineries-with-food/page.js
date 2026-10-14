@@ -2,6 +2,7 @@ import Link from "next/link";
 import venues from "@/data/venues.json";
 import PlannerMount from "@/components/PlannerMount";
 import AuthorNote from "@/components/AuthorNote";
+import foodEvidence from "@/data/food-offerings.json";
 
 const wineries = venues
   .filter((v) => v.category === "winery" && v.food)
@@ -10,8 +11,8 @@ const wineries = venues
     return rank(a.food) - rank(b.food) || (b.rating || 0) - (a.rating || 0) || a.name.localeCompare(b.name);
   });
 
-const substantial = wineries.filter((v) => /restaurant|bistro|kitchen|pizza|raclette/i.test(v.food || ""));
-const selected = substantial.slice(0, 5).map((v) => v.id);
+const reviewedIds = new Set(foodEvidence.locations.map((item) => item.venueId).filter(Boolean));
+const awaitingReview = wineries.filter((item) => !reviewedIds.has(item.id));
 const BASE = "https://tcwine.chrisizworski.com";
 
 export const metadata = {
@@ -49,14 +50,13 @@ const GRAPH = {
 export default function Page() {
   return (
     <main className="tc-page wine-food-page">
-      <h1>Traverse City Wineries With Food: {wineries.length} Mapped Stops</h1>
+      <h1>Traverse City Wineries With Food: Map & Meal Facts</h1>
       <p className="search-lede">
-        Looking for a wine day that includes an actual meal? This list separates wineries with kitchens, pizza,
-        bistro-style food, raclette, and other substantial options from rooms that only offer tasting snacks.
+        The map has {wineries.length} wineries whose older directory records mention food, but those labels are not confirmations of a full lunch. V7 is auditing each menu and kitchen schedule separately; the source-checked Old Mission examples appear below.
       </p>
       <section className="wine-search-arrival" aria-label="Winery lunch planning">
         <h2>Can you eat lunch at a Traverse City winery?</h2>
-        <p><strong>At some tasting rooms, yes.</strong> This guide separates actual kitchens, restaurants, bistros and pizza from light tasting snacks. If lunch matters, choose a substantial-food stop, confirm today's kitchen service, and give the meal enough time. Do not assume a winery with a cheese board serves lunch.</p>
+        <p><strong>Yes, at some wineries, but not necessarily on the day you want.</strong> Brys Estate lists substantial seated-service food, while Bonobo and Chateau Chantal document small plates. Food-serving hours are not interchangeable with winery opening hours. Official webpages can disagree; a full lunch is never considered confirmed solely because a winery has food listed.</p>
         <p>We enjoyed a pairing at <Link href="/winery/bonobo">Bonobo</Link> on our own October trip but ordered a separate pizza for sunset. <Link href="/leelanau-wine-weekend">See what a well-paced food-and-wine weekend looks like</Link>.</p>
         <nav className="wine-search-actions" aria-label="Plan a winery meal">
           <Link href="/old-mission-peninsula-wineries">Old Mission wineries</Link>
@@ -64,25 +64,44 @@ export default function Page() {
           <Link href="/one-day-itineraries">Wine day itineraries</Link>
         </nav>
       </section>
+      <section className="wine-food-source-audit" aria-label="Source-checked wine and meal options">
+        <h2>What the actual menus support</h2>
+        <p>Operator sources reviewed {foodEvidence.reviewedAt}. These are researched meal types, not confirmed kitchen service or available reservations.</p>
+        <ul>
+          {foodEvidence.locations.map((location) => (
+            <li key={location.locationId}>
+              <strong>{location.venueId
+                ? <Link href={"/winery/" + location.venueId}>{location.name}</Link>
+                : location.name}</strong>
+              <span>{location.kind === "winery" ? "Winery" : "Separate dining stop"}</span>
+              {location.services.map((service) => (
+                <p key={service.serviceId}>
+                  <b>{service.mealType === "SUBSTANTIAL" || service.mealType === "FULL_MEAL" ? "Substantial meal documented" : service.mealType === "SMALL_PLATES" ? "Small plates, not proven lunch" : service.mealType === "PAIRING" ? "Reserved pairing, full meal unverified" : "Snacks only"}</b>.
+                  {" "}{service.note}{" "}
+                  <a href={service.sourceUrl} target="_blank" rel="noopener noreferrer">Official food information ↗</a>
+                </p>
+              ))}
+            </li>
+          ))}
+        </ul>
+        <p><strong>Old Mission lunch warning:</strong> Jolly Pumpkin and Peninsula Grill have conflicting posted weekday hours. Confirm directly before traveling; the map does not check live tables or bookings.</p>
+      </section>
       <PlannerMount
         embedded
-        preset={{ beverages: ["wine"], selected, origin: "Traverse City", analyticsContext: "wineries_food" }}
+        preset={{ beverages: ["wine"], selected: [], origin: "Traverse City", analyticsContext: "wineries_food" }}
         title="Wineries With Food: Interactive Map"
-        description="Explore the wineries on the full-width map. Your five starter selections and route controls appear directly below the map, not over it."
+        description="Choose your own winery stops. The unobstructed map sits above the route controls; it does not preselect five locations merely because they have food tags."
       />
-      <h2>Best bets for more than a snack</h2>
+      <h2>Additional wineries with food mentioned in the directory</h2>
+      <p>The entries below still need their menus, kitchens, dates and food types checked at the operator source. Their older food tags are <strong>not verified full-lunch recommendations</strong>.</p>
       <ul>
-        {substantial.map((v) => (
+        {awaitingReview.map((v) => (
           <li key={v.id}>
-            <strong><Link href={"/winery/"+v.id}>{v.name}</Link></strong> ({v.town}): {v.food}.
-            {v.note ? " " + v.note : ""}
+            <strong><Link href={"/winery/" + v.id}>{v.name}</Link></strong> ({v.town}).
+            Directory label: {v.food}. Check directly before depending on a meal.
           </li>
         ))}
       </ul>
-      <h2>Wineries with tasting snacks</h2>
-      <p>
-        {wineries.filter((v) => !substantial.includes(v)).map((v,i,arr) => <span key={v.id}><Link href={"/winery/"+v.id}>{v.name}</Link> ({v.town}){i<arr.length-1?", ":"."}</span>)}
-      </p>
       <p>
         For a peninsula-first plan, open the <Link href="/old-mission-peninsula-wineries">Old Mission winery map</Link>
         {" or the "}<Link href="/leelanau-peninsula-wine-trail">Leelanau winery map</Link>.

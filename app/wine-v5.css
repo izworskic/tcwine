@@ -173,3 +173,14 @@
     min-height:310px;
   }
 }
+
+/* V7 operator evidence appears as editorial truth, not a false booking widget. */
+.wine-food-source-audit{margin:24px 0;padding:clamp(16px,3vw,26px);border:1px solid #d8cbbc;border-radius:14px;background:#f9f6f1}
+.wine-food-source-audit h2{margin:0 0 8px;font-family:Georgia,serif}
+.wine-food-source-audit>p{font-size:.88rem;line-height:1.6}
+.wine-food-source-audit ul{list-style:none;padding:0!important;margin:18px 0;display:grid;gap:12px}
+.wine-food-source-audit li{margin:0!important;padding:13px 15px;border:1px solid #e3d9ce;border-radius:10px;background:#fff;min-width:0}
+.wine-food-source-audit li>strong{display:inline-block;margin-right:10px}
+.wine-food-source-audit li>span{font-size:.75rem;color:#76645d}
+.wine-food-source-audit li>p{font-size:.83rem;line-height:1.5;margin:9px 0 0}
+.wine-food-source-audit a{color:#693c4a;text-underline-offset:3px;overflow-wrap:anywhere}

@@ -61,3 +61,11 @@ assert.equal(hypothetical.bookingAvailability,"NOT_CHECKED");
 fixture.locations.push(structuredClone(fixture.locations[0]));
 assert.ok(validateFoodDataset(fixture).some(x=>x.includes("duplicate")));
 console.log("Food V7 Truth Engine: 26 menu, timing, conflict, booking and regression checks passed.");
+
+const page=await readFile(new URL("../app/traverse-city-wineries-with-food/page.js",import.meta.url),"utf8");
+assert.match(page,/foodEvidence\.locations\.map/);
+assert.match(page,/awaitingReview/);
+assert.match(page,/selected: \[\]/);
+assert.doesNotMatch(page,/const substantial =/);
+assert.match(page,/not verified full-lunch recommendations/);
+console.log("Food page: audited evidence and unverified directory entries remain distinct.");
