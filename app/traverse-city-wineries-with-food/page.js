@@ -1,6 +1,6 @@
 import Link from "next/link";
 import venues from "@/data/venues.json";
-import PlannerMount from "@/components/PlannerMount";
+import FoodDayDecision from "@/components/FoodDayDecision";
 import AuthorNote from "@/components/AuthorNote";
 import foodEvidence from "@/data/food-offerings.json";
 
@@ -50,9 +50,9 @@ const GRAPH = {
 export default function Page() {
   return (
     <main className="tc-page wine-food-page">
-      <h1>Traverse City Wineries With Food: Map & Meal Facts</h1>
+      <h1>Traverse City Wineries With Food: Plan a Real Lunch</h1>
       <p className="search-lede">
-        The map has {wineries.length} wineries whose older directory records mention food, but those labels are not confirmations of a full lunch. V7 is auditing each menu and kitchen schedule separately; the source-checked Old Mission examples appear below.
+        Choose a lunch date, time and party size. The meal-first engine protects time to actually eat, checks the published food evidence, and builds a practical Old Mission route. The broader directory still needs individual food-service verification.
       </p>
       <section className="wine-search-arrival" aria-label="Winery lunch planning">
         <h2>Can you eat lunch at a Traverse City winery?</h2>
@@ -64,6 +64,7 @@ export default function Page() {
           <Link href="/one-day-itineraries">Wine day itineraries</Link>
         </nav>
       </section>
+      <FoodDayDecision />
       <section className="wine-food-source-audit" aria-label="Source-checked wine and meal options">
         <h2>What the actual menus support</h2>
         <p>Operator sources reviewed {foodEvidence.reviewedAt}. These are researched meal types, not confirmed kitchen service or available reservations.</p>
@@ -86,12 +87,6 @@ export default function Page() {
         </ul>
         <p><strong>Old Mission lunch warning:</strong> Jolly Pumpkin and Peninsula Grill have conflicting posted weekday hours. Confirm directly before traveling; the map does not check live tables or bookings.</p>
       </section>
-      <PlannerMount
-        embedded
-        preset={{ beverages: ["wine"], selected: [], origin: "Traverse City", analyticsContext: "wineries_food" }}
-        title="Wineries With Food: Interactive Map"
-        description="Choose your own winery stops. The unobstructed map sits above the route controls; it does not preselect five locations merely because they have food tags."
-      />
       <h2>Additional wineries with food mentioned in the directory</h2>
       <p>The entries below still need their menus, kitchens, dates and food types checked at the operator source. Their older food tags are <strong>not verified full-lunch recommendations</strong>.</p>
       <ul>

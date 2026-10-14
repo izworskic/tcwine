@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node scripts/check-seo.mjs && node scripts/check-pois.mjs && npm run test:my-wine-day && npm run test:wine-truth && npm run test:wine-scene && npm run test:publisher-authority && npm run test:varietals && npm run test:data-desk && npm run test:v5 && npm run test:food-v7",
+    "test": "node scripts/check-seo.mjs && node scripts/check-pois.mjs && npm run test:my-wine-day && npm run test:wine-truth && npm run test:wine-scene && npm run test:publisher-authority && npm run test:varietals && npm run test:data-desk && npm run test:v5 && npm run test:food-v7 && npm run test:food-day",
     "check": "npm run test && npm run build",
     "test:my-wine-day": "node scripts/check-my-wine-day.mjs",
     "test:wine-truth": "node scripts/check-wine-truth.mjs",
@@ -16,7 +16,8 @@
     "test:varietals": "node scripts/check-varietals.mjs",
     "test:data-desk": "node scripts/check-data-desk.mjs",
     "test:v5": "node scripts/check-wine-v5.mjs",
-    "test:food-v7": "node scripts/check-food-v7.mjs"
+    "test:food-v7": "node scripts/check-food-v7.mjs",
+    "test:food-day": "node scripts/check-food-day.mjs"
   },
   "dependencies": {
     "leaflet": "1.9.4",

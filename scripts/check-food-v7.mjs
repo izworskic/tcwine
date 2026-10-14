@@ -65,7 +65,7 @@ console.log("Food V7 Truth Engine: 26 menu, timing, conflict, booking and regres
 const page=await readFile(new URL("../app/traverse-city-wineries-with-food/page.js",import.meta.url),"utf8");
 assert.match(page,/foodEvidence\.locations\.map/);
 assert.match(page,/awaitingReview/);
-assert.match(page,/selected: \[\]/);
+assert.match(page,/FoodDayDecision/);
 assert.doesNotMatch(page,/const substantial =/);
 assert.match(page,/not verified full-lunch recommendations/);
 console.log("Food page: audited evidence and unverified directory entries remain distinct.");
