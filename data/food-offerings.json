@@ -1,0 +1,343 @@
+{
+  "version": "7.0.0-foundation",
+  "reviewedAt": "2026-10-13",
+  "method": "Official operator evidence only. Meal service hours are distinct from venue opening hours. Conflict, freshness and unknown states are never treated as confirmed availability.",
+  "locations": [
+    {
+      "locationId": "brys-estate",
+      "venueId": "brys-estate",
+      "name": "Brys Estate Vineyard & Winery",
+      "kind": "winery",
+      "region": "old-mission",
+      "address": "3309 Blue Water Road, Traverse City, MI 49686",
+      "services": [
+        {
+          "serviceId": "brys-seated-food",
+          "mealType": "SUBSTANTIAL",
+          "menuItems": [
+            {
+              "name": "Sandwiches",
+              "priceUsd": null
+            },
+            {
+              "name": "Salads",
+              "priceUsd": null
+            }
+          ],
+          "sourceUrl": "https://brysestate.com/visit_tastingroom/",
+          "menuUrl": "https://brysestate.com/wp-content/uploads/2026/09/brys_mainmenu_fall2026.pdf",
+          "foodHours": null,
+          "hoursBasis": "UNKNOWN",
+          "hoursScope": "UNKNOWN",
+          "reservation": "RECOMMENDED",
+          "reservationUrl": "https://brysestate.com/visit_tastingroom/",
+          "verifiedAt": "2026-10-13",
+          "reviewDue": "2026-10-27",
+          "conflicts": [],
+          "note": "Seated tasting-room experience has substantial menu items. Food-service hours are not independently published; the tasting-room timetable is not a kitchen timetable.",
+          "partyMaxRecommended": 6,
+          "evidence": "Official seated experience names sandwiches and salads; menu PDF is available separately."
+        },
+        {
+          "serviceId": "brys-lawn-snacks",
+          "mealType": "SNACKS",
+          "menuItems": [
+            {
+              "name": "Crackers",
+              "priceUsd": 11
+            },
+            {
+              "name": "Chips",
+              "priceUsd": 2
+            }
+          ],
+          "sourceUrl": "https://brysestate.com/lawn-bar-menu/",
+          "menuUrl": "https://brysestate.com/lawn-bar-menu/",
+          "foodHours": null,
+          "hoursBasis": "UNKNOWN",
+          "hoursScope": "SEASONAL_UNKNOWN",
+          "reservation": "NOT_REQUIRED",
+          "reservationUrl": null,
+          "verifiedAt": "2026-10-13",
+          "reviewDue": "2026-10-27",
+          "conflicts": [],
+          "note": "Lawn Bar snack menu and seated tasting-room food are separate services.",
+          "evidence": "Official Lawn Bar menu identifies snack items and distinguishes the areas."
+        }
+      ]
+    },
+    {
+      "locationId": "bonobo",
+      "venueId": "bonobo",
+      "name": "Bonobo Winery",
+      "kind": "winery",
+      "region": "old-mission",
+      "address": "12011 Center Road, Traverse City, MI 49686",
+      "services": [
+        {
+          "serviceId": "bonobo-small-plates",
+          "mealType": "SMALL_PLATES",
+          "menuItems": [
+            {
+              "name": "Seasonal small plates",
+              "priceUsd": null
+            }
+          ],
+          "sourceUrl": "https://www.bonobowinery.com/faq",
+          "menuUrl": "https://www.bonobowinery.com/faq",
+          "foodHours": {
+            "Monday": [
+              "13:00",
+              "18:30"
+            ],
+            "Tuesday": [
+              "13:00",
+              "18:30"
+            ],
+            "Wednesday": [
+              "13:00",
+              "18:30"
+            ],
+            "Thursday": [
+              "13:00",
+              "18:30"
+            ],
+            "Friday": [
+              "12:00",
+              "19:30"
+            ],
+            "Saturday": [
+              "12:00",
+              "19:30"
+            ],
+            "Sunday": [
+              "12:00",
+              "17:30"
+            ]
+          },
+          "hoursBasis": "KITCHEN_EXPLICIT",
+          "hoursScope": "SEASONAL_UNCONFIRMED",
+          "reservation": "WALK_IN",
+          "reservationUrl": null,
+          "verifiedAt": "2026-10-13",
+          "reviewDue": "2026-10-27",
+          "conflicts": [],
+          "note": "FAQ publishes kitchen hours but calls tasting room hours 'Spring Hours'; confirm applicability for a fall date.",
+          "evidence": "Operator describes seasonal small plates, kitchen service, and separate food hours."
+        },
+        {
+          "serviceId": "bonobo-reservable-pairing",
+          "mealType": "PAIRING",
+          "menuItems": [],
+          "sourceUrl": "https://www.bonobowinery.com/faq",
+          "menuUrl": "https://www.bonobowinery.com/faq",
+          "foodHours": null,
+          "hoursBasis": "RESERVATION_ONLY",
+          "hoursScope": "BOOKING_DEPENDENT",
+          "reservation": "REQUIRED",
+          "reservationUrl": "https://www.bonobowinery.com/",
+          "verifiedAt": "2026-10-13",
+          "reviewDue": "2026-10-27",
+          "conflicts": [],
+          "note": "Food and Wine Pairing is reservable; the FAQ does not prove it constitutes a full meal.",
+          "fullMealEvidence": false,
+          "evidence": "Operator offers a reservable pairing distinct from walk-in small plates."
+        }
+      ]
+    },
+    {
+      "locationId": "jolly-pumpkin",
+      "venueId": "jolly-pumpkin",
+      "name": "Jolly Pumpkin Traverse City",
+      "kind": "restaurant_brewery",
+      "region": "old-mission",
+      "address": "13512 Peninsula Drive, Traverse City, MI 49686",
+      "services": [
+        {
+          "serviceId": "jolly-restaurant",
+          "mealType": "FULL_MEAL",
+          "menuItems": [
+            {
+              "name": "Artisan pizza",
+              "priceUsd": null
+            },
+            {
+              "name": "Sandwiches and main plates",
+              "priceUsd": null
+            }
+          ],
+          "sourceUrl": "https://traversecity.jollypumpkin.com/",
+          "menuUrl": "https://traversecity.jollypumpkin.com/menu/",
+          "foodHours": {
+            "Monday": [
+              "15:00",
+              "21:00"
+            ],
+            "Tuesday": [
+              "15:00",
+              "21:00"
+            ],
+            "Wednesday": [
+              "15:00",
+              "21:00"
+            ],
+            "Thursday": [
+              "15:00",
+              "21:00"
+            ],
+            "Friday": [
+              "15:00",
+              "21:00"
+            ],
+            "Saturday": [
+              "12:00",
+              "21:00"
+            ],
+            "Sunday": [
+              "12:00",
+              "20:00"
+            ]
+          },
+          "hoursBasis": "VENUE_HOURS_ONLY",
+          "hoursScope": "PUBLISHED_CONFLICTED",
+          "reservation": "UNKNOWN",
+          "reservationUrl": null,
+          "verifiedAt": "2026-10-13",
+          "reviewDue": "2026-10-20",
+          "conflicts": [
+            {
+              "field": "foodHours",
+              "days": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "sources": [
+                "https://traversecity.jollypumpkin.com/",
+                "https://traversecity.jollypumpkin.com/menu/"
+              ],
+              "reason": "Homepage lists Monday–Friday 3pm opening, while menu page header lists Monday–Saturday noon."
+            }
+          ],
+          "note": "Old Mission brewery/restaurant, not a winery. Weekday lunch must not be represented as available before resolving contradictory official hours.",
+          "evidence": "Operator's full menu lists substantial dishes, but public pages disagree on weekday hours."
+        }
+      ]
+    },
+    {
+      "locationId": "peninsula-grill",
+      "venueId": null,
+      "name": "Peninsula Grill",
+      "kind": "restaurant",
+      "region": "old-mission",
+      "address": "14091 Center Road, Traverse City, MI 49686",
+      "services": [
+        {
+          "serviceId": "peninsula-grill-dining",
+          "mealType": "FULL_MEAL",
+          "menuItems": [
+            {
+              "name": "Classic burger",
+              "priceUsd": 17.95
+            },
+            {
+              "name": "Cherry chicken salad",
+              "priceUsd": 22.95
+            }
+          ],
+          "sourceUrl": "https://www.tcpeninsulagrill.com/",
+          "menuUrl": "https://www.tcpeninsulagrill.com/menu",
+          "foodHours": {
+            "Monday": [
+              "12:00",
+              "20:30"
+            ],
+            "Tuesday": [
+              "12:00",
+              "20:30"
+            ],
+            "Wednesday": [
+              "12:00",
+              "20:30"
+            ],
+            "Thursday": [
+              "12:00",
+              "20:30"
+            ],
+            "Friday": [
+              "12:00",
+              "21:00"
+            ],
+            "Saturday": [
+              "12:00",
+              "21:00"
+            ],
+            "Sunday": [
+              "12:00",
+              "20:30"
+            ]
+          },
+          "hoursBasis": "VENUE_HOURS_ONLY",
+          "hoursScope": "PUBLISHED_CONFLICTED",
+          "reservation": "UNKNOWN",
+          "reservationUrl": null,
+          "verifiedAt": "2026-10-13",
+          "reviewDue": "2026-10-20",
+          "conflicts": [
+            {
+              "field": "foodHours",
+              "days": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday"
+              ],
+              "sources": [
+                "https://www.tcpeninsulagrill.com/",
+                "https://www.tcpeninsulagrill.com/locations",
+                "https://www.tcpeninsulagrill.com/employment"
+              ],
+              "reason": "Homepage and menu footer list noon daily; location and employment pages list weekday 3pm opening."
+            }
+          ],
+          "note": "Restaurant-only meal anchor. Lunch eligibility cannot be confirmed on Tuesday at noon; kitchen hours are not published separately.",
+          "evidence": "Operator publishes substantial menu items and prices, with conflicting operating hours."
+        }
+      ]
+    },
+    {
+      "locationId": "chateau-chantal",
+      "venueId": "chateau-chantal",
+      "name": "Chateau Chantal Winery and Inn",
+      "kind": "winery",
+      "region": "old-mission",
+      "address": "15900 Rue de Vin, Traverse City, MI 49686",
+      "services": [
+        {
+          "serviceId": "chantal-charcuterie",
+          "mealType": "SMALL_PLATES",
+          "menuItems": [
+            {
+              "name": "Charcuterie and Mediterranean plates",
+              "priceUsd": null
+            }
+          ],
+          "sourceUrl": "https://www.chateauchantal.com/visit-us/",
+          "menuUrl": "https://www.chateauchantal.com/visit-us/",
+          "foodHours": null,
+          "hoursBasis": "UNKNOWN",
+          "hoursScope": "SUPPLIES_DEPENDENT",
+          "reservation": "WALK_IN",
+          "reservationUrl": null,
+          "verifiedAt": "2026-10-13",
+          "reviewDue": "2026-10-27",
+          "conflicts": [],
+          "note": "Year-round small plates subject to availability; separately booked wine dinners are not a standard full lunch.",
+          "evidence": "Operator's Visit Us page describes rotating charcuterie and smaller plates."
+        }
+      ]
+    }
+  ]
+}
