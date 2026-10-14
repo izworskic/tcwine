@@ -149,7 +149,9 @@ console.log("Regional search questions, clear intent pages and wine cross-links 
 // Food page map should never be squeezed/covered by the preselected five-stops panel.
 const foodLayoutStyles=await read("../app/wine-v5.css");
 assert.match(food,/tc-page wine-food-page/);
-assert.match(food,/Explore the wineries on the full-width map/);
+assert.match(food,/Choose your own winery stops/);
+assert.match(food,/selected: \[\]/);
+assert.match(food,/What the actual menus support/);
 assert.match(foodLayoutStyles,/\.wine-food-page \.planner-shell-embedded #main\s*\{\s*flex:none;\s*display:flex;\s*flex-direction:column;/);
 assert.match(foodLayoutStyles,/\.wine-food-page \.planner-shell-embedded #map\s*\{[\s\S]*?width:100%;[\s\S]*?height:clamp\(/);
 assert.match(foodLayoutStyles,/\.wine-food-page \.planner-shell-embedded #plan\s*\{[\s\S]*?width:100%;\s*max-width:none;[\s\S]*?border-top:1px solid var\(--line\)/);
