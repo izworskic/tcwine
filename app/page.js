@@ -8,6 +8,7 @@ import WineDayComposer from "@/components/WineDayComposer";
 import WineRegionDecision from "@/components/WineRegionDecision";
 import WineCountryNow from "@/components/WineCountryNow";
 import Fold from "@/components/Fold";
+import GlanceLens from "@/components/GlanceLens";
 import { buildVenueItemList } from "@/lib/venue-schema";
 import { HOURS_VERIFIED } from "@/components/VenueHours";
 
@@ -129,6 +130,7 @@ export default function Page() {
       <main className="tc-page">
         <h1>Traverse City Winery Map: {W} Wineries on Old Mission & Leelanau</h1>
         <p className="search-lede">{INTRO}</p>
+        <GlanceLens />
         <div className="quick-answer" aria-label="Winery map coverage">
           <div><strong>43 wineries</strong><span>Mapped across the Traverse City wine region</span></div>
           <div><strong>11 mapped Old Mission</strong><span>10 current official trail members, plus wider mapped inventory</span></div>

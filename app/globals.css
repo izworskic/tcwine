@@ -1760,3 +1760,97 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
 .home-fold-body{padding:4px 14px 18px;border-top:1px solid var(--line)}
 .home-fold-body>section:first-child{margin-top:14px}
 @media print{.home-fold:not([open])>.home-fold-body{display:block}}
+
+
+/* ---------- Persona flow: hero, "what kind of day?", charts (Oct 14 2026) ---------- */
+.planner-head.has-hero{position:relative;overflow:hidden;color:#fff;padding:18px 18px 14px;background:#2d3a3f}
+.planner-head.has-hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,28,30,.55) 0%,rgba(20,28,30,.78) 100%)}
+.planner-head.has-hero>*:not(.hero-img){position:relative;z-index:2}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.planner-head.has-hero h2,.planner-head.has-hero p{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.planner-head.has-hero .map-proof{color:rgba(255,255,255,.9)}
+.planner-head.has-hero .map-proof strong{color:#fff}
+.planner-head.has-hero .map-proof em{color:#cfe6ee}
+.hero-credit{display:block;margin-top:8px;font-size:.66rem;color:rgba(255,255,255,.78)}
+.hero-credit a{color:#fff;text-decoration:underline}
+
+.intent-bar{padding:12px 16px 4px;background:var(--paper,#f5f1e8);border-bottom:1px solid var(--line)}
+.intent-label{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:8px}
+.intent-label span{font-family:inherit;font-weight:400;font-size:.8rem;color:var(--ink-soft);margin-left:6px}
+.intent-chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.chip.intent{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;padding:9px 13px;border-radius:14px;scroll-snap-align:start;--accent:var(--wine)}
+.chip.intent .intent-name{font-weight:700;font-size:.9rem}
+.chip.intent .intent-sub{font-size:.72rem;opacity:.78;white-space:nowrap}
+.need-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:2px 0 10px}
+.need-row>span{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);font-weight:700}
+.chip.need{--accent:var(--bay)}
+.trip-row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.trip-row .grp{min-width:0}
+@media (max-width:860px){
+  .trip-row{flex-wrap:nowrap;gap:8px}
+  .trip-row .grp{flex:1 1 0}
+  .trip-row select,.trip-row input{width:100%;min-width:0;font-size:.86rem;padding:6px 6px}
+  #controls.hide-adv .grp.adv-phone{display:none}
+  .planner-head.has-hero{padding:14px 16px 12px}
+  .planner-head.has-hero p{font-size:.86rem;line-height:1.4;margin:.3em 0 0}
+}
+.note.notice{background:#fbf2d8;border-color:#ecd9a0}
+.grape-pick{margin:10px 0 4px}
+.grape-h{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft);font-weight:700;margin-bottom:6px}
+.stop-why{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 2px}
+.stop-why .why{font-size:.72rem;font-weight:600;color:var(--bay);background:#e8f1f3;border-radius:999px;padding:2px 8px}
+
+.glance{margin:22px 0;padding:16px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.glance h2{margin:0 0 4px;font-size:1.2rem}
+.glance-sub{margin:0 0 10px;color:var(--ink-soft);font-size:.9rem;line-height:1.45}
+.glance-help,.glance-note{font-size:.8rem;color:var(--ink-soft);margin:6px 0}
+.glance-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 8px}
+.glance-tabs button{font:inherit;font-size:.82rem;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer}
+.glance-tabs button.on{background:var(--bay);border-color:var(--bay);color:#fff}
+.hour-chart{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:4px;align-items:end;height:170px;margin:8px 0 6px}
+.hour-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;height:100%;padding:0;border:1px solid transparent;border-radius:8px;background:none;cursor:pointer;font:inherit}
+.hour-col:hover{background:var(--paper-2,#f6f2e9)}
+.hour-col.on{border-color:var(--ink);background:var(--paper-2,#f6f2e9)}
+.hour-col:focus-visible{outline:3px solid var(--bay);outline-offset:1px}
+.hour-n{font-size:.7rem;font-weight:700;color:var(--ink)}
+.hour-stack{display:flex;flex-direction:column-reverse;width:70%;min-height:4px;border-radius:5px 5px 0 0;overflow:hidden}
+.hour-stack i{display:block;min-height:2px}
+.hour-l{font-size:.68rem;color:var(--ink-soft);padding-bottom:2px}
+.bar-list{list-style:none;margin:6px 0;padding:0;display:grid;gap:4px}
+.bar-list button{display:grid;grid-template-columns:minmax(96px,34%) 1fr 34px;align-items:center;gap:8px;width:100%;padding:6px 8px;border:1px solid transparent;border-radius:8px;background:none;cursor:pointer;font:inherit;text-align:left}
+.bar-list button:hover{background:var(--paper-2,#f6f2e9)}
+.bar-list button.on{border-color:var(--ink);background:var(--paper-2,#f6f2e9)}
+.bar-list button:focus-visible{outline:3px solid var(--bay);outline-offset:1px}
+.bar-name{font-size:.84rem;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{display:block;height:14px;background:#f1ede4;border-radius:7px;overflow:hidden}
+.bar-fill{display:flex;height:100%;border-radius:7px;overflow:hidden}
+.bar-fill i{display:block}
+.bar-val{font-size:.78rem;font-weight:700;color:var(--ink);text-align:right}
+.glance-more{font:inherit;font-size:.82rem;padding:7px 12px;border:1px dashed var(--line);border-radius:999px;background:none;color:var(--bay);cursor:pointer}
+.glance-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.72rem;color:var(--ink-soft);margin:8px 0 0}
+.glance-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+@media (prefers-reduced-motion:no-preference){.bar-fill{transition:width .25s ease}.hour-stack{transition:height .25s ease}}
+
+.hero-img{color:transparent;font-size:0}
+.planner-head.has-hero .map-proof span{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4);color:#fff}
+@media (max-width:860px){
+  .trip-row{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px}
+  .trip-row .grp:first-child{grid-column:1 / -1}
+  .trip-row select,.trip-row input{font-size:.95rem;padding:8px 10px}
+}
+
+@media (max-width:860px){
+  .planner-head.has-hero p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .planner-head.has-hero .map-proof{margin-top:6px;gap:5px 8px}
+  .planner-head.has-hero .map-proof em{flex-basis:100%}
+  .intent-bar{padding-top:10px}
+  .intent-label span{display:none}
+}
+
+/* Desktop: the manual filter rows live behind "More filters" too, and the map keeps real height. */
+#controls.hide-adv .grp.adv-phone{display:none}
+.planner-shell:not(.planner-shell-embedded){height:auto;min-height:100vh}
+.planner-shell:not(.planner-shell-embedded) #main{min-height:max(560px,70vh)}
+@media (max-width:860px){.planner-shell:not(.planner-shell-embedded) #main{min-height:0}}
+
+@media (min-width:861px){.planner-shell:not(.planner-shell-embedded) #plan{max-height:max(560px,70vh)}}
