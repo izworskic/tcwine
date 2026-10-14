@@ -6,6 +6,7 @@ import origins from "@/data/origins.json";
 import {planFoodDay,evaluateRouteLegs} from "@/lib/food-day-planner.mjs";
 import {trackWineEvent} from "@/lib/wine-analytics";
 import FoodDayMap from "./FoodDayMap";
+import {buildWinePlanHash} from "@/lib/my-wine-day";
 
 function localToday(){
   const p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Detroit",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
@@ -42,11 +43,12 @@ export default function FoodDayDecision(){
   const [road,setRoad]=useState(null);
   const [routeGeometry,setRouteGeometry]=useState(null);
   const [loading,setLoading]=useState(false);
+  const [copied,setCopied]=useState(false);
   const requestId=useRef(0);
   const abortRef=useRef(null);
   const [choiceId,setChoiceId]=useState("");
   const chosen=result?(choice==="alternate"?result.alternate:choice==="shorter"?result.candidates.find(c=>c.id===choiceId):result.best):null;
-  const change=fn=>v=>{requestId.current++;abortRef.current?.abort();fn(v);setResult(null);setRoad(null);setRouteGeometry(null);};
+  const change=fn=>v=>{requestId.current++;abortRef.current?.abort();fn(v);setCopied(false);setResult(null);setRoad(null);setRouteGeometry(null);};
   const submit=e=>{
     e.preventDefault();
     const next=planFoodDay({data:foodData,venues,origin:{...origins["Traverse City"],address:"Traverse City, MI"},
@@ -67,6 +69,17 @@ export default function FoodDayDecision(){
     if(!shorter)return;
     setChoiceId(shorter.id);setChoice("shorter");setRoad(null);setRouteGeometry(null);
   };
+  // Reuse explicit visitor inputs in a shared plan without automatic promises.
+  useEffect(()=>{
+    const params=new URLSearchParams(window.location.search);
+    const d=params.get("visit"),t=params.get("start");
+    if(d&&/^\d{4}-\d{2}-\d{2}$/.test(d))setDate(d);
+    if(t&&/^([01]\d|2[0-3]):[0-5]\d$/.test(t))setStartTime(t);
+    const w=Number(params.get("window")),p=Number(params.get("party"));
+    if([180,210,240].includes(w))setMinutes(w);
+    if(Number.isInteger(p)&&p>=1&&p<=8)setParty(p);
+    if(params.get("wineryOnly")==="1")setStrict(true);
+  },[]);
   // A checked route is part of the decision, not a second action users must find.
   // Request IDs prevent an old route response from replacing a newer choice.
   useEffect(()=>{
@@ -109,6 +122,24 @@ export default function FoodDayDecision(){
   const more=chosen?.winery;
   const routeGood=road?.routeType==="ROAD_PROVIDER_ESTIMATE";
   const veto=["TIME_CONFLICT","HOURS_CONFLICT","KITCHEN_CLOSED","SOURCE_CONFLICT","DATE_EXCEPTION"].includes(road?.state);
+  const wineHandoff=chosen?.wineryIds?.length
+    ? "/old-mission-peninsula-wineries"+buildWinePlanHash({
+        origin:"Traverse City",date,start:startTime,doneBy:"",pace:"standard",
+        area:"old-mission",beverages:["wine"],selected:chosen.wineryIds
+      }):null;
+  async function sharePlan(){
+    if(!chosen)return;
+    const params=new URLSearchParams({visit:date,start:startTime,window:String(minutes),
+      party:String(party),wineryOnly:strict?"1":"0"});
+    const link=window.location.origin+window.location.pathname+"?"+params.toString();
+    const note="Old Mission lunch research: "+chosen.locationName+
+      ". "+date+" from "+startTime+". "+chosen.reason+
+      " Confirm kitchen hours and seating with the operator. "+link;
+    try{await navigator.clipboard.writeText(note);setCopied(true);
+      trackWineEvent("wine_food_plan_copied",{context:"wineries_food"});
+    }catch{setCopied(false)}
+  }
+
   return (
     <section className="food-v7" aria-labelledby="food-v7-title">
       <div className="food-v7-intro">
@@ -161,11 +192,14 @@ export default function FoodDayDecision(){
             <a href={chosen.reservationUrl||chosen.sourceUrl} target="_blank" rel="noopener noreferrer" onClick={()=>trackWineEvent("wine_food_operator_opened",{context:"wineries_food"})}>{chosen.reservationUrl?"Check seating on operator booking page":"Official service & contact"} <span aria-hidden="true">↗</span></a>
             <button type="button" onClick={()=>checkRoad(chosen)} disabled={loading}>{loading?"Checking road route…":"Recheck road times"}</button>
             <a href={chosen.drivingUrl} target="_blank" rel="noopener noreferrer" onClick={()=>trackWineEvent("wine_food_directions_opened",{context:"wineries_food"})}>Open directions ↗</a>
+            {wineHandoff&&<a href={wineHandoff} onClick={()=>trackWineEvent("wine_food_winery_handoff",{context:"wineries_food"})}>Inspect wineries in full planner ↗</a>}
+            <button type="button" onClick={sharePlan}>{copied?"Plan notes copied":"Copy plan & verification notes"}</button>
+
           </div>
           {result.alternate&&<button type="button" className="food-v7-alt" onClick={pickAlternate}>
             {choice==="alternate"?"Back to suggested route":"Compare: "+result.alternate.locationName}
           </button>}
-          <p className="food-v7-fine">Menu/source reviewed {chosen.sourceVerifiedAt}; review due {chosen.reviewDue}. Plan does not check table availability, traffic or reservations. Arrange safe transportation for wine tastings.</p>
+          <p className="food-v7-fine">Menu/source reviewed {chosen.sourceVerifiedAt}; review due {chosen.reviewDue}. The full winery planner carries the wine stops only: <strong>your meal, booking and its kitchen-hour verification are not transferred</strong>. This plan does not check table availability, traffic or reservations. Arrange safe transportation for wine tastings.</p>
         </>:<>
           <h3>{labels[result.state]||"No verified option for this window"}</h3>
           <p>{result.reason} We will not substitute a snack board for a full lunch or invent a reservation.</p>
