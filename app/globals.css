@@ -1725,3 +1725,16 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
   .data-hero-stats,.data-town-grid{grid-template-columns:1fr}
   .data-actions button,.data-actions a{width:100%;box-sizing:border-box}
 }
+
+
+/* ---------- Phone usability fix (Oct 13 2026) ----------
+   The home planner shell is a fixed 100vh column on desktop. On phones the stacked map
+   (52vh) plus the stops panel is taller than that, so the panel was clipped to ~80px and
+   the article below printed over it. Let the shell grow with its content on phones, and keep
+   the first screen to the choices that matter (beverage, start, date, time) with sights and
+   area behind "More filters". */
+@media (max-width:860px){
+  .planner-shell:not(.planner-shell-embedded){height:auto;min-height:0}
+  #plan{overflow:visible;max-height:none}
+  #controls.hide-adv .grp.adv-phone{display:none}
+}
