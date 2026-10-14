@@ -232,3 +232,11 @@
   .food-v7-actions a,.food-v7-actions button,.food-v7-alt{width:100%;text-align:center}
   .wine-food-route-map{height:48vh;min-height:320px}
 }
+
+/* Food V8: search answers and road check visibly support the same decision. */
+.food-v7-checking{margin:10px 0;padding:9px 12px;background:#edf3f0;border-left:3px solid #3f7063;color:#334b46;font-weight:700;font-size:.8rem}
+.wine-food-questions{margin:26px 0 34px;padding:clamp(16px,3vw,26px);border:1px solid var(--line);border-radius:12px;background:#fff}
+.wine-food-questions h2{margin-top:0!important}
+.wine-food-questions h3{margin-top:20px!important}
+.wine-food-questions p{max-width:72ch;overflow-wrap:break-word}
+.wine-food-questions a{color:var(--wine);font-weight:700}

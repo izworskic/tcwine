@@ -40,9 +40,10 @@ export default function Page() {
         <h2>How do you tour Old Mission Peninsula wineries in one day?</h2>
         <p><strong>The practical answer:</strong> start in Traverse City, choose two or three tasting rooms along Center Road, then stay on the peninsula. It is a shorter, more coherent day than trying to cross into Leelanau between tastings. Allow 45–60 minutes per winery plus real driving, a meal and any required reservations.</p>
         <p>We opened an actual October wine weekend at <Link href="/winery/bonobo">Bonobo Winery</Link> before spending the next day in Leelanau. <Link href="/leelanau-wine-weekend">Read the firsthand weekend</Link> and compare it with the suggested <Link href="/one-day-itineraries">three-winery Old Mission loop</Link>.</p>
+        <p><strong>Planning around lunch?</strong> A tasting-room food label is not proof that a kitchen is serving at noon. Our <Link href="/traverse-city-wineries-with-food#food-v7-title">Old Mission food-and-wine decision engine</Link> separates full meals from small plates, checks documented hours and proposes one meal plus no more than one additional tasting.</p>
         <nav className="wine-search-actions" aria-label="Related Old Mission winery guides">
           <Link href="/best-traverse-city-wineries-with-views">Wineries with bay views</Link>
-          <Link href="/traverse-city-wineries-with-food">Wineries serving food</Link>
+          <Link href="/traverse-city-wineries-with-food#food-v7-title">Find a real lunch and winery route</Link>
           <Link href="/leelanau-peninsula-wine-trail">Compare with Leelanau</Link>
         </nav>
       </section>
@@ -67,7 +68,7 @@ export default function Page() {
             {v.officialTrail ? <span className="inline-trail-badge">Official trail member</span> : null}
             {v.note ? ": " + v.note : ""}
             {v.specialties && v.specialties.length ? " Known for " + v.specialties.join(", ") + "." : ""}
-            {v.food ? " Food on site: " + v.food + "." : ""}
+            {v.food ? " Directory food note (confirm kitchen service): " + v.food + "." : ""}
           </li>
         ))}
       </ul>

@@ -1,7 +1,7 @@
 {
   "version": "7.0.0-foundation",
   "reviewedAt": "2026-10-13",
-  "method": "Official operator evidence only. Meal service hours are distinct from venue opening hours. Conflict, freshness and unknown states are never treated as confirmed availability. Coordinates for reviewed wineries are inherited from mapped venue inventory; Peninsula Grill point is grounded in independent geolocated listings. These are pins, not road timings.",
+  "method": "Official operator evidence only. Meal service hours are distinct from venue opening hours. Conflict, freshness and unknown states are never treated as confirmed availability. Coordinates for reviewed wineries are inherited from mapped venue inventory; Peninsula Grill point is grounded in independent geolocated listings. These are pins, not road timings. Booking links are operator-published destinations and never confirm table inventory.",
   "locations": [
     {
       "locationId": "brys-estate",
@@ -30,13 +30,14 @@
           "hoursBasis": "UNKNOWN",
           "hoursScope": "UNKNOWN",
           "reservation": "RECOMMENDED",
-          "reservationUrl": "https://brysestate.com/visit_tastingroom/",
+          "reservationUrl": "https://www.exploretock.com/brysestatevineyardwinery",
           "verifiedAt": "2026-10-13",
           "reviewDue": "2026-10-27",
           "conflicts": [],
-          "note": "Seated tasting-room experience has substantial menu items. Food-service hours are not independently published; the tasting-room timetable is not a kitchen timetable.",
+          "note": "Seated tasting-room experience has substantial menu items. Food-service hours are not independently published; the tasting-room timetable is not a kitchen timetable. The published Brys reservation link goes directly to Tock; selecting it does not establish open tables.",
           "partyMaxRecommended": 6,
-          "evidence": "Official seated experience names sandwiches and salads; menu PDF is available separately."
+          "evidence": "Official seated experience names sandwiches and salads; menu PDF is available separately.",
+          "reservationSourceUrl": "https://brysestate.com/visit_tastingroom/"
         },
         {
           "serviceId": "brys-lawn-snacks",

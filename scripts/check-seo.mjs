@@ -156,3 +156,13 @@ assert.match(foodLayoutStyles,/\.wine-food-page \.planner-shell-embedded #main\s
 assert.match(foodLayoutStyles,/\.wine-food-page \.planner-shell-embedded #map\s*\{[\s\S]*?width:100%;[\s\S]*?height:clamp\(/);
 assert.match(foodLayoutStyles,/\.wine-food-page \.planner-shell-embedded #plan\s*\{[\s\S]*?width:100%;\s*max-width:none;[\s\S]*?border-top:1px solid var\(--line\)/);
 console.log("Food page full-width map above selections responsive layout checks passed.");
+
+const foodDecisions=await read("../components/FoodDayDecision.js");
+assert.match(food,/Can you actually eat lunch at a Traverse City winery/);
+assert.match(food,/Does Bonobo Winery serve a full lunch/);
+assert.match(foodDecisions,/Check seating on operator booking page/);
+assert.match(home,/meal-first Old Mission decision engine/);
+assert.match(oldMission,/Old Mission food-and-wine decision engine/);
+assert.match(leelanau,/Old Mission only/);
+assert.doesNotMatch(home,/28 wineries with on-site food/);
+console.log("V8 cross-page meal-journey and query-first entry tests passed.");

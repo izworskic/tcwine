@@ -71,3 +71,22 @@ assert.match(files[2],/scrollWheelZoom:false/);
 assert.match(files[2],/dashArray/);
 assert.match(files[3],/\.wine-food-route-map/);
 console.log("Food V7 day planner: source, hard-gate, route, 3–4h, tablet-map and progressive UI tests passed.");
+
+// V8 coupling: winery-map handoff carries both the meal winery and any extra tasting.
+assert.ok(plan.best.wineryIds.includes("brys-estate"));
+assert.ok(plan.best.wineryIds.length<=2);
+assert.ok(plan.candidates.every(x=>x.wineryIds.length<=2));
+assert.equal(planFoodDay({...args,startTime:"23:45"}).state,"NO_VERIFIED_FULL_MEAL");
+// A known conflicting source cannot outrank a less glamorous unconflicted lunch.
+const trust=planFoodDay({...args,startTime:"12:00",asOf:"2026-10-21"});
+assert.ok(!trust.best||trust.best.status!=="SOURCE_CONFLICT"||
+  trust.candidates.every(c=>["SOURCE_STALE","SOURCE_CONFLICT"].includes(c.status)));
+assert.ok(["RESEARCH_ONLY","CALL_TO_CONFIRM"].includes(trust.state));
+const decision=await readFile(new URL("../components/FoodDayDecision.js",import.meta.url),"utf8");
+assert.match(decision,/void checkRoad\(chosen\)/);
+assert.match(decision,/AbortController/);
+assert.match(decision,/routeRequestId|requestId/);
+assert.match(decision,/buildWinePlanHash/);
+assert.match(decision,/your meal, booking and its kitchen-hour verification are not transferred/);
+assert.match(decision,/Copy plan & verification notes/);
+console.log("V8 automatic road verification, honest handoff and late-hour safety checks passed.");
