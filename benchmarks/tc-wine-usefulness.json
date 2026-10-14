@@ -1,0 +1,754 @@
+{
+  "runs": [
+    {
+      "label": "baseline",
+      "driver": "baseline",
+      "factors": {
+        "react": 20,
+        "fit": 30,
+        "hours": 15,
+        "firstScreen": 12,
+        "evidence": 13,
+        "facts": 10
+      },
+      "firstScreen": {
+        "mapTop": 408,
+        "vh": 844,
+        "questionsBeforeMap": 5,
+        "imageInTwoScreens": false
+      },
+      "loss": 0.292,
+      "results": [
+        {
+          "persona": "first-timer-couple",
+          "weight": 25,
+          "name": "First-timer couple, Saturday, from Traverse City",
+          "reachable": true,
+          "actions": 2,
+          "secs": 1.1,
+          "stops": [
+            "peninsula-cellars",
+            "brys-estate",
+            "chateau-chantal",
+            "2-lads"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 0,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              true
+            ],
+            [
+              "one peninsula",
+              true
+            ],
+            [
+              "under 100 min driving",
+              true
+            ]
+          ],
+          "loss": 0.17
+        },
+        {
+          "persona": "group-of-8",
+          "weight": 12,
+          "name": "Group of 8 with a shuttle, needs food and reservations",
+          "reachable": true,
+          "actions": 2,
+          "secs": 0.4,
+          "stops": [
+            "peninsula-cellars",
+            "brys-estate",
+            "chateau-chantal",
+            "2-lads"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3-4 stops",
+              true
+            ],
+            [
+              "a stop with food",
+              true
+            ],
+            [
+              "shuttle or driver advice",
+              true
+            ]
+          ],
+          "loss": 0.04
+        },
+        {
+          "persona": "wine-enthusiast",
+          "weight": 10,
+          "name": "Enthusiast: Riesling + Cabernet Franc, small producers",
+          "reachable": true,
+          "actions": 6,
+          "secs": 1.5,
+          "stops": [
+            "northern-natural-cider-house",
+            "rove-estate",
+            "left-foot-charley"
+          ],
+          "scores": {
+            "react": 0.3,
+            "fit": 0.6666666666666666,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 0,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              false
+            ],
+            [
+              "every stop pours Riesling or Cab Franc",
+              true
+            ],
+            [
+              "not just the biggest labels",
+              true
+            ]
+          ],
+          "loss": 0.41
+        },
+        {
+          "persona": "fall-color",
+          "weight": 14,
+          "name": "Fall-color weekend driver, wants views",
+          "reachable": true,
+          "actions": 3,
+          "secs": 0.7,
+          "stops": [
+            "northern-natural-cider-house",
+            "left-foot-charley",
+            "the-barrel-room"
+          ],
+          "scores": {
+            "react": 0.8,
+            "fit": 0.3333333333333333,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 0,
+            "facts": 0
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              false
+            ],
+            [
+              "2+ with bay or lake views",
+              false
+            ],
+            [
+              "one peninsula",
+              true
+            ]
+          ],
+          "loss": 0.51
+        },
+        {
+          "persona": "family-non-drinker",
+          "weight": 8,
+          "name": "Family, non-drinking driver: food and a beach",
+          "reachable": true,
+          "actions": 7,
+          "secs": 1.6,
+          "stops": [
+            "northern-natural-cider-house",
+            "clinch-park",
+            "the-barrel-room",
+            "left-foot-charley"
+          ],
+          "scores": {
+            "react": 0.3,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 0,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "has a sight stop",
+              true
+            ],
+            [
+              "has a food stop",
+              true
+            ],
+            [
+              "4 stops or fewer",
+              true
+            ]
+          ],
+          "loss": 0.31
+        },
+        {
+          "persona": "open-now",
+          "weight": 8,
+          "name": "Open right now, Wednesday 2:00 PM, on the phone",
+          "reachable": true,
+          "actions": 4,
+          "secs": 0.9,
+          "stops": [
+            "northern-natural-cider-house",
+            "rove-estate",
+            "left-foot-charley"
+          ],
+          "scores": {
+            "react": 0.6,
+            "fit": 0.6666666666666666,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 0,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "nothing in the past",
+              true
+            ],
+            [
+              "2+ stops",
+              true
+            ],
+            [
+              "each open 45+ min after arrival",
+              false
+            ]
+          ],
+          "loss": 0.35
+        },
+        {
+          "persona": "beer-cider",
+          "weight": 6,
+          "name": "Beer and cider group in Traverse City, Friday",
+          "reachable": true,
+          "actions": 6,
+          "secs": 1.5,
+          "stops": [
+            "mackinaw-brewing",
+            "taproot-cider-house",
+            "northern-natural-cider-house"
+          ],
+          "scores": {
+            "react": 0.3,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ stops",
+              true
+            ],
+            [
+              "all breweries or cideries",
+              true
+            ],
+            [
+              "no wineries",
+              true
+            ]
+          ],
+          "loss": 0.18
+        },
+        {
+          "persona": "local-weekday",
+          "weight": 5,
+          "name": "Local on a Monday, wants to know who is open",
+          "reachable": true,
+          "actions": 4,
+          "secs": 0.9,
+          "stops": [
+            "northern-natural-cider-house",
+            "left-foot-charley",
+            "the-barrel-room"
+          ],
+          "scores": {
+            "react": 0.6,
+            "fit": 0.6666666666666666,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 0,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "2+ stops",
+              true
+            ],
+            [
+              "all open Monday",
+              false
+            ],
+            [
+              "no past times",
+              true
+            ]
+          ],
+          "loss": 0.35
+        },
+        {
+          "persona": "based-in-leland",
+          "weight": 8,
+          "name": "Staying in Leland, Saturday",
+          "reachable": true,
+          "actions": 4,
+          "secs": 0.9,
+          "stops": [
+            "verterra-leland",
+            "good-harbor",
+            "laurentide-winery"
+          ],
+          "scores": {
+            "react": 0.6,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 0.67,
+            "evidence": 0,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              true
+            ],
+            [
+              "all within 15 mi of Leland",
+              true
+            ],
+            [
+              "says back to Leland",
+              true
+            ]
+          ],
+          "loss": 0.25
+        },
+        {
+          "persona": "dog-owner",
+          "weight": 4,
+          "name": "Dog owner, Saturday",
+          "reachable": false,
+          "actions": 0,
+          "secs": null,
+          "stops": [],
+          "scores": {
+            "react": 0,
+            "fit": 0,
+            "hours": 0,
+            "firstScreen": 0.67,
+            "evidence": 1,
+            "facts": 0
+          },
+          "fitDetail": [],
+          "loss": 0.79
+        }
+      ]
+    },
+    {
+      "label": "after",
+      "driver": "after",
+      "factors": {
+        "react": 20,
+        "fit": 30,
+        "hours": 15,
+        "firstScreen": 12,
+        "evidence": 13,
+        "facts": 10
+      },
+      "firstScreen": {
+        "mapTop": 593,
+        "vh": 844,
+        "questionsBeforeMap": 3,
+        "imageInTwoScreens": true
+      },
+      "loss": 0.008,
+      "results": [
+        {
+          "persona": "first-timer-couple",
+          "weight": 25,
+          "name": "First-timer couple, Saturday, from Traverse City",
+          "reachable": true,
+          "actions": 1,
+          "secs": 0.5,
+          "stops": [
+            "peninsula-cellars",
+            "chateau-grand-traverse",
+            "brys-estate"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              true
+            ],
+            [
+              "one peninsula",
+              true
+            ],
+            [
+              "under 100 min driving",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "group-of-8",
+          "weight": 12,
+          "name": "Group of 8 with a shuttle, needs food and reservations",
+          "reachable": true,
+          "actions": 1,
+          "secs": 0.3,
+          "stops": [
+            "chateau-grand-traverse",
+            "brys-estate",
+            "tabone",
+            "bowers-harbor"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3-4 stops",
+              true
+            ],
+            [
+              "a stop with food",
+              true
+            ],
+            [
+              "shuttle or driver advice",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "wine-enthusiast",
+          "weight": 10,
+          "name": "Enthusiast: Riesling + Cabernet Franc, small producers",
+          "reachable": true,
+          "actions": 4,
+          "secs": 1.8,
+          "stops": [
+            "brys-estate",
+            "peninsula-cellars",
+            "mari-vineyards"
+          ],
+          "scores": {
+            "react": 0.6,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              true
+            ],
+            [
+              "every stop pours Riesling or Cab Franc",
+              true
+            ],
+            [
+              "not just the biggest labels",
+              true
+            ]
+          ],
+          "loss": 0.08
+        },
+        {
+          "persona": "fall-color",
+          "weight": 14,
+          "name": "Fall-color weekend driver, wants views",
+          "reachable": true,
+          "actions": 1,
+          "secs": 0.3,
+          "stops": [
+            "mari-vineyards",
+            "brys-estate",
+            "hawthorne-vineyards"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              true
+            ],
+            [
+              "2+ with bay or lake views",
+              true
+            ],
+            [
+              "one peninsula",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "family-non-drinker",
+          "weight": 8,
+          "name": "Family, non-drinking driver: food and a beach",
+          "reachable": true,
+          "actions": 1,
+          "secs": 0.3,
+          "stops": [
+            "bowers-harbor",
+            "brys-estate",
+            "chateau-grand-traverse",
+            "center-road-overlook"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "has a sight stop",
+              true
+            ],
+            [
+              "has a food stop",
+              true
+            ],
+            [
+              "4 stops or fewer",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "open-now",
+          "weight": 8,
+          "name": "Open right now, Wednesday 2:00 PM, on the phone",
+          "reachable": true,
+          "actions": 1,
+          "secs": 0.3,
+          "stops": [
+            "black-star-farms-old-mission",
+            "mari-vineyards",
+            "hawthorne-vineyards"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "nothing in the past",
+              true
+            ],
+            [
+              "2+ stops",
+              true
+            ],
+            [
+              "each open 45+ min after arrival",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "beer-cider",
+          "weight": 6,
+          "name": "Beer and cider group in Traverse City, Friday",
+          "reachable": true,
+          "actions": 1,
+          "secs": 0.3,
+          "stops": [
+            "taproot-cider-house",
+            "tank-space-on-8th",
+            "silver-spruce"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ stops",
+              true
+            ],
+            [
+              "all breweries or cideries",
+              true
+            ],
+            [
+              "no wineries",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "local-weekday",
+          "weight": 5,
+          "name": "Local on a Monday, wants to know who is open",
+          "reachable": true,
+          "actions": 2,
+          "secs": 0.6,
+          "stops": [
+            "black-star-farms-old-mission",
+            "mari-vineyards",
+            "hawthorne-vineyards"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "2+ stops",
+              true
+            ],
+            [
+              "all open Monday",
+              true
+            ],
+            [
+              "no past times",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "based-in-leland",
+          "weight": 8,
+          "name": "Staying in Leland, Saturday",
+          "reachable": true,
+          "actions": 2,
+          "secs": 0.6,
+          "stops": [
+            "silver-leaf",
+            "leelanau-wine-cellars",
+            "dune-bird"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              true
+            ],
+            [
+              "all within 15 mi of Leland",
+              true
+            ],
+            [
+              "says back to Leland",
+              true
+            ]
+          ],
+          "loss": 0
+        },
+        {
+          "persona": "dog-owner",
+          "weight": 4,
+          "name": "Dog owner, Saturday",
+          "reachable": true,
+          "actions": 1,
+          "secs": 0.3,
+          "stops": [
+            "rove-estate",
+            "chateau-fontaine",
+            "gilchrist-farm"
+          ],
+          "scores": {
+            "react": 1,
+            "fit": 1,
+            "hours": 1,
+            "firstScreen": 1,
+            "evidence": 1,
+            "facts": 1
+          },
+          "fitDetail": [
+            [
+              "3+ wineries",
+              true
+            ],
+            [
+              "every stop dog-friendly",
+              true
+            ],
+            [
+              "says dog-friendly",
+              true
+            ]
+          ],
+          "loss": 0
+        }
+      ]
+    }
+  ]
+}

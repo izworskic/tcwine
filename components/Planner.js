@@ -7,6 +7,8 @@ import poisData from "@/data/pois.json";
 import originsData from "@/data/origins.json";
 import shuttleData from "@/data/shuttle.json";
 import { trackWineEvent } from "@/lib/wine-analytics";
+import { INTENTS, intentById, pickStops, passesNeeds, ceil15, VIEW_WATER } from "@/lib/wine-intents.mjs";
+import { PHOTOS, photoThumb } from "@/lib/regional-photos";
 import {
   buildWinePlanHash,
   normalizeWinePlan,
@@ -84,7 +86,15 @@ export default function Planner({
         : embedded
           ? "embedded_map"
           : "winery_map_home";
-    const today = new Date().toISOString().slice(0,10);
+    const nowD = new Date();
+    const p2 = (n)=>String(n).padStart(2,"0");
+    const hhmm = (m)=>`${p2(Math.floor(m/60))}:${p2(m%60)}`;
+    const localDate = (d)=>`${d.getFullYear()}-${p2(d.getMonth()+1)}-${p2(d.getDate())}`;
+    const nowMin = nowD.getHours()*60+nowD.getMinutes();
+    const todayReal = localDate(nowD);
+    // Local date, not UTC (UTC flips to "tomorrow" at 8 PM Eastern). After 5 PM the useful day is tomorrow.
+    const today = nowMin>=17*60 ? localDate(new Date(nowD.getTime()+864e5)) : todayReal;
+    const defaultStart = (nowMin>=8*60 && nowMin<=16*60) ? hhmm(Math.max(ceil15(nowMin),10*60)) : "11:00";
     const winePlanOptions = {
       validOrigins: Object.keys(ORIGINS),
       validIds: ALL.map((v)=>v.id),
@@ -97,10 +107,11 @@ export default function Planner({
       poiKinds:new Set(Array.isArray(preset.poiKinds) ? preset.poiKinds : []),
       area:["any","leelanau","old-mission","traverse-city"].includes(preset.area) ? preset.area : "any",
       origin:ORIGINS[preset.origin] ? preset.origin : "Traverse City",
-      date:today, start:"11:00", doneBy:"18:00",
+      date:today, start:defaultStart, doneBy:"18:00",
       pace:"standard", dd:false, suggestN:3,
       selected:Array.isArray(preset.selected) ? preset.selected.filter((id)=>byId(id)) : [],
-      mode:"choose", scheduled:null
+      mode:"choose", scheduled:null,
+      must:{dog:false,food:false,view:false}, userMust:{}, intent:null, auto:false, why:{}, notice:""
     };
     const originPt = () => ORIGINS[state.origin];
     const initialSharedPlan = typeof window !== "undefined"
@@ -170,6 +181,8 @@ export default function Planner({
       const db=document.getElementById("doneByInput"); if(db) db.value=state.doneBy;
       const pace=document.getElementById("paceChips"); if(pace)[...pace.children].forEach((el)=>el.classList.toggle("chip-on",el.dataset.pace===state.pace));
       const dd=document.getElementById("ddToggle"); if(dd) dd.checked=state.dd;
+      const ic=document.getElementById("intentChips"); if(ic)[...ic.children].forEach((c)=>{ const on=c.dataset.intent===state.intent; c.classList.toggle("chip-on",on); c.setAttribute("aria-pressed",on?"true":"false"); });
+      const nc=document.getElementById("needChips"); if(nc)[...nc.children].forEach((c)=>{ const on=!!state.must[c.dataset.need]; c.classList.toggle("chip-on",on); c.setAttribute("aria-pressed",on?"true":"false"); });
       buildStyleCloud();
     }
 
@@ -300,6 +313,7 @@ export default function Planner({
         if(state.beverages.size && ![...v.beverages].some((b)=>state.beverages.has(b))) return false;
         if(state.styles.size && !v.tags.some((t)=>state.styles.has(t))) return false;
         if(!isOpen(v,day,state.date)) return false;
+        if(!passesNeeds(v,state.must)) return false;
         return true;
       });
     }
@@ -308,6 +322,7 @@ export default function Planner({
       return POIS.filter((p)=>{
         if(state.area!=="any" && p.area!==state.area) return false;
         if(!state.poiKinds.has(p.kind)) return false;
+        if(state.must.dog && p.dogFriendly!==true) return false;
         if(!isOpen(p,day,state.date)) return false;
         return true;
       });
@@ -326,6 +341,7 @@ export default function Planner({
     function toggleSelect(id){
       const wasIn = state.selected.includes(id);
       const item = byId(id);
+      state.auto = false;
       if(wasIn) state.selected = state.selected.filter((x)=>x!==id);
       else state.selected = [...state.selected, id];
       if(item) trackWineEvent("wine_stop_toggled", {
@@ -337,14 +353,99 @@ export default function Planner({
       if(state.mode==="day"){ buildDay(); }
       else { renderPanel(); drawMap(); if(!wasIn){ const m=markerById[id]; if(m && m.openPopup) m.openPopup(); } }
     }
+    function wineOnlyMode(){ return state.beverages.size===1 && state.beverages.has("wine"); }
+    function smartPick(n, intent, keep){
+      const date=state.date, day=dayName(date);
+      const pool=candidates();
+      const r=pickStops({ pool, windowFor:(v)=>windowFor(v,day,date), legMin, origin:originPt(), startMin:toMin(state.start),
+        finishMin:toMin(state.doneBy)||1080, n, area:state.area, styles:state.styles, bonus:(intent&&intent.bonus)||(()=>0),
+        keep:keep||[], wineOnly:wineOnlyMode() });
+      return r.ids;
+    }
+    function whyFor(v){
+      const out=[];
+      if(VIEW_WATER.includes(v.view)) out.push(v.view==="bay"?"Bay view":"Lake view");
+      if(v.dogFriendly) out.push("Dogs welcome");
+      if(v.food) out.push("Food: "+v.food);
+      const hit=state.styles.size?v.tags.filter((t)=>state.styles.has(t)).map(prettyTag):[];
+      if(hit.length) out.push(hit.slice(0,2).join(" + "));
+      return out;
+    }
     function suggest(){
-      const p = candidates();
-      const have = state.selected.filter((id)=>p.find((v)=>v.id===id));
-      const need = Math.max(state.suggestN, have.length);
-      let sel=[...have], remaining=p.filter((v)=>!sel.includes(v.id));
-      let cur = sel.length ? coords(sel[sel.length-1]) : originPt();
-      while(sel.length<need && remaining.length){ remaining.sort((a,b)=>miles(cur,a)-miles(cur,b)); const pick=remaining.shift(); sel.push(pick.id); cur=coords(pick.id); }
-      state.selected = sel; renderPanel(); drawMap();
+      const keep=state.selected.filter((id)=>byId(id) && !byId(id).isPoi);
+      const intent=intentById(state.intent);
+      const need=Math.max(state.suggestN,keep.length);
+      const ids=smartPick(need,intent,keep);
+      const extras=state.selected.filter((id)=>byId(id) && byId(id).isPoi);
+      state.selected=ids.concat(extras); renderPanel(); drawMap();
+    }
+    function rerunIntent(){
+      const intent=intentById(state.intent); if(!intent) return false;
+      const ids=smartPick(intent.n,intent,[]);
+      let sel=ids.slice();
+      if(intent.sights && ids.length){
+        const prevKinds=state.poiKinds; state.poiKinds=new Set(intent.sights);
+        const sg=suggestSightFor(ids); state.poiKinds=prevKinds;
+        if(sg) sel=sel.concat(sg.id);
+      }
+      state.selected=sel; state.auto=true;
+      return sel.length>0;
+    }
+    function reflow(){
+      if(state.intent && state.auto){
+        if(rerunIntent()){ buildDay(); return; }
+        state.mode="choose"; state.notice="Nothing fits those choices on that day. Try another day, an earlier start, or fewer must-haves."; renderPanel(); drawMap(); return;
+      }
+      if(state.mode==="day") buildDay(); else { renderPanel(); drawMap(); }
+    }
+    function applyIntent(id){
+      const intent=intentById(id); if(!intent) return;
+      state.intent=id; state.auto=true; state.notice="";
+      state.styles=new Set();
+      state.area=intent.area||"any";
+      state.beverages=new Set(intent.beverages||["wine"]);
+      state.poiKinds=new Set(intent.sights||[]);
+      state.must={dog:false,food:false,view:false,...state.userMust,...(intent.must||{})};
+      state.doneBy="18:00";
+      if(intent.now){
+        state.date=todayReal;
+        if(nowMin>=15*60 && nowMin<19*60) state.doneBy="20:00";
+        if(nowMin>=19*60){ state.date=localDate(new Date(nowD.getTime()+864e5)); state.start="11:00"; state.notice="Everything is closed this late, so this is tomorrow's plan."; }
+        else state.start=hhmm(Math.max(ceil15(nowMin),10*60));
+      }
+      trackWineEvent("wine_intent_chosen",{ context:analyticsContext, intent:id });
+      syncControlsFromState(); setHero(intent.photo);
+      state.focusPlan=true;
+      reflow();
+    }
+    function focusPlan(){
+      if(window.innerWidth>860) return;
+      const el=document.getElementById("plan"); if(!el) return;
+      const top=el.getBoundingClientRect().top; if(top>window.innerHeight*0.6 || top<0) el.scrollIntoView({behavior:"smooth",block:"start"});
+    }
+    function setHero(kind){
+      if(!kind) return; const ph=PHOTOS[kind]; if(!ph) return;
+      const img=document.getElementById("heroImg"), cap=document.getElementById("heroCredit"); if(!img||!cap) return;
+      if(img.dataset.kind===kind) return; img.dataset.kind=kind; img.dataset.fb=""; img.onerror=()=>{ if(!img.dataset.fb){ img.dataset.fb="1"; img.src=ph.src; } }; img.src=photoThumb(ph); img.alt=ph.alt;
+      cap.innerHTML=`Photo: <a href="${ph.source}" target="_blank" rel="noopener noreferrer">${ph.credit}</a> · <a href="${ph.licenseUrl}" target="_blank" rel="noopener noreferrer">${ph.license}</a>`;
+    }
+    function toggleNeed(k){
+      state.must[k]=!state.must[k]; state.userMust[k]=state.must[k];
+      trackWineEvent("wine_need_toggled",{ context:analyticsContext, need:k, action:state.must[k]?"on":"off" });
+      syncControlsFromState();
+      if(!state.intent && state.mode==="choose" && !state.selected.length && state.must[k]){ applyIntent("first"); return; }
+      if(state.intent && state.auto) return reflow();
+      refreshChoose();
+    }
+    function togglePlanStyle(tag){
+      if(state.styles.has(tag)) state.styles.delete(tag); else state.styles.add(tag);
+      syncControlsFromState();
+      if(state.intent && state.auto) return reflow();
+      refreshChoose();
+    }
+    function emitState(){
+      try{ window.dispatchEvent(new CustomEvent("tcwine:state",{ detail:{ date:state.date, start:state.start, origin:state.origin,
+        originPt:originPt(), selected:state.selected.slice(), styles:[...state.styles], area:state.area, must:{...state.must} } })); }catch(e){}
     }
     function suggestSightFor(anchorIds){
       const kinds = state.poiKinds.size ? state.poiKinds : null;
@@ -438,6 +539,7 @@ export default function Planner({
         conflictCount: state.scheduled.conflicts.length + state.scheduled.overflow.length,
       });
       state.mode = "day"; renderPanel(); drawMap(); renderMyWineDay();
+      if(state.focusPlan){ state.focusPlan=false; focusPlan(); }
     }
     function removeAndRebuild(id){ state.selected = state.selected.filter((x)=>x!==id); if(state.selected.length) buildDay(); else { state.mode="choose"; renderPanel(); drawMap(); } }
 
@@ -570,7 +672,28 @@ export default function Planner({
     function locate(id){ const v=byId(id); if(!v) return; map.setView([v.lat,v.lng],12,{animate:true}); const m=markerById[id]; if(m && m.openPopup) m.openPopup(); }
     function emphasize(id,on){ const m=markerById[id]; if(m && m.setStyle){ m.setStyle(on?{radius:(m._baseR||5)+3,weight:(m._baseW||2)+1}:{radius:m._baseR||5,weight:m._baseW||2}); } }
 
-    function renderPanel(){ state.mode==="day" ? renderDay() : renderChoose(); }
+    function renderPanel(){ state.mode==="day" ? renderDay() : renderChoose(); emitState(); }
+    function grapeChips(){
+      const day=dayName(state.date); const count={};
+      VENUES.filter((v)=>v.category==="winery" && isOpen(v,day,state.date)).forEach((v)=>v.tags.forEach((t)=>{ if(STYLE_BEV[t]==="wine" && !["broad-lineup","small-batch","dry-whites","dry-reds","aromatic-whites"].includes(t)) count[t]=(count[t]||0)+1; }));
+      return Object.entries(count).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([t])=>t);
+    }
+    function planExtras(){
+      let h="";
+      if(state.notice) h+=`<div class="note notice" role="status">${state.notice}</div>`;
+      const intent=intentById(state.intent);
+      if(intent && intent.note==="lover"){
+        h+=`<div class="grape-pick"><div class="grape-h">Narrow by grape</div><div class="chips">`+grapeChips().map((t)=>`<button type="button" class="chip sty${state.styles.has(t)?" chip-on":""}" data-plan-style="${t}" aria-pressed="${state.styles.has(t)}">${prettyTag(t)}</button>`).join("")+`</div></div>`;
+      }
+      if(intent && intent.note==="group"){
+        h+=`<div class="note"><strong>Group of 6 or more:</strong> larger groups should call ahead for reservations, and hours shift with the season. For a driver, <a href="tel:${SHUTTLE.phone}">${SHUTTLE.name}</a> runs chauffeured tours.</div>`;
+      }
+      if(intent && intent.note==="family"){
+        h+=`<div class="note"><strong>Easy day:</strong> each stop serves food or snacks, and a beach or scenic stop is added so there is time outside. Hours shift with the season, so confirm before you go.</div>`;
+      }
+      if(state.must.dog) h+=`<div class="note"><strong>Dogs welcome:</strong> only places marked dog-friendly are shown. Policies change, so call ahead to confirm, especially for indoor tasting rooms.</div>`;
+      return h;
+    }
     function candRow(v, sel){
       if(v.isPoi){
         const fee = v.fee ? ` · ${v.fee}` : "";
@@ -592,7 +715,7 @@ export default function Planner({
       const plan = document.getElementById("plan");
       const cand = candidates(), poiC = poiCandidates(), selSet = new Set(state.selected);
       const ord = draftOrder(); const est = state.selected.length>=2 ? draftDriveMin(ord) : 0;
-      let html = `<div class="choose-head"><h2>Choose your stops</h2>
+      let html = planExtras() + `<div class="choose-head"><h2>Choose your stops</h2>
         <p>Tap a pin to see what it is and add it. As you pick, a draft loop is drawn so your stops line up with a route. Then build it and we time everything against real hours.</p></div>`;
       if(!state.selected.length){
         html += `<div class="starters"><div class="starters-h">New to the area? Start with a day, then make it your own.</div>`;
@@ -634,7 +757,7 @@ export default function Planner({
 
     function renderDay(){
       const plan = document.getElementById("plan"), s = state.scheduled;
-      let html = `<button id="backBtn" class="back">← Edit stops</button>`;
+      let html = `<button id="backBtn" class="back">← Edit stops</button>` + planExtras();
       if(!s || !s.fits.length){
         html += `<div class="empty"><p class="warn">None of your stops fit on ${dayName(state.date)} from ${pretty(toMin(state.start))}.</p>`;
         if(s && s.conflicts.length) html += `<p>Closed when you'd arrive: ${s.conflicts.map((c)=>byId(c.id).name).join(", ")}.</p>`;
@@ -667,16 +790,20 @@ export default function Planner({
               <div class="stop-actions"><a class="act go leaf" href="${v.directionsUrl}" target="_blank" rel="noopener">Navigate</a>
                 <button class="act danger" data-remove="${v.id}">Remove</button></div></div></li>`;
         } else {
-          const tags = v.tags.slice(0,3).map((t)=>`<span class="tag">${prettyTag(t)}</span>`).join("");
+          const ordered = v.tags.slice().sort((a,b)=>(state.styles.has(b)?1:0)-(state.styles.has(a)?1:0));
+          const tags = ordered.slice(0,3).map((t)=>`<span class="tag ${state.styles.has(t)?'match':''}">${prettyTag(t)}</span>`).join("");
+          const badges = whyFor(v).map((b)=>`<span class="why">${b}</span>`).join("");
+          const isNow = state.date===todayReal && x.arrive<=nowMin+45 && nowMin>=toMin(v.hours?.[dayName(state.date)]?.open||"23:59") && nowMin<x.close;
           html += `<li class="stop" data-row="${v.id}">
             <div class="stop-num" style="color:${accent(v)}">${i+1}</div>
             <div class="stop-body">
               <div class="stop-head"><button class="stop-name" data-locate="${v.id}">${v.name}</button>
                 <span class="stop-time">${pretty(x.arrive)} – ${pretty(x.depart)}</span></div>
               <div class="stop-meta">${v.town} · ${v.beverages.map((b)=>`<span class="bev bev-${b}">${BEV_LABEL[b]}</span>`).join("")}</div>
+              ${badges?`<div class="stop-why">${badges}</div>`:""}
               <div class="stop-tags">${tags}</div>
               <div class="stop-note">${v.note}</div>
-              <div class="stop-hrs ${x.callAhead?'call':''}">${x.callAhead?"Hours vary, call ahead":`Open, closes ${pretty(x.close)}`}</div>
+              <div class="stop-hrs ${x.callAhead?'call':''}">${x.callAhead?"Hours vary, call ahead":`${isNow?"Open now, closes":"Open, closes"} ${pretty(x.close)}`}</div>
               <div class="stop-actions"><a class="act go" href="${v.directionsUrl}" target="_blank" rel="noopener">Navigate</a>
                 ${v.website?`<a class="act" href="${v.website}" target="_blank" rel="noopener">Website</a>`:""}
                 <button class="act danger" data-remove="${v.id}">Remove</button></div></div></li>`;
@@ -721,6 +848,13 @@ export default function Planner({
       if(!tags.length){ sc.innerHTML=`<span class="cloud-hint">No specific styles for those drinks.</span>`; return; }
       tags.forEach((t)=>{ const el=document.createElement("button"); el.className="chip sty"+(state.styles.has(t)?" chip-on":""); el.dataset.style=t; el.textContent=prettyTag(t); sc.appendChild(el); });
     }
+    function buildIntents(){
+      const ic=document.getElementById("intentChips"); if(ic){ ic.innerHTML="";
+        INTENTS.forEach((it)=>{ const el=document.createElement("button"); el.type="button"; el.className="chip intent"+(state.intent===it.id?" chip-on":""); el.dataset.intent=it.id;
+          el.innerHTML=`<span class="intent-name">${it.label}</span><span class="intent-sub">${it.sub}</span>`; el.setAttribute("aria-pressed",state.intent===it.id?"true":"false"); ic.appendChild(el); }); }
+      const nc=document.getElementById("needChips"); if(nc){ nc.innerHTML="";
+        [["dog","Dogs welcome"],["food","Food on site"],["view","Water views"]].forEach(([k,lab])=>{ const el=document.createElement("button"); el.type="button"; el.className="chip need"+(state.must[k]?" chip-on":""); el.dataset.need=k; el.textContent=lab; el.setAttribute("aria-pressed",state.must[k]?"true":"false"); nc.appendChild(el); }); }
+    }
     function buildChips(){
       const bc=document.getElementById("bevChips"); bc.innerHTML="";
       Object.keys(BEV_LABEL).forEach((b)=>{ const el=document.createElement("button"); el.className="chip"+(state.beverages.has(b)?" chip-on":""); el.dataset.bev=b; el.textContent=BEV_LABEL[b]; el.style.setProperty("--accent",CAT_COLOR[b]); bc.appendChild(el); });
@@ -737,7 +871,7 @@ export default function Planner({
       document.getElementById("timeInput").value=state.start;
       document.getElementById("doneByInput").value=state.doneBy;
     }
-    function refreshChoose(){ if(state.mode==="choose"){ renderPanel(); drawMap(); } else { drawMap(); } }
+    function refreshChoose(){ if(state.intent && state.auto){ reflow(); return; } if(state.mode==="choose"){ renderPanel(); drawMap(); } else { drawMap(); } }
     function wireEvents(){
       document.getElementById("bevChips").onclick=(e)=>{ const b=e.target.dataset.bev; if(!b) return;
         const turningOff = state.beverages.has(b);
@@ -757,14 +891,17 @@ export default function Planner({
         [...e.currentTarget.children].forEach((c)=>c.classList.toggle("chip-on",c.dataset.pace===p)); if(state.mode==="day") buildDay(); };
       document.getElementById("originSelect").onchange=(e)=>{ state.origin=e.target.value; refreshChoose(); };
       document.getElementById("dateInput").onchange=(e)=>{ state.date=e.target.value||state.date; refreshChoose(); };
-      document.getElementById("timeInput").onchange=(e)=>{ state.start=e.target.value||state.start; if(state.mode==="day") buildDay(); };
+      document.getElementById("timeInput").onchange=(e)=>{ state.start=e.target.value||state.start; if(state.intent && state.auto) reflow(); else if(state.mode==="day") buildDay(); };
       document.getElementById("doneByInput").onchange=(e)=>{ state.doneBy=e.target.value; if(state.mode==="day") buildDay(); };
       document.getElementById("ddToggle").onchange=()=>{ if(state.mode==="day") renderDay(); };
       document.getElementById("stopsInput").onchange=(e)=>{ state.suggestN=Math.min(6,Math.max(2,parseInt(e.target.value||"3",10))); if(state.mode==="choose") renderPanel(); };
+      const ich=document.getElementById("intentChips"); if(ich) ich.onclick=(e)=>{ const b=e.target.closest("[data-intent]"); if(b) applyIntent(b.dataset.intent); };
+      const nch=document.getElementById("needChips"); if(nch) nch.onclick=(e)=>{ const b=e.target.closest("[data-need]"); if(b) toggleNeed(b.dataset.need); };
       const moreToggle=document.getElementById("moreToggle");
       if(moreToggle) moreToggle.onclick=()=>{ const c=document.getElementById("controls"); const open=c.classList.toggle("hide-adv")===false; moreToggle.setAttribute("aria-expanded", open?"true":"false"); moreToggle.textContent = open?"Fewer filters":"More filters"; };
       const plan=document.getElementById("plan");
       plan.onclick=(e)=>{ const t=e.target.closest("[data-toggle],[data-remove],[data-locate],button"); if(!t) return;
+        if(t.dataset && t.dataset.planStyle) return togglePlanStyle(t.dataset.planStyle);
         if(t.dataset && t.dataset.starter) return loadStarter(t.dataset.starter);
         if(t.dataset && t.dataset.remove) return removeAndRebuild(t.dataset.remove);
         if(t.dataset && t.dataset.toggle) return toggleSelect(t.dataset.toggle);
@@ -802,7 +939,7 @@ export default function Planner({
       };
     }
 
-    buildChips(); syncControlsFromState(); wireEvents(); initMap(); renderPanel(); renderMyWineDay();
+    buildChips(); buildIntents(); syncControlsFromState(); wireEvents(); initMap(); renderPanel(); renderMyWineDay();
     trackWineEvent("wine_map_loaded", {
       context: analyticsContext,
       area: state.area,
@@ -818,12 +955,25 @@ export default function Planner({
       });
       buildDay();
     }
-    return () => { if (map) { map.remove(); map = null; } };
+    const onLensToggle=(e)=>{ if(e.detail && byId(e.detail.id)) toggleSelect(e.detail.id); };
+    const onLensStyle=(e)=>{ if(e.detail && e.detail.tag) togglePlanStyle(e.detail.tag); };
+    const onLensTime=(e)=>{ if(!e.detail||!e.detail.time) return; state.start=e.detail.time; const ti=document.getElementById("timeInput"); if(ti) ti.value=state.start; if(state.intent && state.auto) reflow(); else if(state.mode==="day") buildDay(); else emitState(); };
+    window.addEventListener("tcwine:toggle",onLensToggle); window.addEventListener("tcwine:style",onLensStyle); window.addEventListener("tcwine:time",onLensTime);
+    emitState();
+    return () => { window.removeEventListener("tcwine:toggle",onLensToggle); window.removeEventListener("tcwine:style",onLensStyle); window.removeEventListener("tcwine:time",onLensTime); if (map) { map.remove(); map = null; } };
   }, []);
 
   return (
     <>
-      <header className={embedded ? "planner-head embedded" : "planner-head"}>
+      <header className={embedded ? "planner-head embedded" : "planner-head has-hero"}>
+        {!embedded && (
+          <>
+            <img id="heroImg" className="hero-img" data-kind="oldMission" src={photoThumb(PHOTOS.oldMission)} alt={PHOTOS.oldMission.alt} decoding="async" fetchPriority="low" onError={(e) => { if (!e.currentTarget.dataset.fb) { e.currentTarget.dataset.fb = "1"; e.currentTarget.src = PHOTOS.oldMission.src; } }} />
+            <small id="heroCredit" className="hero-credit">
+              Photo: <a href={PHOTOS.oldMission.source} target="_blank" rel="noopener noreferrer">{PHOTOS.oldMission.credit}</a> · <a href={PHOTOS.oldMission.licenseUrl} target="_blank" rel="noopener noreferrer">{PHOTOS.oldMission.license}</a>
+            </small>
+          </>
+        )}
         <h2>{title}</h2>
         <p>{description}</p>
         {!embedded && (
@@ -844,14 +994,23 @@ export default function Planner({
         </div>
         <div id="myWineDayDrawer" className="my-wine-day-drawer" hidden></div>
       </section>
+      {!embedded && (
+        <section id="intents" className="intent-bar" data-qgroup aria-label="What kind of day are you planning?">
+          <div className="intent-label">What kind of day? <span>One tap builds it; change anything after.</span></div>
+          <div id="intentChips" className="intent-chips" role="group" aria-label="Kind of day"></div>
+          <div className="need-row"><span>Must have</span><div id="needChips" className="chips" role="group" aria-label="Must have"></div></div>
+        </section>
+      )}
       <section id="controls" className="hide-adv">
-        <div className="grp"><label>Tasting</label><div id="bevChips" className="chips"></div></div>
-        <div className="grp grow adv"><label>Styles (optional, pick any)</label><div id="styleCloud" className="chips style-cloud"></div></div>
-        <div className="grp adv-phone"><label>Add sights</label><div id="sightChips" className="chips"></div></div>
-        <div className="grp adv-phone"><label>Area</label><div id="areaChips" className="chips"></div></div>
+        <div className="trip-row" data-qgroup>
         <div className="grp"><label>Starting from</label><select id="originSelect"></select></div>
         <div className="grp"><label>Date</label><input type="date" id="dateInput" /></div>
         <div className="grp"><label>Start time</label><input type="time" id="timeInput" /></div>
+        </div>
+        <div className="grp adv-phone"><label>Tasting</label><div id="bevChips" className="chips"></div></div>
+        <div className="grp grow adv"><label>Styles (optional, pick any)</label><div id="styleCloud" className="chips style-cloud"></div></div>
+        <div className="grp adv-phone"><label>Add sights</label><div id="sightChips" className="chips"></div></div>
+        <div className="grp adv-phone"><label>Area</label><div id="areaChips" className="chips"></div></div>
         <div className="grp adv"><label>Done by</label><input type="time" id="doneByInput" /></div>
         <div className="grp small adv"><label>Suggest size</label><input type="number" id="stopsInput" min="2" max="6" defaultValue="3" /></div>
         <div className="grp adv"><label>Pace</label><div id="paceChips" className="chips"></div></div>

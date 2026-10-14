@@ -33,7 +33,8 @@ const [
   read("../app/old-mission-vs-leelanau-wineries/page.js"),
   read("../app/fall-color-wine-tour/page.js"),
   read("../app/sitemap.js"),
-  read("../components/RegionalPhoto.js"),
+  // Photo credits now live in lib/regional-photos.js (shared by RegionalPhoto and the planner hero).
+  read("../lib/regional-photos.js"),
   read("../app/venues/page.js"),
   read("../app/opengraph-image.js"),
   read("../lib/wine-analytics.js"),
