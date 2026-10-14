@@ -42,3 +42,9 @@ The site-wide goals are **1,000,000 impressions and 5% CTR**, neither achieved n
 - No invented live reservations or table times.
 - Search growth: monitor 28-day GSC non-branded queries, impressions, position and CTR plus meal-start / verdict / route-check / operator-click outcomes. Favor query-led content improvement over mass publishing.
 - Future expansion gate: Leelanau meal recommender requires official menu/hours reviews and fail-closed tests first.
+
+
+## Low-cost operational safeguards
+- Weekly GitHub Actions audit in .github/workflows/food-source-freshness.yml checks each official-service review deadline and lists unresolved venue-hour conflicts in its job logs. A stale record fails the audit; it **does not** automatically refresh verification timestamps, claim kitchen availability or trigger a Vercel build.
+- The existing analytics helper now duplicates only anonymized, allowlisted wine_food_* funnel events into the site's existing GA4 gtag. Individual visit dates, addresses, coordinates, copied plan notes and raw form content never flow to GA4 from this helper.
+- A source-deadline failure requires a person to verify operator pages and update evidence records. GitHub workflow alerts depend on repository notification settings; no notification is promised from ChatGPT.
