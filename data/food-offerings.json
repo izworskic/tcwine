@@ -1,7 +1,7 @@
 {
   "version": "7.0.0-foundation",
   "reviewedAt": "2026-10-13",
-  "method": "Official operator evidence only. Meal service hours are distinct from venue opening hours. Conflict, freshness and unknown states are never treated as confirmed availability.",
+  "method": "Official operator evidence only. Meal service hours are distinct from venue opening hours. Conflict, freshness and unknown states are never treated as confirmed availability. Coordinates for reviewed wineries are inherited from mapped venue inventory; Peninsula Grill point is grounded in independent geolocated listings. These are pins, not road timings.",
   "locations": [
     {
       "locationId": "brys-estate",
@@ -64,7 +64,10 @@
           "note": "Lawn Bar snack menu and seated tasting-room food are separate services.",
           "evidence": "Official Lawn Bar menu identifies snack items and distinguishes the areas."
         }
-      ]
+      ],
+      "lat": 44.8866667,
+      "lng": -85.5097222,
+      "geoSource": "venue-dataset"
     },
     {
       "locationId": "bonobo",
@@ -143,7 +146,10 @@
           "fullMealEvidence": false,
           "evidence": "Operator offers a reservable pairing distinct from walk-in small plates."
         }
-      ]
+      ],
+      "lat": 44.8603845,
+      "lng": -85.5233635,
+      "geoSource": "venue-dataset"
     },
     {
       "locationId": "jolly-pumpkin",
@@ -224,7 +230,10 @@
           "note": "Old Mission brewery/restaurant, not a winery. Weekday lunch must not be represented as available before resolving contradictory official hours.",
           "evidence": "Operator's full menu lists substantial dishes, but public pages disagree on weekday hours."
         }
-      ]
+      ],
+      "lat": 44.8861334,
+      "lng": -85.5284273,
+      "geoSource": "venue-dataset"
     },
     {
       "locationId": "peninsula-grill",
@@ -305,7 +314,10 @@
           "note": "Restaurant-only meal anchor. Lunch eligibility cannot be confirmed on Tuesday at noon; kitchen hours are not published separately.",
           "evidence": "Operator publishes substantial menu items and prices, with conflicting operating hours."
         }
-      ]
+      ],
+      "lat": 44.8929,
+      "lng": -85.5087,
+      "geoSource": "https://exploretraverse.com/places/peninsula-grill"
     },
     {
       "locationId": "chateau-chantal",
@@ -337,7 +349,10 @@
           "note": "Year-round small plates subject to availability; separately booked wine dinners are not a standard full lunch.",
           "evidence": "Operator's Visit Us page describes rotating charcuterie and smaller plates."
         }
-      ]
+      ],
+      "lat": 44.9195363,
+      "lng": -85.5020069,
+      "geoSource": "venue-dataset"
     }
   ]
 }
