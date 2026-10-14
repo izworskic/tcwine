@@ -22,7 +22,9 @@ import {
   writeLocalWinePlans,
 } from "@/lib/my-wine-day";
 
-const WINERY_COUNT = venuesData.filter((venue) => venue.category === "winery").length;
+const WINERIES = venuesData.filter((venue) => venue.category === "winery");
+const WINERY_COUNT = WINERIES.length;
+const AREA_COUNT = (area) => WINERIES.filter((venue) => venue.area === area).length;
 
 export default function Planner({
   preset = {},
@@ -826,10 +828,10 @@ export default function Planner({
         <p>{description}</p>
         {!embedded && (
           <div className="map-proof" aria-label="Map coverage">
-            <strong>40 wineries</strong>
-            <span>11 Old Mission</span>
-            <span>27 Leelanau</span>
-            <span>2 Traverse City</span>
+            <strong>{WINERY_COUNT} wineries</strong>
+            <span>{AREA_COUNT("old-mission")} Old Mission</span>
+            <span>{AREA_COUNT("leelanau")} Leelanau</span>
+            <span>{AREA_COUNT("traverse-city")} Traverse City</span>
             <em>Real-road routing · posted hours · no account</em>
           </div>
         )}
@@ -845,8 +847,8 @@ export default function Planner({
       <section id="controls" className="hide-adv">
         <div className="grp"><label>Tasting</label><div id="bevChips" className="chips"></div></div>
         <div className="grp grow adv"><label>Styles (optional, pick any)</label><div id="styleCloud" className="chips style-cloud"></div></div>
-        <div className="grp"><label>Add sights</label><div id="sightChips" className="chips"></div></div>
-        <div className="grp"><label>Area</label><div id="areaChips" className="chips"></div></div>
+        <div className="grp adv-phone"><label>Add sights</label><div id="sightChips" className="chips"></div></div>
+        <div className="grp adv-phone"><label>Area</label><div id="areaChips" className="chips"></div></div>
         <div className="grp"><label>Starting from</label><select id="originSelect"></select></div>
         <div className="grp"><label>Date</label><input type="date" id="dateInput" /></div>
         <div className="grp"><label>Start time</label><input type="time" id="timeInput" /></div>
