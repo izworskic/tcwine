@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import {execFileSync,spawnSync} from "node:child_process";
+import {readFile} from "node:fs/promises";
+const today=execFileSync(process.execPath,["scripts/audit-food-freshness.mjs","--as-of=2026-10-13"],{encoding:"utf8"});
+const report=JSON.parse(today);
+assert.equal(report.reviewedLocations,5);
+assert.equal(report.separateServices,7);
+assert.equal(report.expired.length,0);
+assert.equal(report.unresolvedConflicts.length,2);
+const late=spawnSync(process.execPath,["scripts/audit-food-freshness.mjs","--as-of=2026-11-15"],{encoding:"utf8"});
+assert.equal(late.status,1,"Expired records must fail the scheduled review gate");
+assert.match(late.stderr,/Human\/operator verification required/);
+const analytics=await readFile(new URL("../lib/wine-analytics.js",import.meta.url),"utf8");
+assert.match(analytics,/window.gtag\("event", name, safe\)/);
+assert.match(analytics,/const allowed = \["context","verdict","meal","region","duration","partyBucket","result"\]/);
+assert.doesNotMatch(analytics,/allowed = \[.*date.*\]/);
+console.log("V8 official-food freshness and privacy-scoped GA4 instrumentation passed.");
