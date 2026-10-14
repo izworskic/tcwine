@@ -7,6 +7,7 @@ import WineCountryWorld from "@/components/WineCountryWorld";
 import WineDayComposer from "@/components/WineDayComposer";
 import WineRegionDecision from "@/components/WineRegionDecision";
 import WineCountryNow from "@/components/WineCountryNow";
+import Fold from "@/components/Fold";
 import { buildVenueItemList } from "@/lib/venue-schema";
 import { HOURS_VERIFIED } from "@/components/VenueHours";
 
@@ -157,9 +158,14 @@ export default function Page() {
           <Link href="/venues">Posted hours</Link>
         </div>
         <WineCountryNow compact />
-        <WineDayComposer />
-        <WineCountryWorld />
-        <RegionalPhoto kind="chateau" />
+        <Fold title="Build a wine day by what you like to drink" hint="Pick a style and area; get up to three timed three-winery days" openOnWide>
+          <WineDayComposer />
+        </Fold>
+        <Fold title="Open up the peninsula" hint="Sights, food, beaches and harbor towns beyond the tasting rooms">
+          <WineCountryWorld />
+          <RegionalPhoto kind="chateau" />
+        </Fold>
+        <Fold title="Find wineries by what is in the glass" hint="Riesling, sparkling, reds, whites and grape guides">
         <section className="wine-lens" aria-labelledby="wine-lens-title">
           <h2 id="wine-lens-title">Find wineries by what is in the glass</h2>
           <p>Most regional lists sort by geography or popularity. These wine-first lenses start with the style you want to taste, then use the planner to make the route practical.</p>
@@ -182,6 +188,8 @@ export default function Page() {
             <Link href="/wine/merlot">Merlot</Link>
           </div>
         </section>
+        </Fold>
+        <Fold title="Guides and planning notes" hint="Ten guides, driver and timing advice, and how the two peninsulas differ">
         <h2>Why this map is different</h2>
         <p>
           Most winery maps stop at pins. This one lets you choose the stops you actually want, orders them into a practical loop,
@@ -210,8 +218,9 @@ export default function Page() {
         {REST.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
+        </Fold>
         <AuthorNote context="Traverse City wine country" />
-        <h2>Common questions</h2>
+        <Fold title="Common questions" hint="Best time to visit, how many wineries, drivers and reservations">
         <dl className="faq">
           {FAQ.map((f, i) => (
             <div key={i}>
@@ -220,7 +229,8 @@ export default function Page() {
             </div>
           ))}
         </dl>
-        <h2>Browse the places</h2>
+        </Fold>
+        <Fold title={"Browse all " + T + " places"} hint="Every winery, brewery, distillery and cidery by area">
         {AREAS.map(([key, label]) => {
           const list = venues.filter((v) => v.area === key);
           if (!list.length) return null;
@@ -238,6 +248,7 @@ export default function Page() {
             </section>
           );
         })}
+        </Fold>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph()) }} />
     </>
