@@ -1735,6 +1735,28 @@ main.tc-page .morelinks{margin-top:40px;padding-top:14px;border-top:1px solid #d
    area behind "More filters". */
 @media (max-width:860px){
   .planner-shell:not(.planner-shell-embedded){height:auto;min-height:0}
-  #plan{overflow:visible;max-height:none}
+  #plan{max-height:80vh;overflow-y:auto}
   #controls.hide-adv .grp.adv-phone{display:none}
 }
+
+
+/* ---------- Collapsed long sections on the home page (Oct 14 2026) ----------
+   Content stays in the HTML; only the presentation is folded. */
+.home-fold{margin:14px 0;border:1px solid var(--line);border-radius:12px;background:#fff}
+.home-fold>summary{
+  list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:3px;
+  padding:14px 44px 14px 16px;position:relative;border-radius:12px
+}
+.home-fold>summary::-webkit-details-marker{display:none}
+.home-fold>summary::after{
+  content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;margin-top:-6px;
+  border-right:2px solid var(--wine);border-bottom:2px solid var(--wine);transform:rotate(45deg);transition:transform .15s
+}
+.home-fold[open]>summary::after{transform:rotate(-135deg);margin-top:-2px}
+.home-fold>summary:hover{background:var(--paper-2,#f6f2e9)}
+.home-fold>summary:focus-visible{outline:3px solid var(--bay);outline-offset:2px}
+.home-fold-title{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.08rem;color:var(--ink)}
+.home-fold-hint{font-size:.82rem;color:var(--ink-soft);line-height:1.4}
+.home-fold-body{padding:4px 14px 18px;border-top:1px solid var(--line)}
+.home-fold-body>section:first-child{margin-top:14px}
+@media print{.home-fold:not([open])>.home-fold-body{display:block}}
