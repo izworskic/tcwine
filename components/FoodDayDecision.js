@@ -208,9 +208,17 @@ export default function FoodDayDecision(){
       </div>}
       <div className="food-v7-map-head">
         <h3>{chosen?"Your meal-first map":"Source-reviewed food locations"}</h3>
-        <p>{routeGood?"Road-route geometry from the routing provider. Times are estimates, not live traffic.":"Dashed connecting lines are geographic planning sketches, not road directions. Use Check real-road drive for routing-service estimates."}</p>
+        <p>{!chosen
+          ?"Markers show source-reviewed locations, not open kitchens. Choose a date and start time to assess an outing."
+          :loading
+            ?"Checking the actual road legs. The dashed line is only a geographic sketch."
+            :routeGood&&!veto
+              ?"The road geometry comes from a routing service. Drive times are estimates, not live traffic."
+              :veto
+                ?"This route failed a travel or service-window check; do not treat the sketch as directions."
+                :"Dashed lines show a geographic planning sketch, not a drivable route. Routing will be checked automatically."}</p>
       </div>
-      <FoodDayMap candidate={chosen} geometry={routeGeometry} roadVerified={routeGood}/>
+      <FoodDayMap candidate={chosen} geometry={routeGeometry} roadVerified={routeGood&&!veto}/>
       <p className="food-v7-map-footer">All locations come from published venue or geolocation sources. Need to customize every tasting stop? <a href="/old-mission-peninsula-wineries">Open the full Old Mission winery planner</a>.</p>
     </section>
   );

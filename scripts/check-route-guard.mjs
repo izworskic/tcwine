@@ -1,0 +1,32 @@
+import assert from "node:assert/strict";
+import {checkRouteCoordinates,ROUTE_LIMITS} from "../lib/route-guard.mjs";
+import {readFile} from "node:fs/promises";
+const read=async p=>JSON.parse(await readFile(new URL("../"+p,import.meta.url),"utf8"));
+const venues=await read("data/venues.json");
+const pois=await read("data/pois.json");
+const origins=await read("data/origins.json");
+const all=[...venues,...pois,...Object.values(origins)];
+for(const v of all){
+ const good=checkRouteCoordinates([[-85.6206,44.7631],[v.lng,v.lat]]);
+ assert.equal(good.ok,true,"Existing venue/POI/origin dropped: "+(v.id||v.name));
+}
+assert.equal(checkRouteCoordinates([]).ok,false);
+assert.equal(checkRouteCoordinates([[-85,44]]).ok,false);
+assert.equal(checkRouteCoordinates(Array.from({length:19},()=>[-85.6,44.8])).ok,false);
+assert.equal(checkRouteCoordinates([[-85.6,44.8],["-85.5",44.9]]).ok,false);
+assert.equal(checkRouteCoordinates([[-85.6,44.8],[NaN,44.9]]).ok,false);
+assert.equal(checkRouteCoordinates([[-85.6,44.8],[Infinity,44.9]]).ok,false);
+assert.equal(checkRouteCoordinates([[-85.6,44.8],[-85.5,null]]).ok,false);
+assert.equal(checkRouteCoordinates([[-85.6,44.8],[44.9,-85.5]]).ok,false);
+assert.equal(checkRouteCoordinates([[-85.6,44.8],[-70,44.9]]).ok,false);
+assert.equal(checkRouteCoordinates([[-85.6,44.8],[-85.5,44.9,1]]).ok,false);
+const valid=checkRouteCoordinates([[-85.620600000001,44.7631000001],[-85.5097222,44.8866667],[-85.6206,44.7631]]);
+assert.deepEqual(valid.points[0],[-85.6206,44.7631]);
+assert.equal(valid.points.length,3);
+const page=await readFile(new URL("../app/api/route/route.js",import.meta.url),"utf8");
+assert.match(page,/checkRouteCoordinates/);
+assert.match(page,/AbortSignal.timeout\(6500\)/);
+assert.match(page,/length!==coords.length-1/);
+assert.match(page,/no-store/);
+assert.ok(ROUTE_LIMITS.maxPoints>=14);
+console.log("Route guard accepted "+all.length+" current venues/origins, rejected hostile inputs, and enforced timeout.");

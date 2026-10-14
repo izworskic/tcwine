@@ -3,7 +3,6 @@ import {useEffect,useRef} from "react";
 import "leaflet/dist/leaflet.css";
 import origins from "@/data/origins.json";
 import food from "@/data/food-offerings.json";
-import venues from "@/data/venues.json";
 // The map uses genuine venue points; straight dashed lines are NOT road routes.
 // When /api/route succeeds, replace them with road geometry.
 export default function FoodDayMap({candidate,geometry,roadVerified=false}){
