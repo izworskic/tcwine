@@ -16,9 +16,9 @@ const awaitingReview = wineries.filter((item) => !reviewedIds.has(item.id));
 const BASE = "https://tcwine.chrisizworski.com";
 
 export const metadata = {
-  title: "Traverse City Wineries With Food: Lunch, Pizza & Map",
+  title: "Traverse City Wineries With Food: Lunch Map & Planner",
   description:
-    "Map Traverse City-area wineries with food on site, from kitchens and pizza to bistro meals and tasting snacks, then route a realistic wine day around current hours.",
+    "Where can you eat lunch at a Traverse City winery? Check source-backed Old Mission menus, choose a date and plan a 3–4 hour wine day with road-routing checks.",
   alternates: { canonical: "/traverse-city-wineries-with-food" },
 };
 
@@ -36,7 +36,7 @@ const GRAPH = {
     },
     {
       "@type": "ItemList",
-      name: "Traverse City-area wineries with food on site",
+      name: "Traverse City winery directory entries with historic food tags; service not all verified",
       numberOfItems: wineries.length,
       itemListElement: wineries.map((v, index) => ({
         "@type": "ListItem",
@@ -65,6 +65,16 @@ export default function Page() {
         </nav>
       </section>
       <FoodDayDecision />
+      <section className="wine-food-questions" aria-label="Answers to common winery lunch questions">
+        <h2>Can you actually eat lunch at a Traverse City winery?</h2>
+        <p><strong>Yes, but food offerings are not equivalent.</strong> Brys Estate publishes sandwiches and salads as part of its seated tasting-room experience. Its winery opening hours alone cannot confirm kitchen service or a table; <a href="https://brysestate.com/visit_tastingroom/" rel="noopener noreferrer" target="_blank">check Brys' official information</a> before committing.</p>
+        <h3>Does Bonobo Winery serve a full lunch?</h3>
+        <p>Bonobo publishes seasonal small plates, not a guaranteed full lunch. Its listed kitchen begins at 1 p.m. Monday through Thursday; season and availability still need confirmation. <a href="https://www.bonobowinery.com/faq" rel="noopener noreferrer" target="_blank">Read the official Bonobo kitchen FAQ</a>.</p>
+        <h3>How many wineries fit in three or four hours with lunch?</h3>
+        <p>Plan around a protected 75-minute meal and at most one additional tasting. A route might fit fewer wineries than a tasting-only afternoon. Our planner checks actual road-leg estimates once you enter a date and starting time, and rejects a route that overruns your window.</p>
+        <h3>What if the winery only serves snacks?</h3>
+        <p>The planner can pair a separate restaurant lunch with a wine tasting if the published information and timing support it. You can also require an on-site winery meal. Operator hours can conflict; no meal, reservation or kitchen-service availability is presented as confirmed without appropriate evidence.</p>
+      </section>
       <section className="wine-food-source-audit" aria-label="Source-checked wine and meal options">
         <h2>What the actual menus support</h2>
         <p>Operator sources reviewed {foodEvidence.reviewedAt}. These are researched meal types, not confirmed kitchen service or available reservations.</p>

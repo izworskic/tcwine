@@ -69,3 +69,19 @@ assert.match(page,/FoodDayDecision/);
 assert.doesNotMatch(page,/const substantial =/);
 assert.match(page,/not verified full-lunch recommendations/);
 console.log("Food page: audited evidence and unverified directory entries remain distinct.");
+
+// V8 trust: a known official-site disagreement cannot disappear with source expiry.
+const conflictAfterDue=assessFoodService({data,locationId:"peninsula-grill",
+  serviceId:"peninsula-grill-dining",date:"2026-11-03",
+  startTime:"12:00",partySize:2,asOf:"2026-11-03"});
+assert.equal(conflictAfterDue.state,"SOURCE_CONFLICT");
+assert.equal(conflictAfterDue.evidenceExpired,true);
+// Negative evidence remains a hard veto even if the supporting record has expired.
+const closedFixture=structuredClone(data);
+closedFixture.locations.find(x=>x.locationId==="brys-estate").services[0].dateExceptions=[
+ {date:"2026-11-03",closed:true}
+];
+assert.equal(assessFoodService({data:closedFixture,locationId:"brys-estate",
+  serviceId:"brys-seated-food",date:"2026-11-03",startTime:"12:00",
+  partySize:2,asOf:"2026-11-03"}).state,"DATE_EXCEPTION");
+console.log("V8 hard conflict priority through staleness passed.");

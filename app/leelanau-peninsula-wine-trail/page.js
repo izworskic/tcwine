@@ -48,6 +48,7 @@ export default function Page() {
         <h2>Where should you start the Leelanau Peninsula wine trail?</h2>
         <p><strong>Start in Suttons Bay</strong> for a compact wine day and sparkling wine at <Link href="/winery/mawby">MAWBY</Link>. <strong>Start around Lake Leelanau</strong> if you are staying near the village or want to visit a nearby cluster of tasting rooms. We chose it as our base for a recent two-night October trip.</p>
         <p>Northport, Glen Arbor, and the Suttons Bay–Lake Leelanau villages are different day trips. Choose one cluster, not the entire peninsula. Confirm current hours, driving and reservations before committing to a route.</p>
+        <p><strong>Need a real lunch?</strong> The food tags below are historic directory notes, not independently verified kitchen windows. Our <Link href="/traverse-city-wineries-with-food">food-and-wine service audit</Link> currently supports an interactive lunch planner for <strong>Old Mission only</strong>; we do not pretend that it verifies Leelanau meals yet.</p>
         <nav className="wine-search-actions" aria-label="Leelanau wine planning paths">
           <Link href="/suttons-bay-tasting-rooms">Suttons Bay tasting rooms</Link>
           <Link href="/wine/sparkling">Leelanau sparkling-wine wineries</Link>
@@ -79,7 +80,7 @@ export default function Page() {
                   <strong><Link href={`/winery/${v.id}`}>{v.name}</Link></strong>
                   {v.officialTrail ? <span className="inline-trail-badge">Official trail member</span> : null}
                   {v.note ? ": " + v.note : ""}
-                  {v.food ? " Food on site: " + v.food + "." : ""}
+                  {v.food ? " Directory food note (confirm service): " + v.food + "." : ""}
                 </li>
               ))}
             </ul>
